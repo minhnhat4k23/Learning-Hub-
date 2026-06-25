@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ResizeObserverErrorGuard from "./components/ResizeObserverErrorGuard";
 import SiteNav from "./components/SiteNav";
 
 const geistSans = Geist({
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ResizeObserverErrorGuard />
         <SiteNav />
         {children}
       </body>
