@@ -15,13 +15,111 @@ export type KeyTerm = {
 export type Example = {
   title: string;
   body: string;
+  meaning?: string;
+  implication?: string;
 };
+
+export type CalloutKind =
+  | "insight"
+  | "trap"
+  | "key"
+  | "brainstorm"
+  | "realworld"
+  | "note";
+
+export type Callout = {
+  kind: CalloutKind;
+  title?: string;
+  body: string;
+};
+
+export type FlowNode = {
+  id: string;
+  label: string;
+  group?: "purpose" | "lo" | "concept" | "term";
+  detail?: string;
+  sectionId?: string;
+  parent?: string;
+};
+
+export type FlowEdge = {
+  from: string;
+  to: string;
+  label?: string;
+  animated?: boolean;
+};
+
+export type Diagram =
+  | {
+      engine: "mermaid";
+      title?: string;
+      code: string;
+      caption?: string;
+    }
+  | {
+      engine: "flow";
+      title?: string;
+      layout?: "tree" | "horizontal" | "radial";
+      nodes: FlowNode[];
+      edges: FlowEdge[];
+      collapsible?: boolean;
+      caption?: string;
+    };
+
+export type ComparisonTable = {
+  title?: string;
+  columns: string[];
+  rows: {
+    label: string;
+    cells: string[];
+  }[];
+};
+
+export type CalcStep = {
+  label: string;
+  expr: string;
+  note?: string;
+};
+
+export type CalcWalkthrough = {
+  title?: string;
+  steps: CalcStep[];
+  result?: string;
+  meaning?: string;
+  implication?: string;
+};
+
+export type Formula = {
+  expression: string;
+  legend?: {
+    symbol: string;
+    meaning: string;
+  }[];
+  note?: string;
+};
+
+export type Figure = {
+  caption: string;
+  src?: string;
+  placeholder?: boolean;
+  alt?: string;
+};
+
+export type Block =
+  | { type: "prose"; body: string }
+  | { type: "callout"; callout: Callout }
+  | { type: "diagram"; diagram: Diagram }
+  | { type: "comparison"; table: ComparisonTable }
+  | { type: "calc"; calc: CalcWalkthrough }
+  | { type: "formula"; formula: Formula }
+  | { type: "figure"; figure: Figure };
 
 export type Section = {
   id: string;
   heading: string;
   /** Thân bài lý thuyết. Hỗ trợ xuống dòng bằng \n\n giữa các đoạn. */
-  body: string;
+  body?: string;
+  blocks?: Block[];
   keyTerms?: KeyTerm[];
   examples?: Example[];
 };
@@ -61,4 +159,5 @@ export type Chapter = {
   status: ChapterStatus;
   /** Nguồn (sách/slide, tác giả, năm, trang) — điền khi có tài liệu. */
   source?: string;
+  knowledgeMap?: Diagram;
 };
