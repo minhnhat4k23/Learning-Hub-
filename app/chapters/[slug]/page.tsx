@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllChapters, getChapterBySlug } from "@/content/chapters";
 import QuizPlayer from "@/app/components/QuizPlayer";
 import BlockRenderer from "@/app/components/teaching/BlockRenderer";
-import ChapterTOC from "@/app/components/teaching/ChapterTOC";
+import ChapterRail from "@/app/components/teaching/ChapterRail";
 import KnowledgeMap from "@/app/components/teaching/KnowledgeMap";
 import type { Section } from "@/content/types";
 
@@ -41,13 +41,25 @@ export default async function ChapterDetail({
   const chapter = getChapterBySlug(slug);
   if (!chapter || chapter.status === "placeholder") notFound();
 
+  const navChapters = getAllChapters()
+    .filter((c) => c.status !== "placeholder")
+    .map((c) => ({ order: c.order, slug: c.slug, title: c.title }));
+  const navSections = chapter.sections.map((s) => ({
+    id: s.id,
+    heading: s.heading,
+  }));
+
   return (
     <main className="min-h-screen bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="lg:grid lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-10">
-          <ChapterTOC sections={chapter.sections} />
+        <div className="lg:flex lg:items-start">
+          <ChapterRail
+            chapters={navChapters}
+            currentSlug={slug}
+            sections={navSections}
+          />
 
-          <article className="min-w-0 max-w-4xl">
+          <article className="min-w-0 max-w-4xl lg:flex-1">
             <Link
               href="/chapters"
               className="text-sm text-zinc-500 hover:underline"
