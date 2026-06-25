@@ -39,7 +39,7 @@ export default function ChapterRail({
   const panel = (
     <nav aria-label="Điều hướng chương" className="space-y-6 text-sm">
       <div>
-        <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+        <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
           Các chương
         </p>
         <ol className="mt-2 space-y-1">
@@ -59,7 +59,9 @@ export default function ChapterRail({
                 >
                   <span
                     className={`shrink-0 text-xs ${
-                      active ? "text-white/70 dark:text-zinc-900/70" : "text-zinc-400"
+                      active
+                        ? "text-white/70 dark:text-zinc-900/70"
+                        : "text-zinc-500 dark:text-zinc-400"
                     }`}
                   >
                     {c.order}
@@ -73,7 +75,7 @@ export default function ChapterRail({
       </div>
 
       <div>
-        <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+        <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
           Mục lục
         </p>
         <ol className="mt-2 space-y-1">

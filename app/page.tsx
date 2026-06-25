@@ -23,7 +23,7 @@ export default function Home() {
           <div className="flex gap-3">
             <Link
               href="/chapters"
-              className="rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+              className="rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:ring-offset-zinc-950"
             >
               Bắt đầu học
             </Link>
@@ -45,13 +45,13 @@ export default function Home() {
                       : "border-zinc-200 bg-white hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-900"
                   }`}
                 >
-                  <span className="text-xs text-zinc-400">Chương {c.order}</span>
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400">Chương {c.order}</span>
                   <h3 className="mt-1 text-lg font-semibold">{c.title}</h3>
                   <p className="mt-2 line-clamp-3 text-sm text-zinc-600 dark:text-zinc-300">
                     {c.bigIdea}
                   </p>
                   {placeholder && (
-                    <span className="mt-auto pt-3 text-xs font-medium text-zinc-400">
+                    <span className="mt-auto pt-3 text-xs font-medium text-zinc-500 dark:text-zinc-400">
                       Chờ nội dung
                     </span>
                   )}
@@ -60,7 +60,11 @@ export default function Home() {
               return placeholder ? (
                 <div key={c.slug}>{card}</div>
               ) : (
-                <Link key={c.slug} href={`/chapters/${c.slug}`}>
+                <Link
+                  key={c.slug}
+                  href={`/chapters/${c.slug}`}
+                  className="rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
+                >
                   {card}
                 </Link>
               );

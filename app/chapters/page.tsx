@@ -32,7 +32,7 @@ export default function ChapterList() {
                 }`}
               >
                 <div>
-                  <span className="text-xs text-zinc-400">Chương {c.order}</span>
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400">Chương {c.order}</span>
                   <h2 className="text-base font-semibold">{c.title}</h2>
                 </div>
                 <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
@@ -44,7 +44,12 @@ export default function ChapterList() {
               <li key={c.slug}>{inner}</li>
             ) : (
               <li key={c.slug}>
-                <Link href={`/chapters/${c.slug}`}>{inner}</Link>
+                <Link
+                  href={`/chapters/${c.slug}`}
+                  className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
+                >
+                  {inner}
+                </Link>
               </li>
             );
           })}

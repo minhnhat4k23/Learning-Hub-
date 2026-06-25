@@ -67,7 +67,7 @@ export default async function ChapterDetail({
               ← Các chương
             </Link>
 
-            <span className="mt-6 block text-xs text-zinc-400">
+            <span className="mt-6 block text-xs text-zinc-500 dark:text-zinc-400">
               Chương {chapter.order}
             </span>
             <h1 className="mt-1 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -75,7 +75,7 @@ export default async function ChapterDetail({
             </h1>
 
             <div className="mt-6 rounded-2xl border-l-4 border-zinc-900 bg-white p-6 dark:border-white dark:bg-zinc-900">
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
+              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                 Bản chất chương
               </p>
               <p className="mt-3 text-lg leading-8 text-zinc-800 dark:text-zinc-200">
@@ -179,7 +179,7 @@ export default async function ChapterDetail({
             </section>
 
             {chapter.source && (
-              <p className="mt-10 border-t border-zinc-200 pt-4 text-xs text-zinc-400 dark:border-zinc-800">
+              <p className="mt-10 border-t border-zinc-200 pt-4 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
                 Nguồn: {chapter.source}
               </p>
             )}

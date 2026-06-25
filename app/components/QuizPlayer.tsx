@@ -59,7 +59,7 @@ export default function QuizPlayer({ questions }: Props) {
         </p>
         <button
           onClick={restart}
-          className="mt-4 rounded-full bg-zinc-950 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+          className="mt-4 cursor-pointer rounded-full bg-zinc-950 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:ring-offset-zinc-900"
         >
           Làm lại
         </button>
@@ -78,7 +78,7 @@ export default function QuizPlayer({ questions }: Props) {
         </span>
       </div>
 
-      <p className="mt-3 text-xs uppercase tracking-wide text-zinc-400">
+      <p className="mt-3 text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
         {q.conceptTested}
       </p>
       <h3 className="mt-1 text-lg font-medium leading-7">{q.stem}</h3>
@@ -102,7 +102,7 @@ export default function QuizPlayer({ questions }: Props) {
               <button
                 onClick={() => choose(opt.id)}
                 disabled={revealed}
-                className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${tone}`}
+                className={`w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 disabled:cursor-default ${tone}`}
               >
                 <span className="font-medium">{opt.id.toUpperCase()}.</span>{" "}
                 {opt.text}
@@ -128,7 +128,7 @@ export default function QuizPlayer({ questions }: Props) {
       {revealed && (
         <button
           onClick={next}
-          className="mt-4 rounded-full bg-zinc-950 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+          className="mt-4 cursor-pointer rounded-full bg-zinc-950 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:ring-offset-zinc-900"
         >
           {index + 1 >= questions.length ? "Xem kết quả" : "Câu tiếp"}
         </button>
