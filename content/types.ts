@@ -161,3 +161,11 @@ export type Chapter = {
   source?: string;
   knowledgeMap?: Diagram;
 };
+
+export type Subject = {
+  /** Kebab-case URL segment, such as "managerial-accounting". */
+  id: string;
+  title: string;
+  subtitle?: string;
+  chapters: Chapter[];
+};

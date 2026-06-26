@@ -11,10 +11,12 @@ export default function ChapterRail({
   chapters,
   currentSlug,
   sections,
+  subjectId,
 }: {
   chapters: NavChapter[];
   currentSlug: string;
   sections: NavSection[];
+  subjectId: string;
 }) {
   const [open, setOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,7 +50,7 @@ export default function ChapterRail({
             return (
               <li key={c.slug}>
                 <Link
-                  href={`/chapters/${c.slug}`}
+                  href={`/${subjectId}/${c.slug}`}
                   onClick={() => setMobileOpen(false)}
                   aria-current={active ? "page" : undefined}
                   className={`flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 leading-5 ${

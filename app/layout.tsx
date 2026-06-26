@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Managerial Accounting — Học theo bản chất",
+  title: "Learning Hub — Học theo bản chất",
   description:
-    "Học Managerial Accounting theo bản chất từng chương kèm bộ câu hỏi bẫy có giải thích sâu.",
+    "Học theo từng môn, từng chương, kèm bộ câu hỏi có giải thích sâu.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
