@@ -6912,13 +6912,13 @@ const rawChapters: Chapter[] = [
                 {
                   from: "PLAN",
                   to: "FLEX",
-                  label: "Activity variance",
+                  label: "activity var.",
                   animated: true,
                 },
                 {
                   from: "FLEX",
                   to: "ACT",
-                  label: "Revenue & Spending variance",
+                  label: "rev/spend var.",
                   animated: true,
                 },
               ],
