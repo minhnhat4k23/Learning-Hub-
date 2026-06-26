@@ -24,6 +24,12 @@
 - `keyTerms` cho thuật ngữ dễ nhầm; `examples` cho minh họa cụ thể (số liệu phải có nguồn hoặc ghi rõ là ví dụ giả định).
 - Mỗi section nên kết bằng **một điểm dễ sai** để nối sang câu hỏi bẫy.
 
+### 3.2b Ưu tiên trực quan — rich teaching mode (BẮT BUỘC, mọi môn)
+Chuẩn đã rải khắp Managerial Accounting (8/8 chương có `knowledgeMap`, 86 section dùng `blocks`, 13 diagram tương tác) — **áp y chang cho mọi môn** (gồm DTB và môn thêm sau).
+- **Mỗi chương phải có `knowledgeMap`** (mindmap/graph tổng quan LO + khái niệm).
+- **Section dùng `blocks` là chính, không để prose đặc.** Ưu tiên: `diagram` (engine `flow` = React Flow tương tác, hoặc `mermaid`), `comparison`, `calc`, `formula`, `callout` (insight/trap/key). Mỗi section nên có ≥1 visual block; prose chỉ khi không diễn đạt được bằng sơ đồ.
+- Spec bàn giao Codex phải liệt kê rõ knowledgeMap + blocks cho từng section (KHÔNG bàn giao prose thuần). Schema chi tiết: `rich-teaching-mode.md`.
+
 ### 3.3 questions — thiết kế "bẫy có chủ đích"
 Quy tắc bắt buộc cho mỗi câu:
 1. **Đáp án sai = một hiểu lầm có thật**, không phải sai vu vơ. Mỗi `rationale` của đáp án sai phải **gọi tên đúng cái bẫy** ("bẫy tuyệt đối hóa", "trộn tổng với đơn vị"…).
