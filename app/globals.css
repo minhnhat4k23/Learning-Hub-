@@ -4,6 +4,9 @@
 :root {
   --background: #f6f8fb;
   --foreground: #1f2937;
+  --flow-edge-label-bg: #f6f8fb;
+  --flow-edge-label-border: #c2cad6;
+  --flow-edge-label-text: #3a414c;
 }
 
 @theme inline {
@@ -25,12 +28,27 @@
   --color-zinc-800: #2c313a;
   --color-zinc-900: #1d2027;
   --color-zinc-950: #16181d;
+
+  /* Type scale +2px — dễ đọc khi học lâu; chỉ to chữ, không đụng spacing. */
+  --text-xs: 0.8125rem; /* 13px */
+  --text-xs--line-height: 1.15rem;
+  --text-sm: 1rem; /* 16px */
+  --text-sm--line-height: 1.5rem;
+  --text-base: 1.125rem; /* 18px */
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.25rem; /* 20px */
+  --text-lg--line-height: 1.85rem;
+  --text-xl: 1.375rem; /* 22px */
+  --text-xl--line-height: 1.95rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #16181d;
     --foreground: #e2e6ec;
+    --flow-edge-label-bg: #1d2027;
+    --flow-edge-label-border: #3a414c;
+    --flow-edge-label-text: #e2e6ec;
   }
 }
 
@@ -39,6 +57,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI",
     Roboto, sans-serif;
+  font-size: 1.125rem; /* 18px — đoạn văn body không gắn class size */
 }
 
 /* React Flow controls — khớp tông cool slate */

@@ -16,7 +16,7 @@
 - Số liệu slide đã VERIFIED: PearCo POHR = $4/DLH; Job A-143 Total $268 / unit $134; Quick Check WR53 = $730; Dickson Job 407 = $2,485, giá $4,348.75 (markup 75%).
 
 ### 2. Quy ước ngôn ngữ quiz — `docs/specs/quiz-language-conversion-ch1-ch2.md`
-- `stem` + `options[].text` → **tiếng Anh**; rationale giữ **tiếng Việt** theo khung **Cơ chế → Bẫy → Khóa**, đặt tên distractor theo khái niệm (không A/B/C/D).
+- **[CHỐT 2026-06-26]** `stem` + `options[].text` → **tiếng Anh**; `rationale` → **tiếng Việt + thuật ngữ tiếng Anh** theo khung **Cơ chế → Bẫy → Khóa**, đặt tên distractor theo khái niệm (không A/B/C/D). Xem memory `quy-uoc-ngon-ngu-noi-dung` (bản cuối).
 - Title: "Chapter 1 — Managerial Accounting and Cost Concepts" / "Chapter 2 — Job-Order Costing: Calculating Unit Product Costs".
 
 ### 3. Rich Teaching Mode — `docs/specs/rich-teaching-mode.md` (spec chính, §A–§J)
