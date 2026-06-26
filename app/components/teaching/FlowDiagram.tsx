@@ -16,6 +16,7 @@ import {
   Handle,
   Position,
   ReactFlow,
+  getBezierPath,
   getSmoothStepPath,
   useReactFlow,
   type Edge,
@@ -42,6 +43,8 @@ type TeachingNodeData = {
   sectionId?: string;
   canToggle: boolean;
   collapsed: boolean;
+  sourcePosition: Position;
+  targetPosition: Position;
 };
 
 type HoverState = {
@@ -104,7 +107,7 @@ function TeachingNode({ id, data }: NodeProps<Node<TeachingNodeData>>) {
         dim ? "opacity-25" : "opacity-100"
       }`}
     >
-      <Handle type="target" position={Position.Left} className="opacity-0" />
+      <Handle type="target" position={data.targetPosition} className="opacity-0" />
       <div className="flex items-start gap-2">
         <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${classes.dot}`} />
         <p className="min-w-0 flex-1 text-sm font-medium leading-5">
@@ -123,7 +126,7 @@ function TeachingNode({ id, data }: NodeProps<Node<TeachingNodeData>>) {
           </span>
         )}
       </div>
-      <Handle type="source" position={Position.Right} className="opacity-0" />
+      <Handle type="source" position={data.sourcePosition} className="opacity-0" />
     </div>
   );
 }
@@ -149,14 +152,19 @@ function TeachingEdge({
     hoveredId && (relatedIds.has(source) || relatedIds.has(target)),
   );
   const muted = Boolean(hoveredId && !related);
-  const [edgePath, labelX, labelY] = getSmoothStepPath({
+  const edgePathArgs = {
     sourceX,
     sourceY,
     sourcePosition,
     targetX,
     targetY,
     targetPosition,
-  });
+  };
+  const isHorizontalEdge =
+    sourcePosition === Position.Right && targetPosition === Position.Left;
+  const [edgePath, labelX, labelY] = isHorizontalEdge
+    ? getBezierPath(edgePathArgs)
+    : getSmoothStepPath(edgePathArgs);
 
   return (
     <BaseEdge
@@ -164,7 +172,7 @@ function TeachingEdge({
       path={edgePath}
       label={label}
       labelX={labelX}
-      labelY={labelY}
+      labelY={label ? labelY - 12 : labelY}
       markerEnd={markerEnd}
       markerStart={markerStart}
       interactionWidth={interactionWidth}
@@ -175,7 +183,18 @@ function TeachingEdge({
         opacity: muted ? 0.2 : 1,
         transition: "opacity 150ms ease, stroke 150ms ease, stroke-width 150ms ease",
       }}
-      labelStyle={{ fill: "#71717a", fontSize: 12 }}
+      labelStyle={{
+        fill: "var(--flow-edge-label-text)",
+        fontSize: 12,
+        fontWeight: 600,
+      }}
+      labelBgStyle={{
+        fill: "var(--flow-edge-label-bg)",
+        stroke: "var(--flow-edge-label-border)",
+        strokeWidth: 1,
+      }}
+      labelBgPadding={[6, 4]}
+      labelBgBorderRadius={5}
     />
   );
 }
@@ -332,11 +351,16 @@ function layoutNodes(
       layout === "horizontal"
         ? (horizontalPosition?.y ?? 130)
         : depth * 130;
+    const isHorizontal = layout === "horizontal";
+    const sourcePosition = isHorizontal ? Position.Right : Position.Bottom;
+    const targetPosition = isHorizontal ? Position.Left : Position.Top;
 
     return {
       id: node.id,
       type: "teaching",
       position: { x, y },
+      sourcePosition,
+      targetPosition,
       data: {
         label: node.label,
         group: node.group ?? "concept",
@@ -344,6 +368,8 @@ function layoutNodes(
         sectionId: node.sectionId,
         canToggle: Boolean(diagram.collapsible && (children.get(node.id) ?? []).length),
         collapsed: collapsed.has(node.id),
+        sourcePosition,
+        targetPosition,
       },
     };
   });
