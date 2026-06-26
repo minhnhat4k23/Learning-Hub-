@@ -101,7 +101,7 @@ function TeachingNode({ id, data }: NodeProps<Node<TeachingNodeData>>) {
       data-node-state={
         data.canToggle ? (data.collapsed ? "closed" : "open") : undefined
       }
-      className={`min-w-44 rounded-xl border px-4 py-3 text-sm transition-[opacity,box-shadow] duration-150 focus:outline-none focus:ring-2 focus:ring-zinc-400 ${
+      className={`min-w-44 max-w-[14rem] rounded-xl border px-4 py-3 text-sm transition-[opacity,box-shadow] duration-150 focus:outline-none focus:ring-2 focus:ring-zinc-400 ${
         classes.shell
       } ${highlight ? "ring-2 ring-zinc-400" : ""} ${
         dim ? "opacity-25" : "opacity-100"
@@ -166,13 +166,24 @@ function TeachingEdge({
     ? getBezierPath(edgePathArgs)
     : getSmoothStepPath(edgePathArgs);
 
+  // Đẩy nhãn lệch về phía nguồn cho cạnh ngang: nhiều cạnh song song cùng
+  // hành lang sẽ tách nhãn theo trục Y (mỗi nguồn ở một độ cao) → hết đè nhau.
+  const labelPosX = isHorizontalEdge
+    ? sourceX + (targetX - sourceX) * 0.32
+    : labelX;
+  const labelPosY = isHorizontalEdge
+    ? sourceY + (targetY - sourceY) * 0.32
+    : label
+      ? labelY - 12
+      : labelY;
+
   return (
     <BaseEdge
       id={id}
       path={edgePath}
       label={label}
-      labelX={labelX}
-      labelY={label ? labelY - 12 : labelY}
+      labelX={labelPosX}
+      labelY={labelPosY}
       markerEnd={markerEnd}
       markerStart={markerStart}
       interactionWidth={interactionWidth}
@@ -330,8 +341,8 @@ function layoutNodes(
       for (const [rank, columnNodes] of columns) {
         for (const [index, node] of columnNodes.entries()) {
           horizontalPositions.set(node.id, {
-            x: rank * 260,
-            y: index * 110 - ((columnNodes.length - 1) * 110) / 2 + 170,
+            x: rank * 340,
+            y: index * 120 - ((columnNodes.length - 1) * 120) / 2 + 170,
           });
         }
       }
@@ -345,8 +356,8 @@ function layoutNodes(
     const horizontalPosition = horizontalPositions.get(node.id);
     const x =
       layout === "horizontal"
-        ? (horizontalPosition?.x ?? index * 230)
-        : siblingIndex * 200 - ((siblings.length - 1) * 200) / 2;
+        ? (horizontalPosition?.x ?? index * 300)
+        : siblingIndex * 240 - ((siblings.length - 1) * 240) / 2;
     const y =
       layout === "horizontal"
         ? (horizontalPosition?.y ?? 130)
