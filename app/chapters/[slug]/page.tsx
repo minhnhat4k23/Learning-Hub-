@@ -173,7 +173,7 @@ export default async function ChapterDetail({
 
             <section className="mt-12">
               <h2 className="mb-4 text-xl font-semibold">
-                Câu hỏi củng cố
+                End-of-Chapter Questions
               </h2>
               <QuizPlayer questions={chapter.questions} />
             </section>

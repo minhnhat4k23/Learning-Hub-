@@ -1,11 +1,12 @@
 import type { Chapter } from "./types";
+import { applyEnglishQuizOverrides } from "./quizEnglish";
 
 // Nội dung Chương 1 bám sát slide gốc của môn (Garrison/Noreen/Brewer,
 // Managerial Accounting 17e, Chapter 1) + case study Phở của giảng viên.
 // Spec đối chiếu: docs/specs/chapter-a-cost-concepts.md.
 // Thêm chương mới = thêm 1 object vào mảng này, KHÔNG cần sửa UI.
 
-export const chapters: Chapter[] = [
+const rawChapters: Chapter[] = [
   {
     slug: "cost-concepts",
     order: 1,
@@ -9583,6 +9584,8 @@ export const chapters: Chapter[] = [
     ],
   },
 ];
+
+export const chapters: Chapter[] = applyEnglishQuizOverrides(rawChapters);
 
 export function getAllChapters(): Chapter[] {
   return [...chapters].sort((a, b) => a.order - b.order);
