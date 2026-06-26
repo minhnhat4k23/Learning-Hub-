@@ -166,24 +166,13 @@ function TeachingEdge({
     ? getBezierPath(edgePathArgs)
     : getSmoothStepPath(edgePathArgs);
 
-  // Đẩy nhãn lệch về phía nguồn cho cạnh ngang: nhiều cạnh song song cùng
-  // hành lang sẽ tách nhãn theo trục Y (mỗi nguồn ở một độ cao) → hết đè nhau.
-  const labelPosX = isHorizontalEdge
-    ? sourceX + (targetX - sourceX) * 0.32
-    : labelX;
-  const labelPosY = isHorizontalEdge
-    ? sourceY + (targetY - sourceY) * 0.32
-    : label
-      ? labelY - 12
-      : labelY;
-
   return (
     <BaseEdge
       id={id}
       path={edgePath}
       label={label}
-      labelX={labelPosX}
-      labelY={labelPosY}
+      labelX={labelX}
+      labelY={label ? labelY - 12 : labelY}
       markerEnd={markerEnd}
       markerStart={markerStart}
       interactionWidth={interactionWidth}

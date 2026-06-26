@@ -4200,15 +4200,33 @@ const rawChapters: Chapter[] = [
           {
             type: "diagram",
             diagram: {
-              engine: "mermaid",
+              engine: "flow",
               title: "CVP graph của RBC",
-              code: `flowchart LR
-  Fixed["Fixed expenses: đường ngang $80,000"] --> BE["Break-even: 400 đơn vị / $200,000"]
-  Total["Total expenses: $80,000 + $300Q"] --> BE
-  Sales["Sales: $500Q từ gốc 0"] --> BE
-  Loss["Loss zone: dưới break-even"] -.-> BE
-  BE --> Profit["Profit zone: trên break-even"]
-  Profit --> At500["500 đơn vị: sales $250,000, profit $20,000"]`,
+              layout: "horizontal",
+              nodes: [
+                { id: "fixed", label: "Fixed expenses: $80,000 (đường ngang)" },
+                { id: "total", label: "Total expenses: $80,000 + $300Q" },
+                { id: "sales", label: "Sales: $500Q (từ gốc 0)" },
+                {
+                  id: "be",
+                  label: "Break-even: 400 đơn vị / $200,000",
+                  group: "term",
+                },
+                { id: "loss", label: "Loss zone: dưới break-even" },
+                { id: "profit", label: "Profit zone: trên break-even" },
+                {
+                  id: "at500",
+                  label: "500 đơn vị → sales $250,000, profit $20,000",
+                },
+              ],
+              edges: [
+                { from: "fixed", to: "be" },
+                { from: "total", to: "be" },
+                { from: "sales", to: "be" },
+                { from: "loss", to: "be", animated: true },
+                { from: "be", to: "profit" },
+                { from: "profit", to: "at500" },
+              ],
               caption:
                 "Trục X là units, trục Y là dollars; Sales cắt Total expenses tại break-even.",
             },
@@ -7701,6 +7719,40 @@ const rawChapters: Chapter[] = [
             body: "Mọi variance của DM, DL và VOH đều dùng chung khung 3 cột để so sánh ba tích số. Price variance là chênh giữa (1) và (2), chỉ do GIÁ đầu vào. Quantity variance là chênh giữa (2) và (3), chỉ do LƯỢNG dùng. Tách riêng giá và lượng vì trách nhiệm khác nhau và thời điểm mua/dùng khác nhau.",
           },
           {
+            type: "diagram",
+            diagram: {
+              engine: "flow",
+              title: "Khung 3 cột → price & quantity variance",
+              layout: "horizontal",
+              nodes: [
+                {
+                  id: "c1",
+                  label: "(1) AQ×AP",
+                  group: "term",
+                  detail: "Thực mua/dùng ở giá thực (actual quantity × actual price).",
+                },
+                {
+                  id: "c2",
+                  label: "(2) AQ×SP",
+                  group: "term",
+                  detail: "Thực dùng ở giá chuẩn (actual quantity × standard price) — cột bản lề.",
+                },
+                {
+                  id: "c3",
+                  label: "(3) SQ×SP",
+                  group: "term",
+                  detail: "Lượng chuẩn cho output thực, ở giá chuẩn (standard quantity allowed × standard price).",
+                },
+              ],
+              edges: [
+                { from: "c1", to: "c2", label: "price var." },
+                { from: "c2", to: "c3", label: "quantity var." },
+              ],
+              caption:
+                "Cùng một khung dùng cho DM, DL, VOH: chênh (1)→(2) là price, (2)→(3) là quantity.",
+            },
+          },
+          {
             type: "comparison",
             table: {
               title: "Khung 3 cột",
@@ -8703,6 +8755,63 @@ const rawChapters: Chapter[] = [
           {
             type: "prose",
             body: "Differential analysis chỉ tập trung vào future cost & benefit khác nhau giữa các phương án; mọi thứ khác bỏ qua. Differential cost, incremental cost và avoidable cost đều là cách nhìn vào phần chi phí thay đổi theo quyết định. Sunk cost và cost không đổi giữa các phương án là irrelevant. Opportunity cost phải xét dù không ghi sổ.",
+          },
+          {
+            type: "diagram",
+            diagram: {
+              engine: "flow",
+              title: "Bộ lọc: khoản này relevant hay irrelevant?",
+              layout: "tree",
+              nodes: [
+                { id: "start", label: "Một khoản cost/benefit" },
+                {
+                  id: "qdiff",
+                  label: "Khác nhau giữa các phương án?",
+                  group: "concept",
+                  parent: "start",
+                },
+                {
+                  id: "irr",
+                  label: "Irrelevant — bỏ qua",
+                  detail: "Cost không đổi giữa các phương án thì không ảnh hưởng quyết định.",
+                  parent: "qdiff",
+                },
+                {
+                  id: "qfuture",
+                  label: "Là future cost (chưa phát sinh)?",
+                  group: "concept",
+                  parent: "qdiff",
+                },
+                {
+                  id: "sunk",
+                  label: "Sunk cost → irrelevant",
+                  detail: "Đã chi rồi, không thể thay đổi → luôn bỏ qua.",
+                  parent: "qfuture",
+                },
+                {
+                  id: "rel",
+                  label: "Relevant — đưa vào phân tích",
+                  group: "term",
+                  parent: "qfuture",
+                },
+                {
+                  id: "opp",
+                  label: "Nhớ: opportunity cost luôn relevant",
+                  detail: "Lợi ích bỏ lỡ của phương án tốt nhất bị từ chối — không ghi sổ nhưng phải xét.",
+                  parent: "rel",
+                },
+              ],
+              edges: [
+                { from: "start", to: "qdiff" },
+                { from: "qdiff", to: "irr", label: "Không" },
+                { from: "qdiff", to: "qfuture", label: "Có" },
+                { from: "qfuture", to: "sunk", label: "Không" },
+                { from: "qfuture", to: "rel", label: "Có" },
+                { from: "rel", to: "opp", label: "gồm cả" },
+              ],
+              caption:
+                "Hai câu hỏi lọc: (1) có khác giữa các phương án không, (2) có phải future cost không.",
+            },
           },
           {
             type: "comparison",
