@@ -14,7 +14,7 @@ export const subjects: Subject[] = [
     id: "digital-technology-business",
     title: "Digital Technology in Business",
     subtitle:
-      "Topic 00-08 placeholder. Nội dung sẽ được soạn từ slide môn học và quiz-digi.pdf khi có spec chi tiết.",
+      "Topic 01-08 placeholder. Nội dung sẽ được soạn từ slide môn học và quiz-digi.pdf khi có spec chi tiết.",
     chapters: dtbChapters,
   },
 ];
