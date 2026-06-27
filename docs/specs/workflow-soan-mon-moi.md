@@ -59,6 +59,7 @@ Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`
 5. **Sections s0…sn**: mỗi section ghi rõ LO, danh sách **blocks** cụ thể (loại + nội dung), `keyTerms` (trang Glossary).
 6. **Quiz bank** (≥ số câu mục tiêu): stem+options EN, rationale Cơ chế→Bẫy→Khóa, số VERIFIED.
 7. **Lưu ý thực thi (Codex)**: ràng buộc kind block, không đổi types, mốc số VERIFIED.
+8. **Coverage matrix (Lớp B)**: bảng ma trận phủ `[LO/khái niệm/ví dụ × Có/Thiếu/Sai số]` (xem §6). Lưu **cố định ngay trong spec chương này** (mục cuối) — KHÔNG để riêng trong scratchpad (mất theo session). Đây là bằng chứng "không sót kiến thức" để mở lại khi audit.
 
 ---
 
@@ -67,12 +68,13 @@ Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`
 
 ### Lớp A — Render / kỹ thuật
 - `npx tsc --noEmit` → **PASS** (bắt buộc).
-- Render check Playwright qua `playwright-core` + chromium bundled (binary: `C:/Users/mnhaajt/AppData/Local/ms-playwright/chromium-1228/chrome-win64/chrome.exe`). Script `.mjs` trong scratchpad: sweep page × breakpoint (375/768/1440), check `scrollWidth>clientWidth` (horizontal scroll), `pageerror`, screenshot; graph không bị nhãn cạnh khuất/đè.
+- Render check Playwright qua `playwright-core` + chromium bundled. Binary nằm ở `C:/Users/mnhaajt/AppData/Local/ms-playwright/chromium-*/chrome-win64/chrome.exe` — **số version (`chromium-1228`…) đổi mỗi lần update Playwright**, nên trỏ tới thư mục `chromium-*` mới nhất chứ đừng hardcode số cũ (script gãy nếu version lệch). Script `.mjs` trong scratchpad: sweep page × breakpoint (375/768/1440), check `scrollWidth>clientWidth` (horizontal scroll), `pageerror`, screenshot; graph không bị nhãn cạnh khuất/đè.
 
 ### Lớp B — Completeness ("KHÔNG SÓT kiến thức")
 - Dựng **ma trận phủ**: `[mọi LO + mọi khái niệm/định nghĩa/ví dụ trong slide & sách (gồm Appendix)] × [đã có trong content chưa]`.
 - Mỗi dòng đánh dấu: **Có / Thiếu / Sai số**. Mọi mục **Thiếu** phải bổ sung hoặc Chaliyah duyệt bỏ.
 - Đối chiếu trực tiếp PDF slide + sách ở đường dẫn nguồn (bản trích `.txt` trong scratchpad là tạm, mất theo session → trích lại khi cần).
+- **Lưu ma trận phủ cuối cùng vào spec chương** (§5 mục 8), không để trong scratchpad — đó là bằng chứng durable cho cổng chốt.
 
 ### Cổng chốt
 - Đạt **cả Lớp A + Lớp B** → Claude chuyển `status: "draft" → "ready"`. Chưa đủ → giữ `draft`.
@@ -94,5 +96,5 @@ Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`
 - [ ] `knowledgeMap` + section dùng blocks, ≥1 visual/section, edge label ngắn.
 - [ ] Ngôn ngữ đúng §3 (lý thuyết VI+EN; quiz stem/options EN; rationale VI+EN).
 - [ ] Lớp A verify PASS (tsc + render).
-- [ ] Lớp B completeness: ma trận phủ không còn mục **Thiếu** chưa duyệt.
+- [ ] Lớp B completeness: ma trận phủ không còn mục **Thiếu** chưa duyệt, và đã lưu vào spec chương (§5 mục 8).
 - [ ] `status: "ready"`.
