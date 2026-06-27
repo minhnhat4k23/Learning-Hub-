@@ -26,6 +26,7 @@
 - **KHÔNG bịa** số liệu/diagram/khái niệm. Số ngoài slide phải có timeframe/nguồn.
   Thiếu nguồn → giữ `[CẦN NGUỒN]`, không tự điền.
 - **Rich teaching mode BẮT BUỘC mọi chương/mọi môn** (memory `uu-tien-truc-quan` + `docs/specs/rich-teaching-mode.md`): chương phải có `knowledgeMap`; section dùng `blocks` (diagram flow/mermaid, comparison, calc, formula, callout), KHÔNG prose đặc (bỏ `body` khi đã có `blocks`). Mỗi section ≤1 visual nặng + ≤1 callout (§F). Mọi node `flow` có `detail` + `sectionId`. **Edge label phải NGẮN GỌN** (vd "phân bổ", "khi bán") — nhãn dài hơn khoảng cách 2 node trong graph ngang sẽ bị node che 2 đầu; thuật ngữ đầy đủ để ở `caption`/prose, không nhồi vào edge label (node label dài thì OK, ô tự xuống dòng).
+- **Flow layout: CHỈ `"horizontal"` hoặc `"tree"`, KHÔNG `"radial"`** (radial không được render → dồn 1 hàng chật, cạnh đè/khuất). Hub→nhiều nhánh (≥5) dùng `horizontal` (hub trái, nhánh thành cột phải); phân rã cha→ít con dùng `tree` + set `parent` cho node con. Cạnh quan hệ/cross-link (không phải phân rã hiển nhiên) BẮT BUỘC có nhãn ngắn. Chi tiết: `workflow-soan-mon-moi.md` §4.
 - **Phạm vi tối thiểu:** chỉ thay object đang làm; các object/topic khác giữ nguyên.
 - KHÔNG xóa file / commit / push / đổi cấu trúc thư mục khi chưa được xác nhận.
 - `status` mặc định khi đổ xong = `draft`.

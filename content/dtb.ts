@@ -543,7 +543,7 @@ const topic01: Chapter = {
         flowBlock(
           "s3",
           "Management functions",
-          "radial",
+          "horizontal",
           [
             {
               id: "s3-management",
@@ -695,7 +695,7 @@ const topic01: Chapter = {
         flowBlock(
           "s5",
           "Three dimensions of IS",
-          "radial",
+          "tree",
           [
             {
               id: "s5-is",
@@ -708,6 +708,7 @@ const topic01: Chapter = {
               id: "s5-tech",
               label: "Technology",
               group: "term",
+              parent: "s5-is",
               detail:
                 "Technology cung cấp tools để xử lý, lưu trữ và truyền data.",
             },
@@ -715,6 +716,7 @@ const topic01: Chapter = {
               id: "s5-people",
               label: "People",
               group: "term",
+              parent: "s5-is",
               detail:
                 "People dùng và diễn giải information để làm việc trong organization.",
             },
@@ -722,24 +724,22 @@ const topic01: Chapter = {
               id: "s5-org",
               label: "Organizations",
               group: "term",
+              parent: "s5-is",
               detail:
                 "Organizations đặt mục tiêu, quy trình, cấu trúc và bối cảnh sử dụng IS.",
             },
           ],
           [
-            { from: "s5-is", to: "s5-tech" },
-            { from: "s5-is", to: "s5-people" },
-            { from: "s5-is", to: "s5-org" },
-            { from: "s5-tech", to: "s5-people" },
-            { from: "s5-people", to: "s5-org" },
-            { from: "s5-org", to: "s5-tech" },
+            { from: "s5-is", to: "s5-tech", label: "gồm" },
+            { from: "s5-is", to: "s5-people", label: "gồm" },
+            { from: "s5-is", to: "s5-org", label: "gồm" },
           ],
-          "IS = application of IT to support people working in organizations.",
+          "Information System được tạo bởi 3 chiều: People, Organizations và Technology — thiếu một chiều thì chưa thành IS.",
         ),
         calloutBlock(
           "insight",
-          "IS không chỉ là technology",
-          "Một hệ thống chỉ thành IS khi technology được gắn với people và organization để tạo information hữu ích.",
+          "Ba chiều gắn kết, không rời rạc",
+          "Một hệ thống chỉ thành IS khi technology được gắn với people và organization để tạo information hữu ích. Ba chiều tương tác nhau: technology là công cụ cho people, people vận hành organization, còn organization định hướng technology cần dùng.",
         ),
       ],
       keyTerms: [
@@ -986,7 +986,7 @@ const topic01: Chapter = {
         flowBlock(
           "s9",
           "Good information",
-          "radial",
+          "horizontal",
           [
             {
               id: "s9-good",
@@ -1178,7 +1178,7 @@ const topic01: Chapter = {
         flowBlock(
           "s12",
           "Current technology issues",
-          "radial",
+          "horizontal",
           [
             {
               id: "s12-issues",
@@ -1345,14 +1345,9 @@ const topic01: Chapter = {
           ],
         ),
         calloutBlock(
-          "trap",
-          "Bẫy Carr",
-          "Không phải cứ đầu tư IT là có competitive advantage; khi technology trở thành infrastructural, lợi thế đến từ cách quản trị và sử dụng.",
-        ),
-        calloutBlock(
           "insight",
-          "The future theo Carr",
-          "IT càng modular thì càng dễ innovate. Công ty 'lý tưởng' giữ thái độ hoài nghi với IT — ưu tiên cái rẻ, có sẵn over-the-counter, open source, và có thể outsource. Lợi thế dài hạn nằm ở basic good management, không ở việc sở hữu IT đắt tiền.",
+          "Bẫy Carr & the future",
+          "Không phải cứ đầu tư IT là có competitive advantage; khi technology trở thành infrastructural, lợi thế đến từ cách quản trị và sử dụng. Nhìn về tương lai: IT càng modular càng dễ innovate — công ty 'lý tưởng' hoài nghi IT, ưu tiên cái rẻ, có sẵn over-the-counter, open source, có thể outsource; lợi thế dài hạn nằm ở basic good management, không ở việc sở hữu IT đắt tiền.",
         ),
       ],
       keyTerms: [

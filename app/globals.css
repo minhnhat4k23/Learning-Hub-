@@ -7,6 +7,8 @@
   --flow-edge-label-bg: #f6f8fb;
   --flow-edge-label-border: #c2cad6;
   --flow-edge-label-text: #3a414c;
+  --flow-edge-stroke: #545d6c;
+  --flow-edge-stroke-active: #2c313a;
 }
 
 @theme inline {
@@ -49,6 +51,8 @@
     --flow-edge-label-bg: #1d2027;
     --flow-edge-label-border: #3a414c;
     --flow-edge-label-text: #e2e6ec;
+    --flow-edge-stroke: #97a1b1;
+    --flow-edge-stroke-active: #dbe1ea;
   }
 }
 

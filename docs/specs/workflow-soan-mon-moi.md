@@ -46,6 +46,10 @@
 - **Mỗi chương BẮT BUỘC có `knowledgeMap`** (graph tổng quan LO + khái niệm; engine `flow`).
 - **Section dùng `blocks` là chính, KHÔNG prose đặc.** Ưu tiên: `diagram` (engine `flow` = React Flow tương tác, hoặc `mermaid`), `comparison` (bảng so sánh), `calc` (walkthrough tính), `formula`, `callout` (insight/trap/key). Mỗi section nên có **≥1 visual block**.
 - **Nhãn cạnh (edge label) phải NGẮN GỌN** (vd "price var.", "activity var.", "phân bổ"). Nhãn dài hơn khoảng cách 2 node trong graph ngang sẽ bị node che → đặt thuật ngữ đầy đủ ở `prose`/`caption`, KHÔNG nhồi vào edge label. Node label dài thì OK (ô tự xuống dòng nhờ `max-w`).
+- **Layout flow — CHỈ dùng `"horizontal"` hoặc `"tree"`, TUYỆT ĐỐI KHÔNG `"radial"`.** Renderer (`FlowDiagram.tsx`) không hỗ trợ `radial` → nó rơi về một hàng ngang chật, các cạnh đè/khuất, nhãn bị node che (lỗi đã gặp & sửa ở Topic 01 DTB: s3/s5/s9/s12). Chọn layout theo hình quan hệ:
+  - **`"horizontal"`** — chuỗi/tiến trình `A→B→C`, HOẶC hub→nhiều nhánh (≥5 con): renderer tự xếp hub bên trái, các nhánh thành cột dọc bên phải. Không cần `parent`.
+  - **`"tree"`** — phân rã cha→ít con (≤4), cha ở trên / các con bên dưới. **PHẢI set `parent: "<id-cha>"` cho mỗi node con** (không thì cả cụm dồn về 1 hàng như `radial`).
+- **Mỗi cạnh phải có nghĩa đọc được.** Cạnh phân rã cha→con (hub→nhánh) thì cấu trúc đã ngụ ý "gồm" → không cần nhãn. Nhưng **cạnh quan hệ/tương tác (cross-link, vòng lặp) BẮT BUỘC có nhãn ngắn** nói rõ quan hệ (vd "gồm", "công cụ cho", "định hướng"); cạnh không nhãn mà KHÔNG phải phân rã hiển nhiên = người học không hiểu ý. ĐỪNG vẽ vòng quan hệ nhiều-nhiều không nhãn (vd tam giác Tech↔People↔Org) — hoặc gán nhãn từng cạnh, hoặc đưa giải thích vào `caption`/callout và giữ graph ở dạng phân rã sạch. `caption` nên nói **cách đọc** graph khi quan hệ không hiển nhiên.
 - KHÔNG sửa `content/types.ts` khi không cần.
 
 ---
@@ -94,6 +98,7 @@ Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`
 - [ ] Spec chương đủ 7 mục (§5), mọi số `VERIFIED` + nguồn.
 - [ ] Appendix (nếu có) đã đưa vào.
 - [ ] `knowledgeMap` + section dùng blocks, ≥1 visual/section, edge label ngắn.
+- [ ] Flow layout chỉ `horizontal`/`tree` (KHÔNG `radial`); cạnh quan hệ/cross-link đều có nhãn; `tree` đã set `parent` cho node con.
 - [ ] Ngôn ngữ đúng §3 (lý thuyết VI+EN; quiz stem/options EN; rationale VI+EN).
 - [ ] Lớp A verify PASS (tsc + render).
 - [ ] Lớp B completeness: ma trận phủ không còn mục **Thiếu** chưa duyệt, và đã lưu vào spec chương (§5 mục 8).

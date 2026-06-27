@@ -28,7 +28,7 @@
 | 19 | Technological issues today — 8 mục (Size…Rapid decline cost/perf) (s26) | s12 | ✅ Có |
 | 20 | **Carr "Does IT matter?" (2005) — Yes args: ubiquitous, dominant capex, prerequisite survival, boost productivity; nhưng superior profitability?** (s27) | s13 flow "Carr's argument" node `carr-ubi`→`carr-mgmt` | ✅ Có (bổ sung) |
 | 21 | Proprietary vs Infrastructural technology (s28) | s13 comparison | ✅ Có |
-| 22 | **Carr "The future" — IT modular→innovate; ideal company sceptical (cheap/OTC/open-source/outsource); basic good management = future advantage** (s29) | s13 callout "The future theo Carr" | ✅ Có (bổ sung) |
+| 22 | **Carr "The future" — IT modular→innovate; ideal company sceptical (cheap/OTC/open-source/outsource); basic good management = future advantage** (s29) | s13 callout "Bẫy Carr & the future" | ✅ Có (bổ sung) |
 | 23 | Computer — electronic device, instructions in memory; Input→Processing→Output (s31) | s14 flow "processing model" | ✅ Có |
 | 24 | Computers & mobile devices — laptop/tablet/desktop, server/terminal, smartphone/wearable, game, embedded (s32–34) | s14 | ✅ Có |
 | 25 | Terminal (limited power, POS/ATM), Supercomputer, Cloud computing (s34–36) | s14 keyTerms Terminal, Cloud computing | ✅ Có |

@@ -14,6 +14,7 @@ import {
   BaseEdge,
   Controls,
   Handle,
+  MarkerType,
   Position,
   ReactFlow,
   getBezierPath,
@@ -178,9 +179,11 @@ function TeachingEdge({
       interactionWidth={interactionWidth}
       className={animated ? "animated" : undefined}
       style={{
-        stroke: related ? "#52525b" : "#a1a1aa",
-        strokeWidth: related ? 2 : 1,
-        opacity: muted ? 0.2 : 1,
+        stroke: related
+          ? "var(--flow-edge-stroke-active)"
+          : "var(--flow-edge-stroke)",
+        strokeWidth: related ? 2.5 : 1.75,
+        opacity: muted ? 0.25 : 1,
         transition: "opacity 150ms ease, stroke 150ms ease, stroke-width 150ms ease",
       }}
       labelStyle={{
@@ -203,7 +206,15 @@ const nodeTypes: NodeTypes = { teaching: TeachingNode };
 const edgeTypes: EdgeTypes = { teaching: TeachingEdge };
 const fitViewOptions: FitViewOptions = { padding: 0.15 };
 const proOptions = { hideAttribution: true };
-const defaultEdgeOptions = { type: "teaching" };
+const defaultEdgeOptions = {
+  type: "teaching",
+  markerEnd: {
+    type: MarkerType.ArrowClosed,
+    width: 18,
+    height: 18,
+    color: "#6f7888",
+  },
+};
 
 function buildChildren(nodes: ContentFlowNode[]) {
   const children = new Map<string, string[]>();
