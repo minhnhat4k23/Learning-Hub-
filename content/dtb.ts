@@ -1876,6 +1876,2201 @@ const topic01: Chapter = {
     "Digital Technology in Business slides Topic 01 (Introduction to CBIS) + quiz-digi.pdf.",
 };
 
+const topic02: Chapter = {
+  slug: "topic-02",
+  order: 2,
+  title: "Topic 02 — Computer Hardware & Software",
+  bigIdea:
+    "Bạn — future business manager — không chế tạo máy tính, nhưng bạn quyết định mua/nâng cấp (câu hỏi $20,000 cho phòng ban). Hardware + Software + Data chính là mặt Technology của five-component IS ở Topic 01. Hiểu HW (Moore's Law: faster–cheaper–smaller–greater capacity) và SW (từ machine language → OS → applications, và các cách phân phối software) giúp bạn ra quyết định đầu tư IT tốt hơn: biết cái gì đáng tiền, cái gì sắp lỗi thời, cái gì 'free' mà vẫn có chi phí ẩn.",
+  learningObjectives: [
+    "Đặt Hardware/Software/Data trong ICT framework và nối lại với five-component IS (Topic 01).",
+    "Diễn giải brief history + Moore's Law và hệ quả kinh tế (faster, cheaper, smaller, greater capacity; cost of data processing → ~0).",
+    "Phân loại secondary storage (HDD / SSD / optical) theo các tiêu chí: capacity, cost, access speed, interface, media, portability, removability.",
+    "Mô tả system unit: CPU = control unit + ALU; machine cycle; cache (L1/L2/L3); bus — và 4 yếu tố quyết định performance.",
+    "Phân biệt memory: RAM vs ROM, volatile vs non-volatile, EEPROM; đơn vị lưu trữ (bit/byte, KB/MB/GB/TB).",
+    "Nhận diện input / output / communications devices chính.",
+    "Phân biệt machine / assembly / high-level language; compiler vs interpreter.",
+    "Giải thích OS là gì + các chức năng (UI: GUI vs CLI; manage programs; manage memory/virtual memory; coordinate tasks; tools) và types of OS (desktop / server / mobile).",
+    "Phân loại programs & apps + các hình thức phân phối software (retail / custom / freeware / shareware / open source / public domain / web app); nhận diện productivity, graphics/media, communications apps, security & system tools.",
+  ],
+  knowledgeMap: {
+    engine: "flow",
+    layout: "tree",
+    collapsible: true,
+    caption:
+      "5 nhóm chủ đề (Hardware + Software); bấm từng chip để mở chi tiết và nhảy tới phần học.",
+    nodes: [
+      {
+        id: "hwsw",
+        label: "Hardware & Software",
+        group: "concept",
+        sectionId: "s0",
+        detail:
+          "HW + SW + Data = mặt Technology của five-component IS; bạn ra quyết định đầu tư IT (câu hỏi $20,000).",
+      },
+
+      {
+        id: "g-found",
+        label: "Nền tảng & lịch sử",
+        group: "concept",
+        sectionId: "s0",
+        parent: "hwsw",
+        detail: "ICT framework, lịch sử, Moore's Law.",
+      },
+      {
+        id: "g-core",
+        label: "Lưu trữ & xử lý",
+        group: "concept",
+        sectionId: "s3",
+        parent: "hwsw",
+        detail: "Secondary storage, CPU, memory, performance.",
+      },
+      {
+        id: "g-io",
+        label: "Nhập / Xuất",
+        group: "concept",
+        sectionId: "s7",
+        parent: "hwsw",
+        detail: "Input, output, communications devices.",
+      },
+      {
+        id: "g-sys",
+        label: "Ngôn ngữ & hệ điều hành",
+        group: "concept",
+        sectionId: "s9",
+        parent: "hwsw",
+        detail: "Computer language, compiler/interpreter, OS.",
+      },
+      {
+        id: "g-app",
+        label: "Phần mềm ứng dụng",
+        group: "concept",
+        sectionId: "s12",
+        parent: "hwsw",
+        detail: "Phân phối software, loại ứng dụng, security tools.",
+      },
+
+      {
+        id: "c-ict",
+        label: "ICT framework",
+        group: "term",
+        parent: "g-found",
+        sectionId: "s0",
+        detail: "HW + SW + Data = mặt Technology của five-component IS.",
+      },
+      {
+        id: "c-hist",
+        label: "History & Moore's Law",
+        group: "term",
+        parent: "g-found",
+        sectionId: "s1",
+        detail:
+          "ENIAC 1946; transistor gấp đôi mỗi 24 tháng; cost of data processing → 0.",
+      },
+      {
+        id: "c-hwmap",
+        label: "Bức tranh phần cứng",
+        group: "term",
+        parent: "g-found",
+        sectionId: "s2",
+        detail: "4 nhóm chức năng: nhập, xử lý, xuất, lưu/truyền.",
+      },
+
+      {
+        id: "c-storage",
+        label: "Secondary storage",
+        group: "term",
+        parent: "g-core",
+        sectionId: "s3",
+        detail: "HDD / SSD / optical; EEPROM; các tiêu chí đánh giá.",
+      },
+      {
+        id: "c-cpu",
+        label: "System unit / CPU",
+        group: "term",
+        parent: "g-core",
+        sectionId: "s4",
+        detail: "Control unit + ALU; machine cycle; cache L1/L2/L3.",
+      },
+      {
+        id: "c-mem",
+        label: "Memory",
+        group: "term",
+        parent: "g-core",
+        sectionId: "s5",
+        detail: "RAM/ROM; volatile/non-volatile; bit/byte.",
+      },
+      {
+        id: "c-perf",
+        label: "Performance",
+        group: "term",
+        parent: "g-core",
+        sectionId: "s6",
+        detail: "4 yếu tố: processor, RAM, bus, cache.",
+      },
+
+      {
+        id: "c-in",
+        label: "Input devices",
+        group: "term",
+        parent: "g-io",
+        sectionId: "s7",
+        detail: "Keyboard, pointing, scanners OCR/OMR/RFID/MICR.",
+      },
+      {
+        id: "c-out",
+        label: "Output & comms",
+        group: "term",
+        parent: "g-io",
+        sectionId: "s8",
+        detail: "Display, printer; modem, router, NIC.",
+      },
+
+      {
+        id: "c-lang",
+        label: "Computer language",
+        group: "term",
+        parent: "g-sys",
+        sectionId: "s9",
+        detail: "Machine → assembly → HLL.",
+      },
+      {
+        id: "c-comp",
+        label: "Compiler vs Interpreter",
+        group: "term",
+        parent: "g-sys",
+        sectionId: "s9b",
+        detail: "Dịch trước (compiler) vs dịch từng dòng (interpreter).",
+      },
+      {
+        id: "c-os",
+        label: "Operating systems",
+        group: "term",
+        parent: "g-sys",
+        sectionId: "s10",
+        detail: "Chức năng OS; GUI/CLI; virtual memory/paging.",
+      },
+      {
+        id: "c-ostypes",
+        label: "Types of OS",
+        group: "term",
+        parent: "g-sys",
+        sectionId: "s11",
+        detail: "Desktop / server / mobile; open vs proprietary.",
+      },
+
+      {
+        id: "c-dist",
+        label: "Programs & distribution",
+        group: "term",
+        parent: "g-app",
+        sectionId: "s12",
+        detail:
+          "Retail/custom/freeware/shareware/open source/public domain.",
+      },
+      {
+        id: "c-cat",
+        label: "App categories",
+        group: "term",
+        parent: "g-app",
+        sectionId: "s13",
+        detail: "Productivity / graphics & media / communications.",
+      },
+      {
+        id: "c-sec",
+        label: "Security & tools",
+        group: "term",
+        parent: "g-app",
+        sectionId: "s14",
+        detail: "Firewall, antivirus; disk/file/system tools.",
+      },
+      {
+        id: "c-syn",
+        label: "Tổng kết: câu hỏi $20,000",
+        group: "concept",
+        parent: "g-app",
+        sectionId: "s15",
+        detail: "HW + SW + Data + Network = quyết định đầu tư IT.",
+      },
+    ],
+    edges: [
+      { from: "hwsw", to: "g-found" },
+      { from: "hwsw", to: "g-core" },
+      { from: "hwsw", to: "g-io" },
+      { from: "hwsw", to: "g-sys" },
+      { from: "hwsw", to: "g-app" },
+      { from: "g-found", to: "c-ict" },
+      { from: "g-found", to: "c-hist" },
+      { from: "g-found", to: "c-hwmap" },
+      { from: "g-core", to: "c-storage" },
+      { from: "g-core", to: "c-cpu" },
+      { from: "g-core", to: "c-mem" },
+      { from: "g-core", to: "c-perf" },
+      { from: "g-io", to: "c-in" },
+      { from: "g-io", to: "c-out" },
+      { from: "g-sys", to: "c-lang" },
+      { from: "g-sys", to: "c-comp" },
+      { from: "g-sys", to: "c-os" },
+      { from: "g-sys", to: "c-ostypes" },
+      { from: "g-app", to: "c-dist" },
+      { from: "g-app", to: "c-cat" },
+      { from: "g-app", to: "c-sec" },
+      { from: "g-app", to: "c-syn" },
+    ],
+  },
+  sections: [
+    {
+      id: "s0",
+      heading: "ICT framework & câu hỏi $20,000",
+      blocks: [
+        comparisonBlock(
+          "ICT framework — 3 mảnh",
+          ["", "Hardware", "Software", "Data"],
+          [
+            {
+              label: "Định nghĩa",
+              cells: [
+                "Thiết bị hữu hình: input, output, secondary storage, processing, communications devices",
+                "Chỉ thị bảo hardware làm gì",
+                "Số/thông tin mà software dẫn dắt máy tác động lên",
+              ],
+            },
+            {
+              label: "Ví dụ",
+              cells: [
+                "Keyboard, CPU, HDD, modem",
+                "OS, Word, Chrome",
+                "File văn bản, database record, ảnh",
+              ],
+            },
+            {
+              label: "Communications layer",
+              cells: [
+                "Cable, modem, network card, router",
+                "Chỉ thị cho thiết bị truyền",
+                "Thông tin truyền giữa các máy",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "key",
+          "Nối lại với Topic 01",
+          "HW/SW/Data chính là mặt Technology của five-component IS (Hardware – Software – Data – People – Procedures). Là business manager, bạn không lắp máy — nhưng bạn quyết định chi $20,000 cho phòng ban: mua gì, nâng cấp gì, và khi nào. Hiểu ICT framework = biết đặt câu hỏi đúng trước khi ký hợp đồng.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Hardware",
+          definition:
+            "Thiết bị vật lý hữu hình của hệ thống máy tính: input, output, secondary storage, processing và communications devices.",
+        },
+        {
+          term: "Software",
+          definition:
+            "Tập hợp chỉ thị (instructions) bảo phần cứng thực hiện các tác vụ cụ thể.",
+        },
+        {
+          term: "Data",
+          definition:
+            "Số liệu/thông tin thô mà hệ thống máy tính tiếp nhận, xử lý và lưu trữ.",
+        },
+        {
+          term: "ICT framework",
+          definition:
+            "Khung phân loại công nghệ thông tin gồm Hardware, Software và Data (cùng communications layer).",
+        },
+      ],
+    },
+    {
+      id: "s1",
+      heading: "Brief history & Moore's Law",
+      blocks: [
+        flowBlock(
+          "s1",
+          "Từ mainframe đến hậu-2010",
+          "horizontal",
+          [
+            {
+              id: "s1_main",
+              label: "Mainframe",
+              group: "concept",
+              detail:
+                "1950s: ENIAC (Feb 1946, ~17,000 vacuum tubes, ~30 tons, 150 kW), UNIVAC I (~1955), IBM mainframe (1957).",
+            },
+            {
+              id: "s1_pc",
+              label: "Rise of PC",
+              group: "concept",
+              detail: "1960s–1980s: máy tính cá nhân; xử lý phân tán.",
+            },
+            {
+              id: "s1_cs",
+              label: "Client/Server",
+              group: "concept",
+              detail: "1990s: client (máy trạm) + server kết nối mạng.",
+            },
+            {
+              id: "s1_hosted",
+              label: "Hosted",
+              group: "concept",
+              detail: "2000s: dịch vụ đặt thuê, cloud đầu tiên.",
+            },
+            {
+              id: "s1_beyond",
+              label: "Beyond 2010",
+              group: "concept",
+              detail: "Cloud, mobile, IoT; điện toán phân tán toàn cầu.",
+            },
+          ],
+          [
+            { from: "s1_main", to: "s1_pc" },
+            { from: "s1_pc", to: "s1_cs" },
+            { from: "s1_cs", to: "s1_hosted" },
+            { from: "s1_hosted", to: "s1_beyond" },
+          ],
+          "Chuỗi eras phản ánh Moore's Law: mỗi giai đoạn máy nhỏ hơn, rẻ hơn, mạnh hơn.",
+        ),
+        calloutBlock(
+          "insight",
+          "Moore's Law & ý nghĩa kinh tế",
+          "Số transistor trên chip gấp đôi mỗi 24 tháng → bốn hệ quả: faster/more powerful · greater capacity · smaller/more efficient · cheaper. Hệ quả business quan trọng nhất: cost of data processing tiến gần 0. Giới hạn tương lai: kích thước nguyên tử, quản lý nhiệt. Minh chứng: Samsung đạt tiến trình 3 nm (January 2019).",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "ENIAC",
+          definition:
+            "Electronic Numerical Integrator and Computer — máy tính điện tử đầu tiên, vận hành lần đầu February 1946; ~17,000 vacuum tubes, ~1,800 sq ft, ~30 tons, 150 kW, 5,000 cycles/second.",
+        },
+        {
+          term: "Moore's Law",
+          definition:
+            "Quan sát của Gordon Moore (1965): số transistor trên chip gấp đôi khoảng mỗi 24 tháng, dẫn đến tăng hiệu năng và giảm chi phí liên tục.",
+        },
+        {
+          term: "transistor",
+          definition:
+            "Linh kiện bán dẫn siêu nhỏ dùng để khuếch đại/chuyển đổi tín hiệu điện; nền tảng của mọi chip hiện đại.",
+        },
+      ],
+      examples: [
+        {
+          title: "ENIAC (1946)",
+          body: "Máy tính điện tử đầu tiên chạy thực tế vào February 1946: sử dụng ~17,000 vacuum tubes, chiếm ~1,800 square feet (~167 m²), nặng ~30 tons, tiêu thụ 150 kW điện, tốc độ ~5,000 cycles/second.",
+          meaning:
+            "ENIAC là điểm khởi đầu của kỷ nguyên máy tính điện tử; mọi tiến bộ sau đó đều quy về xu hướng Moore's Law.",
+        },
+      ],
+    },
+    {
+      id: "s2",
+      heading: "Computer hardware: bức tranh tổng",
+      blocks: [
+        flowBlock(
+          "s2",
+          "Sơ đồ phần cứng cơ bản",
+          "horizontal",
+          [
+            {
+              id: "s2_input",
+              label: "Input devices",
+              group: "concept",
+              detail:
+                "Keyboard, mouse, scanner, microphone — chuyển dữ liệu/lệnh vào system unit.",
+            },
+            {
+              id: "s2_cpu",
+              label: "System unit (CPU)",
+              group: "concept",
+              detail:
+                "Trung tâm xử lý: nhận dữ liệu từ input, xử lý theo SW, gửi kết quả ra output/storage.",
+            },
+            {
+              id: "s2_output",
+              label: "Output devices",
+              group: "concept",
+              detail: "Monitor, printer, speaker — trình bày kết quả xử lý.",
+            },
+            {
+              id: "s2_storage",
+              label: "Secondary storage",
+              group: "concept",
+              detail: "HDD, SSD, optical — lưu dữ liệu lâu dài (non-volatile).",
+            },
+            {
+              id: "s2_network",
+              label: "Network/Comms",
+              group: "concept",
+              detail:
+                "Modem, router, NIC — kết nối với máy khác và Internet.",
+            },
+          ],
+          [
+            { from: "s2_input", to: "s2_cpu", label: "nhập" },
+            { from: "s2_cpu", to: "s2_output", label: "xuất" },
+            { from: "s2_cpu", to: "s2_storage", label: "lưu/đọc" },
+            { from: "s2_cpu", to: "s2_network", label: "truyền" },
+          ],
+          "Mọi thiết bị phần cứng thuộc 1 trong 4 nhóm chức năng: nhập, xử lý, xuất, lưu/truyền.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "system unit",
+          definition:
+            "Vỏ máy chứa các thành phần xử lý chính: motherboard, CPU, RAM, power supply.",
+        },
+        {
+          term: "peripheral",
+          definition:
+            "Thiết bị ngoại vi kết nối với system unit: keyboard, mouse, monitor, printer, v.v.",
+        },
+      ],
+    },
+    {
+      id: "s3",
+      heading: "Secondary storage: HDD vs SSD vs Optical",
+      blocks: [
+        comparisonBlock(
+          "So sánh thiết bị lưu trữ thứ cấp",
+          ["Tiêu chí", "HDD", "SSD", "Optical (CD/DVD/Blu-ray)"],
+          [
+            {
+              label: "Cơ chế",
+              cells: [
+                "Đĩa kim loại quay, đầu đọc từ; dữ liệu = binary polarity",
+                "EEPROM flash, không bộ phận chuyển động",
+                "Phản xạ ánh sáng laser đọc vết pit/land",
+              ],
+            },
+            {
+              label: "Tốc độ truy cập",
+              cells: [
+                "Chậm hơn SSD (bộ phận cơ học)",
+                "Nhanh nhất",
+                "Chậm nhất",
+              ],
+            },
+            {
+              label: "Chi phí/GB",
+              cells: [
+                "Rẻ nhất",
+                "Đắt hơn HDD",
+                "Rẻ, nhưng dung lượng mỗi đĩa thấp",
+              ],
+            },
+            {
+              label: "Độ bền (va đập)",
+              cells: [
+                "Dễ hỏng (đầu đọc cơ học)",
+                "Bền, không bộ phận chuyển động",
+                "Dễ trầy xước",
+              ],
+            },
+            {
+              label: "Dung lượng điển hình",
+              cells: ["500 GB – 4 TB", "[CẦN NGUỒN]", "[CẦN NGUỒN]"],
+            },
+            {
+              label: "Tính di động",
+              cells: [
+                "Có (external HDD)",
+                "Có (USB flash, external SSD)",
+                "Có (đĩa rời)",
+              ],
+            },
+            {
+              label: "Interface",
+              cells: ["SATA, USB", "SATA, NVMe, USB", "SATA, USB (external)"],
+            },
+          ],
+        ),
+        calloutBlock(
+          "note",
+          "EEPROM — nền tảng SSD/USB flash",
+          "EEPROM (Electrically Erasable Programmable Read-Only Memory) là loại non-volatile memory có thể xoá và ghi lại bằng điện. SSD và USB flash drive đều xây trên EEPROM. SSHD (Solid State Hybrid Drive) = ổ kết hợp HDD + SSD cache nhỏ — cân bằng giữa giá và tốc độ.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "HDD",
+          definition:
+            "Hard Disk Drive — ổ đĩa cứng dùng đĩa kim loại quay và đầu đọc từ để lưu dữ liệu.",
+        },
+        {
+          term: "SSD",
+          definition:
+            "Solid State Drive — ổ lưu trữ dùng EEPROM flash, không bộ phận chuyển động; nhanh hơn và bền hơn HDD khi va đập.",
+        },
+        {
+          term: "optical drive",
+          definition:
+            "Ổ đĩa quang đọc/ghi dữ liệu bằng tia laser trên đĩa CD/DVD/Blu-ray.",
+        },
+        {
+          term: "EEPROM",
+          definition:
+            "Electrically Erasable Programmable ROM — non-volatile memory có thể xoá và ghi lại bằng tín hiệu điện; nền tảng của SSD và USB flash.",
+        },
+        {
+          term: "SSHD",
+          definition:
+            "Solid State Hybrid Drive — ổ kết hợp HDD (lưu trữ lớn) + SSD cache nhỏ (tăng tốc truy cập dữ liệu thường dùng).",
+        },
+      ],
+    },
+    {
+      id: "s4",
+      heading: "System unit: CPU, machine cycle, cache",
+      blocks: [
+        flowBlock(
+          "s4",
+          "Machine cycle",
+          "horizontal",
+          [
+            {
+              id: "s4_fetch",
+              label: "Fetch",
+              group: "concept",
+              detail:
+                "Control unit lấy instruction từ RAM (hoặc cache) vào register.",
+            },
+            {
+              id: "s4_decode",
+              label: "Decode",
+              group: "concept",
+              detail:
+                "Control unit giải mã instruction để xác định tác vụ cần thực hiện.",
+            },
+            {
+              id: "s4_execute",
+              label: "Execute",
+              group: "concept",
+              detail:
+                "ALU thực hiện phép tính/so sánh; hoặc control unit điều phối tác vụ khác.",
+            },
+            {
+              id: "s4_store",
+              label: "Store",
+              group: "concept",
+              detail:
+                "Kết quả ghi lại vào RAM hoặc register; chu kỳ tiếp theo bắt đầu.",
+            },
+          ],
+          [
+            { from: "s4_fetch", to: "s4_decode" },
+            { from: "s4_decode", to: "s4_execute" },
+            { from: "s4_execute", to: "s4_store" },
+          ],
+          "Fetch → Decode → Execute → Store: một machine cycle hoàn chỉnh. CPU thực hiện hàng tỷ chu kỳ mỗi giây.",
+        ),
+        calloutBlock(
+          "key",
+          "Cache & độ trễ",
+          "Cache là bộ nhớ nhỏ, cực nhanh nằm ngay trong/gần CPU — giảm thời gian chờ khi fetch instruction/data so với RAM. Đa cấp: L1 (nhỏ nhất, nhanh nhất, gần core nhất), L2, L3. Fetch từ L3 lâu gấp ~10 lần so với L1. Mục tiêu: giữ data 'hot' ở L1 để CPU không phải chờ RAM.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "CPU",
+          definition:
+            "Central Processing Unit — bộ xử lý trung tâm; gồm control unit và ALU.",
+        },
+        {
+          term: "control unit",
+          definition:
+            "Thành phần của CPU điều phối hầu hết các hoạt động: fetch, decode, điều phối execute và store.",
+        },
+        {
+          term: "ALU",
+          definition:
+            "Arithmetic/Logic Unit — thực hiện phép toán số học (cộng/trừ/nhân/chia) và phép so sánh logic.",
+        },
+        {
+          term: "machine cycle",
+          definition:
+            "Một vòng lặp cơ bản của CPU: Fetch → Decode → Execute → Store.",
+        },
+        {
+          term: "cache",
+          definition:
+            "Bộ nhớ nhỏ, tốc độ cao gắn trong/gần CPU; lưu tạm instruction và data hay dùng để giảm độ trễ truy cập RAM.",
+        },
+        {
+          term: "bus",
+          definition:
+            "Đường dẫn dữ liệu nội bộ kết nối CPU, RAM, và các thiết bị; tốc độ và độ rộng bus ảnh hưởng performance.",
+        },
+      ],
+    },
+    {
+      id: "s5",
+      heading: "Memory & đơn vị lưu trữ",
+      blocks: [
+        comparisonBlock(
+          "Phân loại memory",
+          ["Tiêu chí", "RAM", "ROM", "EEPROM"],
+          [
+            {
+              label: "Volatile / Non-volatile",
+              cells: [
+                "Volatile (dynamic) — mất dữ liệu khi mất điện",
+                "Non-volatile (static) — giữ dữ liệu khi mất điện",
+                "Non-volatile — giữ dữ liệu khi mất điện",
+              ],
+            },
+            {
+              label: "Ghi lại được?",
+              cells: [
+                "Có (read/write tự do)",
+                "Không (chỉ đọc)",
+                "Có (xoá/ghi bằng điện)",
+              ],
+            },
+            {
+              label: "Vai trò",
+              cells: [
+                "Bộ nhớ làm việc chính; chứa OS, apps, data đang chạy. Điển hình 4–8 GB.",
+                "Chứa firmware, boot instructions (BIOS/UEFI); nhà sản xuất ghi sẵn.",
+                "Flash drive, SSD; lưu trữ lâu dài có thể ghi lại.",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "trap",
+          "Static/Dynamic ≠ trực giác",
+          "Dễ nhầm: 'Static RAM' (SRAM) ≠ non-volatile. Static ở đây chỉ nghĩa là không cần refresh liên tục — SRAM vẫn volatile (mất khi mất điện). 'Dynamic RAM' (DRAM) cần refresh liên tục. Non-volatile mới = giữ khi mất điện (ROM, EEPROM). RAM 4–8 GB điển hình; byte = 8 bit; KB (thousands) / MB (millions) / GB (billions) / TB (trillions).",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "RAM",
+          definition:
+            "Random Access Memory — bộ nhớ làm việc chính, volatile; nội dung bị xoá khi tắt máy.",
+        },
+        {
+          term: "ROM",
+          definition:
+            "Read-Only Memory — bộ nhớ chỉ đọc, non-volatile; chứa firmware được nhà sản xuất ghi sẵn.",
+        },
+        {
+          term: "volatile",
+          definition:
+            "Tính chất mất dữ liệu khi mất nguồn điện (đặc trưng của RAM).",
+        },
+        {
+          term: "non-volatile",
+          definition:
+            "Tính chất giữ dữ liệu khi mất nguồn điện (ROM, EEPROM, HDD, SSD).",
+        },
+        {
+          term: "bit",
+          definition: "Đơn vị thông tin nhỏ nhất: giá trị 0 hoặc 1.",
+        },
+        {
+          term: "byte",
+          definition:
+            "Nhóm 8 bit; đơn vị lưu trữ cơ bản. 1 KB ≈ 1,000 bytes; 1 MB ≈ 1,000,000 bytes; 1 GB ≈ 1 tỷ bytes; 1 TB ≈ 1 nghìn tỷ bytes.",
+        },
+      ],
+    },
+    {
+      id: "s6",
+      heading: "Yếu tố quyết định performance",
+      blocks: [
+        flowBlock(
+          "s6",
+          "4 yếu tố performance",
+          "horizontal",
+          [
+            {
+              id: "s6_hub",
+              label: "System performance",
+              group: "concept",
+              detail:
+                "Tổng thể hiệu năng hệ thống — bị chi phối bởi 4 yếu tố phần cứng.",
+            },
+            {
+              id: "s6_proc",
+              label: "Processor speed",
+              group: "concept",
+              detail:
+                "Clock speed (GHz) — số chu kỳ máy/giây; cao hơn = nhanh hơn nhưng sinh nhiệt nhiều hơn.",
+            },
+            {
+              id: "s6_ram",
+              label: "RAM speed & capacity",
+              group: "concept",
+              detail:
+                "Nhiều RAM → chứa được nhiều apps đồng thời; RAM nhanh → CPU không phải chờ.",
+            },
+            {
+              id: "s6_bus",
+              label: "Bus speed & width",
+              group: "concept",
+              detail:
+                "Bus rộng (bits/lần) và nhanh (MHz) → truyền nhiều dữ liệu hơn mỗi chu kỳ.",
+            },
+            {
+              id: "s6_cache",
+              label: "Cache capacity & speed",
+              group: "concept",
+              detail:
+                "Cache lớn hơn = ít phải đọc RAM hơn; giảm bottleneck giữa CPU và RAM.",
+            },
+          ],
+          [
+            { from: "s6_hub", to: "s6_proc" },
+            { from: "s6_hub", to: "s6_ram" },
+            { from: "s6_hub", to: "s6_bus" },
+            { from: "s6_hub", to: "s6_cache" },
+          ],
+        ),
+        calloutBlock(
+          "insight",
+          "Tradeoffs — 'other things are never equal'",
+          "Thiết kế/chọn mua máy tính là bài toán đánh đổi: CPU nhanh hơn → sinh nhiệt nhiều hơn; RAM nhiều hơn → tiêu điện hơn; bus rộng hơn → bo mạch phức tạp hơn. Hiểu 4 yếu tố này giúp bạn đặt câu hỏi đúng khi phê duyệt ngân sách IT: 'Bottleneck của chúng ta nằm ở đâu?'",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "clock speed",
+          definition:
+            "Tốc độ xung nhịp của CPU (Hz/GHz) — số machine cycles thực hiện được mỗi giây.",
+        },
+        {
+          term: "bus",
+          definition:
+            "Đường dẫn dữ liệu kết nối các thành phần; đặc trưng bởi tốc độ và độ rộng (số bit truyền mỗi lần).",
+        },
+        {
+          term: "cache",
+          definition:
+            "Bộ nhớ siêu nhanh gần CPU; L1/L2/L3; tăng dung lượng cache giảm thời gian chờ RAM.",
+        },
+      ],
+    },
+    {
+      id: "s7",
+      heading: "Input devices",
+      blocks: [
+        flowBlock(
+          "s7",
+          "Các nhóm input device",
+          "horizontal",
+          [
+            {
+              id: "s7_hub",
+              label: "Input",
+              group: "concept",
+              detail:
+                "Thiết bị nhập chuyển dữ liệu/lệnh từ người dùng hoặc môi trường vào system unit.",
+            },
+            {
+              id: "s7_key",
+              label: "Keyboard",
+              group: "concept",
+              detail:
+                "Ergonomic keyboard giảm chấn thương; nhập ký tự và lệnh.",
+            },
+            {
+              id: "s7_point",
+              label: "Pointing / Touch",
+              group: "concept",
+              detail:
+                "Mouse, touchpad, trackball; touch screen, pen/stylus, graphics tablet.",
+            },
+            {
+              id: "s7_motion",
+              label: "Motion/Voice/Video",
+              group: "concept",
+              detail:
+                "Gesture recognition, speech recognition, webcam, videoconference camera.",
+            },
+            {
+              id: "s7_scan",
+              label: "Scanners & readers",
+              group: "concept",
+              detail:
+                "Flatbed scanner, OCR (text), OMR (bubbles), bar code/QR, RFID (radio), magstripe, MICR (ngân hàng).",
+            },
+          ],
+          [
+            { from: "s7_hub", to: "s7_key" },
+            { from: "s7_hub", to: "s7_point" },
+            { from: "s7_hub", to: "s7_motion" },
+            { from: "s7_hub", to: "s7_scan" },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "input",
+          definition:
+            "Dữ liệu hoặc lệnh nhập vào máy tính từ người dùng hoặc thiết bị ngoại vi.",
+        },
+        {
+          term: "OCR",
+          definition:
+            "Optical Character Recognition — nhận dạng ký tự in/viết bằng ánh sáng quét.",
+        },
+        {
+          term: "OMR",
+          definition:
+            "Optical Mark Recognition — đọc dấu chì/mực trên phiếu trắc nghiệm, phiếu điều tra.",
+        },
+        {
+          term: "RFID",
+          definition:
+            "Radio Frequency Identification — nhận diện đối tượng qua sóng radio không tiếp xúc; dùng trong logistics, thẻ từ.",
+        },
+        {
+          term: "MICR",
+          definition:
+            "Magnetic Ink Character Recognition — đọc ký tự mực từ tính; dùng trên séc ngân hàng.",
+        },
+        {
+          term: "voice recognition",
+          definition:
+            "Công nghệ nhận dạng giọng nói chuyển âm thanh thành văn bản hoặc lệnh.",
+        },
+      ],
+    },
+    {
+      id: "s8",
+      heading: "Output & communications devices",
+      blocks: [
+        comparisonBlock(
+          "Output & Communications devices",
+          ["", "Output", "Communications"],
+          [
+            {
+              label: "Thiết bị chính",
+              cells: [
+                "Display/monitor (LCD); printers (non-impact: ink-jet, photo, laser, all-in-one, plotter; impact); speakers",
+                "Broadband modem (cable/DSL), wireless modem, WAP, router, NIC, hub, switch",
+              ],
+            },
+            {
+              label: "Chỉ số chất lượng",
+              cells: [
+                "Display: resolution, response time, refresh rate, contrast ratio, brightness",
+                "Modem: bandwidth (Mbps); router: wired/wireless",
+              ],
+            },
+            {
+              label: "Ghi chú",
+              cells: [
+                "Non-impact printer: không tiếp xúc giấy khi in (laser, ink-jet). Impact: tiếp xúc vật lý (đầu kim).",
+                "Chi tiết giao thức mạng → Topic 03. Ở đây chỉ nhận diện thiết bị.",
+              ],
+            },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "non-impact printer",
+          definition:
+            "Máy in không tiếp xúc trực tiếp với giấy: ink-jet, laser, photo printer.",
+        },
+        {
+          term: "modem",
+          definition:
+            "Thiết bị chuyển đổi tín hiệu số ↔ analog để truyền qua đường dây cáp/điện thoại.",
+        },
+        {
+          term: "WAP",
+          definition:
+            "Wireless Access Point — thiết bị phát Wi-Fi, kết nối thiết bị không dây vào mạng có dây.",
+        },
+        {
+          term: "router",
+          definition:
+            "Thiết bị định tuyến gói tin giữa các mạng; wireless router = WAP + router.",
+        },
+        {
+          term: "network card",
+          definition:
+            "NIC (Network Interface Card) — card mạng cho phép máy tính kết nối vào LAN.",
+        },
+        {
+          term: "hub",
+          definition:
+            "Thiết bị đơn giản gửi tín hiệu ra mọi cổng (broadcast); kém hiệu quả hơn switch.",
+        },
+        {
+          term: "switch",
+          definition:
+            "Thiết bị chuyển mạch thông minh: gửi gói tin đúng cổng đích (unicast); hiệu quả hơn hub.",
+        },
+      ],
+    },
+    {
+      id: "s9",
+      heading: "Computer language: ML → Assembly → HLL",
+      blocks: [
+        flowBlock(
+          "s9",
+          "Các cấp ngôn ngữ & dịch",
+          "horizontal",
+          [
+            {
+              id: "s9_ml",
+              label: "Machine language",
+              group: "concept",
+              detail:
+                "Chuỗi bit 0/1; CPU thực thi trực tiếp. ~100–200 loại instruction trên máy hiện đại.",
+            },
+            {
+              id: "s9_asm",
+              label: "Assembly language",
+              group: "concept",
+              detail:
+                "Mnemonics gần tiếng Anh (ADD, MOV); cần Assembler dịch sang machine language. Phụ thuộc platform.",
+            },
+            {
+              id: "s9_hll",
+              label: "High-level language",
+              group: "concept",
+              detail:
+                "Python, Java, C, COBOL — đọc gần ngôn ngữ người. Cần Compiler hoặc Interpreter.",
+            },
+          ],
+          [
+            { from: "s9_ml", to: "s9_asm", label: "assembler" },
+            { from: "s9_asm", to: "s9_hll", label: "compiler/interp." },
+          ],
+          "Chiều mũi tên = trừu tượng hoá tăng dần; cạnh ghi công cụ dịch.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "machine language",
+          definition:
+            "Ngôn ngữ máy — tập hợp bit 0/1 mà CPU thực thi trực tiếp; duy nhất hardware hiểu.",
+        },
+        {
+          term: "instruction set",
+          definition:
+            "Tập các loại lệnh cơ bản mà một CPU có thể thực hiện; máy hiện đại có ~100–200 loại instruction.",
+        },
+        {
+          term: "assembly language",
+          definition:
+            "Ngôn ngữ cấp thấp dùng từ gợi nhớ (mnemonics) thay cho bit; cần assembler dịch sang machine language.",
+        },
+        {
+          term: "HLL",
+          definition:
+            "High-Level Language — ngôn ngữ lập trình gần ngôn ngữ người (Python, Java, C); cần compiler hoặc interpreter.",
+        },
+      ],
+    },
+    {
+      id: "s9b",
+      heading: "Compiler vs Interpreter",
+      blocks: [
+        comparisonBlock(
+          "Compiler vs Interpreter",
+          ["Tiêu chí", "Compiler", "Interpreter"],
+          [
+            {
+              label: "Cơ chế",
+              cells: [
+                "Dịch toàn bộ source code (HLL) → object code một lần trước khi chạy",
+                "Dịch và chạy từng dòng tại thời điểm thực thi; cần interpreter ở runtime",
+              ],
+            },
+            {
+              label: "Output",
+              cells: [
+                "File thực thi độc lập — chạy không cần compiler",
+                "Không tạo file độc lập — phải có interpreter mỗi lần chạy",
+              ],
+            },
+            {
+              label: "Tốc độ",
+              cells: [
+                "Chạy nhanh hơn (đã dịch trước)",
+                "Chậm hơn (dịch lại mỗi lần)",
+              ],
+            },
+            {
+              label: "Ví dụ",
+              cells: ["C, C++, Go", "Python (script mode), Ruby"],
+            },
+          ],
+        ),
+        calloutBlock(
+          "key",
+          "Compiler hay interpreter — ảnh hưởng gì tới business?",
+          "Phần mềm compiled (C/C++/Go) chạy nhanh và phân phối dưới dạng file thực thi — không lộ source code, bảo vệ tài sản trí tuệ. Phần mềm interpreted (Python/Ruby/JavaScript) dễ sửa nhanh và chạy đa nền tảng, nhưng cần runtime/interpreter cài sẵn ở máy đích. Chọn ngôn ngữ = đánh đổi giữa tốc độ thực thi · bảo mật mã nguồn · tốc độ phát triển.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "compiler",
+          definition:
+            "Chương trình dịch toàn bộ source code (HLL) thành object code (machine code) trước khi thực thi.",
+        },
+        {
+          term: "interpreter",
+          definition:
+            "Chương trình dịch và thực thi source code từng dòng tại runtime; cần có mặt mỗi khi chương trình chạy.",
+        },
+        {
+          term: "source code",
+          definition:
+            "Code do lập trình viên viết ở ngôn ngữ cấp cao trước khi được compiler/interpreter xử lý.",
+        },
+        {
+          term: "object code",
+          definition:
+            "Machine code do compiler tạo ra từ source code; có thể thực thi trực tiếp hoặc link thêm thư viện.",
+        },
+      ],
+    },
+    {
+      id: "s10",
+      heading: "OS là gì & các chức năng",
+      blocks: [
+        flowBlock(
+          "s10",
+          "Chức năng của OS",
+          "horizontal",
+          [
+            {
+              id: "s10_hub",
+              label: "Operating System",
+              group: "concept",
+              detail:
+                "Phần mềm hệ thống điều phối toàn bộ phần cứng và phần mềm; nền tảng cho mọi ứng dụng.",
+            },
+            {
+              id: "s10_boot",
+              label: "Start / shutdown",
+              group: "concept",
+              detail:
+                "Khởi động và tắt máy an toàn; quản lý sleep/hibernate.",
+            },
+            {
+              id: "s10_ui",
+              label: "User interface",
+              group: "concept",
+              detail:
+                "GUI (menu, icon, cửa sổ) hoặc CLI (gõ lệnh); cầu nối người dùng ↔ phần cứng.",
+            },
+            {
+              id: "s10_prog",
+              label: "Manage programs",
+              group: "concept",
+              detail:
+                "Single/multi tasking; foreground/background processes; single/multi user.",
+            },
+            {
+              id: "s10_mem",
+              label: "Manage memory",
+              group: "concept",
+              detail:
+                "Cấp phát RAM cho apps; virtual memory (paging: swap RAM ↔ storage).",
+            },
+            {
+              id: "s10_coord",
+              label: "Coordinate tasks",
+              group: "concept",
+              detail:
+                "Lập lịch CPU, quản lý I/O, điều phối device drivers.",
+            },
+            {
+              id: "s10_tools",
+              label: "Tools & admin",
+              group: "concept",
+              detail:
+                "Performance monitor, file management, Internet setup, device config, update.",
+            },
+          ],
+          [
+            { from: "s10_hub", to: "s10_boot" },
+            { from: "s10_hub", to: "s10_ui" },
+            { from: "s10_hub", to: "s10_prog" },
+            { from: "s10_hub", to: "s10_mem" },
+            { from: "s10_hub", to: "s10_coord" },
+            { from: "s10_hub", to: "s10_tools" },
+          ],
+        ),
+        calloutBlock(
+          "key",
+          "GUI vs CLI & virtual memory",
+          "GUI (Graphical User Interface): điều khiển bằng icon, menu, cửa sổ — thân thiện, ít đường cong học. CLI (Command-Line Interface): gõ lệnh từ bàn phím — mạnh hơn, linh hoạt cho admin. Virtual memory: phần storage đóng vai RAM phụ — khi RAM đầy, OS tự swap (paging) data ít dùng ra HDD/SSD; cho phép chạy nhiều app hơn RAM vật lý.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "operating system",
+          definition:
+            "Phần mềm hệ thống quản lý toàn bộ tài nguyên máy tính và cung cấp nền tảng cho ứng dụng.",
+        },
+        {
+          term: "user interface",
+          definition:
+            "Cơ chế tương tác giữa người dùng và máy tính: GUI hoặc CLI.",
+        },
+        {
+          term: "GUI",
+          definition:
+            "Graphical User Interface — giao diện đồ hoạ dùng icon, menu, cửa sổ, con trỏ chuột.",
+        },
+        {
+          term: "command-line interface",
+          definition:
+            "CLI — giao diện dòng lệnh; người dùng gõ lệnh text để điều khiển OS.",
+        },
+        {
+          term: "multitasking",
+          definition:
+            "Khả năng OS chạy nhiều programs/tasks đồng thời (hoặc gần đồng thời bằng time-slicing).",
+        },
+        {
+          term: "virtual memory",
+          definition:
+            "Kỹ thuật mở rộng RAM ảo bằng cách dùng một phần secondary storage làm RAM phụ.",
+        },
+        {
+          term: "paging",
+          definition:
+            "Trong virtual memory: quá trình swap các 'trang' dữ liệu giữa RAM và storage khi cần.",
+        },
+        {
+          term: "performance monitor",
+          definition:
+            "Tool của OS theo dõi CPU, RAM, disk, network usage theo thời gian thực.",
+        },
+        {
+          term: "user account",
+          definition:
+            "Hồ sơ người dùng với username/password; OS quản lý quyền truy cập tài nguyên theo account.",
+        },
+      ],
+    },
+    {
+      id: "s11",
+      heading: "Types of OS: desktop / server / mobile",
+      blocks: [
+        comparisonBlock(
+          "Phân loại OS",
+          ["Tiêu chí", "Desktop", "Server", "Mobile"],
+          [
+            {
+              label: "Hệ điều hành",
+              cells: [
+                "Windows, Mac OS (OS X), UNIX, Linux, Chrome OS",
+                "Windows Server, macOS Server, UNIX, Linux",
+                "Android (Google), iOS (Apple), Windows Phone (Microsoft)",
+              ],
+            },
+            {
+              label: "Đặc điểm",
+              cells: [
+                "Chạy trên PC/laptop; hỗ trợ single/multi user",
+                "Hỗ trợ nhiều user đồng thời; quản lý mạng, user accounts, quyền truy cập",
+                "Cài sẵn trên firmware thiết bị di động; tối ưu touch, pin, kết nối di động",
+              ],
+            },
+            {
+              label: "Open source?",
+              cells: [
+                "Linux, Chrome OS = open source; Windows, Mac OS = proprietary",
+                "Linux = open source; UNIX, Windows Server = proprietary",
+                "Android = open source (Linux-based); iOS, Windows Phone = proprietary",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "note",
+          "Mở (open source) vs đóng (proprietary)",
+          "Open source (Linux, Android): source code công khai, ai cũng có thể xem/sửa/phân phối lại — cộng đồng cùng phát triển, chi phí license thường 0. Proprietary (Windows, iOS): source code bí mật, bản quyền thuộc công ty — mua license mới dùng. UNIX phát triển đầu thập niên 1970s; Linux là UNIX-based.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "desktop OS",
+          definition:
+            "Hệ điều hành dành cho PC/laptop: Windows, Mac OS (OS X), Linux, Chrome OS.",
+        },
+        {
+          term: "server OS",
+          definition:
+            "Hệ điều hành tối ưu để chạy trên máy chủ, quản lý mạng và nhiều user đồng thời.",
+        },
+        {
+          term: "mobile OS",
+          definition:
+            "Hệ điều hành dành cho thiết bị di động (smartphone/tablet): Android, iOS, Windows Phone.",
+        },
+        {
+          term: "open source",
+          definition:
+            "Phần mềm có source code công khai, cho phép xem, sửa và phân phối lại.",
+        },
+        {
+          term: "proprietary",
+          definition:
+            "Phần mềm có source code bí mật, bản quyền thuộc về công ty phát triển.",
+        },
+        {
+          term: "firmware",
+          definition:
+            "Phần mềm nhúng cố định trên chip hardware (ROM/flash); mobile OS thường cài qua firmware.",
+        },
+      ],
+    },
+    {
+      id: "s12",
+      heading: "Programs & apps + phân phối software",
+      blocks: [
+        flowBlock(
+          "s12",
+          "Các hình thức phân phối software",
+          "horizontal",
+          [
+            {
+              id: "s12_hub",
+              label: "Software distribution",
+              group: "concept",
+              detail:
+                "Cách nhà phát triển đưa phần mềm đến người dùng — ảnh hưởng giá, quyền sở hữu, tùy chỉnh.",
+            },
+            {
+              id: "s12_retail",
+              label: "Retail",
+              group: "concept",
+              detail:
+                "Mua đóng hộp/tải về; trả tiền license; bản quyền thuộc hãng.",
+            },
+            {
+              id: "s12_custom",
+              label: "Custom",
+              group: "concept",
+              detail:
+                "Đặt làm riêng cho tổ chức; đắt nhưng khớp hoàn toàn nhu cầu.",
+            },
+            {
+              id: "s12_web",
+              label: "Web/Mobile app",
+              group: "concept",
+              detail:
+                "Web app chạy trên browser; mobile app cài từ store; mobile web app = web tối ưu mobile.",
+            },
+            {
+              id: "s12_share",
+              label: "Shareware",
+              group: "concept",
+              detail:
+                "Dùng thử miễn phí có giới hạn thời gian/tính năng; trả tiền để mở khoá.",
+            },
+            {
+              id: "s12_free",
+              label: "Freeware",
+              group: "concept",
+              detail: "Miễn phí sử dụng; KHÔNG được sửa source code.",
+            },
+            {
+              id: "s12_oss",
+              label: "Open source",
+              group: "concept",
+              detail:
+                "Miễn phí + được xem/sửa/phân phối lại source code (Linux, Firefox).",
+            },
+            {
+              id: "s12_pd",
+              label: "Public domain",
+              group: "concept",
+              detail:
+                "Tác giả hiến tặng toàn bộ quyền; tự do sửa/dùng/phân phối.",
+            },
+          ],
+          [
+            { from: "s12_hub", to: "s12_retail" },
+            { from: "s12_hub", to: "s12_custom" },
+            { from: "s12_hub", to: "s12_web" },
+            { from: "s12_hub", to: "s12_share" },
+            { from: "s12_hub", to: "s12_free" },
+            { from: "s12_hub", to: "s12_oss" },
+            { from: "s12_hub", to: "s12_pd" },
+          ],
+        ),
+        calloutBlock(
+          "insight",
+          "'Free' không miễn phí hoàn toàn",
+          "Freeware = miễn phí dùng nhưng KHÔNG cho sửa code (VLC, Zoom free tier). Open source ≠ miễn phí bắt buộc — nhưng cho sửa/phân phối lại code (Linux, LibreOffice). Public domain = tự do tuyệt đối kể cả bán lại. Phân biệt: Program (bất kỳ tập lệnh) → Application (program giải quyết vấn đề end-user) → System software (OS + utilities, không phải ứng dụng end-user).",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "program",
+          definition:
+            "Bộ chỉ thị (instructions) để máy tính thực hiện một tác vụ.",
+        },
+        {
+          term: "application",
+          definition:
+            "Chương trình giải quyết nhu cầu cụ thể của người dùng cuối.",
+        },
+        {
+          term: "system software",
+          definition:
+            "Phần mềm quản lý tài nguyên máy tính (OS, utilities); khác với application software.",
+        },
+        {
+          term: "retail software",
+          definition: "Phần mềm bán thương mại, có license phí.",
+        },
+        {
+          term: "custom software",
+          definition:
+            "Phần mềm đặt lập trình riêng theo yêu cầu tổ chức.",
+        },
+        {
+          term: "shareware",
+          definition:
+            "Phần mềm dùng thử miễn phí có thời hạn/tính năng giới hạn; cần trả tiền để sử dụng đầy đủ.",
+        },
+        {
+          term: "freeware",
+          definition:
+            "Phần mềm miễn phí sử dụng; không cho phép sửa source code.",
+        },
+        {
+          term: "open source software",
+          definition:
+            "Phần mềm cho phép xem, sửa và phân phối lại source code.",
+        },
+        {
+          term: "public domain software",
+          definition:
+            "Phần mềm tác giả từ bỏ toàn bộ bản quyền; tự do sử dụng, sửa, phân phối.",
+        },
+        {
+          term: "web app",
+          definition:
+            "Ứng dụng chạy trên trình duyệt web, không cần cài đặt.",
+        },
+      ],
+    },
+    {
+      id: "s13",
+      heading: "Loại ứng dụng: productivity / graphics / communications",
+      blocks: [
+        comparisonBlock(
+          "Phân loại ứng dụng phổ biến",
+          ["", "Productivity", "Graphics & Media", "Communications"],
+          [
+            {
+              label: "Ứng dụng tiêu biểu",
+              cells: [
+                "Word processing, presentation, spreadsheet, database, note taking, calendar/contact, project management, accounting, personal finance, legal, tax, document management, enterprise computing",
+                "CAD, desktop publishing (DTP), paint/image editing, photo editing, video/audio editing, multimedia & website authoring, media player, disc burning",
+                "Email, web browsing, chat, blog, VoIP/Internet phone, instant/mobile messaging, videoconference, web feeds, file transfer",
+              ],
+            },
+            {
+              label: "Mục đích",
+              cells: [
+                "Tăng năng suất công việc văn phòng và quản lý doanh nghiệp",
+                "Tạo/chỉnh sửa nội dung số: đồ hoạ, âm thanh, video",
+                "Kết nối và trao đổi thông tin giữa người với người",
+              ],
+            },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "productivity application",
+          definition:
+            "Phần mềm tăng hiệu suất công việc: word, spreadsheet, presentation, database, v.v.",
+        },
+        {
+          term: "software suite",
+          definition:
+            "Gói ứng dụng đóng gói chung (Microsoft 365, Google Workspace) — mua 1 lần được nhiều app.",
+        },
+        {
+          term: "CAD",
+          definition:
+            "Computer-Aided Design — phần mềm thiết kế kỹ thuật/kiến trúc; cho phép xoay 3D, xem từ mọi góc.",
+        },
+        {
+          term: "website authoring",
+          definition:
+            "Phần mềm tạo trang web đầy đủ tính năng (graphics, video, audio, animation) mà không cần lập trình từ đầu.",
+        },
+        {
+          term: "project management",
+          definition:
+            "Phần mềm lên kế hoạch, lịch trình, theo dõi, phân tích sự kiện–nguồn lực–chi phí của dự án.",
+        },
+        {
+          term: "spreadsheet",
+          definition:
+            "Phần mềm bảng tính (Excel, Google Sheets) — phân tích số liệu, xây dựng mô hình tài chính.",
+        },
+      ],
+    },
+    {
+      id: "s14",
+      heading: "Security & system tools",
+      blocks: [
+        comparisonBlock(
+          "Công cụ bảo mật & hệ thống",
+          ["", "Security tools", "File/Disk/System tools"],
+          [
+            {
+              label: "Công cụ",
+              cells: [
+                "Personal firewall, antivirus, spyware remover, adware remover, anti-spam, web filtering, phishing filter, pop-up/pop-under blocker",
+                "File manager, search tool, image viewer, uninstaller, disk cleanup, disk defragmenter, screen saver, file compression, PC maintenance, backup & restore",
+              ],
+            },
+            {
+              label: "Mục đích",
+              cells: [
+                "Bảo vệ máy tính & dữ liệu khỏi mối đe doạ an ninh",
+                "Quản lý, tối ưu và duy trì hệ thống",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "realworld",
+          "Spyware vs Adware",
+          "Spyware: phần mềm lén cài vào máy, thu thập thông tin người dùng (mật khẩu, thói quen duyệt web) và gửi ra ngoài mà không được phép. Adware: tự động hiển thị quảng cáo banner/pop-up — phiền nhưng ít nguy hiểm hơn spyware. Cả hai cần có spyware remover / adware remover chạy định kỳ.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "firewall",
+          definition:
+            "Phần mềm/phần cứng lọc lưu lượng mạng, chặn truy cập trái phép vào/ra máy tính.",
+        },
+        {
+          term: "antivirus",
+          definition:
+            "Phần mềm phát hiện và loại bỏ virus, malware khỏi hệ thống.",
+        },
+        {
+          term: "spyware",
+          definition:
+            "Phần mềm gián điệp lén thu thập thông tin người dùng và gửi cho bên thứ ba.",
+        },
+        {
+          term: "adware",
+          definition:
+            "Phần mềm tự động hiển thị quảng cáo không mong muốn trên màn hình.",
+        },
+        {
+          term: "disk defragmenter",
+          definition:
+            "Công cụ sắp xếp lại các phần dữ liệu phân mảnh trên HDD để tăng tốc truy cập.",
+        },
+        {
+          term: "backup/restore tool",
+          definition:
+            "Công cụ sao lưu định kỳ và khôi phục dữ liệu khi cần.",
+        },
+      ],
+    },
+    {
+      id: "s15",
+      heading: "Tổng kết Part 2: quay lại câu hỏi $20,000",
+      blocks: [
+        calloutBlock(
+          "realworld",
+          "'Upgrade problem' — quyết định của YOU",
+          "Khi mua laptop/desktop cho phòng ban, bạn cân nhắc: brand/model · processor speed & type · RAM capacity · HDD/SSD capacity & speed · cache · display quality (resolution, size) · Wi-Fi/Bluetooth/camera/fingerprint · input devices · output ports · network card. Kết hợp HW (input/process/output/storage) + SW (OS + applications) + Data + Network = quyết định đầu tư IT toàn diện. Cost of data processing tiến gần 0 (Moore's Law) → câu hỏi không còn là 'có mua được không' mà là 'mua gì phù hợp nhất với nhu cầu business'.",
+        ),
+        flowBlock(
+          "s15",
+          "IT decision = HW + SW + Data + Network",
+          "horizontal",
+          [
+            {
+              id: "s15_hw",
+              label: "Hardware",
+              group: "concept",
+              detail: "Input/output/processing/storage devices — nền tảng vật lý.",
+            },
+            {
+              id: "s15_sw",
+              label: "Software",
+              group: "concept",
+              detail: "OS + applications — điều phối và thực thi tác vụ.",
+            },
+            {
+              id: "s15_data",
+              label: "Data",
+              group: "concept",
+              detail:
+                "Tài sản số của tổ chức — cần lưu trữ, bảo mật, truy cập.",
+            },
+            {
+              id: "s15_net",
+              label: "Network",
+              group: "concept",
+              detail: "Kết nối HW+SW+Data với nhau và với Internet.",
+            },
+            {
+              id: "s15_it",
+              label: "IT decision",
+              group: "concept",
+              detail:
+                "Quyết định đầu tư IT tổng thể: mua gì, bao nhiêu, khi nào nâng cấp.",
+            },
+          ],
+          [
+            { from: "s15_hw", to: "s15_it" },
+            { from: "s15_sw", to: "s15_it" },
+            { from: "s15_data", to: "s15_it" },
+            { from: "s15_net", to: "s15_it" },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "upgrade problem",
+          definition:
+            "Quyết định khi nào nên nâng cấp hoặc thay thế hệ thống IT dựa trên cân nhắc chi phí, hiệu năng và nhu cầu business.",
+        },
+      ],
+    },
+  ],
+  questions: [
+    {
+      id: "q01",
+      stem: "Which of the following is a small piece of semiconducting material, usually silicon, on which integrated circuits are etched?",
+      options: [
+        {
+          id: "a",
+          text: "system unit",
+          isCorrect: false,
+          rationale:
+            "Bẫy system unit: system unit là cả khối vỏ máy chứa bo mạch chủ, CPU, RAM, nguồn — không phải một mảnh bán dẫn nhỏ. Khoá: computer chip mới là mảnh silicon siêu nhỏ mang mạch tích hợp.",
+        },
+        {
+          id: "b",
+          text: "computer port",
+          isCorrect: false,
+          rationale:
+            "Bẫy port: port là cổng kết nối (USB, HDMI...) trên vỏ máy để cắm thiết bị ngoại vi — điểm giao tiếp vật lý, không phải vật liệu bán dẫn.",
+        },
+        {
+          id: "c",
+          text: "computer chip",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: computer chip (hay microchip) là mảnh vật liệu bán dẫn (thường là silicon) siêu nhỏ, trên đó khắc các mạch tích hợp (integrated circuits) gồm hàng tỷ transistor. Toàn bộ CPU, RAM, GPU đều là dạng chip.",
+        },
+        {
+          id: "d",
+          text: "mainboard",
+          isCorrect: false,
+          rationale:
+            "Bẫy mainboard: mainboard (motherboard) là bo mạch chủ — tấm PCB lớn kết nối và chứa nhiều chip. Mainboard chứa chip, không phải là chip.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Định nghĩa computer chip (microchip) là mảnh bán dẫn silicon mang mạch tích hợp.",
+      takeaway:
+        "Computer chip = mảnh silicon siêu nhỏ có mạch tích hợp. System unit = vỏ máy. Port = cổng cắm. Mainboard = bo mạch chủ chứa chip.",
+    },
+    {
+      id: "q02",
+      stem: "Which of the following is the component of the processor that directs and coordinates most of the operations in the computer?",
+      options: [
+        {
+          id: "a",
+          text: "control unit",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: control unit là thành phần của CPU chịu trách nhiệm fetch instruction, decode, điều phối execute và store — 'đạo diễn' mọi hoạt động trong máy tính. ALU mới là nơi thực thi phép tính; control unit chỉ điều phối.",
+        },
+        {
+          id: "b",
+          text: "concatenation unit",
+          isCorrect: false,
+          rationale:
+            "Bẫy concatenation unit: tên bịa — không có thành phần nào gọi là 'concatenation unit' trong kiến trúc CPU chuẩn. Hai thành phần thật: control unit + ALU.",
+        },
+        {
+          id: "c",
+          text: "compression unit",
+          isCorrect: false,
+          rationale:
+            "Bẫy compression unit: tên bịa, không tồn tại trong CPU. Compression là tác vụ do software thực hiện.",
+        },
+        {
+          id: "d",
+          text: "micro unit",
+          isCorrect: false,
+          rationale:
+            "Bẫy micro unit: tên bịa. 'Micro' trong 'microprocessor' chỉ kích thước nhỏ, không phải tên một đơn vị chức năng.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Control unit là thành phần điều phối hoạt động CPU, phân biệt với ALU (thực thi tính toán).",
+      takeaway:
+        "CPU = control unit (điều phối) + ALU (tính toán/so sánh). Control unit: fetch → decode → điều phối execute → store.",
+    },
+    {
+      id: "q03",
+      stem: "...a type of nonvolatile memory that can be erased electronically and rewritten. What did your instructor call this memory?",
+      options: [
+        {
+          id: "a",
+          text: "perm-memory",
+          isCorrect: false,
+          rationale:
+            "Bẫy perm-memory: tên bịa. Không có loại bộ nhớ nào gọi là 'perm-memory' trong lý thuyết máy tính chuẩn.",
+        },
+        {
+          id: "b",
+          text: "firewire",
+          isCorrect: false,
+          rationale:
+            "Bẫy Firewire: FireWire (IEEE 1394) là chuẩn giao diện kết nối thiết bị ngoại vi tốc độ cao — không liên quan đến loại bộ nhớ.",
+        },
+        {
+          id: "c",
+          text: "EM-ROM",
+          isCorrect: false,
+          rationale:
+            "Bẫy EM-ROM: tên bịa, không tồn tại. Các loại ROM thật: ROM, PROM, EPROM, EEPROM (= flash memory).",
+        },
+        {
+          id: "d",
+          text: "flash memory",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: flash memory = EEPROM (Electrically Erasable Programmable ROM) — non-volatile (giữ dữ liệu khi mất điện), có thể xoá và ghi lại bằng tín hiệu điện. Nền tảng của SSD và USB flash drive.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "Flash memory = EEPROM: non-volatile, xoá/ghi lại bằng điện; nền tảng SSD và USB.",
+      takeaway:
+        "Flash memory = EEPROM = non-volatile + xoá-ghi bằng điện. ROM thường không ghi lại được. Firewire là chuẩn cổng kết nối, không phải bộ nhớ.",
+    },
+    {
+      id: "q04",
+      stem: "Which of the following is true of SSDs compared to traditional hard disks?",
+      options: [
+        {
+          id: "a",
+          text: "lower storage capacities",
+          isCorrect: false,
+          rationale:
+            "Bẫy dung lượng: SSD hiện đại có dung lượng tương đương HDD; nhược điểm thật của SSD là giá/GB cao hơn, không phải dung lượng thấp hơn.",
+        },
+        {
+          id: "b",
+          text: "generate more heat",
+          isCorrect: false,
+          rationale:
+            "Bẫy nhiệt: SSD không có bộ phận cơ học quay → toả ít nhiệt hơn HDD. Nói 'more heat' là sai chiều.",
+        },
+        {
+          id: "c",
+          text: "faster transfer rates",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: SSD dùng EEPROM flash, không bộ phận chuyển động → không phải chờ đĩa quay và đầu đọc di chuyển như HDD → tốc độ đọc/ghi (transfer rate) nhanh hơn rõ rệt.",
+        },
+        {
+          id: "d",
+          text: "shorter life",
+          isCorrect: false,
+          rationale:
+            "Bẫy tuổi thọ: SSD bền hơn HDD ở va đập vật lý (không bộ phận cơ học). SSD có giới hạn chu kỳ ghi (write endurance) nhưng trong dùng thông thường bền hơn HDD.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "So sánh SSD vs HDD: SSD nhanh hơn, mát hơn, bền hơn khi va đập; nhược điểm là giá/GB cao.",
+      takeaway:
+        "SSD nhanh hơn HDD vì không bộ phận cơ học. SSD mát hơn, bền hơn (va đập). Điểm yếu thực sự: giá/GB cao hơn HDD.",
+    },
+    {
+      id: "q05",
+      stem: "When you use hardware, in which gesture do you quickly touch and release one finger one time?",
+      options: [
+        {
+          id: "a",
+          text: "tap",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: tap = chạm nhanh và thả ngón tay một lần — tương đương single click chuột. Đây là gesture cơ bản nhất của touch interface.",
+        },
+        {
+          id: "b",
+          text: "stretch",
+          isCorrect: false,
+          rationale:
+            "Bẫy stretch: stretch (pinch-to-zoom) là cử chỉ dùng 2 ngón để phóng to/thu nhỏ — không phải chạm một lần.",
+        },
+        {
+          id: "c",
+          text: "swipe",
+          isCorrect: false,
+          rationale:
+            "Bẫy swipe: swipe = vuốt nhanh theo một hướng — có chuyển động ngang, khác tap.",
+        },
+        {
+          id: "d",
+          text: "slide",
+          isCorrect: false,
+          rationale:
+            "Bẫy slide: slide = kéo chậm theo hướng — dùng để di chuyển đối tượng. Khác với tap (nhấn-thả nhanh, không di chuyển).",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested: "Phân biệt các touch gesture: tap, swipe, slide, stretch.",
+      takeaway:
+        "Tap = chạm nhanh + thả 1 lần. Swipe = vuốt nhanh. Slide = kéo chậm. Stretch = 2 ngón phóng to/thu nhỏ.",
+    },
+    {
+      id: "q06",
+      stem: "Which one is the key point you can infer from Moore's Law as a future business professional?",
+      options: [
+        {
+          id: "a",
+          text: "You care how fast of a computer your company can buy for $1,000",
+          isCorrect: false,
+          rationale:
+            "Bẫy tốc độ/giá cố định: câu này đảo trục — Moore's Law nói cùng một mức giá thì năng lực tăng dần (chi phí xử lý/đơn vị giảm). Hệ quả sâu hơn là cost of data processing tiến gần 0.",
+        },
+        {
+          id: "b",
+          text: "IT development is slow",
+          isCorrect: false,
+          rationale:
+            "Bẫy sai chiều: Moore's Law nói ngược lại — IT phát triển theo hàm mũ (exponential), không phải chậm.",
+        },
+        {
+          id: "c",
+          text: "The cost of data processing is approaching zero",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: Moore's Law → transistor gấp đôi mỗi 24 tháng → cùng giá mua được máy mạnh gấp đôi → chi phí xử lý mỗi đơn vị dữ liệu liên tục giảm → tiến dần về 0. Hệ quả business quan trọng nhất: mọi doanh nghiệp đều có thể xử lý lượng lớn dữ liệu với chi phí tối thiểu.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "Hệ quả kinh tế của Moore's Law: cost of data processing tiến về 0.",
+      takeaway:
+        "Hệ quả Moore's Law quan trọng nhất cho business: cost of data processing → 0. Lý do AI, big data, cloud đều trở nên phổ cập.",
+    },
+    {
+      id: "q07",
+      stem: "Which language needs an interpreter to be able to run on the computer?",
+      options: [
+        {
+          id: "a",
+          text: "Machine language",
+          isCorrect: false,
+          rationale:
+            "Bẫy machine language: machine language chạy trực tiếp trên CPU, không cần dịch — đây là ngôn ngữ native của hardware.",
+        },
+        {
+          id: "b",
+          text: "Compilers",
+          isCorrect: false,
+          rationale:
+            "Bẫy compiler: compiler là chương trình dịch (software tool), không phải một ngôn ngữ lập trình.",
+        },
+        {
+          id: "c",
+          text: "High level language",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: High-level language (Python, JavaScript script mode...) cần được dịch sang machine code để CPU hiểu. Có thể dùng compiler (dịch trước) hoặc interpreter (dịch từng dòng khi chạy). Câu hỏi hỏi loại cần 'interpreter' → HLL là câu trả lời đúng.",
+        },
+        {
+          id: "d",
+          text: "Assembly language",
+          isCorrect: false,
+          rationale:
+            "Bẫy assembly: assembly language cần assembler (không phải interpreter) dịch sang machine code. Assembler và interpreter là hai loại công cụ dịch khác nhau.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "HLL cần compiler hoặc interpreter; assembly cần assembler; machine language chạy trực tiếp.",
+      takeaway:
+        "Machine language → chạy trực tiếp. Assembly → cần assembler. HLL → cần compiler hoặc interpreter.",
+    },
+    {
+      id: "q08",
+      stem: "In virtual memory, what is the term for the process of swapping items between memory and storage?",
+      options: [
+        {
+          id: "a",
+          text: "paging",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: paging là quá trình OS chia RAM thành các 'trang' (pages) và swap các trang ít dùng ra secondary storage khi RAM đầy, rồi load lại khi cần. Đây là cơ chế cốt lõi của virtual memory.",
+        },
+        {
+          id: "b",
+          text: "spacing",
+          isCorrect: false,
+          rationale:
+            "Bẫy spacing: 'spacing' không phải thuật ngữ trong quản lý bộ nhớ. Nghe giống 'paging' nhưng sai hoàn toàn.",
+        },
+        {
+          id: "c",
+          text: "writing",
+          isCorrect: false,
+          rationale:
+            "Bẫy writing: 'writing' chỉ thao tác ghi dữ liệu chung — không đặc trưng cho virtual memory.",
+        },
+        {
+          id: "d",
+          text: "reading",
+          isCorrect: false,
+          rationale:
+            "Bẫy reading: chỉ thao tác đọc chung, không mô tả đúng cơ chế swap trong virtual memory.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "Paging = cơ chế swap trang giữa RAM và storage trong virtual memory.",
+      takeaway:
+        "Virtual memory dùng secondary storage như RAM phụ. Paging = swap pages giữa RAM ↔ storage. Khi RAM đầy → OS page out → page in khi cần.",
+    },
+    {
+      id: "q09",
+      stem: "Which of the following kinds of operating systems allow only one user to run one program or app at a time?",
+      options: [
+        {
+          id: "a",
+          text: "single user/single indexing",
+          isCorrect: false,
+          rationale:
+            "Bẫy single indexing: tên bịa — 'indexing' không phải thuật ngữ phân loại OS.",
+        },
+        {
+          id: "b",
+          text: "single user/single tasking",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: single user = chỉ một người dùng; single tasking = chỉ một chương trình chạy tại một thời điểm (MS-DOS). Khi muốn chạy app khác, phải đóng app đang mở.",
+        },
+        {
+          id: "c",
+          text: "single user/single throttle",
+          isCorrect: false,
+          rationale:
+            "Bẫy single throttle: tên bịa — 'throttle' trong IT là giảm tốc độ để kiểm soát tài nguyên, không phải khái niệm phân loại OS.",
+        },
+        {
+          id: "d",
+          text: "single user/single function",
+          isCorrect: false,
+          rationale:
+            "Bẫy single function: tên bịa. Embedded systems có thể gọi là single-function nhưng không phải phân loại OS chuẩn.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Phân loại OS theo số user/task: single user/single tasking vs multi-user/multitasking.",
+      takeaway:
+        "Single user/single tasking = 1 người + 1 app tại một thời điểm (MS-DOS). Multi-tasking = nhiều app đồng thời (Windows, macOS).",
+    },
+    {
+      id: "q10",
+      stem: "Which of the following is NOT a desktop operating system?",
+      options: [
+        {
+          id: "a",
+          text: "Mac OS",
+          isCorrect: false,
+          rationale:
+            "Mac OS (OS X / macOS) là desktop OS của Apple — chạy trên Mac/MacBook, không phải mobile.",
+        },
+        {
+          id: "b",
+          text: "MS Windows",
+          isCorrect: false,
+          rationale:
+            "MS Windows là desktop OS phổ biến nhất — chạy trên PC/laptop.",
+        },
+        {
+          id: "c",
+          text: "Chrome OS",
+          isCorrect: false,
+          rationale:
+            "Bẫy Chrome OS: Chrome OS là desktop OS của Google, chạy trên Chromebook — dù cloud-centric nhưng vẫn là desktop OS.",
+        },
+        {
+          id: "d",
+          text: "Google Android",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: Android là mobile OS — thiết kế cho smartphone và tablet, chạy trên firmware thiết bị di động. Android dựa trên Linux nhưng không phải desktop OS. Chrome OS mới là desktop OS của Google.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Phân biệt desktop OS (Windows, macOS, Linux, Chrome OS) vs mobile OS (Android, iOS).",
+      takeaway:
+        "Desktop: Windows, macOS, Linux, Chrome OS. Mobile: Android (Google), iOS (Apple), Windows Phone. Android ≠ desktop dù cùng Google phát triển như Chrome OS.",
+    },
+    {
+      id: "q11",
+      stem: "Linux is an operating system... code is provided for use, modification, and redistribution. What kind of software is this?",
+      options: [
+        {
+          id: "a",
+          text: "open source",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: open source = source code công khai, cho phép dùng, sửa và phân phối lại. Linux là ví dụ điển hình — bất kỳ ai cũng có thể đọc, fork, và phân phối lại (Ubuntu, Fedora, Android đều dựa trên Linux).",
+        },
+        {
+          id: "b",
+          text: "upgradable",
+          isCorrect: false,
+          rationale:
+            "Bẫy upgradable: mọi phần mềm đều có thể nâng cấp — không phải đặc điểm phân loại phân phối software.",
+        },
+        {
+          id: "c",
+          text: "client/server",
+          isCorrect: false,
+          rationale:
+            "Bẫy client/server: đây là kiến trúc mạng (client gửi request, server phản hồi) — không liên quan đến cách phân phối/cấp phép software.",
+        },
+        {
+          id: "d",
+          text: "multitasking",
+          isCorrect: false,
+          rationale:
+            "Bẫy multitasking: đây là tính năng của OS — không phải loại phân phối software.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Open source software = source code cho phép dùng, sửa, phân phối lại; Linux là ví dụ điển hình.",
+      takeaway:
+        "Open source = use + modify + redistribute source code. Linux, Android = open source. Phân biệt với freeware (miễn phí nhưng KHÔNG cho sửa code).",
+    },
+    {
+      id: "q12",
+      stem: "A spreadsheet program would be an example of:",
+      options: [
+        {
+          id: "a",
+          text: "personal interest application",
+          isCorrect: false,
+          rationale:
+            "Bẫy personal interest: personal interest apps = game, hobby, giải trí — không phải công cụ làm việc như spreadsheet.",
+        },
+        {
+          id: "b",
+          text: "firmware",
+          isCorrect: false,
+          rationale:
+            "Bẫy firmware: firmware là phần mềm nhúng trong chip hardware (BIOS, OS điện thoại) — không phải ứng dụng văn phòng.",
+        },
+        {
+          id: "c",
+          text: "productivity application",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: productivity application = phần mềm tăng hiệu suất công việc, gồm word processing, spreadsheet, presentation, database, project management... Spreadsheet (Excel, Google Sheets) là công cụ phân tích số liệu điển hình.",
+        },
+        {
+          id: "d",
+          text: "system software",
+          isCorrect: false,
+          rationale:
+            "Bẫy system software: system software = OS và utilities quản lý tài nguyên máy — không phải ứng dụng end-user. Spreadsheet là application software.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Phân loại ứng dụng: spreadsheet thuộc productivity application.",
+      takeaway:
+        "Productivity apps: Word, Excel, PowerPoint, database, project management. System software: OS, utilities. Firmware: phần mềm nhúng chip.",
+    },
+    {
+      id: "q13",
+      stem: "Which of the following programs allow designers to rotate designs of 3-D objects to view them from any angle?",
+      options: [
+        {
+          id: "a",
+          text: "CAD",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: CAD (Computer-Aided Design) là phần mềm thiết kế 3D dùng trong kỹ thuật/kiến trúc — cho phép xây mô hình 3D, xoay góc nhìn 360°, kiểm tra tỉ lệ và xuất bản vẽ. AutoCAD, SolidWorks là ví dụ điển hình.",
+        },
+        {
+          id: "b",
+          text: "DTP",
+          isCorrect: false,
+          rationale:
+            "Bẫy DTP: Desktop Publishing = phần mềm làm báo/tạp chí/tài liệu in — bố cục 2D trang in, không phải mô hình 3D.",
+        },
+        {
+          id: "c",
+          text: "DTM",
+          isCorrect: false,
+          rationale:
+            "Bẫy DTM: tên bịa — không có loại phần mềm thiết kế nào gọi là 'DTM' trong phân loại chuẩn.",
+        },
+        {
+          id: "d",
+          text: "CAM",
+          isCorrect: false,
+          rationale:
+            "Bẫy CAM: Computer-Aided Manufacturing = phần mềm điều khiển máy CNC/sản xuất — không phải thiết kế/xoay mô hình 3D.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "CAD (Computer-Aided Design) = phần mềm thiết kế 3D cho phép xoay góc nhìn bất kỳ.",
+      takeaway:
+        "CAD = thiết kế 3D (kỹ thuật, kiến trúc). DTP = dàn trang 2D (báo, sách). CAM = sản xuất tự động. DTM = không tồn tại.",
+    },
+    {
+      id: "q14",
+      stem: "What kind of software helps users of all skill levels create web pages that include graphics, video, audio, animation, and other special effects?",
+      options: [
+        {
+          id: "a",
+          text: "website management",
+          isCorrect: false,
+          rationale:
+            "Bẫy website management: quản lý website tập trung vào hosting, domain, analytics — không phải tạo nội dung trang web.",
+        },
+        {
+          id: "b",
+          text: "website publishing",
+          isCorrect: false,
+          rationale:
+            "Bẫy website publishing: publishing nhấn mạnh việc đưa trang lên server — không phải quá trình tạo/thiết kế.",
+        },
+        {
+          id: "c",
+          text: "website editing",
+          isCorrect: false,
+          rationale:
+            "Bẫy website editing: editing chỉ chỉnh sửa nội dung hiện có. Authoring rộng hơn: tạo toàn bộ trang mới với multimedia.",
+        },
+        {
+          id: "d",
+          text: "website authoring",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: website authoring software (Adobe Dreamweaver, WordPress visual editor...) cho phép người dùng mọi trình độ tạo trang web đầy đủ tính năng — text, graphics, video, audio, animation, special effects — mà không cần lập trình từ đầu.",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "Website authoring software = tạo trang web đầy đủ multimedia; phân biệt với editing/publishing/management.",
+      takeaway:
+        "Authoring = tạo trang web (graphics + video + audio + animation). Editing = chỉnh nội dung. Publishing = đưa lên server. Management = quản trị hosting/analytics.",
+    },
+    {
+      id: "q15",
+      stem: "Which type of software has no restrictions from the copyright holder regarding modifications of the software's internal instructions and its redistribution?",
+      options: [
+        {
+          id: "a",
+          text: "shareware",
+          isCorrect: false,
+          rationale:
+            "Bẫy shareware: shareware cho dùng thử nhưng có giới hạn — bản quyền vẫn thuộc hãng, không được sửa code hay phân phối lại.",
+        },
+        {
+          id: "b",
+          text: "custom software",
+          isCorrect: false,
+          rationale:
+            "Bẫy custom software: phần mềm đặt làm riêng — quyền sửa/phân phối tuỳ hợp đồng, không mặc định tự do hoàn toàn.",
+        },
+        {
+          id: "c",
+          text: "open source software",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: open source = không giới hạn từ copyright holder về (1) sửa internal instructions (source code) và (2) phân phối lại. Đây là định nghĩa phân biệt open source với freeware (miễn phí nhưng không cho sửa code).",
+        },
+        {
+          id: "d",
+          text: "system software",
+          isCorrect: false,
+          rationale:
+            "Bẫy system software: đây là loại phần mềm (OS + utilities), không phải cách phân phối/cấp phép. System software có thể là proprietary (Windows) hoặc open source (Linux).",
+        },
+      ],
+      difficulty: "intermediate",
+      conceptTested:
+        "Open source = không giới hạn sửa code + phân phối lại; phân biệt với freeware.",
+      takeaway:
+        "Open source: sửa code + phân phối lại tự do. Freeware: miễn phí nhưng KHÔNG sửa code. Shareware: dùng thử có hạn. Public domain: tự do tuyệt đối.",
+    },
+    {
+      id: "q16",
+      stem: "Which of the following are you, as a marketing manager, most likely to use to schedule the processes required in a new advertising campaign you are running?",
+      options: [
+        {
+          id: "a",
+          text: "calendar management",
+          isCorrect: false,
+          rationale:
+            "Bẫy calendar management: calendar chỉ ghi lịch hẹn/cuộc họp — không đủ để quản lý toàn bộ quy trình/nguồn lực/chi phí của một campaign.",
+        },
+        {
+          id: "b",
+          text: "personal finance",
+          isCorrect: false,
+          rationale:
+            "Bẫy personal finance: phần mềm tài chính cá nhân dùng để quản lý thu chi cá nhân — không phải công cụ điều phối campaign quảng cáo.",
+        },
+        {
+          id: "c",
+          text: "software suite",
+          isCorrect: false,
+          rationale:
+            "Bẫy software suite: suite là gói nhiều app — quá rộng và không đặc trưng cho bài toán lập lịch quy trình campaign.",
+        },
+        {
+          id: "d",
+          text: "project management",
+          isCorrect: true,
+          rationale:
+            "Cơ chế: project management software (MS Project, Asana, Trello, Monday.com...) dùng để plan, schedule, track và analyze events–resources–costs của một dự án. Campaign quảng cáo có nhiều tasks, deadline, người phụ trách, ngân sách → bài toán project management điển hình.",
+        },
+      ],
+      difficulty: "basic",
+      conceptTested:
+        "Project management software = lập kế hoạch, lịch trình, theo dõi sự kiện–nguồn lực–chi phí.",
+      takeaway:
+        "Project management: plan + schedule + track + analyze tasks/resources/costs. Khác calendar (chỉ lịch hẹn), personal finance (thu chi cá nhân), software suite (gói app chung).",
+    },
+  ],
+  status: "ready",
+  source:
+    "Digital Technology in Business slides Topic 02-1 (Hardware, 95 slides) + Topic 02-2 (Software, 86 slides) + quiz-digi.pdf (QUIZ 2 Software + QUIZ 3 Hardware).",
+};
+
 const createPlaceholderTopic = (order: number): Chapter => {
   const topicNumber = String(order).padStart(2, "0");
 
@@ -1895,5 +4090,7 @@ const createPlaceholderTopic = (order: number): Chapter => {
 
 export const dtbChapters: Chapter[] = Array.from({ length: 8 }, (_, index) => {
   const order = index + 1;
-  return order === 1 ? topic01 : createPlaceholderTopic(order);
+  if (order === 1) return topic01;
+  if (order === 2) return topic02;
+  return createPlaceholderTopic(order);
 });
