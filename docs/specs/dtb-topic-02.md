@@ -219,52 +219,59 @@
 
 | # | Khái niệm/ví dụ trong slide | Nguồn slide | Section | Trạng thái |
 |---|---|---|---|---|
-| 1 | ICT framework: Hardware/Software/Data (+ communication) | 02-1 s6 | s0 | ⏳ |
-| 2 | Câu hỏi $20,000 / IT conveyor belt | 02-1 s4–5 | s0,s15 | ⏳ |
-| 3 | Brief history: ENIAC 1946, UNIVAC 1955, IBM 1957 | 02-1 s8–12 | s1 | ⏳ |
-| 4 | Eras: mainframe→PC→client/server→hosted→beyond | 02-1 s11 | s1 | ⏳ |
-| 5 | Moore's Law (24 tháng) + Samsung 3nm | 02-1 s16–19 | s1 | ⏳ |
-| 6 | Hệ quả: faster/cheaper/smaller/greater capacity | 02-1 s18 | s1 | ⏳ |
-| 7 | Sơ đồ phần cứng cơ bản | 02-1 s20 | s2 | ⏳ |
-| 8 | Secondary storage: 7 tiêu chí đánh giá | 02-1 s21 | s3 | ⏳ |
-| 9 | HDD (đĩa kim loại, đầu đọc từ, binary polarity) | 02-1 s24 | s3 | ⏳ |
-| 10 | Optical drives (CD/DVD/Blu-ray, read-only/write-once/rewriteable) | 02-1 s26–28 | s3 | ⏳ |
-| 11 | SSD/EEPROM, USB flash, SSHD | 02-1 s30 | s3 | ⏳ |
-| 12 | SSD vs HDD | 02-1 s32–33 | s3 | ⏳ |
-| 13 | System unit: CPU + Main Memory | 02-1 s34 | s4 | ⏳ |
-| 14 | Control unit + ALU; machine cycle | 02-1 s37–38 | s4 | ⏳ |
-| 15 | Cache L1/L2/L3 (L3 ~10× L1) | 02-1 s39 | s4 | ⏳ |
-| 16 | RAM vs ROM, static/dynamic, volatile/non-volatile, EEPROM | 02-1 s40–41 | s5 | ⏳ |
-| 17 | Bits & bytes, KB/MB/GB/TB, RAM 4–8GB, HDD 500GB–4TB | 02-1 s43–44 | s5 | ⏳ |
-| 18 | Ports | 02-1 s48 | s2/s5 | ⏳ |
-| 19 | 4 yếu tố performance + tradeoffs | 02-1 s36,49 | s6 | ⏳ |
-| 20 | Input: keyboard (ergonomic) | 02-1 s53–56 | s7 | ⏳ |
-| 21 | Pointing: mouse/touchpad/trackball | 02-1 s57–59 | s7 | ⏳ |
-| 22 | Touch screen, pen input, graphics tablet | 02-1 s60–62 | s7 | ⏳ |
-| 23 | Motion/voice/video, webcam, videoconference | 02-1 s63–70 | s7 | ⏳ |
-| 24 | Scanners: OCR/OMR/bar code/QR/RFID/magstripe/MICR | 02-1 s71–76 | s7 | ⏳ |
-| 25 | Output: display (chất lượng), printers (impact/non-impact) | 02-1 s78–80 | s8 | ⏳ |
-| 26 | Comms devices: modem/WAP/router/network card/hub/switch | 02-1 s81–92 | s8 | ⏳ |
-| 27 | Upgrade problem (factors) | 02-1 s94 | s15 | ⏳ |
-| 28 | Machine language, instruction set (100–200), software programme | 02-2 s3 | s9 | ⏳ |
-| 29 | Assembly language, assembler, source/object code | 02-2 s4–5 | s9 + s9b | ⏳ |
-| 30 | HLL, compiler vs interpreter | 02-2 s6–7 | s9b | ⏳ |
-| 31 | OS định nghĩa + bảng chức năng | 02-2 s12 | s10 | ⏳ |
-| 32 | Sleep vs hibernate; start/shutdown | 02-2 s14–15 | s10 | ⏳ |
-| 33 | UI: GUI vs command-line | 02-2 s16–17 | s10 | ⏳ |
-| 34 | Manage programs: single/multi tasking, fore/background, single/multi user | 02-2 s18 | s10 | ⏳ |
-| 35 | Memory mgmt + virtual memory (paging) | 02-2 s20 | s10 | ⏳ |
-| 36 | Coordinate tasks, performance monitor, Internet, update, tools | 02-2 s21–26 | s10 | ⏳ |
-| 37 | Server OS + network admin; user account/username/password | 02-2 s27–28 | s10/s11 | ⏳ |
-| 38 | Desktop OS: Windows/Mac(OS X)/UNIX/Linux/Chrome OS | 02-2 s30–35 | s11 | ⏳ |
-| 39 | Server OS; Mobile OS: Android/iOS/Windows Phone (firmware) | 02-2 s36–40 | s11 | ⏳ |
-| 40 | Program vs application vs system software | 02-2 s45 | s12 | ⏳ |
-| 41 | Software distribution: retail/custom/web/mobile/shareware/freeware/open source/public domain | 02-2 s48 | s12 | ⏳ |
-| 42 | Productivity apps (13 loại) + thao tác chung | 02-2 s52–66 | s13 | ⏳ |
-| 43 | Graphics & media software (CAD/DTP/photo/video/authoring/media player/disc burning) | 02-2 s67–70 | s13 | ⏳ |
-| 44 | Personal interest + Communications applications | 02-2 s71–72 | s13 | ⏳ |
-| 45 | Security tools (firewall/antivirus/spyware/adware/anti-spam/phishing/pop-up) | 02-2 s73–77 | s14 | ⏳ |
-| 46 | File/disk/system tools (file mgr/search/image viewer/uninstaller/cleanup/defrag/compression/PC maint/backup-restore) | 02-2 s78–84 | s14 | ⏳ |
-| 47 | Part 2 summary: $20,000 + business implication | 02-2 s86 | s15 | ⏳ |
+| 1 | ICT framework: Hardware/Software/Data (+ communication) | 02-1 s6 | s0 | ✅ Có |
+| 2 | Câu hỏi $20,000 / IT conveyor belt | 02-1 s4–5 | s0,s15 | ✅ Có |
+| 3 | Brief history: ENIAC 1946, UNIVAC 1955, IBM 1957 | 02-1 s8–12 | s1 | ✅ Có |
+| 4 | Eras: mainframe→PC→client/server→hosted→beyond | 02-1 s11 | s1 | ✅ Có |
+| 5 | Moore's Law (24 tháng) + Samsung 3nm | 02-1 s16–19 | s1 | ✅ Có |
+| 6 | Hệ quả: faster/cheaper/smaller/greater capacity | 02-1 s18 | s1 | ✅ Có |
+| 7 | Sơ đồ phần cứng cơ bản | 02-1 s20 | s2 | ✅ Có |
+| 8 | Secondary storage: 7 tiêu chí đánh giá | 02-1 s21 | s3 | ✅ Có |
+| 9 | HDD (đĩa kim loại, đầu đọc từ, binary polarity) | 02-1 s24 | s3 | ✅ Có |
+| 10 | Optical drives (CD/DVD/Blu-ray, read-only/write-once/rewriteable) | 02-1 s26–28 | s3 | ✅ Có |
+| 11 | SSD/EEPROM, USB flash, SSHD | 02-1 s30 | s3 | ✅ Có |
+| 12 | SSD vs HDD | 02-1 s32–33 | s3 | ✅ Có |
+| 13 | System unit: CPU + Main Memory | 02-1 s34 | s4 | ✅ Có |
+| 14 | Control unit + ALU; machine cycle | 02-1 s37–38 | s4 | ✅ Có |
+| 15 | Cache L1/L2/L3 (L3 ~10× L1) | 02-1 s39 | s4 | ✅ Có |
+| 16 | RAM vs ROM, static/dynamic, volatile/non-volatile, EEPROM | 02-1 s40–41 | s5 | ✅ Có |
+| 17 | Bits & bytes, KB/MB/GB/TB, RAM 4–8GB, HDD 500GB–4TB | 02-1 s43–44 | s5 | ✅ Có |
+| 18 | Ports | 02-1 s48 | s2/s5 | ✅ Có |
+| 19 | 4 yếu tố performance + tradeoffs | 02-1 s36,49 | s6 | ✅ Có |
+| 20 | Input: keyboard (ergonomic) | 02-1 s53–56 | s7 | ✅ Có |
+| 21 | Pointing: mouse/touchpad/trackball | 02-1 s57–59 | s7 | ✅ Có |
+| 22 | Touch screen, pen input, graphics tablet | 02-1 s60–62 | s7 | ✅ Có |
+| 23 | Motion/voice/video, webcam, videoconference | 02-1 s63–70 | s7 | ✅ Có |
+| 24 | Scanners: OCR/OMR/bar code/QR/RFID/magstripe/MICR | 02-1 s71–76 | s7 | ✅ Có |
+| 25 | Output: display (chất lượng), printers (impact/non-impact) | 02-1 s78–80 | s8 | ✅ Có |
+| 26 | Comms devices: modem/WAP/router/network card/hub/switch | 02-1 s81–92 | s8 | ✅ Có |
+| 27 | Upgrade problem (factors) | 02-1 s94 | s15 | ✅ Có |
+| 28 | Machine language, instruction set (100–200), software programme | 02-2 s3 | s9 | ✅ Có |
+| 29 | Assembly language, assembler, source/object code | 02-2 s4–5 | s9 + s9b | ✅ Có |
+| 30 | HLL, compiler vs interpreter | 02-2 s6–7 | s9b | ✅ Có |
+| 31 | OS định nghĩa + bảng chức năng | 02-2 s12 | s10 | ✅ Có |
+| 32 | Sleep vs hibernate; start/shutdown | 02-2 s14–15 | s10 | ✅ Có |
+| 33 | UI: GUI vs command-line | 02-2 s16–17 | s10 | ✅ Có |
+| 34 | Manage programs: single/multi tasking, fore/background, single/multi user | 02-2 s18 | s10 | ✅ Có |
+| 35 | Memory mgmt + virtual memory (paging) | 02-2 s20 | s10 | ✅ Có |
+| 36 | Coordinate tasks, performance monitor, Internet, update, tools | 02-2 s21–26 | s10 | ✅ Có |
+| 37 | Server OS + network admin; user account/username/password | 02-2 s27–28 | s10/s11 | ✅ Có |
+| 38 | Desktop OS: Windows/Mac(OS X)/UNIX/Linux/Chrome OS | 02-2 s30–35 | s11 | ✅ Có |
+| 39 | Server OS; Mobile OS: Android/iOS/Windows Phone (firmware) | 02-2 s36–40 | s11 | ✅ Có |
+| 40 | Program vs application vs system software | 02-2 s45 | s12 | ✅ Có |
+| 41 | Software distribution: retail/custom/web/mobile/shareware/freeware/open source/public domain | 02-2 s48 | s12 | ✅ Có |
+| 42 | Productivity apps (13 loại) + thao tác chung | 02-2 s52–66 | s13 | ✅ Có |
+| 43 | Graphics & media software (CAD/DTP/photo/video/authoring/media player/disc burning) | 02-2 s67–70 | s13 | ✅ Có |
+| 44 | Personal interest + Communications applications | 02-2 s71–72 | s13 | ✅ Có |
+| 45 | Security tools (firewall/antivirus/spyware/adware/anti-spam/phishing/pop-up) | 02-2 s73–77 | s14 | ✅ Có |
+| 46 | File/disk/system tools (file mgr/search/image viewer/uninstaller/cleanup/defrag/compression/PC maint/backup-restore) | 02-2 s78–84 | s14 | ✅ Có |
+| 47 | Part 2 summary: $20,000 + business implication | 02-2 s86 | s15 | ✅ Có |
 
 **Quiz coverage:** 16/16 câu verbatim (q01–q16) — Hardware 6 (chip, control unit, flash/EEPROM, SSD, tap, Moore's Law), Software 10 (interpreter, paging, single tasking, desktop OS, open source ×2, productivity, CAD, website authoring, project management).
+
+## 9. Kết luận chốt sổ — 2026-06-30
+
+- **Content hiện tại:** `content/dtb.ts` có `topic02.status = "ready"`, 17 sections (`s0`–`s15`, gồm `s9b`), 9 learning objectives, 16 quiz verbatim, knowledgeMap 23 nodes / 22 edges.
+- **Lớp A PASS:** `npx tsc --noEmit` sạch; render `/digital-technology-business/topic-02` qua Playwright sweep 375/768/1440 không pageerror, không console error, không horizontal scroll.
+- **Lớp B PASS:** ma trận coverage 47/47 mục đều `Có`; không còn mục `Thiếu`, `Sai số`, hoặc trạng thái chờ.
+- **Trạng thái chốt:** Topic 02 đủ điều kiện giữ `status: "ready"` và chuyển pipeline sang Topic 03 khi có spec.
