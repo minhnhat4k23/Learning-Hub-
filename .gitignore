@@ -48,3 +48,7 @@ next-env.d.ts
 # python cache (from local skills)
 __pycache__/
 *.pyc
+
+# verify/render-check artifacts (local only)
+dev-render-check.log
+mfg-*.png
