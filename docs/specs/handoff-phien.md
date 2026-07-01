@@ -1,48 +1,42 @@
-# Handoff — Phiên làm việc Managerial Accounting Web App
+# Handoff — Phiên làm việc Learning Hub (AIM)
 
-> Bản bàn giao để chuyển sang phiên Claude mới. Copy nguyên file này vào ngữ cảnh là đủ tiếp tục.
+> Bản bàn giao cho phiên Claude mới. Copy file này vào ngữ cảnh là đủ tiếp tục.
+> **Cập nhật: 2026-07-01.** (Bản cũ — phiên MA Ch1/Ch2 đầu tiên — đã hoàn thành & thay thế.)
 
 ## Bối cảnh & mô hình cộng tác
-- **Claude = đầu não**: viết spec, pedagogy, Codex prompt — **không code** mặc định.
-- **Codex = thực thi**. Ngoại lệ đã dùng: Chaliyah ủy quyền Claude làm executor cho vụ fix lỗi ResizeObserver (đã xong).
-- Stack: vinext (Next.js App Router trên Vite), TypeScript, Tailwind v4, React 19, Cloudflare Workers + D1.
-- Content-driven: nội dung ở `content/chapters.ts`, type ở `content/types.ts`, UI tự render.
-- Nguồn học liệu: Garrison/Noreen/Brewer 17e.
+- **Claude = đầu não/architect** (viết spec, pedagogy, Codex prompt, verify) — không code mặc định, trừ khi Chaliyah ủy quyền từng việc.
+- **Codex = executor** (đổ nội dung vào `content/<mon>.ts` theo spec).
+- Content-driven: `content/<mon>.ts` + `content/types.ts` (schema) + `content/subjects.ts` (đăng ký môn); UI tự render.
+- Bộ luật vận hành đầy đủ (đọc trước khi soạn): `docs/specs/workflow-soan-mon-moi.md` + memory (`MEMORY.md` index). Nguyên tắc **bigIdea = lens bắt buộc** (memory `bigidea-lens-bat-buoc` + workflow §5 GATE).
 
-## Đã hoàn thành
+## Trạng thái 3 môn (cuối phiên 2026-07-01)
 
-### 1. Spec Chương 2 — `docs/specs/chapter-b-job-order-costing.md`
-- Slug `job-order-costing`, order 2, status draft. Sections s0–s11, 12 câu hỏi q1–q12.
-- Số liệu slide đã VERIFIED: PearCo POHR = $4/DLH; Job A-143 Total $268 / unit $134; Quick Check WR53 = $730; Dickson Job 407 = $2,485, giá $4,348.75 (markup 75%).
+### 1. Managerial Accounting — ✅ DONE
+- 8 chương `ready`. **Audit lại trong phiên này: sạch hoàn toàn** — 23 bảng comparison/78 rows 0 mismatch, công thức notation `× ÷ −` chuẩn (không dính `·` nhập nhằng), tsc 0 error, render đẹp. Không cần sửa. Coi như chốt.
 
-### 2. Quy ước ngôn ngữ quiz — `docs/specs/quiz-language-conversion-ch1-ch2.md`
-- **[CHỐT 2026-06-26]** `stem` + `options[].text` → **tiếng Anh**; `rationale` → **tiếng Việt + thuật ngữ tiếng Anh** theo khung **Cơ chế → Bẫy → Khóa**, đặt tên distractor theo khái niệm (không A/B/C/D). Xem memory `quy-uoc-ngon-ngu-noi-dung` (bản cuối).
-- Title: "Chapter 1 — Managerial Accounting and Cost Concepts" / "Chapter 2 — Job-Order Costing: Calculating Unit Product Costs".
+### 2. Digital Technology in Business — ✅ DONE (đã commit)
+- 7 topic (01–07) `ready` + Topic 00 placeholder. Rich teaching mode, bigIdea theo lens bắt buộc, knowledgeMap 3 tầng, quiz 10–16 câu/topic có rationale bẫy.
+- Công thức Topic 05 dùng FormulaBlock (`×`, `^(−1.5)`). Spiral Web 2.0 (T03→T07).
+- **Đã commit:** `1324d39` `feat(dtb): Topic 03-07 ready ...` (content/dtb.ts + 13 spec docs/specs/dtb-*.md). **Chưa push.**
 
-### 3. Rich Teaching Mode — `docs/specs/rich-teaching-mode.md` (spec chính, §A–§J)
-- §A–E: schema Block, components `app/components/teaching/`, design tokens "Edu giàu màu", nội dung Ch1.
-- §F (v2 giảm nhiễu): bỏ `body` khi có `blocks`, tối đa 1 visual + 1 callout/section, màu dịu, prose hẹp.
-- §G (v3 graph tương tác): `Diagram` thành union, thêm `engine:"flow"` (React Flow) — pan/zoom/hover-highlight/click-popover/collapse.
-- §H: nội dung `detail` cho các node knowledge-map Ch1.
-- §I: `Example.meaning?` + `Example.implication?` → render "Ý nghĩa:" / "Dẫn tới:" cho Ch1.
-- §J: kế hoạch block đầy đủ cho Chương 2 (y chang setting Ch1).
+### 3. Manufacturing Systems — 🟡 MỚI SCAFFOLD (chưa soạn nội dung)
+- `content/manufacturing.ts` (8 placeholder `topic-01…08`, tên thật từ slide) + đăng ký trong `content/subjects.ts`. Route `/manufacturing-systems` chạy ("0/8 READY"). tsc 0 error. **CHƯA commit.**
+- **Nguồn & chiến lược** (memory `nguon-hoc-lieu-manufacturing`): **ebook Groover (Automation, Production Systems & CIM 4e) = primary**, slide Chapter 1-8 hỗ trợ, sách kiểm completeness, test-exams cho quiz, **bigIdea từ cả slide + ebook**. Bỏ: Note MS, cthuc MS, assignments.
+- Chương: 1 Introduction · 2 Organization in Factory · 3 Process Design · 4 Jobbing and Batch · 5 Mass Production · 6 Group Technology · 7 Flexible Manufacturing · 8 Costs Management.
 
-### 4. Fix lỗi ResizeObserver (Claude tự code — đã xong, build pass)
-- `vite.config.ts`: plugin `ignoreResizeObserverDevOverlay()` patch overlay của vinext (đã verify chuỗi `.replace` khớp source; có comment cảnh báo kiểm tra lại nếu nâng cấp vinext).
-- `app/components/ResizeObserverErrorGuard.tsx`: dev-only guard dọn console (mounted ở `app/layout.tsx`).
-- Kết luận: lỗi vô hại (React Flow + fitView), chỉ bị dev overlay escalate thành đỏ.
+## Việc tiếp theo (phiên sau)
+**Soạn Manufacturing Topic 01 (Introduction)** theo GATE bigIdea:
+1. Đọc slide Chapter 1 + phần Introduction trong ebook Groover (dò mục lục map chương).
+2. Extract triết lý tác giả (slide + sách) → draft bigIdea → **trình Chaliyah duyệt lens, đợi chốt**.
+3. Duyệt xong → viết full spec (có ma trận completeness đối chiếu sách) → Codex thực thi → verify 2 lớp → `ready`.
 
-## Đang chờ (việc của Chaliyah ở phiên mới)
-Paste các Codex prompt đã tạo cho Codex thực thi:
-1. Chuyển ngôn ngữ quiz Ch1 & Ch2.
-2. Rich Teaching Mode v2/v3 cho Ch1: fix hover-jank FlowDiagram, fix fallback node, fill `detail` (§H), Example meaning/implication (§I).
-3. Rich Teaching Mode Chương 2 (§J) — Codex fix component FlowDiagram trước rồi đổ nội dung Ch2 vào.
-
-Sau khi Codex xong → Claude review đối chiếu spec rồi mới chuyển status sang `ready`.
+## Chưa commit / để ngoài
+- Manufacturing scaffold (content/manufacturing.ts, subjects.ts) — chờ Chaliyah cho commit `feat(manufacturing): scaffold subject`.
+- `.netlify/`, `netlify.toml`, `netlify/`, `dev-render-check.log` — Chaliyah chọn để nguyên, không track.
 
 ## Ràng buộc cố định
 - Gọi **Chaliyah**, trả lời **tiếng Việt** + giữ thuật ngữ English.
 - KHÔNG xóa file / commit / push / đổi cấu trúc thư mục khi chưa xác nhận.
-- KHÔNG bịa số liệu (đánh dấu `[CẦN NGUỒN]`, tag VERIFIED/UNCERTAIN, trích nguồn).
-- Plan trước khi sửa code; Claude không code mặc định (trừ khi được ủy quyền).
-- Chỉ làm chương mới khi Chaliyah yêu cầu — đã dừng sau Ch2 đúng cam kết.
+- KHÔNG bịa số (đánh dấu `[CẦN NGUỒN]`, tag VERIFIED/UNCERTAIN, trích nguồn trang slide/sách).
+- Plan trước khi sửa code; Claude không code mặc định.
+- PDF path có dấu tiếng Việt → copy sang scratchpad ASCII bằng PowerShell `Copy-Item -LiteralPath` rồi `pdftotext` (Bash mangle path có dấu).

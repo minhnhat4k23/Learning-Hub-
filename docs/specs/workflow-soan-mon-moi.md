@@ -13,6 +13,7 @@
 ## 0. Nguyên tắc bất biến
 - **Bám SÁCH, không chỉ slide.** Slide = giàn giáo; định nghĩa/lý thuyết cốt lõi lấy từ **Glossary + Summary + body sách**, **bao gồm Appendix**.
 - **No fabrication.** Số nào chưa chắc → đọc lại PDF, KHÔNG tự điền. Gắn nhãn `VERIFIED` / `UNCERTAIN` / `[CẦN NGUỒN]`.
+- **Hard theory vs Soft lens (Chaliyah chốt).** **Hard theory** (definition/số/trình tự/phân loại/công thức) = bám NGUYÊN nghĩa nguồn + trích trang; chỉ dịch VI + giữ term EN, không đổi/thêm/bớt nội dung (đặt ở keyTerms/comparison/formula/calc/prose định nghĩa). **Soft lens** (bigIdea/compass/pillars, callout `insight`/`key`, `takeaway`) = diễn giải định hướng cách nghĩ, đặt block riêng, KHÔNG mạo danh là lời sách; khái niệm ngoài nguồn phải ghi rõ "liên hệ/góc nhìn". Gán nguồn chính xác (đúng trang, hoặc "định nghĩa chuẩn ngành"). Xem memory `bigidea-lens-bat-buoc`.
 - **Visual-first.** Mọi chương ưu tiên graph/model thay vì chữ đặc (xem §4).
 - **KHÔNG xoá file / commit / push / đổi cấu trúc thư mục khi chưa có xác nhận của Chaliyah.**
 
@@ -55,6 +56,11 @@
 ---
 
 ## 5. Template spec mỗi chương (`docs/specs/<mon>-chapter-XX.md`)
+
+> **GATE bigIdea (BẮT BUỘC trước khi viết spec này).** `bigIdea` là **lăng kính bắt buộc** bám triết lý tác giả (memory `bigidea-lens-bat-buoc`), KHÔNG phải câu mô tả chung. Quy trình: (1) đọc nguồn → (2) extract triết lý tác giả (dẫn chứng trang) → (3) draft bigIdea theo pattern `[trend tác giả nhấn] → [tác động] → [điều người học rút ra]` → (4) **Chaliyah duyệt lens, đợi "chốt"** → (5) mới viết full spec dưới đây. Bám triết lý TỪNG môn, không ép template chung giữa các môn.
+>
+> **Format bigIdea (compass + pillars).** KHÔNG viết đoạn dài rối. `bigIdea` (string) = **1 câu la bàn** cô đọng. `bigIdeaPillars?: { label: string; body: string }[]` = **2–4 trụ định hướng** (label ngắn "Định vị"/"Bài toán"/"Điều kiện" + body 1 dòng). Renderer render compass đậm + pillars dạng chip/list, trên knowledgeMap (đã là diagram tổng → không thêm diagram riêng cho bigIdea). Field `bigIdeaPillars` optional (managerial/dtb chưa có vẫn render như cũ).
+
 Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`):
 1. **Header**: nguồn (sách chương + Appendix + slide), chuẩn áp dụng.
 2. **Meta**: `slug`, `order`, `title`, `status: "draft"`, `source`, `bigIdea`, `learningObjectives` (LO1…LOn, gồm cả LO của Appendix).
