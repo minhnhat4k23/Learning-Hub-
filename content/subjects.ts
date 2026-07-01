@@ -1,6 +1,7 @@
 import { dtbChapters } from "./dtb";
 import { managerialChapters } from "./managerial";
 import { manufacturingChapters } from "./manufacturing";
+import { organizationalBehaviorChapters } from "./organizational-behavior";
 import type { Chapter, Subject } from "./types";
 
 export const subjects: Subject[] = [
@@ -24,6 +25,13 @@ export const subjects: Subject[] = [
     subtitle:
       "Topic 01-08 placeholder. Nội dung sẽ được soạn từ ebook Groover (Automation, Production Systems & CIM 4e) + slides Chapter 1-8 + test-exams.",
     chapters: manufacturingChapters,
+  },
+  {
+    id: "organizational-behavior",
+    title: "Organizational Behavior",
+    subtitle:
+      "Topic 0-12 placeholder. Nội dung sẽ được soạn từ slide Dr Lan Anh (IM2017) + Reading Chapters + đề thi Midterm/Final.",
+    chapters: organizationalBehaviorChapters,
   },
 ];
 
