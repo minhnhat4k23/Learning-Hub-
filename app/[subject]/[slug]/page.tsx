@@ -87,6 +87,23 @@ export default async function ChapterDetail({
               <p className="mt-3 text-lg leading-8 text-zinc-800 dark:text-zinc-200">
                 {chapter.bigIdea}
               </p>
+              {chapter.bigIdeaPillars && chapter.bigIdeaPillars.length > 0 && (
+                <ul className="mt-4 space-y-2 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+                  {chapter.bigIdeaPillars.map((pillar) => (
+                    <li
+                      key={pillar.label}
+                      className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3"
+                    >
+                      <span className="inline-flex w-fit shrink-0 rounded-md bg-zinc-900 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-white dark:bg-white dark:text-zinc-900">
+                        {pillar.label}
+                      </span>
+                      <span className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                        {pillar.body}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             {chapter.knowledgeMap && (

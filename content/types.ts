@@ -151,8 +151,10 @@ export type Chapter = {
   slug: string;
   order: number;
   title: string;
-  /** Bản chất chương gói trong 1-2 câu. */
+  /** Bản chất chương gói trong 1 câu (compass / la bàn định hướng). */
   bigIdea: string;
+  /** 2-4 trụ định hướng (soft lens) hiển thị dạng chip dưới compass. Optional. */
+  bigIdeaPillars?: { label: string; body: string }[];
   learningObjectives: string[];
   sections: Section[];
   questions: Question[];
