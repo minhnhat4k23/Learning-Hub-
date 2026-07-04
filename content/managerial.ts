@@ -13,6 +13,12 @@ const rawChapters: Chapter[] = [
     title: "Chapter 1 — Managerial Accounting and Cost Concepts",
     bigIdea:
       'Không có một con số "chi phí" duy nhất. Tùy MỤC ĐÍCH quản trị — gán chi phí cho đối tượng, lập báo cáo tài chính, dự đoán theo sản lượng, hay ra quyết định — mà cùng một khoản chi được phân loại và dùng khác nhau ("different costs for different purposes"). Nắm được mình đang phân loại để làm gì thì mới chọn đúng lăng kính.',
+    bigIdeaPillars: [
+      { label: "Gán chi phí cho đối tượng", body: "Mục đích 1 — cost assignment. Direct cost truy nguyên thẳng vào cost object; indirect cost & common cost phải phân bổ. Ba khoản mục chi phí sản xuất: Direct Materials, Direct Labor, Manufacturing Overhead. Prime cost = DM + DL; conversion cost = DL + MOH." },
+      { label: "Lập báo cáo tài chính", body: "Mục đích 2 — financial reporting. Product cost (DM + DL + MOH) gắn vào sản phẩm & tồn kho, chỉ thành chi phí khi bán (COGS); period cost (selling & administrative) tính thẳng vào kỳ. Chi phí luân chuyển Raw Materials → Work in Process → Finished Goods → COGS." },
+      { label: "Dự đoán theo sản lượng", body: "Mục đích 3 — cost behavior. Variable cost đổi theo activity base (cost driver); fixed cost không đổi trong relevant range (committed vs discretionary) nhưng per-unit thì biến thiên ngược; mixed cost tách bằng Y = a + bX (high-low method)." },
+      { label: "Ra quyết định", body: "Mục đích 4 — decision making. Chỉ quan tâm differential cost/benefit (khác nhau giữa các phương án) và opportunity cost; bỏ qua sunk cost. Contribution format income statement (tách variable/fixed) phục vụ ra quyết định, khác traditional format (tách product/period)." },
+    ],
     learningObjectives: [
       "Phân biệt managerial accounting và financial accounting (phục vụ ai, để làm gì).",
       "LO1 — Gán chi phí cho cost object: direct cost, indirect cost, common cost.",
@@ -1547,6 +1553,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 2 — Job-Order Costing: Calculating Unit Product Costs",
     bigIdea:
       "Direct materials và direct labor thì truy nguyên thẳng vào từng job được; nhưng manufacturing overhead thì không — nên ta ước tính trước một tỉ lệ phân bổ (POHR) rồi áp overhead vào job theo mức hoạt động thực tế. Toàn bộ chương trả lời câu hỏi: một đơn hàng riêng lẻ tốn bao nhiêu, và câu trả lời phụ thuộc rất mạnh vào việc chọn allocation base có thật sự là cost driver hay không.",
+    bigIdeaPillars: [
+      { label: "Truy-nguyên-được vs không", body: "Direct materials & direct labor trace thẳng vào từng job qua materials requisition & time ticket. Manufacturing overhead gián tiếp, phát sinh không đều theo thời gian → không thể trace, buộc phải phân bổ (allocate)." },
+      { label: "POHR & normal costing", body: "Ước tính TRƯỚC predetermined overhead rate = estimated total MOH ÷ estimated total allocation base. Overhead applied = POHR × mức hoạt động THỰC của job (normal costing). Nhờ vậy biết chi phí job ngay khi hoàn thành, không phải chờ cuối kỳ." },
+      { label: "Chọn base đúng mới ra số đúng", body: "Một plantwide POHR dễ bóp méo unit cost nếu các bộ phận tiêu hao overhead khác nhau → dùng nhiều departmental rate, hoặc activity-based costing (Appendix 2A) với nhiều cost pool. Allocation base phải là cost driver thật — thứ thực sự làm phát sinh overhead." },
+    ],
     learningObjectives: [
       "LO1 — Tính predetermined overhead rate (POHR).",
       "LO2 — Áp overhead vào job bằng POHR (normal costing).",
@@ -2748,6 +2759,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 3 — Job-Order Costing: Cost Flows and External Reporting",
     bigIdea:
       "Sau khi tính được chi phí từng job ở Chương 2, chương này theo dòng chi phí chạy qua sổ sách: từ bút toán mua/xuất NVL → Work in Process → Finished Goods → Cost of Goods Sold, lập schedule of cost of goods manufactured/cost of goods sold, và xử lý underapplied/overapplied overhead khi lên báo cáo cho bên ngoài.",
+    bigIdeaPillars: [
+      { label: "Dòng chi phí qua tài khoản", body: "Ghi nhận bằng journal entries: mua/xuất Raw Materials → Work in Process (DM, DL, MOH applied) → Finished Goods → Cost of Goods Sold. Dùng T-account để biểu diễn trực quan chi phí chạy qua các tài khoản tồn kho." },
+      { label: "Lập schedule & báo cáo", body: "Schedule of Cost of Goods Manufactured (tổng hợp DM + DL + MOH áp và điều chỉnh Work in Process) → Schedule of Cost of Goods Sold (điều chỉnh Finished Goods) → income statement cho bên ngoài." },
+      { label: "Xử lý under/overapplied overhead", body: "Vì overhead áp bằng POHR ước tính nên lệch so với thực tế: underapplied (áp thiếu) hoặc overapplied (áp thừa). Đóng số dư Manufacturing Overhead vào COGS (hoặc phân bổ theo tỉ lệ) trước khi lập báo cáo ngoài." },
+    ],
     learningObjectives: [
       "LO1 — Hiểu dòng luân chuyển chi phí trong job-order costing và lập journal entries ghi nhận chi phí.",
       "LO2 — Dùng T-account để biểu diễn dòng chi phí.",
@@ -3830,6 +3846,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 5 — Cost-Volume-Profit Relationships",
     bigIdea:
       'CVP là công cụ "what-if" của nhà quản trị: nắm mối quan hệ giữa giá bán, chi phí biến đổi/cố định và sản lượng để trả lời ba câu hỏi lớn: bán bao nhiêu thì hòa vốn, cần bao nhiêu để đạt lợi nhuận mục tiêu, và lợi nhuận nhạy thế nào khi một yếu tố thay đổi.',
+    bigIdeaPillars: [
+      { label: "Contribution margin là động cơ", body: "CM = Sales − Variable expenses, phần còn lại bù fixed cost rồi mới thành lợi nhuận. CM ratio = CM ÷ Sales cho biết mỗi đồng doanh thu tăng thì net operating income tăng bao nhiêu. Profit = (P − V) × Q − Fixed." },
+      { label: "Ba câu hỏi lớn", body: "Break-even (Q hòa vốn = Fixed ÷ CM per unit): bán bao nhiêu thì huề vốn; target profit: cần bao nhiêu để đạt lợi nhuận mục tiêu; margin of safety: doanh thu được phép sụt bao nhiêu trước khi lỗ." },
+      { label: "Độ nhạy & cấu trúc chi phí", body: "What-if: đổi selling price / variable cost / fixed cost / volume tác động NOI thế nào. Operating leverage (= CM ÷ NOI) đo mức khuếch đại — cấu trúc nhiều fixed cost thì NOI nhạy hơn với thay đổi doanh thu. Sales mix ảnh hưởng break-even đa sản phẩm." },
+    ],
     learningObjectives: [
       "LO1 — Giải thích thay đổi sản lượng tác động đến contribution margin và net operating income thế nào.",
       "LO2 — Lập và đọc CVP graph và profit graph.",
@@ -5342,6 +5363,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 8 — Master Budgeting",
     bigIdea:
       'Master budget là bộ kế hoạch định lượng liên kết — khởi đầu từ sales forecast, chạy qua các budget sản xuất/chi phí/tiền mặt, kết tinh ở 3 báo cáo dự toán (cash budget, budgeted income statement, budgeted balance sheet). Vừa để plan (phối hợp nguồn lực, trả lời "what-if") vừa làm chuẩn để control (so actual với budget).',
+    bigIdeaPillars: [
+      { label: "Vì sao & quy trình lập budget", body: "Budget để plan (phối hợp nguồn lực, truyền thông mục tiêu, trả lời what-if) và control (làm chuẩn so với actual). Participative/self-imposed budget tăng cam kết. Toàn bộ khởi đầu từ sales forecast." },
+      { label: "Chuỗi operating budgets liên kết", body: "Sales budget → production budget → direct materials, direct labor, manufacturing overhead budgets → ending finished goods inventory → selling & administrative budget. Đầu ra của budget này là đầu vào của budget kế tiếp — buộc phải nhất quán." },
+      { label: "Kết tinh ở 3 báo cáo dự toán", body: "Cash budget (thu − chi + financing) → budgeted income statement (kết quả kinh doanh dự kiến) → budgeted balance sheet (tình hình tài chính cuối kỳ). Đây là sản phẩm cuối cùng của master budget." },
+    ],
     learningObjectives: [
       "LO1 — Hiểu vì sao tổ chức lập budget và quy trình lập.",
       "LO2 — Lập sales budget kèm schedule of expected cash collections.",
@@ -6542,6 +6568,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 9 — Flexible Budgets and Performance Analysis",
     bigIdea:
       'Static planning budget so sánh "táo với cam" khi mức hoạt động thực khác kế hoạch. Flexible budget "flex" theo mức hoạt động thực để tách chênh lệch thành hai nguồn: phần do mức hoạt động đổi (activity variance) và phần do kiểm soát giá/chi tiêu (revenue & spending variance) → đánh giá hiệu quả công bằng.',
+    bigIdeaPillars: [
+      { label: "Vì sao static budget đánh giá sai", body: "Static (planning) budget cố định ở mức hoạt động KẾ HOẠCH. Khi mức hoạt động thực khác kế hoạch, so actual với static budget là so 'táo với cam' — lẫn lộn giữa 'làm nhiều/ít hơn dự kiến' và 'chi tiêu tốt/tệ'." },
+      { label: "Flexible budget flex theo mức thực", body: "Flexible budget tính lại doanh thu & chi phí NÊN là bao nhiêu Ở MỨC HOẠT ĐỘNG THỰC (dựa cost driver). Đây mới là mốc so sánh công bằng với actual." },
+      { label: "Tách variance đúng nguồn", body: "Activity variance = planning budget vs flexible budget (do mức hoạt động đổi — thường không phải lỗi kiểm soát). Revenue & spending variance = flexible budget vs actual (do kiểm soát giá bán/chi tiêu — thuộc trách nhiệm quản lý)." },
+    ],
     learningObjectives: [
       "LO1 — Lập planning budget và flexible budget với một cost driver.",
       "LO2 — Tính và diễn giải activity variances.",
@@ -7448,6 +7479,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 10 — Standard Costs and Variances",
     bigIdea:
       "Standard cost là chuẩn cho từng input = price standard × quantity standard. So actual với standard cho mức output thực rồi tách spending variance thành price variance và quantity variance → quy trách nhiệm đúng người. Khung lõi: (1) AQ×AP → (2) AQ×SP → (3) SQ×SP.",
+    bigIdeaPillars: [
+      { label: "Standard = price × quantity", body: "Mỗi input có standard price (SP) và standard quantity allowed cho mức output thực (SQ). Standard cost = SP × SQ — mốc 'nên tốn bao nhiêu' để so với thực tế." },
+      { label: "Khung 3 cột tách variance", body: "Cột (1) AQ × AP → (2) AQ × SP → (3) SQ × SP. Chênh (1) − (2) = price/rate variance (do GIÁ input); chênh (2) − (3) = quantity/efficiency variance (do LƯỢNG dùng). Tách để biết đúng nguyên nhân, không lẫn lộn." },
+      { label: "Áp cho mọi input + quy trách nhiệm", body: "Direct materials (price & quantity), direct labor (rate & efficiency), variable overhead (rate & efficiency), fixed overhead budget & volume variance (Appendix 10A). Mỗi variance quy về đúng bộ phận chịu trách nhiệm (purchasing vs production...)." },
+    ],
     learningObjectives: [
       "LO1 — Tính direct materials price và quantity variances, giải thích ý nghĩa.",
       "LO2 — Tính direct labor rate và efficiency variances, giải thích ý nghĩa.",
@@ -8554,6 +8590,11 @@ const rawChapters: Chapter[] = [
     title: "Chapter 13 — Differential Analysis: The Key to Decision Making",
     bigIdea:
       "Ra quyết định đúng = chỉ nhìn future costs & benefits KHÁC NHAU giữa các phương án. Sunk cost và chi phí không đổi giữa các phương án đều irrelevant → bỏ qua. Khung này áp vào 5 quyết định kinh điển: add/drop segment, make-or-buy, special order, constrained resource, sell-or-process-further.",
+    bigIdeaPillars: [
+      { label: "Nguyên tắc relevant cost", body: "Quyết định đúng chỉ nhìn future cost & benefit KHÁC NHAU giữa các phương án (differential/avoidable). Sunk cost và chi phí không đổi giữa các phương án đều irrelevant → bỏ qua. Opportunity cost thì PHẢI tính." },
+      { label: "5 quyết định kinh điển", body: "Add/drop segment (so CM mất đi với fixed cost tránh được), make-or-buy (so avoidable cost với giá mua + opportunity cost), special order (chỉ tính incremental), constrained resource, sell-or-process-further (so incremental revenue với incremental cost sau split-off point)." },
+      { label: "Bẫy hay mắc", body: "Allocated common/fixed cost bị coi nhầm là relevant; quên opportunity cost của nguồn lực đang dùng; với constrained resource phải xếp ưu tiên theo contribution margin trên mỗi ĐƠN VỊ NGUỒN LỰC KHAN HIẾM (không phải CM trên mỗi đơn vị sản phẩm)." },
+    ],
     learningObjectives: [
       "LO1 — Nhận diện relevant vs irrelevant costs/benefits trong một quyết định.",
       "LO2 — Phân tích nên thêm hay bỏ một product line/segment.",
