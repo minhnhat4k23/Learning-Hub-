@@ -522,7 +522,10 @@ export default function FlowDiagram({ diagram }: { diagram: FlowDiagramData }) {
         )}
       </div>
 
-      <div className="relative mt-3 h-[360px] min-w-0 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 md:h-[440px]">
+      <div
+        className="relative mt-3 h-[360px] min-w-0 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 md:h-[440px]"
+        style={{ contain: "layout paint" }}
+      >
         {isReady && (
           <HoverContext.Provider value={hoverValue}>
             <ReactFlow

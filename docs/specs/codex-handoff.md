@@ -33,9 +33,10 @@
 
 ## Verify trước khi báo xong (bắt buộc)
 - `npx tsc --noEmit` sạch lỗi.
-- Trang của topic/chương render được sections + quiz (Playwright + bundled
-  chromium theo quy ước repo).
-- Báo lại ngắn gọn: số sections, số questions, kết quả tsc, kết quả render.
+- Báo lại ngắn gọn: số sections, số questions, số LO/comparison/flow/callout, kết quả tsc.
+- **KHÔNG chạy render check.** `rendercheck.mjs` KHÔNG nằm trong repo (là tool
+  riêng của Claude, đã gitignore). Bước kiểm render (Playwright 375/768/1440) do
+  **Claude** làm ở khâu review — Codex không cần và không thể chạy nó.
 
 ## Tham chiếu
 - Pedagogy + template spec: `docs/specs/00-course-blueprint.md`.

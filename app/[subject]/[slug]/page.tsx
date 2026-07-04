@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSubjects, getChapter, getSubject, getSubjectChapters } from "@/content/subjects";
 import QuizPlayer from "@/app/components/QuizPlayer";
+import BigIdeaModel from "@/app/components/teaching/BigIdeaModel";
 import BlockRenderer from "@/app/components/teaching/BlockRenderer";
 import ChapterRail from "@/app/components/teaching/ChapterRail";
 import KnowledgeMap from "@/app/components/teaching/KnowledgeMap";
@@ -80,31 +81,40 @@ export default async function ChapterDetail({
               {chapter.title}
             </h1>
 
-            <div className="mt-6 rounded-2xl border-l-4 border-zinc-900 bg-white p-6 dark:border-white dark:bg-zinc-900">
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                Bản chất chương
-              </p>
-              <p className="mt-3 text-lg leading-8 text-zinc-800 dark:text-zinc-200">
-                {chapter.bigIdea}
-              </p>
-              {chapter.bigIdeaPillars && chapter.bigIdeaPillars.length > 0 && (
-                <ul className="mt-4 space-y-2 border-t border-zinc-100 pt-4 dark:border-zinc-800">
-                  {chapter.bigIdeaPillars.map((pillar) => (
-                    <li
-                      key={pillar.label}
-                      className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3"
-                    >
-                      <span className="inline-flex w-fit shrink-0 rounded-md bg-zinc-900 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-white dark:bg-white dark:text-zinc-900">
-                        {pillar.label}
-                      </span>
-                      <span className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-                        {pillar.body}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            {chapter.bigIdeaPillars && chapter.bigIdeaPillars.length > 0 ? (
+              <div className="mt-6">
+                <BigIdeaModel
+                  bigIdea={chapter.bigIdea}
+                  pillars={chapter.bigIdeaPillars}
+                />
+              </div>
+            ) : (
+              <div className="mt-6 rounded-2xl border-l-4 border-zinc-900 bg-white p-6 dark:border-white dark:bg-zinc-900">
+                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                  Bản chất chương
+                </p>
+                <p className="mt-3 break-words text-lg leading-8 text-zinc-800 dark:text-zinc-200 [overflow-wrap:anywhere]">
+                  {chapter.bigIdea}
+                </p>
+                {chapter.bigIdeaPillars && chapter.bigIdeaPillars.length > 0 && (
+                  <ul className="mt-4 space-y-2 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+                    {chapter.bigIdeaPillars.map((pillar) => (
+                      <li
+                        key={pillar.label}
+                        className="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3"
+                      >
+                        <span className="inline-flex max-w-full shrink-0 rounded-md bg-zinc-900 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-white dark:bg-white dark:text-zinc-900">
+                          {pillar.label}
+                        </span>
+                        <span className="min-w-0 break-words text-sm leading-6 text-zinc-700 dark:text-zinc-300 [overflow-wrap:anywhere]">
+                          {pillar.body}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
 
             {chapter.knowledgeMap && (
               <KnowledgeMap diagram={chapter.knowledgeMap} />
@@ -115,7 +125,7 @@ export default async function ChapterDetail({
                 <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
                   Mục tiêu học
                 </h2>
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-700 dark:text-zinc-300">
+                <ul className="mt-3 list-disc space-y-1 break-words pl-5 text-sm text-zinc-700 [overflow-wrap:anywhere] dark:text-zinc-300">
                   {chapter.learningObjectives.map((objective, index) => (
                     <li key={index}>{objective}</li>
                   ))}

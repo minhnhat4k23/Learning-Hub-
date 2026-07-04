@@ -12,12 +12,15 @@ export default function ComparisonTable({
           {table.title}
         </p>
       )}
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[520px] border-collapse text-left text-sm">
+      <div className="w-full max-w-full overflow-x-auto">
+        <table className="w-full min-w-full table-fixed border-collapse text-left text-sm sm:min-w-[520px]">
           <thead className="bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
             <tr>
               {table.columns.map((column) => (
-                <th key={column} className="px-4 py-3 font-semibold">
+                <th
+                  key={column}
+                  className="break-words px-3 py-3 font-semibold [overflow-wrap:anywhere] sm:px-4"
+                >
                   {column}
                 </th>
               ))}
@@ -33,13 +36,13 @@ export default function ComparisonTable({
                     : "bg-zinc-50 dark:bg-zinc-900/60"
                 }
               >
-                <th className="w-1/4 px-4 py-3 font-semibold text-zinc-900 dark:text-zinc-100">
+                <th className="w-1/4 break-words px-3 py-3 font-semibold text-zinc-900 [overflow-wrap:anywhere] dark:text-zinc-100 sm:px-4">
                   {row.label}
                 </th>
                 {row.cells.map((cell, cellIndex) => (
                   <td
                     key={`${row.label}-${cellIndex}`}
-                    className="px-4 py-3 leading-6 text-zinc-700 dark:text-zinc-300"
+                    className="break-words px-3 py-3 leading-6 text-zinc-700 [overflow-wrap:anywhere] dark:text-zinc-300 sm:px-4"
                   >
                     {cell}
                   </td>
