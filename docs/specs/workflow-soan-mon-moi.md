@@ -1,6 +1,6 @@
 # Luật Workflow — Soạn môn mới cho web học (AIM)
 
-> **File luật chuẩn (source of truth).** Mở thêm môn mới (DTB, hoặc môn bất kỳ sau này) → tuân đúng file này. Quy trình đã được kiểm chứng thực tế ở môn **Managerial Accounting** (8 chương). Managerial coi như đã chốt, KHÔNG rà lại; file này áp cho **môn mới từ chương đầu tiên**.
+> **File luật chuẩn (source of truth).** Mở thêm môn mới (DTB, hoặc môn bất kỳ sau này) → tuân đúng file này. Quy trình đã được kiểm chứng thực tế ở môn **Managerial Accounting** (8 chương). File này áp cho **MỌI môn**: môn mới từ chương đầu tiên; môn đã soạn xong (Managerial/DTB/Manufacturing/OB) vẫn chịu luật §0 (SÁCH>slide) — **không còn miễn trừ "đã chốt, không rà lại"**; việc rà lại completeness đối chiếu sách là **task riêng** làm sau từng môn.
 >
 > Tài liệu liên quan (đọc kèm, không lặp lại đầy đủ ở đây):
 > - Pedagogy & visual-first: `docs/specs/00-course-blueprint.md` (§3.2b)
@@ -11,7 +11,7 @@
 ---
 
 ## 0. Nguyên tắc bất biến
-- **Bám SÁCH, không chỉ slide.** Slide = giàn giáo; định nghĩa/lý thuyết cốt lõi lấy từ **Glossary + Summary + body sách**, **bao gồm Appendix**.
+- **SÁCH > SLIDE (luật GLOBAL — MỌI môn).** Slide = subset thầy cô dùng để **giảng trên lớp**; **SÁCH (textbook / Reading Chapter) mới là nguồn ĐẦY ĐỦ, và đề thi THƯỜNG RA TỪ SÁCH**. Do đó: (a) định nghĩa/lý thuyết cốt lõi lấy từ **Glossary + Summary + body sách, gồm Appendix**; (b) **mọi kiến thức có trong sách mà slide KHÔNG có đều BẮT BUỘC thêm vào content** — cấm lấy "slide không nhắc" làm lý do bỏ. *Ngoại lệ per-topic:* mục sách rõ ràng thuộc topic khác trong map thì để topic đó (tránh giẫm). Luật này áp cho **cả môn đã soạn xong** (rà lại completeness là task riêng). Xem memory `sach-hon-slide-bat-buoc`.
 - **No fabrication.** Số nào chưa chắc → đọc lại PDF, KHÔNG tự điền. Gắn nhãn `VERIFIED` / `UNCERTAIN` / `[CẦN NGUỒN]`.
 - **Hard theory vs Soft lens (Chaliyah chốt).** **Hard theory** (definition/số/trình tự/phân loại/công thức) = bám NGUYÊN nghĩa nguồn + trích trang; chỉ dịch VI + giữ term EN, không đổi/thêm/bớt nội dung (đặt ở keyTerms/comparison/formula/calc/prose định nghĩa). **Soft lens** (bigIdea/compass/pillars, callout `insight`/`key`, `takeaway`) = diễn giải định hướng cách nghĩ, đặt block riêng, KHÔNG mạo danh là lời sách; khái niệm ngoài nguồn phải ghi rõ "liên hệ/góc nhìn". Gán nguồn chính xác (đúng trang, hoặc "định nghĩa chuẩn ngành"). Xem memory `bigidea-lens-bat-buoc`.
 - **Visual-first.** Mọi chương ưu tiên graph/model thay vì chữ đặc (xem §4).
@@ -82,9 +82,19 @@ Mẫu đã chạy tốt ở Managerial (xem `chapter-h-differential-analysis.md`
 
 ### Lớp B — Completeness ("KHÔNG SÓT kiến thức")
 - Dựng **ma trận phủ**: `[mọi LO + mọi khái niệm/định nghĩa/ví dụ trong slide & sách (gồm Appendix)] × [đã có trong content chưa]`.
+- **Đối chiếu CẢ sách LẪN slide, KHÔNG chỉ slide (luật §0).** Kiến thức có trong sách mà slide bỏ = mục **Thiếu** bắt buộc bổ sung — đây là nguồn sót hay gặp nhất (vd MA Ch.1: `controllable/uncontrollable`, `value-added/non-value-added` có trong sách, thiếu trên web).
 - Mỗi dòng đánh dấu: **Có / Thiếu / Sai số**. Mọi mục **Thiếu** phải bổ sung hoặc Chaliyah duyệt bỏ.
 - Đối chiếu trực tiếp PDF slide + sách ở đường dẫn nguồn (bản trích `.txt` trong scratchpad là tạm, mất theo session → trích lại khi cần).
 - **Lưu ma trận phủ cuối cùng vào spec chương** (§5 mục 8), không để trong scratchpad — đó là bằng chứng durable cho cổng chốt.
+
+#### Quy trình audit đối chiếu SÁCH (kiểm chứng ở MA Topic 1 — áp cho MỌI chương/môn)
+> Dùng khi audit một chương ĐÃ soạn hoặc trước khi chốt chương mới. Đây là cách "biết chắc không sót" theo luật §0 (SÁCH>slide) + memory `sach-hon-slide-bat-buoc`.
+1. **Đọc TRỌN chương sách bằng Playwright vision-read** (không chỉ slide/summary/bản tóm của Codex) — theo memory `read-scanned-pdf-playwright` (server node + wheel scroll + wait dài cho PDF lớn). Slide/summary chỉ để định vị, KHÔNG thay việc đọc sách.
+2. **Lập inventory ĐẦY ĐỦ của chương**, tối thiểu: (a) **Glossary** — mọi term + trang; (b) **mọi Exhibit** (graph/model, sơ đồ, **bảng kế toán tính toán**); (c) **worked examples / Review Problems**; (d) mọi LO. Soi kỹ graph/model + bảng tính vì đây là chỗ web hay bỏ (Chaliyah nhấn).
+3. **So từng mục inventory với content web** → đánh dấu **Có / Thiếu / Dư**. "Dư" (web tự thêm ngoài sách) cũng ghi ra để Chaliyah duyệt.
+4. Mọi mục **Thiếu** (kể cả glossary term, bảng tính, exhibit) → viết **supplement spec** đặt tên `docs/specs/<mon>-topicN-completeness.md` cho Codex **CHỈ THÊM** (keyTerm/block/section/quiz nối vào mảng), KHÔNG rewrite phần đã có, KHÔNG đụng chương/môn khác. Mọi số VERIFIED + trích trang.
+5. **Verify 2 lớp** (Lớp A tsc+render, Lớp B đối chiếu lại) rồi mới chốt.
+6. **Lưu coverage matrix vào chính supplement spec** (mục cuối) = bằng chứng durable; xoá báo cáo/trích tạm sau khi đã đưa vào spec.
 
 ### Cổng chốt
 - Đạt **cả Lớp A + Lớp B** → Claude chuyển `status: "draft" → "ready"`. Chưa đủ → giữ `draft`.
