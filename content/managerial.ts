@@ -858,6 +858,10 @@ const rawChapters: Chapter[] = [
             }
           }
         ],
+        keyTerms: [
+          { term: "SG&A", definition: "Selling, General & Administrative — cách gọi gộp nonmanufacturing costs (selling + administrative) (sách p.30)." },
+          { term: "Order-getting / order-filling costs", definition: "Hai nhóm của selling cost: order-getting = chi phí để CÓ đơn (quảng cáo, sales); order-filling = chi phí để GIAO hàng tới khách (vận chuyển, kho thành phẩm) (sách p.30)." },
+        ],
       },
             {
         id: "s5",
@@ -908,11 +912,21 @@ const rawChapters: Chapter[] = [
               "title": "Chốt nhớ",
               "body": "Product cost nằm chờ trong tồn kho tới khi bán; period cost tính thẳng vào kỳ."
             }
+          },
+          {
+            "type": "callout",
+            "callout": {
+              "kind": "key",
+              "title": "Vì sao product ≠ period: matching principle",
+              "body": "Theo matching principle (accrual), chi phí phải khớp kỳ với doanh thu nó tạo ra. Product cost gắn với sản phẩm nên 'chờ' trong tồn kho tới khi sản phẩm được BÁN mới thành chi phí (COGS). Period cost (selling & administrative) không tạo ra một doanh thu cụ thể nào → ghi thẳng vào kỳ phát sinh."
+            }
           }
         ],
         keyTerms: [
           { term: "Product cost", definition: "DM + DL + MOH; bám vào sản phẩm, qua tồn kho rồi mới thành COGS khi bán." },
           { term: "Period cost", definition: "Selling + administrative; tính thẳng vào kỳ, không qua tồn kho." },
+          { term: "Inventoriable costs", definition: "Từ ĐỒNG NGHĨA của product cost (sách p.31) — vì ban đầu chi phí này 'nằm' trong hàng tồn kho (inventory) rồi mới thành COGS khi bán." },
+          { term: "Matching principle", definition: "Dựa trên accrual concept: chi phí tạo ra một khoản doanh thu phải được ghi nhận CÙNG KỲ với doanh thu đó (sách p.30-31). Là nền để phân biệt product cost (ghi khi bán) vs period cost (ghi ngay trong kỳ)." },
         ],
       },
             {
@@ -960,6 +974,20 @@ const rawChapters: Chapter[] = [
                   "sectionId": "s6"
                 },
                 {
+                  "id": "SA",
+                  "label": "Selling & Administrative",
+                  "group": "term",
+                  "detail": "Period cost — KHÔNG qua tồn kho.",
+                  "sectionId": "s6"
+                },
+                {
+                  "id": "IS",
+                  "label": "Income Statement",
+                  "group": "concept",
+                  "detail": "COGS (product, khi bán) và S&A expense (period, ngay trong kỳ) cùng xuất hiện ở đây.",
+                  "sectionId": "s6"
+                },
+                {
                   "id": "DL",
                   "label": "Direct Labor",
                   "group": "term",
@@ -998,6 +1026,15 @@ const rawChapters: Chapter[] = [
                   "to": "COGS",
                   "label": "khi bán",
                   "animated": true
+                },
+                {
+                  "from": "COGS",
+                  "to": "IS"
+                },
+                {
+                  "from": "SA",
+                  "to": "IS",
+                  "label": "period"
                 }
               ]
             }
@@ -1044,6 +1081,7 @@ const rawChapters: Chapter[] = [
         ],
         keyTerms: [
           { term: "Activity base / Cost driver", definition: "Thước đo làm phát sinh variable cost (số đơn vị sản xuất, giờ máy, giờ lao động, số dặm chạy…)." },
+          { term: "Cost structure", definition: "Tỷ trọng TƯƠNG ĐỐI của các loại chi phí fixed / variable / mixed trong một tổ chức (sách p.33). Vd doanh nghiệp nhiều fixed cost thì cost structure khác với doanh nghiệp nhiều variable cost — ảnh hưởng mức nhạy của lợi nhuận (nền cho operating leverage ở Ch.5)." },
         ],
       },
             {
@@ -1119,10 +1157,19 @@ const rawChapters: Chapter[] = [
               "title": "Step-fixed cost",
               "body": "Fixed cost cũng nhảy BẬC khi vượt relevant range: ví dụ thuê văn phòng $30,000/năm cho mỗi 1,000 square feet — muốn thêm 1,000 sq ft thì tổng fixed cost bật lên thêm $30,000. Relevant range chính là khoảng mà đường chi phí còn nằm phẳng, chưa nhảy bậc."
             }
+          },
+          {
+            "type": "callout",
+            "callout": {
+              "kind": "trap",
+              "title": "Step-variable ≠ step-fixed",
+              "body": "Cả hai đều nhảy bậc, nhưng BỀ RỘNG bậc quyết định cách xử lý: step-variable (bậc hẹp, vd nhân công thời vụ) → coi như variable; step-fixed (bậc rộng, vd mỗi 1.000 sq ft thuê +$30.000/năm, hay máy Mayo Clinic $20.000 mỗi 3.000 test) → coi như fixed trong relevant range."
+            }
           }
         ],
         keyTerms: [
           { term: "Relevant range", definition: "Khoảng hoạt động mà giả định tuyến tính về hành vi chi phí còn đúng." },
+          { term: "Step-variable cost", definition: "Chi phí nhảy BẬC theo những khoảng hoạt động HẸP (vd lương công nhân theo ca, guide du lịch: 1 guide cho mỗi 5 khách) (sách p.36). Bậc hẹp → thực tế coi gần như variable. Khác step-fixed (bậc RỘNG như thuê thêm nhà xưởng → coi là fixed trong relevant range)." },
         ],
       },
             {
@@ -1173,6 +1220,59 @@ const rawChapters: Chapter[] = [
             body: "Y = a + bX = 40 + (0,03 × 2.000) = 100. Nếu X tăng lên 3.000 kWh: Y = 40 + 90 = 130 (phần cố định 40 giữ nguyên, chỉ phần biến đổi tăng).",
             meaning: "Hóa đơn 100 = 40 định phí (trả dù dùng ít) + 60 biến phí theo kWh — chi phí vừa cố định vừa biến đổi.",
         implication: "Khi sản lượng đổi, chỉ phần bX đổi còn a giữ nguyên → phải tách a/b mới dự báo và lập ngân sách đúng; coi cả 100 là biến phí sẽ ước sai ở mức hoạt động khác."
+          },
+        ],
+      },
+            {
+        id: "s10b",
+        heading: "Tổng hợp: Cost Terminology — A Closer Look",
+        blocks: [
+          {
+            type: "prose",
+            body: "Một công ty báo cáo chi phí tháng gần nhất như bên dưới. Cùng bộ số này có thể được gom theo NHIỀU cách phân loại khác nhau — minh hoạ 'different costs for different purposes' (sách p.38).",
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Chi phí trong tháng (sách p.38)",
+              columns: ["Khoản mục", "Số tiền"],
+              rows: [
+                { label: "Direct materials", cells: ["$69,000"] },
+                { label: "Direct labor", cells: ["$35,000"] },
+                { label: "Variable manufacturing overhead", cells: ["$15,000"] },
+                { label: "Fixed manufacturing overhead", cells: ["$28,000"] },
+                { label: "Total manufacturing overhead", cells: ["$43,000"] },
+                { label: "Variable selling expense", cells: ["$12,000"] },
+                { label: "Fixed selling expense", cells: ["$18,000"] },
+                { label: "Total selling expense", cells: ["$30,000"] },
+                { label: "Variable administrative expense", cells: ["$4,000"] },
+                { label: "Fixed administrative expense", cells: ["$25,000"] },
+                { label: "Total administrative expense", cells: ["$29,000"] },
+              ],
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Gom theo 6 cách phân loại",
+              steps: [
+                { label: "Product cost", expr: "DM + DL + MOH = 69,000 + 35,000 + 43,000 = $147,000" },
+                { label: "Period cost", expr: "Selling + Administrative = 30,000 + 29,000 = $59,000" },
+                { label: "Conversion cost", expr: "DL + MOH = 35,000 + 43,000 = $78,000" },
+                { label: "Prime cost", expr: "DM + DL = 69,000 + 35,000 = $104,000" },
+                { label: "Variable manufacturing cost", expr: "DM + DL + variable MOH = 69,000 + 35,000 + 15,000 = $119,000" },
+                { label: "Total fixed cost", expr: "fixed MOH + fixed selling + fixed admin = 28,000 + 18,000 + 25,000 = $71,000" },
+              ],
+              result: "Product $147,000 · Period $59,000 · Conversion $78,000 · Prime $104,000 · Variable manufacturing $119,000 · Total fixed $71,000",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "key",
+              title: "Một bộ số — nhiều lăng kính",
+              body: "Cùng DM/DL/MOH/selling/admin, tùy MỤC ĐÍCH mà gom thành product, period, conversion, prime, variable-mfg hay total-fixed. Đây là bài tổng hợp toàn chương.",
+            },
           },
         ],
       },
@@ -1288,12 +1388,62 @@ const rawChapters: Chapter[] = [
               "title": "Chốt quyết định",
               "body": "Chi phí thích hợp = tương lai + khác biệt."
             }
+          },
+          {
+            "type": "callout",
+            "callout": {
+              "kind": "insight",
+              "title": "Differential = incremental + decremental",
+              "body": "Về kỹ thuật, incremental cost chỉ phần chi phí TĂNG, decremental cost chỉ phần GIẢM. 'Differential cost' là thuật ngữ rộng gồm cả hai. Nhà kinh tế học gọi song song là marginal cost / marginal revenue (chi phí/doanh thu của MỘT đơn vị tăng thêm) — cùng bản chất differential áp cho 1 đơn vị."
+            }
+          },
+          {
+            "type": "comparison",
+            "table": {
+              "title": "Hai cách phân loại chi phí khác cho quản trị (sách p.40)",
+              "columns": ["Cặp phân loại", "Nghĩa", "Dùng để"],
+              "rows": [
+                { "label": "Controllable / Uncontrollable", "cells": ["Controllable = nhà quản lý ĐANG bị đánh giá có thể tác động; Uncontrollable = không thể tác động", "Đánh giá thành quả quản lý (performance evaluation)"] },
+                { "label": "Value-added / Non-value-added", "cells": ["Value-added = làm tăng giá trị cho stakeholder; Non-value-added = không tạo thêm lợi ích", "Cải tiến quy trình (process improvement)"] }
+              ]
+            }
+          },
+          {
+            "type": "comparison",
+            "table": {
+              "title": "Ví dụ differential analysis — Natural Cosmetics (sách p.39)",
+              "columns": ["Khoản mục", "Retailer (hiện tại)", "Sales Rep (đề xuất)", "Differential"],
+              "rows": [
+                { "label": "Sales (variable)", "cells": ["$700,000", "$800,000", "$100,000"] },
+                { "label": "Cost of goods sold (variable)", "cells": ["350,000", "400,000", "50,000"] },
+                { "label": "Advertising (fixed)", "cells": ["80,000", "45,000", "(35,000)"] },
+                { "label": "Commissions (variable)", "cells": ["0", "40,000", "40,000"] },
+                { "label": "Warehouse depreciation (fixed)", "cells": ["50,000", "80,000", "30,000"] },
+                { "label": "Other expenses (fixed)", "cells": ["60,000", "60,000", "0"] },
+                { "label": "Total expenses", "cells": ["540,000", "625,000", "85,000"] },
+                { "label": "Net operating income", "cells": ["$160,000", "$175,000", "$15,000"] }
+              ]
+            }
+          },
+          {
+            "type": "callout",
+            "callout": {
+              "kind": "insight",
+              "title": "Chỉ nhìn cột Differential",
+              "body": "Differential revenue = $100,000, differential cost = $85,000 → chênh net operating income +$15,000 nghiêng về Sales Rep. 'Other expenses' $60,000 giống nhau ở hai phương án → irrelevant, bỏ đi vẫn ra cùng kết luận (sách p.39-40)."
+            }
           }
         ],
         keyTerms: [
           { term: "Differential cost/revenue", definition: "Chênh lệch chi phí/doanh thu giữa hai phương án — luôn thích hợp." },
           { term: "Opportunity cost", definition: "Lợi ích bị bỏ lỡ của phương án không chọn." },
           { term: "Sunk cost", definition: "Chi phí đã phát sinh, không đổi được → luôn không thích hợp." },
+          { term: "Incremental cost", definition: "Phần chi phí TĂNG THÊM giữa hai phương án (sách p.39). 'Differential cost' là từ bao trùm; incremental = phần tăng, decremental = phần giảm." },
+          { term: "Decremental cost", definition: "Phần chi phí GIẢM ĐI giữa hai phương án (sách p.39) — mặt còn lại của incremental cost." },
+          { term: "Relevant benefit", definition: "Lợi ích tương lai KHÁC NHAU giữa các phương án — cần cân nhắc khi ra quyết định (sách p.39). Differential revenue là một ví dụ của relevant benefit." },
+          { term: "Controllable cost", definition: "Chi phí mà nhà quản lý đang được đánh giá CÓ THỂ tác động; ngược lại là uncontrollable cost (sách p.40)." },
+          { term: "Value-added cost", definition: "Chi phí làm TĂNG giá trị sản phẩm/dịch vụ cho stakeholder; ngược lại là non-value-added cost (sách p.40)." },
+          { term: "Marginal cost / Marginal revenue", definition: "Thuật ngữ kinh tế học: chi phí/doanh thu của MỘT đơn vị sản phẩm tăng thêm (sách p.39) — bản chất là differential cost/revenue áp cho một đơn vị output." },
         ],
       },
             {
@@ -1359,11 +1509,33 @@ const rawChapters: Chapter[] = [
               "title": "Đừng nhầm margin",
               "body": "Gross margin ≠ contribution margin: một bên theo chức năng, một bên theo hành vi."
             }
+          },
+          {
+            "type": "formula",
+            "formula": {
+              "expression": "COGS = Beginning merchandise inventory + Purchases − Ending merchandise inventory",
+              "legend": [
+                {
+                  "symbol": "Beginning",
+                  "meaning": "Tồn kho hàng hoá đầu kỳ"
+                },
+                {
+                  "symbol": "Purchases",
+                  "meaning": "Mua thêm trong kỳ"
+                },
+                {
+                  "symbol": "Ending",
+                  "meaning": "Tồn kho hàng hoá cuối kỳ"
+                }
+              ],
+              "note": "Ví dụ sách p.42: 7,000 + 3,000 − 4,000 = 6,000. Áp cho MERCHANDISER (mua đi bán lại). Với nhà sản xuất, COGS phức tạp hơn (đưa vào chương sau)."
+            }
           }
         ],
         keyTerms: [
           { term: "Gross margin", definition: "Doanh thu − COGS (dạng truyền thống)." },
           { term: "Contribution margin", definition: "Doanh thu − biến phí (dạng contribution); phần đóng góp để bù định phí và tạo lãi." },
+          { term: "Contribution margin per unit", definition: "Contribution margin chia cho số đơn vị bán ra (sách p.42, vd $5,000 ÷ 500 = $10/đơn vị) — phần mỗi đơn vị đóng góp để bù fixed cost rồi tạo lãi; nền cho CVP (Ch.5)." },
         ],
         examples: [
           {
@@ -1544,6 +1716,71 @@ const rawChapters: Chapter[] = [
           { id: "d", text: "Luôn không thích hợp, vì đi lại là chi phí cá nhân, không phải chi phí sản xuất.", isCorrect: false, rationale: "Bẫy (sai phạm trù): kéo nhầm product cost/period cost vào quyết định; câu hỏi về chi phí thích hợp." },
         ],
         takeaway: "Chi phí thích hợp = tương lai + khác biệt; vé tàu là chi phí thích hợp nếu chỉ xuất hiện ở phương án đi tàu.",
+      },
+      {
+        id: "q14",
+        difficulty: "intermediate",
+        conceptTested: "Incremental versus differential cost",
+        stem: "A company is choosing between Plan A and Plan B. A cost that is $12,000 higher under Plan B than under Plan A is best described as a(n):",
+        options: [
+          { id: "a", text: "Incremental (differential) cost — relevant to the decision.", isCorrect: true, rationale: "Cơ chế: cost tăng thêm $12,000 giữa hai phương án là incremental cost; vì nó khác nhau giữa Plan A và Plan B nên cũng là differential/relevant cost. Bẫy: chỉ nhìn chữ 'higher' mà quên nó nằm trong so sánh phương án. Khóa: incremental = phần TĂNG của differential cost." },
+          { id: "b", text: "Sunk cost.", isCorrect: false, rationale: "Cơ chế: sunk cost là chi phí đã phát sinh và không đổi được. Bẫy: mọi chi phí nghe có vẻ 'đã có số' nhưng ở đây số $12,000 là chênh lệch giữa phương án tương lai. Khóa: sunk = quá khứ; incremental = tương lai khác biệt." },
+          { id: "c", text: "Common cost.", isCorrect: false, rationale: "Cơ chế: common cost nói về chi phí dùng chung cho nhiều cost object, không nói về chênh lệch giữa phương án. Bẫy: common cost cũng hay cần phân bổ nên dễ bị kéo nhầm sang quyết định. Khóa: common = khả năng truy nguyên; differential = ra quyết định." },
+          { id: "d", text: "Opportunity cost.", isCorrect: false, rationale: "Cơ chế: opportunity cost là lợi ích bị bỏ lỡ khi chọn một phương án. Bẫy: cơ hội bỏ lỡ cũng relevant, nhưng stem nói chi phí cao hơn trực tiếp dưới Plan B. Khóa: higher cost under one plan = incremental cost." },
+        ],
+        takeaway: "Incremental cost là phần chi phí tăng thêm giữa phương án; nó là một dạng differential cost nên relevant cho quyết định.",
+      },
+      {
+        id: "q15",
+        difficulty: "basic",
+        conceptTested: "Cost structure",
+        stem: "The relative proportion of fixed, variable, and mixed costs in an organization is called its:",
+        options: [
+          { id: "a", text: "Cost structure.", isCorrect: true, rationale: "Cơ chế: cost structure là tỷ trọng tương đối của fixed, variable và mixed costs trong tổ chức. Bẫy: thấy nhiều loại cost nên dễ gọi nhầm là cost classification. Khóa: proportion/mix of cost types = cost structure." },
+          { id: "b", text: "Cost object.", isCorrect: false, rationale: "Cơ chế: cost object là thứ ta muốn đo chi phí cho nó. Bẫy: cost object cũng là thuật ngữ nền ở Ch.1. Khóa: object = đối tượng đo; structure = tỷ trọng chi phí." },
+          { id: "c", text: "Relevant range.", isCorrect: false, rationale: "Cơ chế: relevant range là khoảng hoạt động mà giả định chi phí còn hợp lý. Bẫy: fixed/variable behavior thường chỉ đúng trong relevant range. Khóa: range = khoảng hoạt động, không phải tỷ trọng cost." },
+          { id: "d", text: "Contribution margin.", isCorrect: false, rationale: "Cơ chế: contribution margin = sales − variable expenses. Bẫy: cost structure ảnh hưởng CM/operating leverage về sau. Khóa: CM là kết quả tính, không phải cơ cấu chi phí." },
+        ],
+        takeaway: "Cost structure cho biết doanh nghiệp nặng fixed, variable hay mixed cost; đây là nền để hiểu operating leverage ở Ch.5.",
+      },
+      {
+        id: "q16",
+        difficulty: "intermediate",
+        conceptTested: "Controllable cost",
+        stem: "For evaluating a department manager's performance, a cost the manager can influence is classified as:",
+        options: [
+          { id: "a", text: "Controllable cost.", isCorrect: true, rationale: "Cơ chế: controllable cost là chi phí nhà quản lý đang được đánh giá có thể tác động. Bẫy: controllability phụ thuộc người/quyền hạn cụ thể, không phải nhãn vĩnh viễn của khoản chi. Khóa: performance evaluation → controllable vs uncontrollable." },
+          { id: "b", text: "Uncontrollable cost.", isCorrect: false, rationale: "Cơ chế: uncontrollable cost là chi phí nhà quản lý không thể tác động. Bẫy: một cost có thể controllable với cấp trên nhưng uncontrollable với cấp dưới. Khóa: stem nói manager can influence." },
+          { id: "c", text: "Sunk cost.", isCorrect: false, rationale: "Cơ chế: sunk cost là quá khứ không đổi được, không dùng để đánh giá khả năng kiểm soát hiện tại. Bẫy: nếu chi phí đã phát sinh thì có thể vừa sunk vừa không kiểm soát được, nhưng stem hỏi cost manager can influence. Khóa: can influence = controllable." },
+          { id: "d", text: "Period cost.", isCorrect: false, rationale: "Cơ chế: period cost phân loại theo báo cáo tài chính, không theo quyền kiểm soát của manager. Bẫy: nhiều controllable costs có thể là period costs. Khóa: performance evaluation không hỏi product/period." },
+        ],
+        takeaway: "Đánh giá nhà quản lý phải tách controllable và uncontrollable cost; đừng phạt họ vì khoản họ không có quyền tác động.",
+      },
+      {
+        id: "q17",
+        difficulty: "basic",
+        conceptTested: "Value-added cost",
+        stem: "A cost incurred for an activity that increases the value of a product to customers is a(n):",
+        options: [
+          { id: "a", text: "Value-added cost.", isCorrect: true, rationale: "Cơ chế: value-added cost gắn với hoạt động làm tăng giá trị sản phẩm/dịch vụ cho khách hàng hoặc stakeholder. Bẫy: không phải mọi hoạt động tốn tiền đều tạo giá trị. Khóa: increases value to customers = value-added." },
+          { id: "b", text: "Non-value-added cost.", isCorrect: false, rationale: "Cơ chế: non-value-added cost không tạo thêm lợi ích cho stakeholder. Bẫy: hoạt động vẫn có thể đang tồn tại trong quy trình nên dễ tưởng là cần thiết. Khóa: nếu tăng giá trị cho khách thì không phải non-value-added." },
+          { id: "c", text: "Opportunity cost.", isCorrect: false, rationale: "Cơ chế: opportunity cost là lợi ích bị bỏ lỡ của phương án không chọn. Bẫy: cải tiến quy trình cũng có opportunity trade-off. Khóa: stem hỏi hoạt động tạo giá trị, không hỏi phương án bị bỏ." },
+          { id: "d", text: "Conversion cost.", isCorrect: false, rationale: "Cơ chế: conversion cost = DL + MOH để biến nguyên liệu thành sản phẩm. Bẫy: conversion có thể tạo giá trị, nhưng thuật ngữ trong stem là value-added. Khóa: customer value language points to value-added." },
+        ],
+        takeaway: "Value-added cost giúp nhìn chi phí như một câu hỏi cải tiến quy trình: khoản nào tạo giá trị thật, khoản nào chỉ làm tốn nguồn lực.",
+      },
+      {
+        id: "q18",
+        difficulty: "intermediate",
+        conceptTested: "Merchandiser cost of goods sold",
+        stem: "A merchandiser had beginning inventory $7,000, purchases $3,000, and ending inventory $4,000. Cost of goods sold is:",
+        options: [
+          { id: "a", text: "$6,000 (= 7,000 + 3,000 − 4,000).", isCorrect: true, rationale: "Cơ chế: COGS của merchandiser = beginning inventory + purchases − ending inventory = 7,000 + 3,000 − 4,000 = 6,000. Bẫy: ending inventory là hàng còn lại, không phải hàng đã bán. Khóa: goods available − ending = COGS." },
+          { id: "b", text: "$10,000 (= 7,000 + 3,000).", isCorrect: false, rationale: "Cơ chế: $10,000 là goods available for sale, chưa trừ ending inventory. Bẫy: quên hàng còn lại cuối kỳ. Khóa: COGS phải loại ending inventory." },
+          { id: "c", text: "$14,000.", isCorrect: false, rationale: "Cơ chế: $14,000 là cộng tất cả các số, sai vì ending inventory phải trừ. Bẫy: thấy ba số inventory/purchase rồi cộng hết. Khóa: ending inventory còn nằm trong tài sản, không vào COGS." },
+          { id: "d", text: "$4,000.", isCorrect: false, rationale: "Cơ chế: $4,000 chỉ là ending inventory, không phải cost of goods sold. Bẫy: nhầm tồn kho cuối kỳ với hàng đã bán. Khóa: ending inventory is what remains." },
+        ],
+        takeaway: "Với merchandiser: COGS = beginning inventory + purchases − ending inventory; hàng còn lại cuối kỳ chưa phải chi phí đã bán.",
       },
     ],
   },
@@ -1914,11 +2151,21 @@ const rawChapters: Chapter[] = [
                 "Boeing (máy bay), Bechtel (xây dựng lớn), Disney (phim) — mỗi đơn = một job.",
             },
           },
+          {
+            type: "callout",
+            callout: {
+              kind: "key",
+              title: "Job-order costing = một dạng absorption costing",
+              body:
+                "Absorption costing gán đủ DM + DL + toàn bộ MOH (fixed & variable) vào sản phẩm; chi phí ngoài sản xuất là period cost. Đa số nước (gồm Mỹ) buộc dùng absorption costing cho báo cáo tài chính bên ngoài (sách p.61).",
+            },
+          },
         ],
         keyTerms: [
           { term: "Job", definition: "Một đơn hàng hoặc lô riêng biệt được tập hợp chi phí riêng." },
           { term: "Job-order costing", definition: "Hệ thống tính giá thành cho sản phẩm/dịch vụ khác nhau, thường làm theo đơn đặt hàng." },
           { term: "Process costing", definition: "Hệ thống phù hợp cho sản phẩm đồng nhất sản xuất hàng loạt; đây là chương riêng sau này." },
+          { term: "Absorption costing", definition: "Phương pháp tính giá thành gán TẤT CẢ chi phí sản xuất — direct materials, direct labor, và cả biến phí LẪN định phí manufacturing overhead — vào giá thành đơn vị sản phẩm ('fully absorb'). Chi phí ngoài sản xuất (selling & administrative) là period cost, không gán vào sản phẩm (sách p.61). Job-order costing là một dạng absorption costing." },
         ],
       },
       {
@@ -2132,6 +2379,19 @@ const rawChapters: Chapter[] = [
                 "DM/DL thực + MOH áp = normal costing → tính được giá job ngay trong kỳ.",
             },
           },
+          {
+            type: "callout",
+            callout: {
+              kind: "insight",
+              title: "Vì sao POHR ước tính TRƯỚC, không dùng actual rate?",
+              body:
+                "Hai lý do (sách p.69): (1) Nếu tính overhead rate theo THÁNG/QUÝ bằng số thực, chi phí theo mùa (điện sưởi/làm mát cao vào đông–hè) làm rate dao động → hai job giống hệt nhau, một làm mùa đông một làm mùa xuân, lại gánh overhead khác nhau. (2) Nếu tính theo NĂM bằng số thực thì phải chờ hết năm mới biết chi phí job — trong khi job xong và giao trong tháng 3. POHR ước tính trước khắc phục cả hai: rate ổn định + biết giá job ngay khi hoàn thành.",
+            },
+          },
+        ],
+        keyTerms: [
+          { term: "Overhead application", definition: "Quá trình gán (áp) manufacturing overhead vào từng job bằng predetermined overhead rate (sách p.66)." },
+          { term: "Normal cost system", definition: "Hệ thống áp overhead vào job = POHR × mức allocation base THỰC TẾ job đó dùng (DM, DL dùng số thực; MOH dùng số áp) (sách p.67)." },
         ],
       },
       {
@@ -2166,6 +2426,15 @@ const rawChapters: Chapter[] = [
                 "Unit product cost gộp đủ 3 thành phần, gồm overhead ĐÃ áp.",
               implication:
                 "Thiếu một thành phần (vd quên overhead) → định giá sai, có thể bán dưới giá vốn.",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "trap",
+              title: "Unit product cost là chi phí BÌNH QUÂN",
+              body:
+                "Unit product cost (total ÷ số đơn vị) là chi phí TRUNG BÌNH, KHÔNG phải chi phí tăng thêm khi làm thêm 1 đơn vị. Incremental cost của 1 đơn vị nữa thường THẤP hơn unit cost bình quân vì phần lớn overhead cố định không đổi khi thêm 1 đơn vị (sách p.69). Đừng dùng average unit cost cho quyết định 'làm thêm 1 đơn vị'.",
             },
           },
         ],
@@ -2291,6 +2560,9 @@ const rawChapters: Chapter[] = [
             implication:
               "Nếu MH mới là driver đúng mà vẫn dùng DLH, job dùng nhiều máy/ít công sẽ bị định giá sai → mất khả năng cạnh tranh hoặc bán dưới giá.",
           },
+        ],
+        keyTerms: [
+          { term: "Cost-plus pricing", definition: "Phương pháp định giá: lấy một cost base (vd total manufacturing cost) rồi cộng một markup phần trăm định trước để ra target selling price (sách p.71). Vd Dickson: $2.485 × 175% = $4.348,75." },
         ],
       },
       {
@@ -2555,6 +2827,83 @@ const rawChapters: Chapter[] = [
           },
         ],
       },
+      {
+        id: "s13",
+        heading: "Appendix 2B — POHR và Capacity (chi phí công suất không dùng)",
+        blocks: [
+          {
+            type: "prose",
+            body:
+              "Mẫu số của POHR có thể dựa trên (1) mức hoạt động ƯỚC TÍNH/dự toán cho kỳ (cách dùng trong chương, phục vụ báo cáo ngoài) hoặc (2) mức hoạt động ở CÔNG SUẤT — capacity (phục vụ quản trị nội bộ). Appendix giả định: toàn bộ MOH là fixed; fixed MOH dự toán = thực tế (sách p.96).",
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Dữ liệu Prahad Corporation (sách p.97)",
+              columns: ["Khoản mục", "Giá trị"],
+              rows: [
+                { label: "Total MOH (đều là fixed)", cells: ["$180,000/năm"] },
+                { label: "Allocation base — machine time/DVD", cells: ["10 seconds/DVD"] },
+                { label: "Capacity", cells: ["900,000 DVDs/năm"] },
+                { label: "Budgeted output năm tới", cells: ["600,000 DVDs"] },
+              ],
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Hai cách tính POHR",
+              steps: [
+                { label: "Cách 1 — theo mức ước tính (budgeted)", expr: "$180,000 ÷ (600,000 DVDs × 10s) = $0.03/second → $0.30/DVD" },
+                { label: "Cách 2 — theo capacity", expr: "$180,000 ÷ (900,000 DVDs × 10s) = $0.02/second → $0.20/DVD" },
+              ],
+              result: "Rate theo capacity ($0.20/DVD) THẤP hơn và KHÔNG đổi khi budget dao động; rate theo budget ($0.30/DVD) tăng khi budget giảm.",
+              meaning: "Mẫu số lớn hơn (capacity 900,000 vs budget 600,000) → rate nhỏ hơn.",
+              implication: "Hạn chế của cách 1: (a) unit cost dao động theo budget — nếu budget rớt còn 300,000 DVDs thì rate thành $0.60/DVD, chi phí 'có vẻ' tăng đúng lúc cầu giảm → dễ tăng giá sai thời điểm; (b) sản phẩm gánh luôn chi phí công suất KHÔNG dùng.",
+            },
+          },
+          {
+            type: "formula",
+            formula: {
+              expression: "Cost of unused capacity = (Allocation base tại capacity − Allocation base THỰC dùng) × POHR theo capacity",
+              legend: [
+                { symbol: "Base tại capacity", meaning: "900,000 DVDs × 10s = 9,000,000 giây" },
+                { symbol: "Base thực dùng", meaning: "600,000 DVDs × 10s = 6,000,000 giây" },
+                { symbol: "POHR capacity", meaning: "$0.02/giây" },
+              ],
+              note: "Prahad: (9,000,000 − 6,000,000) × $0.02 = $60,000 (sách p.98).",
+            },
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Exhibit 2B-1 — Prahad Income Statement ghi nhận cost of unused capacity (sách p.99)",
+              columns: ["Dòng", "Số tiền"],
+              rows: [
+                { label: "Sales (600,000 CD × $2)", cells: ["$1,200,000"] },
+                { label: "Cost of goods sold (unit cost $1.80, gồm $0.20 MOH)", cells: ["1,080,000"] },
+                { label: "= Gross margin", cells: ["120,000"] },
+                { label: "Cost of unused capacity (PERIOD expense)", cells: ["60,000"] },
+                { label: "Selling & administrative expenses", cells: ["90,000"] },
+                { label: "= Net operating income (loss)", cells: ["$(30,000)"] },
+              ],
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "key",
+              title: "Chi phí công suất không dùng = period expense, KHÔNG chôn vào COGS",
+              body:
+                "Cách capacity tách $60,000 cost of unused capacity ra RIÊNG dưới gross margin (period expense), thay vì chôn vào COGS như cách absorption. Nhờ hiện rõ, nhà quản lý buộc phải xử lý công suất dư: tìm thêm việc để lấp, hoặc cắt bớt công suất (sách p.99).",
+            },
+          },
+        ],
+        keyTerms: [
+          { term: "Predetermined overhead rate based on capacity", definition: "POHR lấy mẫu số là allocation base ở mức CÔNG SUẤT (capacity) thay vì mức ước tính — rate ổn định, không dao động theo budget (sách p.97-98)." },
+          { term: "Cost of unused capacity", definition: "Chi phí công suất KHÔNG được dùng = (base tại capacity − base thực dùng) × POHR theo capacity; báo cáo như PERIOD expense riêng, không gộp vào COGS (sách p.98-99)." },
+        ],
+      },
     ],
     questions: [
       {
@@ -2751,6 +3100,120 @@ const rawChapters: Chapter[] = [
         takeaway:
           "ABC thường dịch overhead từ high-volume sang low-volume khi low-volume tiêu thụ nhiều batch-level hoặc product-level activity.",
       },
+      {
+        id: "q19",
+        difficulty: "basic",
+        conceptTested: "Absorption costing",
+        stem: "Under absorption costing, which costs are assigned to units of product?",
+        options: [
+          {
+            id: "a",
+            text: "All manufacturing costs — direct materials, direct labor, and both variable and fixed manufacturing overhead.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: absorption costing gán đủ DM + DL + toàn bộ MOH (biến phí và định phí) vào sản phẩm. Bẫy: dễ quên fixed MOH vì nó không đổi theo đơn vị. Khóa: absorption = fully absorb all manufacturing costs.",
+          },
+          {
+            id: "b",
+            text: "Only variable manufacturing costs.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: chỉ variable manufacturing costs là logic của variable costing, không phải absorption costing. Bẫy: thấy cost behavior nên kéo nhầm sang biến/định. Khóa: absorption vẫn đưa fixed MOH vào product cost.",
+          },
+          {
+            id: "c",
+            text: "Only direct materials and direct labor.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: phương án này bỏ manufacturing overhead, trong khi absorption costing phải gán cả MOH. Bẫy: DM/DL trace được nên dễ tưởng chỉ hai phần này là product cost. Khóa: product cost trong absorption = DM + DL + MOH.",
+          },
+          {
+            id: "d",
+            text: "All manufacturing costs plus selling and administrative costs.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: selling & administrative costs là period costs, không gán vào product cost. Bẫy: chữ all dễ bị hiểu là mọi chi phí công ty. Khóa: all manufacturing costs, not all company costs.",
+          },
+        ],
+        takeaway:
+          "Absorption costing gán toàn bộ manufacturing costs vào sản phẩm; selling & administrative vẫn là period cost.",
+      },
+      {
+        id: "q20",
+        difficulty: "intermediate",
+        conceptTested: "Need for a predetermined overhead rate",
+        stem: "Why do most companies use a predetermined overhead rate rather than an actual overhead rate?",
+        options: [
+          {
+            id: "a",
+            text: "To avoid seasonal fluctuations in the rate and to know each job's cost as soon as it is completed.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: actual monthly/quarterly rates dao động theo mùa, còn actual annual rate phải chờ hết năm; POHR giải quyết cả hai. Bẫy: tưởng POHR chỉ để đơn giản hóa phép tính. Khóa: stable rate + timely job cost.",
+          },
+          {
+            id: "b",
+            text: "Because actual overhead is always lower than applied overhead.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: actual overhead có thể cao hơn hoặc thấp hơn overhead applied, tạo under/overapplied overhead. Bẫy: nhầm POHR với cách làm chi phí thấp đi. Khóa: POHR không đảm bảo actual lower.",
+          },
+          {
+            id: "c",
+            text: "Because it is required by GAAP for every internal job-costing decision.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: POHR hữu ích cho quản trị và báo cáo, nhưng lý do sách nhấn mạnh là mùa vụ và tính kịp thời, không phải vì GAAP ép mọi quyết định nội bộ. Bẫy: thấy absorption costing dùng cho external reporting nên kéo GAAP vào mọi thứ. Khóa: need for POHR = rate stability and timeliness.",
+          },
+          {
+            id: "d",
+            text: "To make direct labor a variable cost.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: POHR không làm thay đổi bản chất direct labor; nó chỉ dùng allocation base để áp MOH. Bẫy: DLH thường là allocation base nên dễ tưởng POHR biến đổi direct labor. Khóa: overhead application is about MOH, not reclassifying DL.",
+          },
+        ],
+        takeaway:
+          "POHR được dùng vì actual rate theo kỳ ngắn bị mùa vụ làm nhiễu, còn actual annual rate biết quá muộn để tính giá job khi job hoàn thành.",
+      },
+      {
+        id: "q21",
+        difficulty: "advanced",
+        conceptTested: "Cost of unused capacity",
+        stem: "A company's capacity is 9,000,000 machine-seconds but it actually used 6,000,000 seconds. If the capacity-based predetermined overhead rate is $0.02 per second, the cost of unused capacity reported as a period expense is:",
+        options: [
+          {
+            id: "a",
+            text: "$60,000 (= (9,000,000 − 6,000,000) × $0.02).",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: unused capacity = capacity base − actual used base = 3,000,000 seconds; nhân $0.02 = $60,000. Bẫy: lấy toàn bộ capacity hoặc toàn bộ MOH thay vì phần không dùng. Khóa: only unused capacity becomes the separate period expense.",
+          },
+          {
+            id: "b",
+            text: "$120,000.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: $120,000 = 6,000,000 seconds × $0.02, là phần capacity đã dùng/áp cho sản phẩm, không phải phần không dùng. Bẫy: dùng actual used base thay vì unused base. Khóa: unused = 9,000,000 − 6,000,000.",
+          },
+          {
+            id: "c",
+            text: "$180,000.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: $180,000 là toàn bộ fixed MOH trong ví dụ Prahad, không phải cost of unused capacity. Bẫy: thấy tổng MOH và coi toàn bộ là unused. Khóa: chỉ phần capacity không dùng mới tách riêng.",
+          },
+          {
+            id: "d",
+            text: "$0 because overhead has already been fully applied.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: theo capacity-based rate, phần không dùng được báo cáo riêng như period expense, không chôn hết vào sản phẩm. Bẫy: tư duy absorption truyền thống làm tưởng overhead đã áp hết. Khóa: capacity approach exposes unused capacity cost.",
+          },
+        ],
+        takeaway:
+          "Cost of unused capacity = (capacity base − actual used base) × capacity-based POHR và được trình bày riêng như period expense.",
+      },
     ],
   },
   {
@@ -2903,7 +3366,7 @@ const rawChapters: Chapter[] = [
           parent: "sched",
           detail:
             "Income statement nhận COGS và period expenses để tính net operating income.",
-          sectionId: "s8",
+          sectionId: "s11",
         },
         {
           id: "adj",
@@ -3297,6 +3760,75 @@ const rawChapters: Chapter[] = [
         ],
       },
       {
+        id: "s11",
+        heading: "Ruger đầy đủ: COGM → COGS điều chỉnh → Income Statement (Exhibit 3-8/3-9/3-10)",
+        blocks: [
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Nối lại mạch Ruger",
+              body: "s7/s8 ở trên minh hoạ schedule bằng bộ số luyện tập. Mục này dựng ĐÚNG ba báo cáo của Ruger (case xuyên suốt s1–s6) như Exhibit 3-8, 3-9, 3-10 trong sách — để thấy trọn dòng từ chi phí sản xuất → hàng bán → lợi nhuận.",
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Exhibit 3-8 — Schedule of Cost of Goods Manufactured (Ruger)",
+              steps: [
+                { label: "Raw materials used in production", expr: "Beg RM 7,000 + Purchases 60,000 = 67,000 available − End RM 15,000 = 52,000" },
+                { label: "TRỪ indirect materials → Direct materials used", expr: "RM used 52,000 − Indirect materials 2,000 = DM used 50,000" },
+                { label: "Total manufacturing costs added", expr: "DM used 50,000 + DL 60,000 + MOH applied 90,000 = 200,000" },
+                { label: "Điều chỉnh WIP đầu/cuối kỳ", expr: "Beg WIP 30,000 + 200,000 = 230,000 to account for − End WIP 72,000" },
+              ],
+              result: "Cost of goods manufactured = $158,000",
+              meaning:
+                "Chú ý bước 2: 'raw materials used' KHÁC 'direct materials used' — phải trừ indirect materials $2,000 (đã đi qua Manufacturing Overhead) ra khỏi RM đã xuất mới ra direct materials thật vào job.",
+              implication:
+                "Bỏ bước trừ indirect materials là bẫy: DM used bị thổi lên $2,000 và bị đếm hai lần (một lần ở DM, một lần trong MOH applied).",
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Exhibit 3-9 — Schedule of Cost of Goods Sold (Ruger)",
+              steps: [
+                { label: "Goods available for sale", expr: "Beg FG 0 + COGM 158,000 = 158,000" },
+                { label: "Trừ End Finished Goods", expr: "158,000 − End FG 39,500 = Unadjusted COGS 118,500" },
+                { label: "Cộng underapplied overhead (điều chỉnh)", expr: "Unadjusted COGS 118,500 + Underapplied 5,000" },
+              ],
+              result: "Adjusted cost of goods sold = $123,500",
+              meaning:
+                "Unadjusted COGS dựa trên MOH ÁP (applied), chưa phản ánh MOH thực. Underapplied $5,000 nghĩa là áp THIẾU → COGS đang bị hụt → CỘNG vào để ra adjusted COGS. Nếu overapplied thì TRỪ.",
+              implication:
+                "Đây chính là mắt xích LO4 → LO3: số under/overapplied ở s9/s10 được đưa vào ĐÂY để điều chỉnh COGS trước khi lên income statement.",
+            },
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Exhibit 3-10 — Income Statement (Ruger, tháng 4)",
+              columns: ["Khoản mục", "Số tiền ($)"],
+              rows: [
+                { label: "Sales", cells: ["225,000"] },
+                { label: "Cost of goods sold (adjusted)", cells: ["123,500"] },
+                { label: "Gross margin", cells: ["101,500"] },
+                { label: "Selling & administrative (30,000 + 7,000 + 42,000 + 8,000)", cells: ["87,000"] },
+                { label: "Net operating income", cells: ["14,500"] },
+              ],
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "key",
+              title: "Ba báo cáo nối nhau",
+              body: "COGM $158,000 (Ex 3-8) → chảy vào Schedule of COGS ra adjusted COGS $123,500 (Ex 3-9) → chảy vào Income Statement, trừ S&A $87,000 để ra NOI $14,500 (Ex 3-10). S&A KHÔNG chạy qua schedule COGM/COGS — ghi thẳng period expense.",
+            },
+          },
+        ],
+      },
+      {
         id: "s9",
         heading: "Under/overapplied overhead — cách tính (LO4)",
         blocks: [
@@ -3405,6 +3937,14 @@ const rawChapters: Chapter[] = [
               kind: "key",
               title: "Chiều ảnh hưởng",
               body: "Underapplied → TĂNG COGS, GIẢM NOI. Overapplied → GIẢM COGS, TĂNG NOI.",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "insight",
+              title: "Hai cách lệch nhau bao nhiêu? (Ruger)",
+              body: "Ruger underapplied $5,000. Đóng thẳng vào COGS: cả $5,000 dồn vào Cost of Goods Sold. Phân bổ tỉ lệ: chỉ $2,500 vào COGS (phần còn lại $1.666,50 vào WIP, $833,50 vào FG). ⇒ Cách đơn giản làm COGS CAO hơn $2,500 và NOI THẤP hơn $2,500 so với phân bổ tỉ lệ. Chênh này càng lớn khi tồn kho WIP/FG càng nhiều (sách p.121).",
             },
           },
           {
@@ -3838,6 +4378,45 @@ const rawChapters: Chapter[] = [
         takeaway:
           "Absorption costing đưa DM, DL và toàn bộ MOH (variable + fixed) vào product cost.",
       },
+      {
+        id: "q12",
+        difficulty: "intermediate",
+        conceptTested: "Raw materials used vs direct materials used",
+        stem: "Ruger: RM used in production = $52,000, in which indirect materials = $2,000. Direct materials used added to Work in Process is:",
+        options: [
+          { id: "a", text: "$50,000.", isCorrect: true, rationale: "Cơ chế: direct materials used = raw materials used $52,000 − indirect materials $2,000 = $50,000. Bẫy: dùng luôn raw materials used làm direct materials. Khóa: indirect materials đã đi qua Manufacturing Overhead nên phải trừ ra." },
+          { id: "b", text: "$52,000.", isCorrect: false, rationale: "Cơ chế: $52,000 là raw materials used (gồm cả indirect). Bẫy: không tách indirect materials. Khóa: chỉ direct materials mới vào WIP trực tiếp." },
+          { id: "c", text: "$54,000.", isCorrect: false, rationale: "Cơ chế: cộng thay vì trừ indirect materials. Bẫy: sai dấu. Khóa: indirect materials phải TRỪ khỏi RM used." },
+          { id: "d", text: "$2,000.", isCorrect: false, rationale: "Cơ chế: $2,000 chỉ là indirect materials. Bẫy: lấy nhầm phần indirect. Khóa: direct = tổng RM used − indirect." },
+        ],
+        takeaway: "Direct materials used = raw materials used − indirect materials = $52,000 − $2,000 = $50,000.",
+      },
+      {
+        id: "q13",
+        difficulty: "intermediate",
+        conceptTested: "Adjusted cost of goods sold",
+        stem: "Ruger: unadjusted COGS = $118,500 and manufacturing overhead is underapplied by $5,000. Adjusted cost of goods sold is:",
+        options: [
+          { id: "a", text: "$123,500.", isCorrect: true, rationale: "Cơ chế: underapplied nghĩa là áp thiếu → COGS bị hụt → CỘNG $5,000: 118,500 + 5,000 = 123,500. Bẫy: trừ thay vì cộng. Khóa: underapplied → tăng COGS." },
+          { id: "b", text: "$113,500.", isCorrect: false, rationale: "Cơ chế: đây là chiều của OVERapplied (trừ). Bẫy: đảo chiều điều chỉnh. Khóa: underapplied cộng vào COGS." },
+          { id: "c", text: "$118,500.", isCorrect: false, rationale: "Cơ chế: đó là unadjusted COGS, chưa điều chỉnh. Bẫy: quên đưa under/overapplied vào. Khóa: phải điều chỉnh trước khi lên income statement." },
+          { id: "d", text: "$5,000.", isCorrect: false, rationale: "Cơ chế: $5,000 chỉ là số underapplied. Bẫy: nhầm phần điều chỉnh với tổng. Khóa: adjusted = unadjusted ± chênh lệch." },
+        ],
+        takeaway: "Underapplied → adjusted COGS = unadjusted COGS + underapplied = $118,500 + $5,000 = $123,500.",
+      },
+      {
+        id: "q14",
+        difficulty: "intermediate",
+        conceptTested: "Net operating income từ income statement",
+        stem: "Ruger: Sales $225,000; adjusted COGS $123,500; selling & administrative expenses $87,000. Net operating income is:",
+        options: [
+          { id: "a", text: "$14,500.", isCorrect: true, rationale: "Cơ chế: gross margin = 225,000 − 123,500 = 101,500; NOI = 101,500 − 87,000 = 14,500. Bẫy: quên trừ S&A. Khóa: NOI = gross margin − S&A." },
+          { id: "b", text: "$101,500.", isCorrect: false, rationale: "Cơ chế: $101,500 là gross margin, chưa trừ S&A. Bẫy: dừng ở gross margin. Khóa: S&A là period expense phải trừ tiếp." },
+          { id: "c", text: "$102,500.", isCorrect: false, rationale: "Cơ chế: sai số học khi trừ. Bẫy: tính nhầm. Khóa: 101,500 − 87,000 = 14,500." },
+          { id: "d", text: "$137,500.", isCorrect: false, rationale: "Cơ chế: cộng S&A vào thay vì trừ. Bẫy: sai dấu S&A. Khóa: S&A làm GIẢM lợi nhuận." },
+        ],
+        takeaway: "NOI = Sales − adjusted COGS − S&A = 225,000 − 123,500 − 87,000 = $14,500.",
+      },
     ],
   },
   {
@@ -3998,6 +4577,15 @@ const rawChapters: Chapter[] = [
           parent: "be",
         },
         {
+          id: "b-eqn",
+          label: "Equation method",
+          group: "term",
+          detail:
+            "Equation method giải thẳng Profit = Unit CM × Q − Fixed cho break-even và target profit.",
+          sectionId: "s7b",
+          parent: "be",
+        },
+        {
           id: "risk",
           label: "LO7·8 Rủi ro & đòn bẩy",
           group: "lo",
@@ -4084,6 +4672,7 @@ const rawChapters: Chapter[] = [
         { from: "cvp", to: "be" },
         { from: "be", to: "b-unit" },
         { from: "be", to: "t-profit" },
+        { from: "be", to: "b-eqn" },
         { from: "cvp", to: "risk" },
         { from: "risk", to: "r-mos" },
         { from: "risk", to: "r-struct" },
@@ -4280,6 +4869,21 @@ const rawChapters: Chapter[] = [
             },
           },
           {
+            type: "formula",
+            formula: {
+              expression:
+                "Change in profit = CM ratio × Change in sales − Change in fixed expenses",
+              legend: [
+                {
+                  symbol: "ΔFixed = 0",
+                  meaning:
+                    "khi fixed không đổi → Δprofit = CM ratio × Δsales",
+                },
+              ],
+              note: "Tổng quát hơn ΔCM = CM ratio × Δsales: cho phép fixed cũng thay đổi cùng lúc (sách p.199).",
+            },
+          },
+          {
             type: "comparison",
             table: {
               title: "CM ratio vs Variable expense ratio",
@@ -4458,6 +5062,102 @@ const rawChapters: Chapter[] = [
                 "Cùng một logic phủ fixed rồi cộng target, nhưng tính theo đồng doanh thu.",
               implication:
                 "Đừng quên cộng fixed vào target ở tử số; bẫy hay gặp là chỉ chia target cho CM.",
+            },
+          },
+        ],
+      },
+      {
+        id: "s7b",
+        heading: "Equation method — cách giải gốc (LO5·6)",
+        blocks: [
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Hai con đường, một đích",
+              body: "s6/s7 dùng FORMULA METHOD (công thức tắt Fixed ÷ Unit CM). Sách dạy song song EQUATION METHOD: giải thẳng phương trình lợi nhuận. Hai cách luôn cho cùng kết quả — nhưng đề (và Review Problem của sách) có thể yêu cầu ĐÍCH DANH equation method.",
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Break-even bằng equation method (RBC)",
+              steps: [
+                {
+                  label: "Đặt Profit = 0 vào phương trình",
+                  expr: "0 = Unit CM × Q − Fixed = $200 × Q − $80,000",
+                },
+                {
+                  label: "Giải Q",
+                  expr: "$200 × Q = $80,000 → Q = $80,000 ÷ $200 = 400 đơn vị",
+                },
+                {
+                  label: "Theo dollar sales (dùng CM ratio)",
+                  expr: "0 = 0.40 × Sales − $80,000 → Sales = $80,000 ÷ 0.40 = $200,000",
+                },
+              ],
+              result:
+                "Break-even = 400 đơn vị / $200,000 — trùng khớp formula method",
+              meaning:
+                "Equation method chỉ là giải đại số phương trình Profit = Unit CM × Q − Fixed; formula method là bước rút gọn của chính nó.",
+              implication:
+                "Khi đề yêu cầu 'use the equation method', phải trình bày dòng đặt Profit = 0 rồi giải Q, không được nhảy thẳng công thức.",
+            },
+          },
+          {
+            type: "calc",
+            calc: {
+              title: "Target profit bằng equation method (RBC, target $100,000)",
+              steps: [
+                {
+                  label: "Đặt Profit = target",
+                  expr: "$100,000 = $200 × Q − $80,000",
+                },
+                {
+                  label: "Giải Q",
+                  expr: "$200 × Q = $100,000 + $80,000 = $180,000 → Q = 900 đơn vị",
+                },
+                {
+                  label: "Theo dollar sales",
+                  expr: "$100,000 = 0.40 × Sales − $80,000 → Sales = $180,000 ÷ 0.40 = $450,000",
+                },
+              ],
+              result:
+                "900 đơn vị / $450,000 để đạt lợi nhuận $100,000 — trùng khớp formula method",
+              meaning:
+                "Break-even chỉ là trường hợp đặc biệt target = $0; equation method dùng chung một phương trình cho cả hai.",
+              implication:
+                "Nhớ cộng fixed vào target ở vế phải trước khi chia Unit CM; bẫy hay gặp là chỉ chia target cho Unit CM.",
+            },
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Equation method vs Formula method",
+              columns: ["", "Equation method", "Formula method"],
+              rows: [
+                {
+                  label: "Cách làm",
+                  cells: [
+                    "Giải phương trình Profit = Unit CM × Q − Fixed",
+                    "Thế thẳng vào công thức tắt Fixed ÷ Unit CM",
+                  ],
+                },
+                {
+                  label: "Ưu điểm",
+                  cells: [
+                    "Minh bạch, thấy rõ gốc; đề có thể bắt buộc",
+                    "Nhanh, ít bước",
+                  ],
+                },
+                {
+                  label: "Kết quả",
+                  cells: [
+                    "Luôn bằng nhau — hai con đường tới cùng một đích",
+                    "Luôn bằng nhau",
+                  ],
+                },
+              ],
             },
           },
         ],
@@ -5355,6 +6055,82 @@ const rawChapters: Chapter[] = [
         takeaway:
           "R² cho biết mức độ activity giải thích biến thiên cost; R² ≈ 0.90 là fit khá mạnh.",
       },
+      {
+        id: "q18",
+        difficulty: "intermediate",
+        conceptTested: "Break-even bằng equation method",
+        stem: "RBC has Unit CM = $200 and fixed expenses = $80,000. Using the equation method (0 = Unit CM × Q − Fixed), the break-even quantity is:",
+        options: [
+          {
+            id: "a",
+            text: "400 units.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: 0 = $200 × Q − $80,000 → Q = $80,000 ÷ $200 = 400. Bẫy: quên đặt Profit = 0. Khóa: equation method giải thẳng phương trình lợi nhuận.",
+          },
+          {
+            id: "b",
+            text: "160 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: chia fixed cho selling price $500 thay vì Unit CM. Bẫy: dùng nhầm mẫu số. Khóa: break-even chia cho Unit CM, không phải giá bán.",
+          },
+          {
+            id: "c",
+            text: "267 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: chia fixed cho variable cost $300. Bẫy: nhầm Unit CM với variable cost. Khóa: Unit CM = P − V = $200.",
+          },
+          {
+            id: "d",
+            text: "800 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: nhân đôi kết quả đúng. Bẫy: tính sai số học. Khóa: $80,000 ÷ $200 = 400.",
+          },
+        ],
+        takeaway:
+          "Equation method: 0 = $200 × Q − $80,000 → Q = 400 đơn vị (bằng formula method).",
+      },
+      {
+        id: "q19",
+        difficulty: "intermediate",
+        conceptTested: "Target profit bằng equation method",
+        stem: "RBC (Unit CM $200, fixed $80,000) wants a target profit of $100,000. Using the equation method, how many units must be sold?",
+        options: [
+          {
+            id: "a",
+            text: "900 units.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: $100,000 = $200 × Q − $80,000 → $200Q = $180,000 → Q = 900. Bẫy: quên cộng fixed vào target. Khóa: chuyển fixed sang vế phải trước khi chia Unit CM.",
+          },
+          {
+            id: "b",
+            text: "500 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: chỉ chia target $100,000 cho Unit CM, bỏ fixed. Bẫy: quên phủ fixed. Khóa: tử số là target + fixed.",
+          },
+          {
+            id: "c",
+            text: "400 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: 400 là break-even (target = 0). Bẫy: bỏ qua target profit. Khóa: target > 0 làm Q tăng trên break-even.",
+          },
+          {
+            id: "d",
+            text: "1,300 units.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: cộng nhầm hoặc chia sai. Bẫy: tính $180,000 ÷ $200 sai. Khóa: $180,000 ÷ $200 = 900.",
+          },
+        ],
+        takeaway:
+          "Equation method: $100,000 = $200 × Q − $80,000 → Q = 900 đơn vị.",
+      },
     ],
   },
   {
@@ -5600,6 +6376,89 @@ const rawChapters: Chapter[] = [
               title: "Self-imposed (participative) budget",
               body:
                 "Budget do chính manager các cấp lập rồi cấp trên review. Ưu điểm: ước tính sát thực tế hơn, tạo động lực và cam kết, quy trách nhiệm rõ hơn. Rủi ro là budgetary slack: cố tình đặt mục tiêu dễ đạt, nên vẫn cần management review.",
+            },
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Vì sao tổ chức lập budget? (5 planning + 2 control)",
+              columns: ["Góc độ", "Công dụng cụ thể"],
+              rows: [
+                {
+                  label: "Planning (1)",
+                  cells: [
+                    "Buộc manager NGHĨ về và LẬP KẾ HOẠCH cho tương lai.",
+                  ],
+                },
+                {
+                  label: "Planning (2)",
+                  cells: ["TRUYỀN THÔNG mục tiêu tài chính khắp tổ chức."],
+                },
+                {
+                  label: "Planning (3)",
+                  cells: ["PHÂN BỔ nguồn lực tới nơi dùng hiệu quả nhất."],
+                },
+                {
+                  label: "Planning (4)",
+                  cells: [
+                    "PHỐI HỢP kế hoạch & hoạt động của các phòng ban.",
+                  ],
+                },
+                {
+                  label: "Planning (5)",
+                  cells: [
+                    "Phát hiện trước BOTTLENECK (nút thắt) trước khi xảy ra.",
+                  ],
+                },
+                {
+                  label: "Control (1)",
+                  cells: [
+                    "Cải thiện HIỆU QUẢ & hiệu suất vận hành (so actual vs budget).",
+                  ],
+                },
+                {
+                  label: "Control (2)",
+                  cells: ["ĐÁNH GIÁ & khen thưởng nhân viên."],
+                },
+              ],
+            },
+          },
+          {
+            type: "comparison",
+            table: {
+              title: "Hai cách lập budget",
+              columns: ["", "Top-down budget", "Self-imposed / Participative budget"],
+              rows: [
+                {
+                  label: "Ai đặt mục tiêu",
+                  cells: [
+                    "Cấp trên áp target xuống",
+                    "Chính manager các cấp lập, cấp trên review",
+                  ],
+                },
+                {
+                  label: "Rủi ro",
+                  cells: [
+                    "Bỏ qua kiến thức cấp dưới → mất động lực, target phi thực tế",
+                    "Budgetary slack nếu gắn với thưởng → cần review",
+                  ],
+                },
+                {
+                  label: "Tinh thần",
+                  cells: [
+                    "Dễ sinh resentment nếu bị phạt vì không đạt",
+                    "Tạo cam kết & ownership khi được tham gia",
+                  ],
+                },
+              ],
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "key",
+              title: "Self-imposed budget: 4 ưu điểm & 2 hạn chế",
+              body: "4 ưu điểm: (1) tôn trọng ý kiến người trực tiếp làm; (2) ước tính SÁT hơn vì họ hiểu vận hành hằng ngày; (3) tăng động lực đạt mục tiêu do CHÍNH họ đặt; (4) trao ownership & trách nhiệm giải trình cho sai lệch. 2 hạn chế: (1) có thể suboptimal nếu cấp dưới thiếu tầm chiến lược; (2) sinh budgetary slack nếu budget dùng để thưởng → vì vậy cấp trên PHẢI review. Chốt: nên đặt mục tiêu 'highly achievable' (thách thức nhưng đạt được), và cấp trên KHÔNG ép cấp dưới 'meet the budget' bằng mọi giá — ép sẽ sinh thù địch thay vì cải tiến (sách p.356).",
             },
           },
         ],
@@ -6559,6 +7418,82 @@ const rawChapters: Chapter[] = [
         ],
         takeaway:
           "Lãi vay budgeted của Royal là $1,920 vì khoản vay chỉ kéo dài 3 tháng.",
+      },
+      {
+        id: "q14",
+        difficulty: "basic",
+        conceptTested: "Advantages of self-imposed budgets",
+        stem: "Which is a major ADVANTAGE of a self-imposed (participative) budget?",
+        options: [
+          {
+            id: "a",
+            text: "Estimates are often more accurate because front-line managers know day-to-day operations.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: người trực tiếp vận hành hiểu chi tiết hơn nên ước tính sát thực tế. Bẫy: nghĩ cấp trên luôn ước tính tốt hơn. Khóa: self-imposed tận dụng kiến thức cấp dưới.",
+          },
+          {
+            id: "b",
+            text: "It guarantees the elimination of budgetary slack.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: self-imposed budget lại DỄ sinh budgetary slack hơn nếu gắn với thưởng. Bẫy: đảo ngược nhược điểm thành ưu điểm. Khóa: chính vì slack nên vẫn cần cấp trên review.",
+          },
+          {
+            id: "c",
+            text: "It lets top managers impose targets without input.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: áp target không lấy ý kiến là top-down, ngược với self-imposed. Bẫy: nhầm hai cách lập budget. Khóa: self-imposed = có sự tham gia của cấp dưới.",
+          },
+          {
+            id: "d",
+            text: "It removes the need for any management review.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: self-imposed budget VẪN cần review để chặn slack và giữ đúng chiến lược. Bẫy: tưởng tham gia thì khỏi kiểm soát. Khóa: luôn cần higher-level review.",
+          },
+        ],
+        takeaway:
+          "Ưu điểm cốt lõi của self-imposed budget: ước tính sát hơn nhờ kiến thức vận hành; nhưng vẫn cần review vì rủi ro budgetary slack.",
+      },
+      {
+        id: "q15",
+        difficulty: "basic",
+        conceptTested: "Purposes of budgeting (planning vs control)",
+        stem: "Uncovering potential bottlenecks before they occur is an example of budgeting used for:",
+        options: [
+          {
+            id: "a",
+            text: "Planning.",
+            isCorrect: true,
+            rationale:
+              "Cơ chế: phát hiện trước nút thắt là nhìn về tương lai để chuẩn bị → planning. Bẫy: nhầm với control (so actual). Khóa: planning xảy ra TRƯỚC kỳ.",
+          },
+          {
+            id: "b",
+            text: "Control.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: control là so actual với budget để điều chỉnh, diễn ra trong/sau kỳ. Bẫy: gộp mọi công dụng vào control. Khóa: uncover bottleneck là công dụng planning.",
+          },
+          {
+            id: "c",
+            text: "Evaluating and rewarding employees.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: đánh giá/khen thưởng là công dụng CONTROL, không phải phát hiện bottleneck. Bẫy: chọn một công dụng control bất kỳ. Khóa: bottleneck thuộc planning.",
+          },
+          {
+            id: "d",
+            text: "Auditing financial statements.",
+            isCorrect: false,
+            rationale:
+              "Cơ chế: auditing không phải công dụng của master budget. Bẫy: từ nghe gần quản trị tài chính. Khóa: budget phục vụ planning & control nội bộ.",
+          },
+        ],
+        takeaway:
+          "5 công dụng planning gồm phát hiện bottleneck; 2 công dụng control gồm đánh giá/khen thưởng.",
       },
     ],
   },
