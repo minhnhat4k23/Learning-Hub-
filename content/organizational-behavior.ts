@@ -1,4 +1,12 @@
-import type { Block, CalloutKind, Chapter, FlowEdge, FlowNode } from "./types";
+import type {
+  Block,
+  CalloutKind,
+  Chapter,
+  CourseMapDiagram,
+  CourseThread,
+  FlowEdge,
+  FlowNode,
+} from "./types";
 
 type FlowLayout = "tree" | "horizontal" | "radial";
 type SectionFlowNode = Omit<FlowNode, "sectionId"> & {
@@ -732,42 +740,42 @@ const topic00: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which statement best captures Robbins and Judge's definition of Organizational Behavior?",
+      stem: "After medication errors rise, Lan examines how nurse fatigue, team handoffs, and the hospital's reporting structure shape behavior, then uses the findings to improve performance. Which description best matches her approach?",
       options: [
         {
           id: "a",
-          text: "OB studies individual personality only, mainly to help people feel happier at work",
+          text: "It is employee counseling focused only on individual happiness",
           isCorrect: false,
           rationale:
-            "Cơ chế: OB có phần individual, nhưng còn groups và structure. Bẫy: thu hẹp OB thành tâm lý cá nhân. Khóa: định nghĩa đầy đủ gồm impact của individuals, groups, structure lên behavior để cải thiện effectiveness.",
+            "Cơ chế: Lan xem cả fatigue cá nhân, handoffs nhóm và reporting structure, không chỉ happiness. Bẫy: thấy yếu tố con người rồi thu hẹp thành counseling. Khóa: OB bao quát individual, group và structure.",
         },
         {
           id: "b",
-          text: "OB is a field of study about the impact of individuals, groups, and structure on behavior within organizations, applied to improve organizational effectiveness",
+          text: "It is OB because it studies individual, group, and structural effects on behavior and applies them to improve effectiveness",
           isCorrect: true,
           rationale:
-            "Cơ chế: đây là đủ hai vế của định nghĩa Robbins & Judge: 3 nguồn tác động và mục đích cải thiện effectiveness. Bẫy: chỉ nhớ 'people' mà quên structure hoặc effectiveness. Khóa: OB = study + application.",
+            "Cơ chế: tình huống có đủ ba nguồn tác động và dùng kết quả để cải thiện hospital effectiveness. Bẫy: chỉ nhìn một biến như fatigue hoặc handoff. Khóa: OB = systematic study của individuals, groups, structure + application.",
         },
         {
           id: "c",
-          text: "OB is a set of universal rules that predicts every employee's behavior exactly",
+          text: "It is a universal prediction system that should produce the same answer in every hospital",
           isCorrect: false,
           rationale:
-            "Cơ chế: sách nhấn few absolutes, không có quy luật đúng tuyệt đối. Bẫy: biến OB thành công thức vạn năng. Khóa: OB dùng systematic study nhưng vẫn cần contingency.",
+            "Cơ chế: kết quả hành vi còn phụ thuộc context của từng hospital. Bẫy: Lan dùng dữ liệu nên tưởng mô hình sẽ dự đoán tuyệt đối. Khóa: OB có few absolutes và cần contingency.",
         },
         {
           id: "d",
-          text: "OB focuses on financial accounting controls inside organizations",
+          text: "It is financial control because the goal is organizational performance",
           isCorrect: false,
           rationale:
-            "Cơ chế: OB nghiên cứu behavior, không phải accounting control. Bẫy: thấy chữ organization rồi kéo sang môn vận hành/tài chính. Khóa: object của OB là human behavior trong tổ chức.",
+            "Cơ chế: biến Lan phân tích đều là human behavior và social structure, không phải accounting controls. Bẫy: thấy mục tiêu performance rồi kéo sang tài chính. Khóa: object của OB là behavior trong tổ chức.",
         },
         {
           id: "e",
-          text: "OB is mainly about building informal networks for fast promotion",
+          text: "It is informal networking because staff members coordinate across roles",
           isCorrect: false,
           rationale:
-            "Cơ chế: networking xuất hiện trong effective vs successful managers, không phải định nghĩa OB. Bẫy: lấy một ứng dụng nhỏ thay cho toàn bộ môn. Khóa: định nghĩa OB rộng hơn networking.",
+            "Cơ chế: handoff coordination là group process, không đồng nghĩa networking để thăng tiến. Bẫy: thấy người ở nhiều vai trò tương tác rồi gắn nhãn network. Khóa: networking chỉ là một hành vi hẹp, không phải toàn bộ OB.",
         },
       ],
       difficulty: "basic",
@@ -822,42 +830,42 @@ const topic00: Chapter = {
     },
     {
       id: "q03",
-      stem: "Which description of behavior is most consistent with Newstrom's framing in Topic 00?",
+      stem: "During a review meeting, Minh deliberately follows a checklist in public, unconsciously avoids eye contact, and privately suppresses a reaction after criticism. Which statement best explains why all these responses matter to OB?",
       options: [
         {
           id: "a",
-          text: "Behavior is only visible action that people consciously choose",
+          text: "Only the checklist behavior counts because behavior must be visible and conscious",
           isCorrect: false,
           rationale:
-            "Cơ chế: behavior có thể covert và unconscious, không chỉ visible conscious action. Bẫy: chỉ nhìn hành vi thấy được. Khóa: behavior có nhiều cặp đối lập.",
+            "Cơ chế: checklist chỉ là phần overt/conscious; tránh eye contact và suppression vẫn là reactions. Bẫy: người quan sát dễ chỉ ghi nhận thứ nhìn thấy. Khóa: behavior có cả covert và unconscious.",
         },
         {
           id: "b",
-          text: "Behavior is only a person's stated attitude, not their reaction to situations",
+          text: "Only Minh's stated attitude counts; his reactions to criticism are outside behavior",
           isCorrect: false,
           rationale:
-            "Cơ chế: behavior là action/reaction trước situation/stimulus; attitude chỉ là một biến liên quan. Bẫy: đồng nhất attitude với behavior. Khóa: behavior nằm ở phản ứng thực tế.",
+            "Cơ chế: các phản ứng sau criticism chính là action/reaction trước stimulus. Bẫy: đợi Minh phát biểu mới công nhận có behavior. Khóa: stated attitude không bao trùm mọi phản ứng.",
         },
         {
           id: "c",
-          text: "Behavior is action or reaction to a situation or stimulus, and it can be conscious or unconscious, overt or covert, voluntary or involuntary",
+          text: "Behavior includes reactions that may be conscious or unconscious, overt or covert, and voluntary or involuntary",
           isCorrect: true,
           rationale:
-            "Cơ chế: câu này giữ đủ các cặp conscious/unconscious, overt/covert, voluntary/involuntary. Bẫy: thu hẹp behavior thành thứ quan sát được. Khóa: OB học cả phần thấy được lẫn phần ẩn.",
+            "Cơ chế: ba phản ứng của Minh minh họa đồng thời phần conscious/overt và unconscious/covert. Bẫy: chỉ chọn hành vi chủ ý. Khóa: Newstrom xem behavior rộng hơn hành động nhìn thấy.",
         },
         {
           id: "d",
-          text: "Behavior is completely understood, so it can always be perfectly predicted",
+          text: "Once these responses are observed, Minh's future behavior can be predicted perfectly",
           isCorrect: false,
           rationale:
-            "Cơ chế: slide nói behavior partially understood và sometimes unpredictable. Bẫy: quá tự tin vào dự đoán. Khóa: OB có predict nhưng không tuyệt đối.",
+            "Cơ chế: một meeting không loại bỏ contingency hay phần behavior chưa hiểu hết. Bẫy: pattern hiện tại tạo cảm giác chắc chắn. Khóa: behavior chỉ partially understood và sometimes unpredictable.",
         },
         {
           id: "e",
-          text: "Behavior only matters at the organizational level, not the individual level",
+          text: "These responses matter only if they immediately change an organization-level policy",
           isCorrect: false,
           rationale:
-            "Cơ chế: OB phân tích từ individual tới group và organizational. Bẫy: nhảy thẳng lên tổ chức. Khóa: hành vi cá nhân là nền cho các cấp sau.",
+            "Cơ chế: phản ứng của Minh đã là behavior ở individual level dù chưa đổi policy. Bẫy: chỉ coi outcome cấp tổ chức mới đáng học. Khóa: OB bắt đầu từ individual rồi mới nối lên group và organization.",
         },
       ],
       difficulty: "intermediate",
@@ -1432,7 +1440,7 @@ const topic01: Chapter = {
         calloutBlock(
           "note",
           "Big Five 'at work' — chi tiết sách (R&J Ch.4, p81-82)",
-          "Conscientiousness → nhiều job knowledge, nỗ lực & performance cao. Emotional stability → life/job satisfaction, ít stress; cao → thích ứng thay đổi, thấp (neurotic) → burnout, work-family conflict. Extraversion → tốt ở việc nhiều tương tác, dự báo leadership emergence (nhưng impulsive hơn, dễ vắng mặt). Openness → dễ là leader hiệu quả, thoải mái với ambiguity, thích ứng thay đổi. Agreeableness → được yêu thích, tốt ở việc interpersonal, tuân thủ, ít tai nạn, đóng góp OCB; thấp → CWB, ít thành công về earnings.",
+          "Conscientiousness → nhiều job knowledge, nỗ lực & performance cao. Emotional stability → life/job satisfaction, ít stress; cao → thích ứng thay đổi, thấp (neurotic) → burnout, work-family conflict. Extraversion → tốt ở việc nhiều tương tác, dự báo leadership emergence (nhưng impulsive hơn, dễ vắng mặt). Openness → dễ là leader hiệu quả, thoải mái với ambiguity, thích ứng thay đổi. Agreeableness → được yêu thích, tốt ở việc interpersonal, tuân thủ, ít tai nạn, đóng góp OCB; thấp → CWB, ít thành công về earnings. → Mắt xích môn học: personality là INPUT đầu chuỗi cá nhân — trait định hình cách bạn nhìn nhận tình huống (perception, Topic 02), attitudes (Topic 05) và motivation (Topic 06); nền cá nhân này quay lại ở Topic 07 khi ghép người vào nhóm.",
         ),
       ],
       keyTerms: [
@@ -1656,13 +1664,13 @@ const topic01: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which statement best defines personality in OB?",
+      stem: "Across projects and teams, Lan consistently prefers careful preparation and quiet interaction, even though her technical skills and daily moods vary. What is her manager primarily describing?",
       options: [
-        { id: "a", text: "A set of technical skills learned through job training", isCorrect: false, rationale: "Cơ chế: skills là học được, personality là khuynh hướng tự nhiên. Bẫy: đồng nhất personality với năng lực nghề. Khóa: personality = cách react/interact, không phải kỹ năng đào tạo." },
-        { id: "b", text: "The sum of ways an individual reacts to and interacts with others; one's most comfortable, consistent behaviors", isCorrect: true, rationale: "Cơ chế: đúng định nghĩa Robbins & Judge + practical view (most comfortable/natural). Bẫy: (không có). Khóa: personality = khuynh hướng hành vi nhất quán khi react với môi trường." },
-        { id: "c", text: "A temporary mood that changes from one situation to another", isCorrect: false, rationale: "Cơ chế: personality có tính NHẤT QUÁN, khác mood nhất thời. Bẫy: nhầm personality với emotion/mood. Khóa: consistency là dấu hiệu của personality." },
-        { id: "d", text: "The job title and role a person holds in an organization", isCorrect: false, rationale: "Cơ chế: title/role là vị trí, không phải khuynh hướng hành vi. Bẫy: gán personality cho chức danh. Khóa: personality thuộc về con người, không phải vai trò." },
-        { id: "e", text: "The intelligence level measured by an IQ test", isCorrect: false, rationale: "Cơ chế: IQ đo trí tuệ, không đo cách react/interact. Bẫy: nhầm personality với intelligence. Khóa: personality ≠ IQ." },
+        { id: "a", text: "Her technical skill set, because preparation is a trained job competency", isCorrect: false, rationale: "Cơ chế: stem nói skills thay đổi nhưng pattern chuẩn bị và tương tác vẫn lặp lại. Bẫy: careful preparation có thể được huấn luyện. Khóa: skill là năng lực học được; personality là khuynh hướng react/interact nhất quán." },
+        { id: "b", text: "Her personality, because it is her relatively consistent pattern of reacting and interacting", isCorrect: true, rationale: "Cơ chế: pattern xuất hiện qua nhiều project/team và phản ánh cách Lan thoải mái nhất khi react/interact. Bẫy: tưởng personality phải là một nhãn type. Khóa: consistency across situations là dấu hiệu chính." },
+        { id: "c", text: "Her current mood, because quiet interaction is a short-lived emotional state", isCorrect: false, rationale: "Cơ chế: mood biến động theo ngày, còn stem nhấn pattern kéo dài qua nhiều bối cảnh. Bẫy: quiet có thể xuất hiện khi mood thấp. Khóa: temporary affect ≠ personality." },
+        { id: "d", text: "Her formal role, because project assignments determine how she naturally behaves", isCorrect: false, rationale: "Cơ chế: role đặt kỳ vọng hành vi nhưng không phải khuynh hướng cá nhân ổn định. Bẫy: cùng hành vi xuất hiện trong công việc nên dễ quy cho role. Khóa: role thuộc vị trí; personality thuộc cá nhân." },
+        { id: "e", text: "Her intelligence, because preparation directly reveals her IQ level", isCorrect: false, rationale: "Cơ chế: stem không đo reasoning hay cognitive ability. Bẫy: chuẩn bị kỹ thường bị gắn với thông minh. Khóa: IQ không định nghĩa cách react/interact." },
       ],
       difficulty: "basic",
       conceptTested: "Definition of personality",
@@ -1838,13 +1846,13 @@ const topic01: Chapter = {
     },
     {
       id: "q14",
-      stem: "Bottom-line conclusions individuals hold about their capabilities, competence, and worth best define...",
+      stem: "After losing a client pitch, Minh says, 'I still believe I am capable, competent, and worthy, and I can improve next time.' Which construct does this statement most directly reflect?",
       options: [
-        { id: "a", text: "Self-monitoring", isCorrect: false, rationale: "Cơ chế: self-monitoring đo khả năng điều chỉnh hành vi theo cues bên ngoài. Bẫy: nhầm 'self' nào cũng là tự đánh giá. Khóa: capabilities/competence/worth là Core Self-Evaluation." },
-        { id: "b", text: "Core self-evaluation (CSE)", isCorrect: true, rationale: "Cơ chế: CSE là kết luận nền tảng về năng lực, sự thành thạo và giá trị bản thân. Bẫy: nhầm với emotional stability hoặc self-monitoring. Khóa: 'bottom-line conclusions' là phrase khóa của CSE." },
-        { id: "c", text: "Proactive personality", isCorrect: false, rationale: "Cơ chế: proactive personality là chủ động nhận diện cơ hội và kiên trì tạo thay đổi. Bẫy: thấy năng lực cao rồi tưởng proactive. Khóa: proactive nói về initiative, không phải đánh giá worth." },
-        { id: "d", text: "Narcissism", isCorrect: false, rationale: "Cơ chế: narcissism là kiêu ngạo, cần ngưỡng mộ và entitlement. Bẫy: nhầm tự đánh giá cao với CSE. Khóa: CSE là construct rộng về competence/worth, không mặc định là narcissism." },
-        { id: "e", text: "Emotional stability", isCorrect: false, rationale: "Cơ chế: emotional stability là đối cực của neuroticism, nói về ổn định cảm xúc. Bẫy: CSE dương thường đi với tự tin nhưng không phải emotional stability. Khóa: câu hỏi nhấn capabilities/competence/worth." },
+        { id: "a", text: "Self-monitoring", isCorrect: false, rationale: "Cơ chế: Minh đang đánh giá năng lực và worth, không mô tả việc đổi hành vi theo social cues. Bẫy: cả hai construct đều có chữ self. Khóa: adapting presentation = self-monitoring; bottom-line self-view = CSE." },
+        { id: "b", text: "Core self-evaluation (CSE)", isCorrect: true, rationale: "Cơ chế: câu nói trực tiếp thể hiện kết luận nền tảng về capability, competence và worth sau thất bại. Bẫy: tự tin sau setback có thể bị đọc thành optimism chung. Khóa: bộ ba capable–competent–worthy chỉ CSE." },
+        { id: "c", text: "Proactive personality", isCorrect: false, rationale: "Cơ chế: proactive personality cần hành vi nhận diện cơ hội và tạo thay đổi; stem mới chỉ cho self-view. Bẫy: 'improve next time' nghe chủ động. Khóa: intention cải thiện không đủ thay cho initiative thực tế." },
+        { id: "d", text: "Narcissism", isCorrect: false, rationale: "Cơ chế: Minh không thể hiện entitlement hay nhu cầu được ngưỡng mộ. Bẫy: positive self-view dễ bị quy thành narcissism. Khóa: CSE tích cực không đồng nghĩa cái tôi phóng đại." },
+        { id: "e", text: "Emotional stability", isCorrect: false, rationale: "Cơ chế: bình tĩnh sau thất bại có thể gợi emotional stability, nhưng lời nói tập trung vào competence/worth. Bẫy: resilience và CSE thường đi cùng nhau. Khóa: nội dung tự đánh giá quyết định construct." },
       ],
       difficulty: "intermediate",
       conceptTested: "Core Self-Evaluation",
@@ -2653,7 +2661,37 @@ const topic02: Chapter = {
         calloutBlock(
           "note",
           "Giảm bias",
-          "Focus on goals; look for information that disconfirms your beliefs; don't create meaning out of random events; increase your options.",
+          "Focus on goals; look for information that disconfirms your beliefs; don't create meaning out of random events; increase your options. Nguồn gốc exhibit — S. P. Robbins, *Decide & Conquer* (2004).",
+        ),
+        comparisonBlock(
+          "Exhibit 5-3 — Reducing Biases and Errors (sách, p102)",
+          ["Lời khuyên", "Nội dung"],
+          [
+            {
+              label: "Focus on goals",
+              cells: [
+                "Không có goals rõ thì không biết information nào relevant, khó chọn giữa alternatives và dễ hối tiếc về lựa chọn; goals rõ giúp loại option nghịch với lợi ích của mình.",
+              ],
+            },
+            {
+              label: "Look for information that disconfirms your beliefs",
+              cells: [
+                "Cách hiệu quả nhất để chống overconfidence, confirmation và hindsight bias: chủ động tìm thông tin TRÁI với niềm tin/giả định của mình; cân nhắc công khai các cách mình có thể sai để thách thức xu hướng nghĩ mình thông minh hơn thực tế.",
+              ],
+            },
+            {
+              label: "Don't try to create meaning out of random events",
+              cells: [
+                "Não được huấn luyện tìm cause-effect; khi không tìm được lý do ta hay TỰ BỊA ra. Phải chấp nhận có những sự kiện ngoài kiểm soát; đừng gán ý nghĩa cho trùng hợp ngẫu nhiên.",
+              ],
+            },
+            {
+              label: "Increase your options",
+              cells: [
+                "Quyết định cuối chỉ tốt bằng option tốt nhất trong tập đã nghĩ ra; tăng SỐ LƯỢNG và ĐỘ ĐA DẠNG alternatives (kể cả bằng sáng tạo) thì cơ hội tìm được option xuất sắc tăng.",
+              ],
+            },
+          ],
         ),
       ],
       keyTerms: [
@@ -2769,6 +2807,11 @@ const topic02: Chapter = {
             },
           ],
         ),
+        calloutBlock(
+          "note",
+          "Nudging",
+          "**Nudging (sách, p106):** tổ chức chủ động 'hích' perception và decision của ta — quảng cáo là dạng nudge lộ liễu nhất (tác động perception về sản phẩm → decision mua). Nudging cũng được dùng tích cực, ví dụ trong CSR initiatives để đổi kỳ vọng của mọi người về tổ chức. Mức độ dễ bị nudge khác nhau theo người, nhưng gần như ai cũng chịu tác động của suggestion ở mức nào đó.",
+        ),
       ],
       keyTerms: [
         {
@@ -2780,6 +2823,11 @@ const topic02: Chapter = {
           term: "organizational constraints",
           definition:
             "Ràng buộc từ performance evaluation, reward systems, regulations, time constraints và historical precedents.",
+        },
+        {
+          term: "nudging",
+          definition:
+            "Tác động có chủ đích của tổ chức lên perception và decision của cá nhân qua suggestion (sách, p106).",
         },
       ],
     },
@@ -2926,6 +2974,24 @@ const topic02: Chapter = {
           "key",
           "Ứng dụng shortcut & bias trong tổ chức + SO WHAT",
           "Employment interview dễ bị ấn tượng đầu chi phối; performance expectations có thể tạo self-fulfilling prophecy / Pygmalion effect; performance evaluation cũng chịu bias. SO WHAT (Nordell 2022): unconscious bias có thể hại hơn explicit discrimination vì nó ngăn ta thấy rõ, hiểu đúng và tin nhau.",
+        ),
+        comparisonBlock(
+          "Causes of creative behavior — chi tiết sách (p109–111)",
+          ["Nguồn", "Nội dung"],
+          [
+            {
+              label: "Creative potential (p109–110)",
+              cells: [
+                "Intelligence (người thông minh sáng tạo hơn); personality: openness to experience, proactive, self-confidence, risk taking, tolerance for ambiguity, perseverance; hope/self-efficacy/positive affect cũng dự đoán creativity; nghiên cứu \"mad genius\" (một phần creativity gắn psychopathology — vd Van Gogh — nhưng chiều ngược lại KHÔNG đúng); expertise là nền của mọi creative work và là predictor QUAN TRỌNG NHẤT của creative potential (vd Tarantino tích lũy kiến thức phim từ video rental store); ethics KHÔNG tương quan với creativity — người gian lận có thể sáng tạo hơn người hành xử đạo đức (cả hai có thể cùng gốc rule-breaking desire).",
+              ],
+            },
+            {
+              label: "Creative environment (p110–111)",
+              cells: [
+                "Có potential chưa đủ, cần môi trường để hiện thực hóa: quan trọng nhất là motivation, đặc biệt intrinsic motivation (tương quan khá mạnh với creative outcomes); tổ chức nên reward & recognize creative work, cho ý tưởng chảy tự do, tự do khỏi rule thừa, structural + psychological empowerment; climate \"achievement at any cost\" GIẾT creativity; team: diversity chỉ tăng creativity khi có perspective taking và leader truyền cảm hứng + tạo confidence; creative outcomes cần \"used\" — \"ideas are useless unless used\" (translate ý tưởng thành innovation cần motivation + networking ability).",
+              ],
+            },
+          ],
         ),
       ],
       keyTerms: [
@@ -3176,6 +3242,34 @@ const topic02: Chapter = {
       difficulty: "advanced",
       conceptTested: "Ethics and Pygmalion effect",
       takeaway: "Pygmalion effect là ứng dụng quan trọng của perception: kỳ vọng có thể tạo self-fulfilling prophecy.",
+    },
+    {
+      id: "q17",
+      stem: "A project manager is certain her plan cannot fail and dismisses early warning signs. According to Exhibit 5-3, which action would best reduce her overconfidence?",
+      options: [
+        { id: "a", text: "Actively seek information that could disconfirm her assumptions", isCorrect: true, rationale: "Cơ chế: chủ động tìm evidence trái niềm tin buộc manager kiểm tra cách mình có thể sai và chống overconfidence/confirmation bias. Bẫy: warning signs đã có nên dễ nghĩ chỉ cần xem lại dữ liệu ủng hộ plan. Khóa: disconfirming evidence thách thức confidence thay vì củng cố nó." },
+        { id: "b", text: "Focus only on evidence that supports the original plan", isCorrect: false, rationale: "Cơ chế: chỉ tìm evidence thuận chiều làm confirmation bias và overconfidence mạnh hơn. Bẫy: consistency với plan tạo cảm giác quyết đoán. Khóa: giảm bias cần tìm thông tin TRÁI niềm tin." },
+        { id: "c", text: "Treat every random setback as proof of a hidden causal pattern", isCorrect: false, rationale: "Cơ chế: gán cause-effect cho random events tạo randomness error, không sửa overconfidence. Bẫy: warning signs khiến manager muốn tìm một pattern giải thích nhanh. Khóa: Exhibit 5-3 yêu cầu không tự tạo meaning từ sự kiện ngẫu nhiên." },
+        { id: "d", text: "Reduce the number and diversity of alternatives under review", isCorrect: false, rationale: "Cơ chế: thu hẹp alternatives làm decision bị giới hạn bởi option hiện có. Bẫy: ít option có vẻ giúp tập trung. Khóa: Exhibit 5-3 khuyên increase options, không giảm chúng." },
+        { id: "e", text: "Keep the initial forecast as the main anchor and adjust only slightly", isCorrect: false, rationale: "Cơ chế: bám forecast đầu và điều chỉnh không đủ là anchoring bias. Bẫy: forecast ban đầu có thể dựa trên kinh nghiệm. Khóa: anchor không phải biện pháp chống overconfidence." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Exhibit 5-3: reducing overconfidence and confirmation bias",
+      takeaway: "Muốn chống overconfidence, hãy chủ động tìm evidence có thể chứng minh mình sai thay vì chỉ thu thập điều xác nhận plan.",
+    },
+    {
+      id: "q18",
+      stem: "A company repeatedly advertises its recycling initiative so customers begin to expect the firm to act sustainably and become more likely to choose its products. Which concept best describes this deliberate influence?",
+      options: [
+        { id: "a", text: "Nudging", isCorrect: true, rationale: "Cơ chế: tổ chức dùng suggestion qua quảng cáo/CSR để 'hích' perception và decision của customers. Bẫy: quảng cáo cũng có thể frame thông tin. Khóa: deliberate organizational influence on expectations and choice = nudging." },
+        { id: "b", text: "Anchoring bias", isCorrect: false, rationale: "Cơ chế: anchoring cần initial number/information làm điểm neo rồi adjustment không đủ; stem nhấn suggestion lặp lại định hình kỳ vọng. Bẫy: quảng cáo xuất hiện sớm có thể thành thông tin đầu. Khóa: không có anchor-and-adjustment pattern." },
+        { id: "c", text: "Framing through selective perception", isCorrect: false, rationale: "Cơ chế: framing/selective perception mô tả cách presentation hoặc bộ lọc cá nhân làm nổi một phần thông tin. Bẫy: CSR message rõ ràng định khung hình ảnh công ty. Khóa: câu hỏi nhấn hành động chủ đích của tổ chức nhằm đổi decision, tức nudge." },
+        { id: "d", text: "Confirmation bias", isCorrect: false, rationale: "Cơ chế: confirmation bias là người ra quyết định tìm/ưu tiên evidence xác nhận belief sẵn có. Bẫy: customers có thể chú ý quảng cáo hợp kỳ vọng xanh. Khóa: nguồn tác động trong stem là suggestion từ tổ chức, không phải search bias của customer." },
+        { id: "e", text: "Contrast effect", isCorrect: false, rationale: "Cơ chế: contrast effect đánh giá một target bằng cách so với target vừa gặp trước đó. Bẫy: sản phẩm xanh có thể trông tốt hơn đối thủ. Khóa: stem không có comparison sequence; nó có nudge qua CSR advertising." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Nudging",
+      takeaway: "Nudging là tổ chức chủ động dùng suggestion để định hình perception, expectation và decision; quảng cáo và CSR đều có thể tạo nudge.",
     },
   ],
   status: "ready",
@@ -3937,6 +4031,30 @@ const topic03: Chapter = {
           "Implication tổng — nối values & diversity",
           "Chọn người vừa có ability vừa có value system khớp organization (P-O fit) nhưng tránh unconscious bias/cloning. Hướng tốt hơn là culture add và positive diversity climate. Đa dạng thành công khi được coi là everyone's business.",
         ),
+        comparisonBlock(
+          "Implementing diversity management strategies (sách, p126–128)",
+          ["Mảng", "Nội dung"],
+          [
+            {
+              label: "Attract – select – develop – retain",
+              cells: [
+                "Rà workforce xem nhóm nào underutilized (không hiện diện tương xứng ở top management); recruiting nhắm target (vd Microsoft khuyến khích nữ theo technology; Etsy mở lớp engineering + grant cho nữ coder rồi tuyển người giỏi nhất; McKinsey/BCG/Goldman tuyển lại phụ nữ đã rời workforce bằng phase-in programs); quảng cáo tuyển dụng thiếu women/minorities ở vị trí lãnh đạo gửi thông điệp xấu về diversity climate; selection: khi có protocol rõ + ưu tiên nondiscrimination thì QUALIFICATIONS quan trọng hơn hẳn đặc điểm nhân khẩu; người khác biệt nhân khẩu với đồng nghiệp dễ giảm commitment và rời đi — positive diversity climate giúp retention.",
+              ],
+            },
+            {
+              label: "Diversity in groups",
+              cells: [
+                "Nhóm cần cách nhìn chung + cohesion; diversity có thể HẠI hay LỢI tùy đặc điểm: demographic diversity (gender/race/ethnicity) nhìn chung không giúp cũng không hại performance; diversity về intelligence/conscientiousness/hứng thú teamwork là XẤU (đừng trộn người thấp các biến này vào); diversity về expertise/education là SỨC MẠNH; nhóm toàn người assertive muốn lãnh đạo (hoặc toàn follower) kém hơn nhóm mix; bất kể composition: leverage khác biệt bằng cách nhấn mạnh điểm TƯƠNG ĐỒNG giữa thành viên + leader nhấn higher-order goals & values.",
+              ],
+            },
+            {
+              label: "Diversity programs",
+              cells: [
+                "Chương trình hiệu quả có 3 thành phần: (1) dạy manager khung PHÁP LÝ về equal employment opportunity + đối xử công bằng bất kể nhân khẩu; (2) dạy manager cách diverse workforce phục vụ diverse market (khách hàng đa dạng) tốt hơn; (3) personal development practices làm bật skills/abilities của MỌI người, nhìn khác biệt góc nhìn như tài sản chung. Quốc tế: cần tailored approach (case TRANSCO Phần Lan p128 — global philosophy nhất quán nhưng policy riêng theo khung pháp lý/văn hóa từng nước).",
+              ],
+            },
+          ],
+        ),
       ],
       keyTerms: [
         {
@@ -3955,13 +4073,13 @@ const topic03: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which option best defines personal values in OB?",
+      stem: "An refuses to misuse customer data even when doing so could raise revenue, saying, 'Protecting privacy is the right thing to do.' What does An's statement most directly reveal?",
       options: [
-        { id: "a", text: "Temporary moods that change from hour to hour", isCorrect: false, rationale: "Cơ chế: moods là affect ngắn hạn, không phải basic convictions. Bẫy: values có liên hệ emotion nên dễ nhầm. Khóa: values bền hơn mood và nói về right/good/desirable." },
-        { id: "b", text: "Basic convictions about what is right, good, or desirable", isCorrect: true, rationale: "Cơ chế: đây là định nghĩa values theo R&J. Bẫy: câu ngắn nên dễ bỏ qua chữ convictions. Khóa: right, good, desirable là cụm khóa." },
-        { id: "c", text: "A person's current capacity to perform job tasks", isCorrect: false, rationale: "Cơ chế: đây là ability. Bẫy: values và ability đều dùng trong manager implications. Khóa: current capacity thuộc ability, không phải values." },
-        { id: "d", text: "Differences in easily perceived characteristics", isCorrect: false, rationale: "Cơ chế: đây là surface-level diversity. Bẫy: values nối sang diversity nhưng không đồng nghĩa. Khóa: values nằm ở deep-level, không dễ perceived." },
-        { id: "e", text: "The six-step model for maximizing decision outcomes", isCorrect: false, rationale: "Cơ chế: đây là rational decision-making model ở Topic 02. Bẫy: values ảnh hưởng decision nhưng không phải model 6 bước. Khóa: câu hỏi definition values." },
+        { id: "a", text: "A temporary mood caused by the revenue discussion", isCorrect: false, rationale: "Cơ chế: An nêu nguyên tắc right/wrong tương đối bền, không chỉ cảm xúc nhất thời. Bẫy: tranh luận đạo đức có thể gây mood mạnh. Khóa: mood là affect; value là conviction." },
+        { id: "b", text: "A personal value: a basic conviction about what is right, good, or desirable", isCorrect: true, rationale: "Cơ chế: ưu tiên privacy dù mất revenue thể hiện conviction về điều đúng và đáng mong muốn. Bẫy: tưởng đây chỉ là một preference kinh doanh. Khóa: 'right thing to do' là tín hiệu của value." },
+        { id: "c", text: "An's current ability to perform the data-analysis task", isCorrect: false, rationale: "Cơ chế: stem không nói An có đủ capacity hay skill hay không. Bẫy: quyết định liên quan customer data nên dễ nghĩ tới technical ability. Khóa: can do = ability; should do = value." },
+        { id: "d", text: "A surface-level diversity characteristic visible to coworkers", isCorrect: false, rationale: "Cơ chế: privacy conviction là deep-level attribute, không phải đặc điểm dễ nhìn. Bẫy: values thuộc diversity nên dễ chọn sai tầng. Khóa: visible demographic cue ≠ value." },
+        { id: "e", text: "The rational decision-making model itself", isCorrect: false, rationale: "Cơ chế: An có thể dùng value trong decision nhưng stem không mô tả sáu bước rational model. Bẫy: có trade-off revenue nên nghe như decision analysis. Khóa: value là tiêu chuẩn đánh giá, không phải quy trình." },
       ],
       difficulty: "basic",
       conceptTested: "Definition of values",
@@ -3969,13 +4087,13 @@ const topic03: Chapter = {
     },
     {
       id: "q02",
-      stem: "In the values framework, what does the intensity attribute describe?",
+      stem: "Lan values both honesty and career advancement, but when they conflict she refuses to mislead a client because honesty matters more to her. Which part of the values framework explains this priority?",
       options: [
-        { id: "a", text: "How important a value is", isCorrect: true, rationale: "Cơ chế: intensity attribute cho biết value quan trọng đến mức nào. Bẫy: dễ nhầm với content attribute. Khóa: intensity = degree of importance." },
-        { id: "b", text: "Which conduct or end-state is important", isCorrect: false, rationale: "Cơ chế: đây là content attribute. Bẫy: cả hai đều là attributes của values. Khóa: content nói cái gì quan trọng; intensity nói mức độ." },
-        { id: "c", text: "Whether a value is surface-level or deep-level", isCorrect: false, rationale: "Cơ chế: surface/deep là phân loại diversity. Bẫy: values thuộc deep-level diversity nên dễ kéo nhầm. Khóa: intensity không phân loại diversity." },
-        { id: "d", text: "Whether a value is legally protected", isCorrect: false, rationale: "Cơ chế: legal protection liên quan discrimination và diversity policy. Bẫy: values có thể liên quan ethical choice. Khóa: intensity là importance ranking." },
-        { id: "e", text: "How physically demanding a job is", isCorrect: false, rationale: "Cơ chế: physical demand thuộc physical abilities. Bẫy: chữ intensity nghe như sức mạnh. Khóa: ở values, intensity là tầm quan trọng." },
+        { id: "a", text: "The intensity attribute, because it ranks how important honesty is relative to advancement", isCorrect: true, rationale: "Cơ chế: Lan ưu tiên một value khi hai value xung đột, đúng chức năng degree of importance. Bẫy: thấy hai nội dung cụ thể rồi chọn content. Khóa: ranking giữa values = intensity." },
+        { id: "b", text: "The content attribute, because it alone explains why one value outranks another", isCorrect: false, rationale: "Cơ chế: content cho biết honesty và advancement là điều gì được coi trọng, không cho biết cái nào đứng trên. Bẫy: tên value xuất hiện rõ trong stem. Khóa: what = content; how much = intensity." },
+        { id: "c", text: "Surface-level diversity, because coworkers can observe Lan's final choice", isCorrect: false, rationale: "Cơ chế: quan sát được choice không biến value nền thành surface-level. Bẫy: behavior biểu lộ ra ngoài nên dễ nhầm với đặc điểm bề mặt. Khóa: values vẫn là deep-level diversity." },
+        { id: "d", text: "Legal protection, because honesty is always a protected personal value", isCorrect: false, rationale: "Cơ chế: protected characteristics không dùng để xếp mức quan trọng của values. Bẫy: client deception có thể liên quan pháp luật. Khóa: câu hỏi là psychological priority, không phải legal status." },
+        { id: "e", text: "Physical job intensity, because refusing the request requires effort", isCorrect: false, rationale: "Cơ chế: effort thể chất không liên quan hệ thống value của Lan. Bẫy: chữ intensity gợi cường độ công việc. Khóa: value intensity = importance, không phải exertion." },
       ],
       difficulty: "basic",
       conceptTested: "Content vs intensity attributes",
@@ -4067,13 +4185,13 @@ const topic03: Chapter = {
     },
     {
       id: "q09",
-      stem: "Stereotype threat is best described as...",
+      stem: "Before a math-heavy promotion test, a capable female analyst worries that women are expected to perform worse; the fear consumes her attention and her score falls. Which concept best explains this pattern?",
       options: [
-        { id: "a", text: "A policy that denies fair opportunities to a demographic group", isCorrect: false, rationale: "Cơ chế: đó là discriminatory policies or practices. Bẫy: cùng nằm trong discrimination topic. Khóa: stereotype threat là psychological/internalized threat." },
-        { id: "b", text: "Judging someone only by the group to which they belong", isCorrect: false, rationale: "Cơ chế: đây là stereotyping. Bẫy: stereotype threat có chữ stereotype. Khóa: threat nói về người trong nhóm nội tâm hóa định kiến." },
-        { id: "c", text: "Internalizing a negative stereotype about one's own group", isCorrect: true, rationale: "Cơ chế: stereotype threat là mức độ ta nội tâm đồng ý với định kiến tiêu cực về nhóm mình. Bẫy: nhầm với người khác đánh giá ta. Khóa: own group + internalization." },
-        { id: "d", text: "Ranking values by their intensity", isCorrect: false, rationale: "Cơ chế: ranking values tạo value system. Bẫy: cùng dùng psychological constructs. Khóa: không liên quan stereotype." },
-        { id: "e", text: "Hiring a person who adds missing capabilities", isCorrect: false, rationale: "Cơ chế: đó là complementary fit/culture add. Bẫy: diversity hiring context. Khóa: stereotype threat là tác động tâm lý của định kiến." },
+        { id: "a", text: "A discriminatory policy built into the promotion system", isCorrect: false, rationale: "Cơ chế: stem không nêu policy chặn cơ hội; performance giảm vì threat chiếm cognitive resources. Bẫy: kết quả bất lợi cho một demographic group dễ bị quy ngay thành policy discrimination. Khóa: policy là rào cản bên ngoài; stereotype threat là áp lực tâm lý." },
+        { id: "b", text: "Stereotyping by the test evaluator", isCorrect: false, rationale: "Cơ chế: không có evaluator nào đánh giá analyst chỉ theo group trong stem. Bẫy: stereotype threat bắt nguồn từ stereotype xã hội. Khóa: stereotyping là phán xét của người khác; threat là nỗi lo xác nhận stereotype của nhóm mình." },
+        { id: "c", text: "Stereotype threat", isCorrect: true, rationale: "Cơ chế: analyst ý thức stereotype tiêu cực về own group, lo xác nhận nó và mất attention nên performance giảm. Bẫy: năng lực thật vẫn cao nên dễ phủ nhận tác động. Khóa: own-group stereotype + performance pressure = stereotype threat." },
+        { id: "d", text: "Surface-level diversity", isCorrect: false, rationale: "Cơ chế: gender là surface-level characteristic nhưng không tự giải thích cơ chế lo âu và giảm score. Bẫy: stem nêu rõ demographic category. Khóa: diversity mô tả khác biệt; threat mô tả tác động tâm lý của stereotype." },
+        { id: "e", text: "Complementary fit", isCorrect: false, rationale: "Cơ chế: complementary fit là người mang skill/perspective còn thiếu vào tổ chức. Bẫy: đây là promotion context và analyst có năng lực. Khóa: fit không giải thích attention bị tiêu hao bởi stereotype." },
       ],
       difficulty: "intermediate",
       conceptTested: "Stereotype threat",
@@ -4176,6 +4294,20 @@ const topic03: Chapter = {
       difficulty: "advanced",
       conceptTested: "Manager implications: ability, values and diversity",
       takeaway: "Manager cần cân bằng ability-job match, value congruence và culture add, đồng thời kiểm soát unconscious bias.",
+    },
+    {
+      id: "q17",
+      stem: "An HR director wants a diversity program that changes managerial practice rather than merely celebrating demographic differences. Which design best includes all three components of an effective program?",
+      options: [
+        { id: "a", text: "Teach equal-employment law and fair treatment, connect workforce diversity to serving diverse markets, and develop every employee's skills and abilities", isCorrect: true, rationale: "Cơ chế: phương án có đủ legal framework, business/market case và personal development cho MỌI người. Bẫy: mỗi thành phần riêng lẻ nghe đã giống một diversity program hoàn chỉnh. Khóa: effective program cần đủ cả ba." },
+        { id: "b", text: "Teach legal compliance only and avoid discussing markets or employee development", isCorrect: false, rationale: "Cơ chế: legal framework là thành phần thứ nhất nhưng thiếu diverse-market logic và personal development. Bẫy: compliance là yêu cầu bắt buộc nên dễ bị coi là đủ. Khóa: nondiscrimination alone chưa tạo chương trình toàn diện." },
+        { id: "c", text: "Focus only on marketing to diverse customers and leave internal practices unchanged", isCorrect: false, rationale: "Cơ chế: diverse market là thành phần thứ hai nhưng không có fair treatment hay phát triển employees. Bẫy: business case dễ thuyết phục lãnh đạo. Khóa: external market fit không thay thế internal inclusion." },
+        { id: "d", text: "Offer development only to underrepresented groups and exclude everyone else", isCorrect: false, rationale: "Cơ chế: personal development phải làm bật skills/abilities của MỌI người. Bẫy: target support có thể cần thiết trong recruiting. Khóa: diversity management là chương trình cho toàn workforce, không chỉ một vài nhóm." },
+        { id: "e", text: "Hire for demographic similarity so teams reach cohesion immediately", isCorrect: false, rationale: "Cơ chế: demographic cloning làm nghèo diversity và không thuộc ba thành phần chương trình. Bẫy: similarity có thể tăng cohesion ngắn hạn. Khóa: leverage diversity bằng fair systems, market understanding và development." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Three components of effective diversity programs",
+      takeaway: "Diversity program hiệu quả kết hợp legal fairness, năng lực phục vụ diverse market và personal development cho mọi người.",
     },
   ],
   status: "ready",
@@ -4412,7 +4544,7 @@ const topic04: Chapter = {
         calloutBlock(
           "note",
           "Moral emotions",
-          "Moral emotions là emotions có moral implications do phán xét tức thì về tình huống gây ra chúng. Ví dụ: sympathy với người khổ, guilt về hành vi sai của mình, anger về bất công, contempt với người vô đạo đức. Moral disgust khác disgust thường vì nó gắn với phán xét đạo đức.",
+          "Moral emotions là emotions có moral implications do phán xét tức thì về tình huống gây ra chúng. Ví dụ: sympathy với người khổ, guilt về hành vi sai của mình, anger về bất công, contempt với người vô đạo đức. Moral disgust khác disgust thường vì nó gắn với phán xét đạo đức. **Function of emotions (sách, p64):** emotions KHÔNG làm ta phi lý trí — nghiên cứu brain injury cho thấy PHẢI có khả năng trải nghiệm emotions thì mới rational được, vì emotions cung cấp bối cảnh để hiểu thế giới; người đang negative mood còn phân biệt thông tin thật/giả TỐT hơn người đang vui. Về đạo đức: moral judgments phần lớn dựa trên FEELINGS chứ không phải cognition (dù ta tưởng ranh giới đạo đức của mình là logic); cảm xúc chia sẻ trong nhóm dễ được coi là 'đúng', và ta phán xét out-group khắt khe hơn in-group với cùng vi phạm.",
         ),
       ],
       keyTerms: [
@@ -4506,6 +4638,12 @@ const topic04: Chapter = {
               label: "Day of week",
               cells: [
                 "Positive affect cao nhất Fri/Sat/Sun, thấp nhất Monday.",
+              ],
+            },
+            {
+              label: "Day of the week",
+              cells: [
+                "Day of the week: mood tích cực cao hơn về cuối tuần — Exhibit 3-3 so sánh Twitter mood theo giờ giữa Saturday/Monday/Thursday (sách, p66).",
               ],
             },
             {
@@ -4787,7 +4925,7 @@ const topic04: Chapter = {
         calloutBlock(
           "insight",
           "Đạo đức của emotion regulation",
-          "Có tranh luận liệu kiểm soát cảm xúc có phải acting thiếu trung thực hay không. Nhưng 'fake it til you make it' cũng có mặt tích cực: giả vờ mood tốt có thể giúp mood tốt thật trong một số bối cảnh. Điểm mấu chốt là dùng regulation để làm việc lành mạnh, không để che giấu môi trường độc hại.",
+          "Có tranh luận liệu kiểm soát cảm xúc có phải acting thiếu trung thực hay không. Nhưng 'fake it til you make it' cũng có mặt tích cực: giả vờ mood tốt có thể giúp mood tốt thật trong một số bối cảnh. Điểm mấu chốt là dùng regulation để làm việc lành mạnh, không để che giấu môi trường độc hại. **Influences & mặt trái (sách, p71–72):** không phải ai cũng regulate giỏi — người neuroticism cao khó kiểm soát mood; người self-esteem thấp ít cố sửa sad mood (thấy mình 'không xứng đáng vui'). Diversity trong nhóm làm người ta regulate NHIỀU hơn (trẻ hơn giữa nhóm già hơn; minority khi diversity thấp; majority race khi diversity cao) — một outcome có lợi của diversity. Mặt trái: đổi cảm xúc tốn effort và có thể làm cảm xúc MẠNH LÊN (cố tự thuyết phục hết sợ → tập trung vào cái sợ → sợ hơn); né trải nghiệm tiêu cực KÉM hiệu quả hơn chủ động tìm trải nghiệm tích cực. Suppression chỉ nên dùng khi khủng hoảng cấp tính; dùng hằng ngày bào mòn mental ability, emotional ability, health và relationships.",
         ),
       ],
       keyTerms: [
@@ -4926,13 +5064,13 @@ const topic04: Chapter = {
     },
     {
       id: "q04",
-      stem: "What does positivity offset mean?",
+      stem: "Nothing unusual has happened during a quiet morning, yet Lan reports feeling mildly upbeat rather than emotionally neutral. Which concept best explains her baseline mood?",
       options: [
-        { id: "a", text: "People must show positive emotions even when they do not feel them", isCorrect: false, rationale: "Cơ chế: đó là emotional labor/displayed emotions. Bẫy: có chữ positive. Khóa: positivity offset là baseline mood, không phải display rule." },
-        { id: "b", text: "Most people tend to be in a mildly positive mood when nothing special is happening", isCorrect: true, rationale: "Cơ chế: đây là định nghĩa positivity offset. Bẫy: tưởng phải có event tích cực mới mood tích cực. Khóa: nothing special + mildly positive." },
-        { id: "c", text: "Negative affect is impossible in organizations", isCorrect: false, rationale: "Cơ chế: negative affect vẫn có và rất quan trọng. Bẫy: positivity offset không phủ nhận tiêu cực. Khóa: offset chỉ là tendency trung bình." },
-        { id: "d", text: "Positive affect always leads to ethical decisions", isCorrect: false, rationale: "Cơ chế: positive affect có thể hỗ trợ decision nhưng không đảm bảo ethics. Bẫy: đánh đồng mood tốt với đạo đức. Khóa: no always." },
-        { id: "e", text: "A 3:1 ratio eliminates all negative emotions", isCorrect: false, rationale: "Cơ chế: ratio positive:negative không xóa negative emotions. Bẫy: slide có 3:1. Khóa: thriving không phải emotion-free." },
+        { id: "a", text: "Emotional labor, because Lan is displaying positivity required by her job", isCorrect: false, rationale: "Cơ chế: stem nói Lan thật sự feels upbeat và không nêu display rule. Bẫy: workplace positivity dễ bị đọc thành nụ cười nghề nghiệp. Khóa: emotional labor là quản trị display; positivity offset là baseline felt mood." },
+        { id: "b", text: "Positivity offset, because people often feel mildly positive when nothing special is happening", isCorrect: true, rationale: "Cơ chế: quiet morning không có trigger nhưng baseline của Lan vẫn hơi positive. Bẫy: tưởng neutral phải bằng zero affect. Khóa: nothing special + mildly upbeat là positivity offset." },
+        { id: "c", text: "Emotional dissonance, because Lan's felt and displayed emotions conflict", isCorrect: false, rationale: "Cơ chế: stem không có chênh lệch giữa felt và displayed emotion. Bẫy: 'rather than neutral' nghe như hai trạng thái xung đột. Khóa: dissonance cần felt-display mismatch." },
+        { id: "d", text: "Affective Events Theory, because a positive workplace event caused the mood", isCorrect: false, rationale: "Cơ chế: không có event cụ thể nào trong stem. Bẫy: AET thường giải thích mood tại nơi làm việc. Khóa: absence of event là dấu hiệu của baseline offset." },
+        { id: "e", text: "Illusory correlation, because Lan falsely links weather to her mood", isCorrect: false, rationale: "Cơ chế: stem không nêu weather hay một liên hệ tưởng tượng. Bẫy: quiet morning có thể gợi điều kiện môi trường. Khóa: positivity offset không cần external cause." },
       ],
       difficulty: "basic",
       conceptTested: "Positive affect and positivity offset",
@@ -5726,6 +5864,24 @@ const topic05: Chapter = {
           "CWB là phần tối của dissatisfaction",
           "Counterproductive work behavior (CWB) là các hành vi gây hại cho organization hoặc members, như sabotage, aggression, theft, withdrawal. EVLN giúp phân loại phản ứng rộng; CWB nhấn mạnh nhóm hành vi destructive.",
         ),
+        comparisonBlock(
+          "Dissatisfaction → Absenteeism & Turnover (sách, p57–58)",
+          ["Outcome", "Quan hệ với (dis)satisfaction"],
+          [
+            {
+              label: "Absenteeism",
+              cells: [
+                "Quan hệ negative NHẤT QUÁN nhưng chỉ moderate-to-weak. Điều kiện hóa bởi thị trường việc: nhiều job thay thế → dissatisfied nghỉ vặt nhiều; ít alternative → dissatisfied nghỉ THẤP như satisfied. Sick leave hào phóng khuyến khích TẤT CẢ (kể cả người rất hài lòng) nghỉ.",
+              ],
+            },
+            {
+              label: "Turnover",
+              cells: [
+                "Quan hệ MẠNH hơn absenteeism. Pattern satisfaction giảm dần là predictor tốt nhất của intent to leave; có hiệu ứng lây (contagion) — nên nhìn satisfaction/turnover của ĐỒNG NGHIỆP khi phân công người mới; bị điều tiết bởi job embeddedness (đã có trong content — nối mạch, không định nghĩa lại) và alternative prospects: nhận unsolicited offer → dissatisfaction ít dự đoán turnover (rời vì 'pull' chứ không vì 'push'); human capital cao (học vấn, ability) → dissatisfaction DỄ chuyển thành turnover vì nhiều lựa chọn.",
+              ],
+            },
+          ],
+        ),
       ],
       keyTerms: [
         {
@@ -5779,7 +5935,7 @@ const topic05: Chapter = {
         calloutBlock(
           "key",
           "Implications for managers",
-          "Manager không chỉ “mua” satisfaction bằng pay. Cần thiết kế job conditions tốt, fairness/trust, support, CSR đáng tin, và lắng nghe voice sớm để dissatisfaction không trượt sang neglect, exit hoặc CWB. Engagement cần meaningful work và điều kiện để nhân viên thật sự đầu tư năng lượng.",
+          "Manager không chỉ “mua” satisfaction bằng pay. Cần thiết kế job conditions tốt, fairness/trust, support, CSR đáng tin, và lắng nghe voice sớm để dissatisfaction không trượt sang neglect, exit hoặc CWB. Engagement cần meaningful work và điều kiện để nhân viên thật sự đầu tư năng lượng. **Understanding the impact (sách, p58–59):** satisfaction là chuyện bottom-line — công ty morale cao (>70% nhân viên hài lòng) có stock tăng 19.4% so với 10% của nhóm morale trung bình/thấp. Nguy hiểm là manager thường ẢO TƯỞNG: 86% senior managers tin tổ chức đối xử tốt với nhân viên, chỉ 55% nhân viên đồng ý; 55% managers nghĩ morale tốt, nhân viên chỉ 38%. Khảo sát ĐỀU ĐẶN thu hẹp gap này (case KFC Houston: survey mỗi 3 tháng, đổi lịch nghỉ theo ý nhân viên — 'they have a voice and they're heard').",
         ),
       ],
       keyTerms: [
@@ -5799,13 +5955,13 @@ const topic05: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which option best defines an attitude in Organizational Behavior?",
+      stem: "After a new remote-work policy is announced, Minh says, 'I think this policy is unfair, and I dislike it.' What is Minh expressing?",
       options: [
-        { id: "a", text: "A temporary mood with no object", isCorrect: false, rationale: "Cơ chế: mood có thể không có object rõ. Bẫy: attitude nghe giống cảm xúc. Khóa: attitude là evaluative statement about objects, people, or events." },
-        { id: "b", text: "An evaluative statement, favorable or unfavorable, about objects, people, or events", isCorrect: true, rationale: "Cơ chế: đây là định nghĩa Robbins & Judge. Bẫy: bỏ qua chữ evaluative sẽ biến attitude thành feeling chung chung. Khóa: attitude = câu đánh giá." },
-        { id: "c", text: "A formal job description assigned by the organization", isCorrect: false, rationale: "Cơ chế: job description là role/task chính thức, không phải attitude. Bẫy: OB có workplace context nên dễ kéo sang HR. Khóa: attitude thuộc psychological evaluation." },
-        { id: "d", text: "A personality trait that cannot change", isCorrect: false, rationale: "Cơ chế: attitude có thể thay đổi theo experience, persuasion, dissonance. Bẫy: attitude có vẻ ổn định nên tưởng là trait. Khóa: không phải fixed personality." },
-        { id: "e", text: "A behavior that has already been performed", isCorrect: false, rationale: "Cơ chế: behavior là hành động; attitude là evaluation có thể dự báo behavior. Bẫy: behavioral component có chữ behavior. Khóa: component không đồng nghĩa toàn bộ attitude." },
+        { id: "a", text: "A mood, because Minh feels negative without evaluating any object", isCorrect: false, rationale: "Cơ chế: Minh nêu rõ object là remote-work policy và đánh giá nó unfair. Bẫy: từ 'dislike' làm câu giống mood tiêu cực. Khóa: mood thường không có object rõ; attitude có object." },
+        { id: "b", text: "An attitude, because he makes an unfavorable evaluation of a specific policy", isCorrect: true, rationale: "Cơ chế: cognition 'unfair' và affect 'dislike' cùng tạo evaluative statement về policy. Bẫy: tách hai câu thành opinion và emotion rời. Khóa: favorable/unfavorable evaluation of an object = attitude." },
+        { id: "c", text: "A job description, because the policy formally changes where he works", isCorrect: false, rationale: "Cơ chế: policy có thể đổi điều kiện việc làm nhưng lời Minh là psychological evaluation. Bẫy: object được tổ chức ban hành nên dễ nhầm với formal role. Khóa: document khác attitude toward document." },
+        { id: "d", text: "A fixed personality trait, because resistance to remote work cannot change", isCorrect: false, rationale: "Cơ chế: attitude với một policy có thể đổi theo experience và persuasion. Bẫy: phản ứng mạnh dễ bị gán thành tính cách cố hữu. Khóa: attitude không phải immutable trait." },
+        { id: "e", text: "A completed behavior, because Minh has already rejected the policy", isCorrect: false, rationale: "Cơ chế: Minh mới phát biểu evaluation; stem chưa cho thấy hành vi từ chối. Bẫy: verbal statement trông như action. Khóa: attitude có thể dẫn tới behavior nhưng không đồng nhất behavior." },
       ],
       difficulty: "basic",
       conceptTested: "Definition of attitude",
@@ -6020,6 +6176,20 @@ const topic05: Chapter = {
       difficulty: "advanced",
       conceptTested: "Employee engagement vs job satisfaction and managerial implications",
       takeaway: "Engagement thêm involvement và enthusiasm vào nền satisfaction; manager cần tạo điều kiện để nhân viên đầu tư năng lượng thật sự.",
+    },
+    {
+      id: "q17",
+      stem: "A highly educated analyst becomes increasingly dissatisfied while competing firms are hiring aggressively and sending her unsolicited offers. Which outcome is most likely?",
+      options: [
+        { id: "a", text: "Her dissatisfaction is more likely to become turnover because high human capital and many alternatives make leaving easier", isCorrect: true, rationale: "Cơ chế: education/ability tăng human capital, còn active hiring/offers tăng alternative prospects nên dissatisfaction dễ chuyển thành exit. Bẫy: unsolicited offer có thể kéo cả satisfied employee đi. Khóa: nhiều lựa chọn làm turnover phản ứng mạnh hơn absenteeism." },
+        { id: "b", text: "She will mainly become absent because turnover is always weakly related to dissatisfaction", isCorrect: false, rationale: "Cơ chế: turnover có quan hệ với dissatisfaction mạnh hơn absenteeism. Bẫy: vắng mặt là biểu hiện withdrawal dễ thấy trước khi nghỉ. Khóa: market alternatives + human capital làm leaving khả thi." },
+        { id: "c", text: "She is unlikely to leave because education reduces access to alternative jobs", isCorrect: false, rationale: "Cơ chế: human capital cao thường mở rộng lựa chọn, không thu hẹp. Bẫy: chuyên môn cao có thể tạo job embeddedness trong firm hiện tại. Khóa: stem còn nêu firms đang chủ động tuyển và gửi offers." },
+        { id: "d", text: "Generous sick leave would guarantee she stays with the organization", isCorrect: false, rationale: "Cơ chế: sick leave hào phóng có thể tăng absence ở cả satisfied lẫn dissatisfied employees, không bảo đảm retention. Bẫy: benefit tốt có thể tăng satisfaction. Khóa: leave policy khác alternative prospects driving turnover." },
+        { id: "e", text: "Her coworkers' satisfaction cannot affect her intention to leave", isCorrect: false, rationale: "Cơ chế: turnover/satisfaction có contagion, nên đồng nghiệp có thể ảnh hưởng intent to leave. Bẫy: quyết định nghỉ việc có vẻ hoàn toàn cá nhân. Khóa: phải nhìn cả social context và alternatives." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Dissatisfaction, human capital, alternatives, and turnover",
+      takeaway: "Dissatisfaction dễ thành turnover nhất khi nhân viên có human capital cao và thị trường cung cấp nhiều alternative prospects.",
     },
   ],
   status: "ready",
@@ -6245,7 +6415,7 @@ const topic06: Chapter = {
         calloutBlock(
           "note",
           "Motivation không phải trait cố định",
-          "Levels of motivation thay đổi giữa người và trong cùng một người theo tình huống: một SV có thể chật vật đọc textbook 20 phút nhưng ngốn Harry Potter cả ngày.",
+          "Levels of motivation thay đổi giữa người và trong cùng một người theo tình huống: một SV có thể chật vật đọc textbook 20 phút nhưng ngốn Harry Potter cả ngày. → Mắt xích môn học: motivation đứng CUỐI chuỗi cá nhân — nó bị chi phối bởi perception (thấy công bằng hay không là chuyện nhận thức, Topic 02) và job attitudes (Topic 05); đồng thời là đòn bẩy chính mà transformational leadership khai thác (Topic 10).",
         ),
       ],
       keyTerms: [
@@ -7176,13 +7346,13 @@ const topic06: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which definition best captures motivation in Organizational Behavior?",
+      stem: "A salesperson works intensely, directs effort toward qualified leads, and sustains that effort for months to reach a target. Which process is illustrated?",
       options: [
-        { id: "a", text: "A stable personality trait that makes some people permanently hardworking", isCorrect: false, rationale: "Cơ chế: motivation là process thay đổi theo tình huống. Bẫy: “hardworking” nghe giống effort. Khóa: không phải trait cố định." },
-        { id: "b", text: "The processes that account for intensity, direction, and persistence of effort toward a goal", isCorrect: true, rationale: "Cơ chế: đây là định nghĩa R&J, gồm intensity, direction, persistence. Bẫy: nhiều đáp án chỉ nói effort mạnh. Khóa: motivation phải có đủ 3 yếu tố và hướng tới goal." },
-        { id: "c", text: "The amount of money an employee receives for working overtime", isCorrect: false, rationale: "Cơ chế: money có thể là reward/extrinsic incentive, không phải định nghĩa motivation. Bẫy: pay là chủ đề applied motivation. Khóa: reward khác motivation process." },
-        { id: "d", text: "A manager's ability to control employees through strict supervision", isCorrect: false, rationale: "Cơ chế: kiểm soát có thể ảnh hưởng behavior nhưng không định nghĩa motivation. Bẫy: Theory X làm người học nghĩ control là động lực. Khóa: motivation không đồng nghĩa coercion." },
-        { id: "e", text: "A positive emotion that always produces high performance", isCorrect: false, rationale: "Cơ chế: emotion khác motivation, và không có guarantee “always”. Bẫy: positive affect có thể hỗ trợ effort. Khóa: motivation là process, không phải cảm xúc đơn lẻ." },
+        { id: "a", text: "A stable hardworking personality trait", isCorrect: false, rationale: "Cơ chế: stem mô tả effort hướng tới một target trong một giai đoạn, không chứng minh trait vĩnh viễn. Bẫy: làm việc bền bỉ dễ bị gọi là personality. Khóa: motivation là process thay đổi theo goal và tình huống." },
+        { id: "b", text: "Motivation through intensity, direction, and persistence of effort toward a goal", isCorrect: true, rationale: "Cơ chế: works intensely = intensity, qualified leads = direction, for months = persistence, target = goal. Bẫy: chỉ chú ý cường độ. Khóa: đủ ba yếu tố mới mô tả motivation." },
+        { id: "c", text: "An overtime reward, even though no reward is mentioned", isCorrect: false, rationale: "Cơ chế: reward có thể tác động motivation nhưng stem không nêu tiền hay overtime. Bẫy: salesperson và target gợi incentive pay. Khóa: reward là antecedent/outcome, không phải process đang quan sát." },
+        { id: "d", text: "Strict managerial control over the salesperson", isCorrect: false, rationale: "Cơ chế: không có supervision hay coercion trong tình huống. Bẫy: sustained effort có thể do kiểm soát. Khóa: control là một tác động tiềm năng, không định nghĩa motivation." },
+        { id: "e", text: "A positive emotion that guarantees high performance", isCorrect: false, rationale: "Cơ chế: stem không nêu emotion và motivation không bảo đảm performance nếu constraints khác tồn tại. Bẫy: effort tích cực dễ bị đồng nhất với good mood. Khóa: affect khác intensity-direction-persistence." },
       ],
       difficulty: "basic",
       conceptTested: "Motivation definition",
@@ -7687,7 +7857,7 @@ const topic07: Chapter = {
         calloutBlock(
           "note",
           "Vì sao gia nhập group (slide)",
-          "An ninh (security), địa vị (status), lòng tự trọng (self-esteem), liên kết (affiliation), quyền lực (power), đạt mục tiêu (goal achievement).",
+          "An ninh (security), địa vị (status), lòng tự trọng (self-esteem), liên kết (affiliation), quyền lực (power), đạt mục tiêu (goal achievement). → Mắt xích môn học: từ đây môn chuyển sang cấp GROUP — nhưng thành phần nhóm chính là các input cá nhân đã học: personality (Topic 01) và values/deep-level diversity (Topic 03) quyết định nhóm vận hành thế nào.",
         ),
       ],
       keyTerms: [
@@ -7764,15 +7934,22 @@ const topic07: Chapter = {
           ],
           "Book KHÔNG dùng 5-stage làm chính: nhóm có thời hạn thường ì ở Phase 1, đến ĐIỂM GIỮA (halfway) mới bùng nổ thay đổi rồi tăng tốc ở Phase 2 — dòng chảy 'trì trệ → chuyển pha → tăng tốc'.",
         ),
-        comparisonBlock(
+        flowBlock(
+          "s2",
           "5-stage model (slide) — để đối chiếu",
-          ["Giai đoạn", "Nội dung"],
+          "horizontal",
           [
-            { label: "Forming", cells: ["Bất định về mục đích, cơ cấu, lãnh đạo; thăm dò."] },
-            { label: "Storming", cells: ["Xung đột nội bộ về ai kiểm soát, ai làm gì."] },
-            { label: "Norming", cells: ["Hình thành quan hệ gần gũi, cohesiveness và chuẩn mực chung."] },
-            { label: "Performing", cells: ["Cơ cấu ổn định, năng lượng dồn vào thực hiện nhiệm vụ."] },
-            { label: "Adjourning", cells: ["Với nhóm tạm thời: kết thúc, chuẩn bị giải tán."] },
+            { id: "stage_forming", label: "Forming", group: "concept", detail: "Bất định về mục đích, cơ cấu, lãnh đạo; thăm dò." },
+            { id: "stage_storming", label: "Storming", group: "concept", detail: "Xung đột nội bộ về ai kiểm soát, ai làm gì." },
+            { id: "stage_norming", label: "Norming", group: "concept", detail: "Hình thành quan hệ gần gũi, cohesiveness và chuẩn mực chung." },
+            { id: "stage_performing", label: "Performing", group: "concept", detail: "Cơ cấu ổn định, năng lượng dồn vào thực hiện nhiệm vụ." },
+            { id: "stage_adjourning", label: "Adjourning", group: "concept", detail: "Với nhóm tạm thời: kết thúc, chuẩn bị giải tán." },
+          ],
+          [
+            { from: "stage_forming", to: "stage_storming" },
+            { from: "stage_storming", to: "stage_norming" },
+            { from: "stage_norming", to: "stage_performing" },
+            { from: "stage_performing", to: "stage_adjourning" },
           ],
         ),
         calloutBlock(
@@ -9135,7 +9312,7 @@ const topic08: Chapter = {
         calloutBlock(
           "note",
           "Fixed pie & ví dụ quả cam",
-          "Distributive giả định fixed pie (zero-sum) với target point & resistance point; vùng chồng lấn = settlement zone. Ví dụ hai chị em tranh quả cam: nếu chỉ chia đôi (distributive) thì bỏ lỡ win-win — một người cần nước ép, người kia cần vỏ để làm bánh (integrative).",
+          "Distributive giả định fixed pie (zero-sum) với target point & resistance point; vùng chồng lấn = settlement zone. Ví dụ hai chị em tranh quả cam: nếu chỉ chia đôi (distributive) thì bỏ lỡ win-win — một người cần nước ép, người kia cần vỏ để làm bánh (integrative). **First offer (sách, mục Distributive Bargaining):** trong distributive bargaining nên RA GIÁ TRƯỚC và ra giá aggressive — first offer thể hiện power và tận dụng anchoring bias (đã học ở Topic 02): người ta neo vào thông tin đầu và điều chỉnh không đủ; rất nhiều nghiên cứu đàm phán cho thấy anchor ưu ái mạnh người đặt nó. **Settlement range (Exhibit 14-5):** mỗi bên có target point (muốn đạt) và resistance point (mức tối thiểu chấp nhận trước khi bỏ đàm phán); khoảng giữa 2 điểm là aspiration range của mỗi bên — chừng nào 2 aspiration ranges còn CHỒNG LẤN thì tồn tại settlement range nơi kỳ vọng cả hai bên đều thỏa được.",
         ),
       ],
       keyTerms: [
@@ -9143,6 +9320,7 @@ const topic08: Chapter = {
         { term: "Distributive bargaining", definition: "Bargaining win-lose trên giả định fixed pie." },
         { term: "Integrative bargaining", definition: "Bargaining win-win bằng cách mở rộng pie và tập trung interests." },
         { term: "Fixed pie", definition: "Giả định nguồn lực cố định, phần người này tăng thì phần người kia giảm." },
+        { term: "settlement range", definition: "Vùng chồng lấn giữa aspiration ranges của hai bên đàm phán, nơi tồn tại thỏa thuận khả thi (Exhibit 14-5)." },
       ],
     },
     {
@@ -9213,6 +9391,24 @@ const topic08: Chapter = {
             {
               label: "Relationships",
               cells: ["Đàm phán lặp lại xây trust → nghĩ cho cả đối tác & quan hệ → dễ integrative và mở rộng lựa chọn."],
+            },
+          ],
+        ),
+        comparisonBlock(
+          "Individual differences trong negotiation (sách, mục Individual Differences)",
+          ["Yếu tố", "Ảnh hưởng"],
+          [
+            {
+              label: "Personality",
+              cells: [
+                "Quan hệ với outcome YẾU: agreeableness cao không hề 'dễ bị ăn thịt' như tưởng; self-efficacy là biến cá nhân dự đoán ổn định nhất (tự tin → giữ claim mạnh, ít lùi khỏi position, tự tin có thể áp đảo đối phương).",
+              ],
+            },
+            {
+              label: "Moods/emotions",
+              cells: [
+                "Anger chỉ có lợi khi mình có power NGANG TRỞ LÊN đối phương (ít power hơn mà giận → đối phương chơi rắn \"hardball\"); anger GIẢ (surface acting) vô dụng, anger THẬT (deep acting) mới ép được nhượng bộ; lịch sử hay giận → bị coi là \"tough\" → được nhượng bộ nhiều hơn. Disappointment làm đối phương nhượng bộ thêm. Anxiety → dùng deception nhiều hơn, phản hồi/thoát đàm phán quá nhanh → outcome kém. Thể hiện cảm xúc KHÓ ĐOÁN (dương↔âm thất thường) moi được nhiều nhượng bộ vì đối phương mất cảm giác kiểm soát.",
+              ],
             },
           ],
         ),
@@ -9614,6 +9810,20 @@ const topic08: Chapter = {
       difficulty: "advanced",
       conceptTested: "Conflict to collaboration",
       takeaway: "Chuyển conflict thành collaboration không phải thêm tương tác vô hạn; đó là đọc trigger, tạo an toàn cho dissent, làm rõ kỳ vọng và giữ collaboration đúng liều.",
+    },
+    {
+      id: "q21",
+      stem: "A candidate is entering a distributive salary negotiation and has reliable market data supporting a high demand. What should she do to use anchoring strategically?",
+      options: [
+        { id: "a", text: "Make an aggressive first offer to establish a favorable anchor", isCorrect: true, rationale: "Cơ chế: first offer thể hiện power và neo cuộc thương lượng quanh con số có lợi vì đối phương thường adjust không đủ. Bẫy: aggressive dễ bị hiểu là phá quan hệ. Khóa: trong distributive bargaining, credible aggressive first offer tạo anchor." },
+        { id: "b", text: "Wait silently for the employer's first offer so the employer sets the anchor", isCorrect: false, rationale: "Cơ chế: để bên kia ra giá trước trao cho họ lợi thế anchoring. Bẫy: nghe first offer có vẻ giúp thu thập information. Khóa: spec sách khuyên chủ động RA GIÁ TRƯỚC trong distributive bargaining." },
+        { id: "c", text: "Reveal her resistance point before making any demand", isCorrect: false, rationale: "Cơ chế: resistance point là mức tối thiểu trước khi bỏ đàm phán; tiết lộ nó làm yếu bargaining position. Bẫy: transparency thường hữu ích trong integrative negotiation. Khóa: resistance point không phải first offer." },
+        { id: "d", text: "Display fake anger because surface acting reliably forces concessions", isCorrect: false, rationale: "Cơ chế: anger GIẢ/surface acting vô dụng; emotion còn phụ thuộc relative power. Bẫy: toughness có thể tạo nhượng bộ. Khóa: tactic được hỏi là anchoring bằng first offer, không phải emotion display." },
+        { id: "e", text: "Use her BATNA as the opening salary even if it is only her fallback", isCorrect: false, rationale: "Cơ chế: BATNA là alternative nếu không thỏa thuận, không đồng nghĩa aggressive target/first offer. Bẫy: BATNA là con số chuẩn bị trước negotiation. Khóa: opening anchor nên dựa trên demand/market support, không tiết lộ fallback." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "First offer and anchoring in distributive bargaining",
+      takeaway: "Trong distributive bargaining, một first offer aggressive nhưng có cơ sở giúp đặt anchor có lợi; đừng nhường anchor cho đối phương.",
     },
   ],
   status: "ready",
@@ -10339,13 +10549,13 @@ const topic09: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "What is the core difference between a work group and a work team?",
+      stem: "Unit A members share updates and then complete separate quotas. Unit B combines complementary skills, shares accountability, and produces a launch none of its members could deliver alone. Why is Unit B a work team rather than merely a work group?",
       options: [
-        { id: "a", text: "A work team creates positive synergy so collective performance exceeds the sum of individual inputs", isCorrect: true, rationale: "Cơ chế: work team khác work group ở positive synergy và mutual accountability. Bẫy: thấy cả hai đều có nhiều người nên tưởng giống nhau. Khóa: performance > sum of inputs = team." },
-        { id: "b", text: "A work group always has mutual accountability and complementary skills", isCorrect: false, rationale: "Cơ chế: mutual accountability và complementary skills thuộc work team. Bẫy: group vẫn có tương tác nên nghe hợp lý. Khóa: work group chủ yếu chia sẻ thông tin." },
-        { id: "c", text: "A work team exists whenever people report to the same manager", isCorrect: false, rationale: "Cơ chế: cùng manager có thể chỉ là command group; chưa chắc có positive synergy. Bẫy: cấu trúc formal dễ bị nhầm với team. Khóa: team cần phối hợp tạo output tập thể." },
-        { id: "d", text: "A work group produces collective performance through positive synergy", isCorrect: false, rationale: "Cơ chế: câu này đảo khái niệm; positive synergy thuộc work team. Bẫy: từ 'group' trong đời thường hay dùng thay team. Khóa: R&J phân biệt rất rõ work group vs work team." },
-        { id: "e", text: "A work team is simply a larger version of a work group", isCorrect: false, rationale: "Cơ chế: khác biệt không nằm ở size mà ở synergy, accountability và complementary skills. Bẫy: nghĩ team là group đông hơn. Khóa: team = group + positive synergy." },
+        { id: "a", text: "Unit B creates positive synergy, so collective performance exceeds the sum of individual inputs", isCorrect: true, rationale: "Cơ chế: complementary skills + mutual accountability tạo output không ai làm riêng được, tức positive synergy. Bẫy: chỉ thấy members cùng làm một launch. Khóa: collective performance > sum of individual inputs = work team." },
+        { id: "b", text: "Unit B is a team simply because its members exchange information", isCorrect: false, rationale: "Cơ chế: Unit A cũng exchange information nhưng vẫn hoàn thành separate quotas. Bẫy: mọi interaction dễ được gọi là teamwork. Khóa: information sharing alone mô tả work group, chưa đủ positive synergy." },
+        { id: "c", text: "Unit B is a team because all members must report to the same manager", isCorrect: false, rationale: "Cơ chế: stem không nêu reporting line; cùng manager chỉ có thể tạo command group. Bẫy: formal structure thường được gắn nhãn team. Khóa: team được phân biệt bằng synergy/accountability, không phải org chart." },
+        { id: "d", text: "Unit A is the stronger team because individual accountability prevents coordination costs", isCorrect: false, rationale: "Cơ chế: separate individual quotas và thiếu collective output làm Unit A gần work group hơn. Bẫy: individual accountability có thể giúp performance. Khóa: team cần mutual accountability và coordinated output." },
+        { id: "e", text: "Unit B is a team because it has more people than Unit A", isCorrect: false, rationale: "Cơ chế: stem không cho size và size không phải tiêu chí cốt lõi. Bẫy: team thường được hình dung là group lớn. Khóa: khác biệt nằm ở positive synergy, không nằm ở headcount." },
       ],
       difficulty: "basic",
       conceptTested: "Work group versus work team",
@@ -10901,7 +11111,7 @@ const topic10: Chapter = {
         calloutBlock(
           "note",
           "Emotional leadership (slide 24)",
-          "Nhánh trait hiện đại nhấn EI (Goleman): leader hiệu quả có self-awareness, self-regulation, motivation, empathy, social skills → kết nối đội, giữ bình tĩnh dưới áp lực, biến thách thức thành cơ hội.",
+          "Nhánh trait hiện đại nhấn EI (Goleman): leader hiệu quả có self-awareness, self-regulation, motivation, empathy, social skills → kết nối đội, giữ bình tĩnh dưới áp lực, biến thách thức thành cơ hội. **Dark-Side traits & leadership (sách, mục Trait Theories):** điểm normative (GIỮA thang) trên các Dark-Side traits (Machiavellianism, narcissism, psychopathy) là TỐI ƯU cho leadership — cả điểm thấp lẫn cao đều gắn với lãnh đạo kém hiệu quả; éo le là emotional stability cao có thể làm hành vi kém hiệu quả nặng thêm, còn Dark-Side cao + emotional stability cao lại giúp EMERGENCE (nổi lên thành leader) chứ không giúp effectiveness. Self-awareness + self-regulation giúp leader kiểm soát tác động của Dark-Side traits.",
         ),
       ],
       keyTerms: [
@@ -10942,7 +11152,7 @@ const topic10: Chapter = {
         calloutBlock(
           "note",
           "Managerial Grid (Blake & Mouton — slide 13)",
-          "Lưới 2 trục concern for people × concern for production → định vị phong cách (ví dụ 9,9 = team management). Hàm ý: leader tốt cân cả hai mối quan tâm.",
+          "Lưới 2 trục concern for people × concern for production → định vị phong cách (ví dụ 9,9 = team management). Hàm ý: leader tốt cân cả hai mối quan tâm. **Khác biệt văn hóa — GLOBE (sách, mục Cultural Differences):** nghiên cứu GLOBE (18,000 leaders, 825 tổ chức, 62 nước) cho thấy preference với 2 chiều hành vi khác nhau theo nước: Brazil chuộng consideration (không thích leader tự quyết một mình); Pháp nhìn leader kiểu bureaucratic hơn → initiating structure (task-oriented) hợp, consideration cao có thể phản tác dụng; Trung Quốc cần CẢ HAI (văn hóa lịch sự, không vị kỷ NHƯNG performance orientation cao).",
         ),
       ],
       keyTerms: [
@@ -10981,13 +11191,14 @@ const topic10: Chapter = {
         calloutBlock(
           "note",
           "Summary: 3 nền tảng approach (slide 19)",
-          "Trait — leadership bẩm sinh, phải nhận diện leader qua tố chất. Behavioral — leadership là kỹ năng, phải dạy hành vi đúng. Contingency — leadership còn tùy môi trường leader tồn tại. Ba cách bổ sung nhau.",
+          "Trait — leadership bẩm sinh, phải nhận diện leader qua tố chất. Behavioral — leadership là kỹ năng, phải dạy hành vi đúng. Contingency — leadership còn tùy môi trường leader tồn tại. Ba cách bổ sung nhau. **Leader-participation model (sách, mục Contingency Theories):** contingency theory thứ 4 — CÁCH leader ra quyết định quan trọng ngang NỘI DUNG quyết định; leader phải điều chỉnh MỨC ĐỘ THAM GIA của cấp dưới vào việc ra quyết định theo task structure (routine / nonroutine / ở giữa). Giới hạn: model chỉ khuyến nghị loại quyết định nào nên participative, không phủ hết hành vi lãnh đạo.",
         ),
       ],
       keyTerms: [
         { term: "Fiedler model", definition: "Mô hình fit giữa leader style (LPC) và situational favorableness." },
         { term: "Situational leadership", definition: "Phong cách lãnh đạo điều chỉnh theo readiness/năng lực-cam kết của follower." },
         { term: "Path-goal theory", definition: "Leader dọn đường tới mục tiêu bằng cách chọn hành vi phù hợp follower và môi trường." },
+        { term: "leader-participation model", definition: "Contingency theory gắn hành vi leader với mức độ participation của cấp dưới trong decision making, điều chỉnh theo task structure (sách)." },
       ],
     },
     {
@@ -11028,7 +11239,7 @@ const topic10: Chapter = {
         calloutBlock(
           "key",
           "Transactional vs Transformational (Exhibit 12-4, R&J p226)",
-          "Transactional dẫn dắt bằng trao đổi rõ vai trò & phần thưởng; Transformational truyền cảm hứng để follower vượt lên tư lợi vì lợi ích tổ chức, có tác động phi thường. Transformational builds on transactional — leader giỏi làm CẢ HAI; chỉ transactional thì thường chỉ tầm trung.",
+          "Transactional dẫn dắt bằng trao đổi rõ vai trò & phần thưởng; Transformational truyền cảm hứng để follower vượt lên tư lợi vì lợi ích tổ chức, có tác động phi thường. Transformational builds on transactional — leader giỏi làm CẢ HAI; chỉ transactional thì thường chỉ tầm trung. → Mắt xích môn học: transformational leadership tạo hiệu ứng THÔNG QUA motivation của cấp dưới — nâng self-efficacy và ý nghĩa mục tiêu (goal-setting, Topic 06); còn quản trị bất đồng trong nhóm khi dẫn dắt là kỹ năng của Topic 08 (conflict).",
         ),
         comparisonBlock(
           "Transactional vs Transformational (Exhibit 12-4)",
@@ -11223,13 +11434,13 @@ const topic10: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which statement best defines leadership in Robbins and Judge?",
+      stem: "Without a formal title, Lan persuades a cross-functional group to adopt a new service vision and work toward a shared target. What is Lan demonstrating?",
       options: [
-        { id: "a", text: "The ability to influence a group toward the achievement of a vision or set of goals", isCorrect: true, rationale: "Cơ chế: định nghĩa R&J nhấn ability to influence + group + vision/goals. Bẫy: leadership không đồng nghĩa chức danh formal. Khóa: influence toward vision/goals." },
-        { id: "b", text: "The formal authority to issue orders from a managerial position", isCorrect: false, rationale: "Cơ chế: formal authority chỉ là một nguồn power; nonsanctioned leadership có thể rất mạnh. Bẫy: nhầm leader với chức danh. Khóa: leadership rộng hơn authority." },
-        { id: "c", text: "The process of maintaining stability through planning and control only", isCorrect: false, rationale: "Cơ chế: đây gần với management, không phải leadership. Bẫy: manager có thể là leader. Khóa: leadership nhấn influence/vision/change." },
-        { id: "d", text: "A fixed personality trait that cannot be learned or developed", isCorrect: false, rationale: "Cơ chế: trait approach chỉ là một lăng kính; behavioral và contemporary cho thấy leadership có thể học/phát triển. Bẫy: Great Man Theory. Khóa: không tuyệt đối hóa bẩm sinh." },
-        { id: "e", text: "A reward system that makes followers obey", isCorrect: false, rationale: "Cơ chế: reward power là một base of power, không phải định nghĩa leadership. Bẫy: reward có thể gây influence. Khóa: leadership không chỉ là trao thưởng." },
+        { id: "a", text: "Leadership: influencing a group toward a vision or set of goals", isCorrect: true, rationale: "Cơ chế: Lan tạo influence, hướng một group tới service vision và shared target dù không có title. Bẫy: tưởng phải được bổ nhiệm mới là leader. Khóa: influence toward vision/goals là cốt lõi leadership." },
+        { id: "b", text: "Formal managerial authority to issue orders", isCorrect: false, rationale: "Cơ chế: Lan không có formal title hay quyền ra lệnh. Bẫy: người khác làm theo nên dễ suy ra authority. Khóa: nonsanctioned influence vẫn là leadership." },
+        { id: "c", text: "Management through planning and control to preserve stability", isCorrect: false, rationale: "Cơ chế: stem nhấn vision và persuasion, không phải schedule/control. Bẫy: cross-functional initiative vẫn cần management. Khóa: direction/influence là leadership; order/consistency là management." },
+        { id: "d", text: "A fixed personality trait that Lan was born with", isCorrect: false, rationale: "Cơ chế: hành vi influence trong case không chứng minh leadership là trait bất biến. Bẫy: natural persuasion gợi Great Man/Trait view. Khóa: leadership còn có behavioral và contingency components có thể phát triển." },
+        { id: "e", text: "Reward power that makes the group comply", isCorrect: false, rationale: "Cơ chế: không có reward nào được trao; group theo vision qua persuasion. Bẫy: mọi influence dễ bị quy về incentive. Khóa: reward power chỉ là một power base, không phải định nghĩa leadership." },
       ],
       difficulty: "basic",
       conceptTested: "Definition of leadership",
@@ -11237,13 +11448,13 @@ const topic10: Chapter = {
     },
     {
       id: "q02",
-      stem: "Which contrast best captures leadership versus management?",
+      stem: "Minh sets direction and rallies employees around a new product vision, while An builds the schedule, budget, and controls needed to deliver it reliably. Which interpretation best fits the case?",
       options: [
-        { id: "a", text: "Leadership asks whether we are doing the right things; management asks whether we are doing things right", isCorrect: true, rationale: "Cơ chế: leadership gắn tầm nhìn/thay đổi; management gắn trật tự/vận hành đúng. Bẫy: chọn một bên như tốt hơn tuyệt đối. Khóa: cả hai bổ trợ." },
-        { id: "b", text: "Leadership is unnecessary when management is strong", isCorrect: false, rationale: "Cơ chế: tổ chức cần cả ổn định lẫn thay đổi. Bẫy: quản trị tốt có vẻ đủ. Khóa: management không thay thế vision/inspiration." },
-        { id: "c", text: "Management is only about charisma and inspiration", isCorrect: false, rationale: "Cơ chế: charisma/inspiration thuộc leadership nhiều hơn; management lo planning, organizing, controlling. Bẫy: người manager có thể truyền cảm hứng. Khóa: chức năng không đồng nhất." },
-        { id: "d", text: "Leadership and management are exactly the same function", isCorrect: false, rationale: "Cơ chế: hai chức năng bổ trợ nhưng khác trọng tâm. Bẫy: một người có thể vừa manager vừa leader. Khóa: same person không có nghĩa same function." },
-        { id: "e", text: "Leadership only means following procedures efficiently", isCorrect: false, rationale: "Cơ chế: following procedures efficiently là management/operation. Bẫy: efficiency quan trọng. Khóa: leadership hướng đúng việc và con người đi theo." },
+        { id: "a", text: "Minh provides leadership by choosing the right direction; An provides management by executing it correctly", isCorrect: true, rationale: "Cơ chế: vision/rallying tương ứng doing the right things; schedule/budget/control tương ứng doing things right. Bẫy: coi hai người cạnh tranh vai trò. Khóa: leadership và management bổ trợ nhau." },
+        { id: "b", text: "An's strong management makes Minh's leadership unnecessary", isCorrect: false, rationale: "Cơ chế: controls không tự tạo product direction hay commitment với vision. Bẫy: reliable delivery có vẻ là toàn bộ thành công. Khóa: management không thay thế leadership." },
+        { id: "c", text: "An is leading because budgets and controls are forms of charisma", isCorrect: false, rationale: "Cơ chế: budget/control là chức năng management, không phải charisma. Bẫy: manager có thể đồng thời là leader. Khóa: hành vi cụ thể trong stem mới quyết định chức năng." },
+        { id: "d", text: "Minh and An are performing exactly the same organizational function", isCorrect: false, rationale: "Cơ chế: một bên tạo direction/inspiration, bên kia tạo order/consistency. Bẫy: cả hai cùng phục vụ một product. Khóa: shared goal không làm hai functions đồng nhất." },
+        { id: "e", text: "Minh is managing because leadership mainly means following procedures efficiently", isCorrect: false, rationale: "Cơ chế: Minh đang thách thức hiện trạng bằng vision, không chỉ theo procedure. Bẫy: rallying employees vẫn là công việc trong tổ chức. Khóa: efficiency/procedure gần management; vision/change gần leadership." },
       ],
       difficulty: "basic",
       conceptTested: "Leadership versus management",
@@ -11251,13 +11462,13 @@ const topic10: Chapter = {
     },
     {
       id: "q03",
-      stem: "Which option correctly distinguishes the two broad sources of leader power?",
+      stem: "Director An can approve budgets because of her title, while engineer Lan has no formal authority but colleagues follow her technical judgment and trust her. Which distinction best explains their influence?",
       options: [
-        { id: "a", text: "Formal power comes from position; personal power comes from the person, relationships, expertise, or attraction", isCorrect: true, rationale: "Cơ chế: formal/institutional power là outside-in từ vị trí; personal/informal power là inside-out từ con người và quan hệ. Bẫy: nghĩ leader mạnh chỉ cần chức danh. Khóa: position vs person." },
-        { id: "b", text: "Formal power comes from friendship; personal power comes from job title", isCorrect: false, rationale: "Cơ chế: câu này đảo hai nguồn power. Bẫy: relationship có thể tồn tại trong tổ chức formal. Khóa: job title = formal." },
-        { id: "c", text: "Personal power is always coercive power", isCorrect: false, rationale: "Cơ chế: coercive thường gắn quyền trừng phạt; personal power mạnh hơn qua expert/referent/relationship. Bẫy: người mạnh cá nhân có thể ép người khác. Khóa: personal không đồng nghĩa coercive." },
-        { id: "d", text: "Formal power is irrelevant in all organizations", isCorrect: false, rationale: "Cơ chế: formal power vẫn quan trọng, chỉ không đủ cho leadership bền. Bẫy: slide đề cao personal power. Khóa: không có always/irrelevant." },
-        { id: "e", text: "Power is unrelated to influence", isCorrect: false, rationale: "Cơ chế: power là năng lực influence người khác và sự kiện. Bẫy: influence nghe mềm hơn power. Khóa: power chính là capacity to influence." },
+        { id: "a", text: "An has formal power from position; Lan has personal power from expertise and relationships", isCorrect: true, rationale: "Cơ chế: budget approval đến từ title, còn technical judgment/trust đến từ expert và referent sources. Bẫy: cả hai đều tạo compliance nên dễ gom chung. Khóa: position = formal; person/expertise/relationship = personal." },
+        { id: "b", text: "An has personal power from her title; Lan has formal power from colleagues' trust", isCorrect: false, rationale: "Cơ chế: đáp án đảo nguồn power của cả hai. Bẫy: title gắn với cá nhân An và trust tồn tại trong formal organization. Khóa: nguồn gốc, không phải nơi sử dụng, quyết định loại power." },
+        { id: "c", text: "Lan's personal power is coercive because colleagues follow her advice", isCorrect: false, rationale: "Cơ chế: không có threat/punishment; influence đến từ expertise và trust. Bẫy: việc người khác làm theo có thể trông như bị ép. Khóa: coercive cần khả năng trừng phạt." },
+        { id: "d", text: "An's formal power is irrelevant because only personal power can affect decisions", isCorrect: false, rationale: "Cơ chế: quyền approve budget rõ ràng ảnh hưởng quyết định. Bẫy: personal power thường bền hơn nên dễ tuyệt đối hóa. Khóa: formal power vẫn có tác dụng nhưng không phải nguồn duy nhất." },
+        { id: "e", text: "Neither person has power because influence and power are unrelated", isCorrect: false, rationale: "Cơ chế: cả quyền phê duyệt lẫn expert trust đều tạo capacity to influence. Bẫy: influence nghe tự nguyện hơn power. Khóa: power chính là năng lực tác động người khác/sự kiện." },
       ],
       difficulty: "basic",
       conceptTested: "Sources of power",
@@ -11433,13 +11644,13 @@ const topic10: Chapter = {
     },
     {
       id: "q16",
-      stem: "Which statement best describes servant leadership?",
+      stem: "A team leader listens closely, removes obstacles, gives credit away, and coaches junior employees until they can make decisions independently. Which leadership approach is most evident?",
       options: [
-        { id: "a", text: "A leader goes beyond self-interest and focuses on helping followers grow and develop", isCorrect: true, rationale: "Cơ chế: servant leadership vượt tư lợi, phục vụ follower phát triển bằng listening, empathizing, persuading, stewardship. Bẫy: servant bị hiểu là yếu/không lãnh đạo. Khóa: service for follower growth." },
-        { id: "b", text: "A leader maximizes narcissism to appear powerful", isCorrect: false, rationale: "Cơ chế: servant leadership có negative correlation với narcissism. Bẫy: leader nổi bật dễ bị nhầm với quyền lực cá nhân. Khóa: servant giảm cái tôi." },
-        { id: "c", text: "A leader uses only coercive power to ensure obedience", isCorrect: false, rationale: "Cơ chế: coercive power trái với listening/empathy/stewardship. Bẫy: servant vẫn có authority. Khóa: không phải ép buộc." },
-        { id: "d", text: "A leader avoids developing followers so they remain dependent", isCorrect: false, rationale: "Cơ chế: servant leadership phát triển potential của follower. Bẫy: một số leader giữ quyền bằng phụ thuộc. Khóa: servant tạo trưởng thành." },
-        { id: "e", text: "A leader treats ethics as irrelevant to performance", isCorrect: false, rationale: "Cơ chế: servant thuộc value-based leadership. Bẫy: performance có thể đo bằng số. Khóa: servant có nền đạo đức." },
+        { id: "a", text: "Servant leadership that places follower growth beyond the leader's self-interest", isCorrect: true, rationale: "Cơ chế: listening, obstacle removal, shared credit và coaching đều làm follower trưởng thành/tự chủ. Bẫy: leader phục vụ dễ bị hiểu là không dẫn dắt. Khóa: service for follower development là servant leadership." },
+        { id: "b", text: "Narcissistic charismatic leadership that keeps attention on the leader", isCorrect: false, rationale: "Cơ chế: giving credit away giảm spotlight và trái với narcissistic self-focus. Bẫy: leader có ảnh hưởng mạnh vẫn có thể charismatic. Khóa: case ưu tiên follower, không ưu tiên cái tôi." },
+        { id: "c", text: "Coercive leadership that secures obedience through punishment", isCorrect: false, rationale: "Cơ chế: không có threat hay punishment; leader dùng support/coaching. Bẫy: removing obstacles có thể đi kèm authority. Khóa: coercion tạo sợ hãi, servant tạo growth." },
+        { id: "d", text: "Dependency-based leadership that prevents followers from developing", isCorrect: false, rationale: "Cơ chế: leader chủ ý giúp juniors quyết định độc lập, ngược với dependency. Bẫy: coaching ban đầu tạo quan hệ phụ thuộc. Khóa: outcome tự chủ xác nhận follower development." },
+        { id: "e", text: "Laissez-faire leadership that withdraws from follower decisions", isCorrect: false, rationale: "Cơ chế: leader tích cực lắng nghe, hỗ trợ và coaching chứ không né trách nhiệm. Bẫy: trao quyền độc lập dễ bị nhầm với bỏ mặc. Khóa: empowerment có support ≠ laissez-faire." },
       ],
       difficulty: "basic",
       conceptTested: "Servant leadership",
@@ -11500,6 +11711,20 @@ const topic10: Chapter = {
       difficulty: "advanced",
       conceptTested: "Attribution and substitutes-neutralizers",
       takeaway: "Substitute làm leader bớt cần thiết; neutralizer làm hành vi leader khó phát huy tác dụng dù leader có cố.",
+    },
+    {
+      id: "q21",
+      stem: "A manager changes how much employees participate in a decision depending on whether the task is routine, nonroutine, or somewhere in between. Which leadership model is she applying?",
+      options: [
+        { id: "a", text: "Leader-participation model", isCorrect: true, rationale: "Cơ chế: model điều chỉnh mức subordinate participation trong decision making theo task structure. Bẫy: participative cũng là một behavior trong path-goal theory. Khóa: participation level + routine/nonroutine task là dấu hiệu riêng của leader-participation model." },
+        { id: "b", text: "Path-goal theory", isCorrect: false, rationale: "Cơ chế: path-goal chọn directive/supportive/participative/achievement behavior để dọn đường tới goal theo follower/environment. Bẫy: có participative behavior nên rất gần. Khóa: câu hỏi tập trung loại decision và task structure, không motivation path." },
+        { id: "c", text: "Situational Leadership II", isCorrect: false, rationale: "Cơ chế: SLII điều chỉnh Directing/Coaching/Supporting/Delegating theo competence và commitment của follower. Bẫy: cả hai đều yêu cầu leader linh hoạt. Khóa: readiness của follower khác task structure của decision." },
+        { id: "d", text: "Fiedler's contingency model", isCorrect: false, rationale: "Cơ chế: Fiedler fit fixed leader style với leader-member relations, task structure và position power. Bẫy: task structure xuất hiện trong cả hai model. Khóa: Fiedler không khuyến nghị mức participation cho từng decision." },
+        { id: "e", text: "Leader-member exchange theory", isCorrect: false, rationale: "Cơ chế: LMX giải thích chất lượng quan hệ ingroup/outgroup giữa leader và từng follower. Bẫy: participation có thể khác giữa ingroup/outgroup. Khóa: LMX không phân loại decision theo routine/nonroutine." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Leader-participation model",
+      takeaway: "Leader-participation model hỏi cấp dưới nên tham gia decision đến đâu dựa trên task structure; nó không thay thế toàn bộ theory về leadership behavior.",
     },
   ],
   status: "ready",
@@ -12026,13 +12251,13 @@ const topic11: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which statement best defines organizational culture?",
+      stem: "Across two branches, newcomers quickly learn the same unwritten assumptions about serving customers and making decisions, and those patterns distinguish the company from competitors. What are they encountering?",
       options: [
-        { id: "a", text: "A system of shared meaning held by members that distinguishes one organization from others", isCorrect: true, rationale: "Cơ chế: R&J định nghĩa culture là system of shared meaning phân biệt tổ chức. Bẫy: nhầm culture với satisfaction. Khóa: shared meaning + distinguishes." },
-        { id: "b", text: "Employees' level of satisfaction with pay and supervision", isCorrect: false, rationale: "Cơ chế: đó gần với job satisfaction, không phải culture. Bẫy: satisfaction và culture đều là perception của nhân viên. Khóa: culture descriptive, satisfaction evaluative." },
-        { id: "c", text: "Only the formal policies written in the employee handbook", isCorrect: false, rationale: "Cơ chế: formal policies chỉ là phần visible/artifacts; culture sâu hơn nhiều. Bẫy: handbook dễ nhìn thấy. Khóa: shared meaning không chỉ văn bản." },
-        { id: "d", text: "A temporary mood during one team meeting", isCorrect: false, rationale: "Cơ chế: culture là hệ ý nghĩa tương đối bền; mood nhất thời không đủ. Bẫy: cảm giác meeting phản ánh climate. Khóa: culture là pattern sâu hơn." },
-        { id: "e", text: "The individual personality of the CEO only", isCorrect: false, rationale: "Cơ chế: founders/top leaders ảnh hưởng mạnh, nhưng culture là shared meaning của members. Bẫy: leader định hình culture. Khóa: shared system, not one person's personality." },
+        { id: "a", text: "Organizational culture: a shared-meaning system that distinguishes the company", isCorrect: true, rationale: "Cơ chế: assumptions được members ở nhiều branch chia sẻ và tạo pattern riêng so với competitors. Bẫy: unwritten nên dễ coi là informal habits rời rạc. Khóa: shared meaning + distinguishes = organizational culture." },
+        { id: "b", text: "Job satisfaction with pay and supervision", isCorrect: false, rationale: "Cơ chế: stem mô tả how work is understood, không đánh giá employees thích pay/supervision đến đâu. Bẫy: cả culture và satisfaction đều được members cảm nhận. Khóa: culture descriptive; satisfaction evaluative." },
+        { id: "c", text: "Only formal policies in the employee handbook", isCorrect: false, rationale: "Cơ chế: các assumptions trong case là unwritten và học qua socialization. Bẫy: customer service/decision rules có thể được viết thành policy. Khóa: artifacts/policies chỉ là phần nổi của culture." },
+        { id: "d", text: "A temporary mood shared during one branch meeting", isCorrect: false, rationale: "Cơ chế: pattern lặp qua branches và newcomers, không phải affect nhất thời. Bẫy: một trải nghiệm chung có thể tạo cảm giác tập thể. Khóa: durability/shared assumptions khác mood." },
+        { id: "e", text: "The CEO's individual personality and nothing else", isCorrect: false, rationale: "Cơ chế: leader có thể khởi tạo culture nhưng case cho thấy members cùng giữ meaning. Bẫy: assumptions thường phản ánh founder. Khóa: culture là collective system, không phải personality của một người." },
       ],
       difficulty: "basic",
       conceptTested: "Definition of organizational culture",
@@ -12124,13 +12349,13 @@ const topic11: Chapter = {
     },
     {
       id: "q08",
-      stem: "Organizational climate is best defined as which of the following?",
+      stem: "Across departments, employees consistently report that it feels safe to speak up and that management supports experimentation. What does this shared perception most directly represent?",
       options: [
-        { id: "a", text: "Shared perceptions members have about the organization and its work environment", isCorrect: true, rationale: "Cơ chế: organizational climate = shared perceptions about org and work environment. Bẫy: nhầm climate với culture sâu. Khóa: shared perceptions, not assumptions." },
-        { id: "b", text: "The founder's private diary", isCorrect: false, rationale: "Cơ chế: founders matter but climate belongs to members' shared perceptions. Bẫy: founder philosophy shapes culture. Khóa: climate is collective perception." },
-        { id: "c", text: "A single employee's job satisfaction score", isCorrect: false, rationale: "Cơ chế: climate is shared and descriptive; one satisfaction score is individual/evaluative. Bẫy: both are attitudes/perceptions. Khóa: shared about environment." },
-        { id: "d", text: "Only the visible office layout", isCorrect: false, rationale: "Cơ chế: layout can signal climate, but climate is perception. Bẫy: material symbols matter. Khóa: not only physical artifacts." },
-        { id: "e", text: "The legal code outside the organization", isCorrect: false, rationale: "Cơ chế: law/code is ethical climate category, not climate definition. Bẫy: climate can include ethics. Khóa: shared perceptions broadly." },
+        { id: "a", text: "Organizational climate, because members share perceptions of the work environment", isCorrect: true, rationale: "Cơ chế: nhiều department cùng cảm nhận psychological safety và support for experimentation. Bẫy: các cảm nhận này có thể bắt nguồn từ culture sâu. Khóa: shared perceptions about work environment = climate." },
+        { id: "b", text: "The founder's personal philosophy, even though no founder is mentioned", isCorrect: false, rationale: "Cơ chế: founder philosophy có thể định hình culture nhưng không phải shared perception đang được đo. Bẫy: support for experimentation thường đến từ founder values. Khóa: climate nằm ở collective experience hiện tại." },
+        { id: "c", text: "One employee's job satisfaction", isCorrect: false, rationale: "Cơ chế: case nói employees across departments, không phải một evaluative satisfaction score. Bẫy: feeling safe có thể làm satisfaction tăng. Khóa: shared/descriptive = climate; individual/evaluative = satisfaction." },
+        { id: "d", text: "A visible office artifact such as an open-plan layout", isCorrect: false, rationale: "Cơ chế: stem không nêu physical symbol; nó nêu perception về speaking up và support. Bẫy: layout có thể phát tín hiệu openness. Khóa: artifact có thể ảnh hưởng climate nhưng không phải climate itself." },
+        { id: "e", text: "An instrumental ethical climate driven by self-interest", isCorrect: false, rationale: "Cơ chế: psychological safety/experimentation không cho thấy decisions dựa trên self-interest. Bẫy: ethical climate là một subtype của climate. Khóa: muốn chọn instrumental phải có criterion egoism/self-interest." },
       ],
       difficulty: "basic",
       conceptTested: "Organizational climate",
@@ -12551,7 +12776,7 @@ const topic12: Chapter = {
         calloutBlock(
           "key",
           "Định nghĩa stress + Demands–Resources (R&J p327)",
-          "Stress = dynamic condition khi cá nhân đối mặt với opportunity/demand/resource liên quan điều mình mong muốn, mà kết quả vừa uncertain vừa important. Stress thường bị nhìn tiêu cực nhưng có mặt tích cực khi áp lực vừa phải thúc đẩy hiệu suất. Demands = trách nhiệm, áp lực, nghĩa vụ, bất định cá nhân đối mặt; Resources = những thứ trong tầm kiểm soát giúp giải quyết demands. Stress cao khi demands vượt resources.",
+          "Stress = dynamic condition khi cá nhân đối mặt với opportunity/demand/resource liên quan điều mình mong muốn, mà kết quả vừa uncertain vừa important. Stress thường bị nhìn tiêu cực nhưng có mặt tích cực khi áp lực vừa phải thúc đẩy hiệu suất. Demands = trách nhiệm, áp lực, nghĩa vụ, bất định cá nhân đối mặt; Resources = những thứ trong tầm kiểm soát giúp giải quyết demands. Stress cao khi demands vượt resources. → Mắt xích môn học: stress response về bản chất là emotion kéo dài (Topic 04) và nếu không quản trị sẽ bào mòn job attitudes/satisfaction (Topic 05) — vì thế quản trị change không tách rời quản trị cảm xúc và thái độ.",
         ),
         comparisonBlock("Challenge vs Hindrance stressors (R&J p327)", ["Loại", "Bản chất", "Tác động"], [
           { label: "Challenge stressors", cells: ["Gắn với workload, áp lực hoàn thành, deadline.", "Thúc đẩy — cải thiện hiệu suất trong môi trường có hỗ trợ; ít strain hơn."] },
@@ -12667,13 +12892,13 @@ const topic12: Chapter = {
   questions: [
     {
       id: "q01",
-      stem: "Which item is one of Robbins and Judge's six forces for change?",
+      stem: "A manufacturer begins redesigning jobs after AI-enabled equipment makes its old workflow obsolete. Which force for change is most directly driving the response?",
       options: [
-        { id: "a", text: "Technology", isCorrect: true, rationale: "Cơ chế: technology là một trong 6 forces for change vì công nghệ làm đổi cách làm việc và cấu trúc tổ chức. Bẫy: technology nghe như công cụ vận hành, nhưng trong change nó là lực môi trường. Khóa: remember workforce, technology, economic shocks, competition, social trends, world politics." },
-        { id: "b", text: "Job satisfaction", isCorrect: false, rationale: "Cơ chế: job satisfaction là thái độ của nhân viên, không nằm trong 6 forces for change. Bẫy: satisfaction có thể bị ảnh hưởng bởi change. Khóa: force là áp lực khiến tổ chức phải đổi." },
-        { id: "c", text: "Emotional intelligence", isCorrect: false, rationale: "Cơ chế: emotional intelligence là năng lực cá nhân. Bẫy: change agents cần EI, nhưng EI không phải force ở Exhibit. Khóa: lực thay đổi là điều kiện môi trường/tổ chức rộng." },
-        { id: "d", text: "Equity sensitivity", isCorrect: false, rationale: "Cơ chế: equity sensitivity thuộc motivation/perception. Bẫy: bất công có thể làm người ta phản kháng. Khóa: không thuộc 6 dimensions của R&J." },
-        { id: "e", text: "Instrumental ethical climate", isCorrect: false, rationale: "Cơ chế: instrumental climate thuộc ethical culture. Bẫy: culture cũng thay đổi theo thời gian. Khóa: Topic 12 forces for change không liệt kê climate này." },
+        { id: "a", text: "Technology", isCorrect: true, rationale: "Cơ chế: AI-enabled equipment làm workflow cũ lỗi thời và buộc redesign jobs, đúng technology force. Bẫy: coi thiết bị chỉ là công cụ nội bộ, không phải áp lực change. Khóa: technology là một trong sáu forces for change." },
+        { id: "b", text: "Job satisfaction", isCorrect: false, rationale: "Cơ chế: satisfaction có thể đổi sau redesign nhưng không phải trigger được nêu. Bẫy: nhân viên có thể không hài lòng với workflow cũ. Khóa: outcome/attitude khác force buộc tổ chức thay đổi." },
+        { id: "c", text: "Emotional intelligence", isCorrect: false, rationale: "Cơ chế: EI có thể giúp manager triển khai change nhưng không làm workflow lỗi thời. Bẫy: change agents cần quản trị emotion. Khóa: capability cá nhân ≠ environmental force." },
+        { id: "d", text: "Equity sensitivity", isCorrect: false, rationale: "Cơ chế: equity sensitivity ảnh hưởng phản ứng với fairness, không phải nguyên nhân AI xuất hiện. Bẫy: job redesign có thể đổi input/outcome. Khóa: fairness perception khác technology pressure." },
+        { id: "e", text: "Instrumental ethical climate", isCorrect: false, rationale: "Cơ chế: case không nói self-interest hay ethical criterion. Bẫy: culture có thể hỗ trợ/cản change. Khóa: climate không nằm trong sáu forces được tình huống kích hoạt." },
       ],
       difficulty: "basic",
       conceptTested: "Forces for change",
@@ -12681,13 +12906,13 @@ const topic12: Chapter = {
     },
     {
       id: "q02",
-      stem: "Planned change is best described as change that is:",
+      stem: "Six months before a new regulation takes effect, a hospital sets a safety target, appoints change agents, and launches a phased redesign of its procedures. What type of change is this?",
       options: [
-        { id: "a", text: "Intentional, goal-oriented, and often guided by change agents", isCorrect: true, rationale: "Cơ chế: planned change là thay đổi có chủ đích, có mục tiêu, do change agents dẫn dắt. Bẫy: change có thể xảy ra tự phát hoặc reactionary. Khóa: planned = intentional + goal-oriented." },
-        { id: "b", text: "A passive reaction after a crisis has already forced the organization to move", isCorrect: false, rationale: "Cơ chế: đây là reactionary change, không phải planned change. Bẫy: cả hai đều là change. Khóa: planned chủ động trước hoặc trong khi quản trị vấn đề." },
-        { id: "c", text: "Any change that employees resist", isCorrect: false, rationale: "Cơ chế: resistance có thể xuất hiện với nhiều loại change. Bẫy: planned change thường bị kháng cự. Khóa: tiêu chí planned nằm ở intentionality, không ở phản ứng nhân viên." },
-        { id: "d", text: "A cultural ritual that reinforces existing norms", isCorrect: false, rationale: "Cơ chế: ritual thường duy trì văn hóa hiện tại. Bẫy: ritual có thể được dùng trong change. Khóa: planned change nhằm dịch chuyển trạng thái." },
-        { id: "e", text: "A purely individual coping strategy for stress", isCorrect: false, rationale: "Cơ chế: coping strategy thuộc stress management, không phải planned organizational change. Bẫy: thay đổi gây stress nên hai phần liên quan. Khóa: planned change là cấp tổ chức." },
+        { id: "a", text: "Planned change because it is intentional, goal-oriented, and led by change agents", isCorrect: true, rationale: "Cơ chế: target, appointed agents và phased redesign trước deadline thể hiện intentionality + goal orientation. Bẫy: regulation là lực bên ngoài nên tưởng mọi phản ứng đều reactionary. Khóa: chủ động thiết kế response = planned change." },
+        { id: "b", text: "Reactionary change because the hospital waits for a crisis before acting", isCorrect: false, rationale: "Cơ chế: hospital hành động trước khi regulation có hiệu lực và trước crisis. Bẫy: external mandate có vẻ ép tổ chức phản ứng. Khóa: timing và kế hoạch cho thấy chủ động." },
+        { id: "c", text: "Resistance to change because employees may dislike the new procedures", isCorrect: false, rationale: "Cơ chế: stem chưa nêu employee resistance; resistance là response, không phải loại change. Bẫy: procedure redesign thường gặp phản kháng. Khóa: classify theo intentionality, không theo mức thích/ghét." },
+        { id: "d", text: "A cultural ritual that preserves the current safety norms", isCorrect: false, rationale: "Cơ chế: phased redesign nhằm thay procedures, không chỉ reinforce trạng thái cũ. Bẫy: safety practices có thể trở thành ritual. Khóa: planned change dịch chuyển system." },
+        { id: "e", text: "An individual stress-coping strategy", isCorrect: false, rationale: "Cơ chế: target/agents/procedures đều ở organizational level. Bẫy: regulation và redesign có thể gây stress cho staff. Khóa: coping cá nhân khác planned organizational change." },
       ],
       difficulty: "basic",
       conceptTested: "Planned versus reactionary change",
@@ -12695,13 +12920,13 @@ const topic12: Chapter = {
     },
     {
       id: "q03",
-      stem: "Which option lists only individual sources of resistance to change?",
+      stem: "During a software rollout, Lan clings to her familiar routine, worries about job security and the unknown, and ignores evidence that the system will help. What is the main source of resistance in this case?",
       options: [
-        { id: "a", text: "Habit, security, fear of the unknown, and selective information processing", isCorrect: true, rationale: "Cơ chế: đây đều là individual sources trong Exhibit 17-1. Bẫy: chúng có thể được tổ chức củng cố, nhưng nguồn gốc là tâm lý/hành vi cá nhân. Khóa: individual = habit/security/economic/fear/selective processing." },
-        { id: "b", text: "Structural inertia, group inertia, and threat to expertise", isCorrect: false, rationale: "Cơ chế: đây là organizational sources. Bẫy: chúng ảnh hưởng cá nhân. Khóa: structural/group/expertise/power là cấp tổ chức." },
-        { id: "c", text: "Limited focus of change and world politics", isCorrect: false, rationale: "Cơ chế: limited focus là organizational resistance, world politics là force for change. Bẫy: đều xuất hiện trong Topic 12. Khóa: không cùng nhóm individual sources." },
-        { id: "d", text: "Competition, technology, and economic shocks", isCorrect: false, rationale: "Cơ chế: đây là forces for change, không phải resistance sources. Bẫy: economic factors cũng là individual resistance source nhưng economic shocks là force. Khóa: phân biệt economic factors vs economic shocks." },
-        { id: "e", text: "Role conflict, role overload, and role ambiguity", isCorrect: false, rationale: "Cơ chế: đây là role demands trong sources of stress. Bẫy: stress có thể làm resistance mạnh hơn. Khóa: role demands thuộc nửa stress của topic." },
+        { id: "a", text: "Individual resistance through habit, security concerns, fear of the unknown, and selective processing", isCorrect: true, rationale: "Cơ chế: từng cue trong stem map trực tiếp vào habit/security/fear/selective information processing. Bẫy: rollout là organizational event nên dễ chọn nguồn tổ chức. Khóa: cơ chế nằm trong cognition và routine của Lan." },
+        { id: "b", text: "Organizational resistance through structural inertia and threat to expertise", isCorrect: false, rationale: "Cơ chế: case không nêu rules, group norms hay power/expertise bị đe dọa ở cấp hệ thống. Bẫy: software mới thường làm đổi expertise. Khóa: evidence hiện tại chỉ nằm ở phản ứng cá nhân Lan." },
+        { id: "c", text: "A force for change created by world politics", isCorrect: false, rationale: "Cơ chế: world politics không xuất hiện và force for change khác source resisting change. Bẫy: rollout có thể bắt nguồn từ external force. Khóa: câu hỏi hỏi vì sao Lan chống lại, không hỏi vì sao tổ chức đổi." },
+        { id: "d", text: "Technology and competition as external forces for change", isCorrect: false, rationale: "Cơ chế: technology có thể kích hoạt rollout nhưng không giải thích selective denial của Lan. Bẫy: software làm đáp án technology rất hấp dẫn. Khóa: trigger of change ≠ source of resistance." },
+        { id: "e", text: "Role conflict, overload, and ambiguity as stress demands", isCorrect: false, rationale: "Cơ chế: stem không nói incompatible roles, excessive workload hay unclear expectations. Bẫy: fear và insecurity gây stress. Khóa: emotional strain không tự biến thành role demands." },
       ],
       difficulty: "intermediate",
       conceptTested: "Individual resistance sources",
@@ -12709,13 +12934,13 @@ const topic12: Chapter = {
     },
     {
       id: "q04",
-      stem: "Structural inertia and group inertia are examples of:",
+      stem: "Employees support a new cross-functional process, but legacy approval rules and department norms repeatedly pull work back to the old system. What best explains the resistance?",
       options: [
-        { id: "a", text: "Organizational sources of resistance to change", isCorrect: true, rationale: "Cơ chế: structural inertia và group inertia là resistance nằm trong hệ thống/chuẩn nhóm. Bẫy: cá nhân cảm nhận chúng như áp lực cá nhân. Khóa: inertia at structure/group level = organizational source." },
-        { id: "b", text: "Challenge stressors", isCorrect: false, rationale: "Cơ chế: challenge stressors có thể thúc đẩy hiệu suất; inertia là cản thay đổi. Bẫy: change có thể tạo challenge. Khóa: inertia belongs to resistance, not stressor type." },
-        { id: "c", text: "Individual sources of resistance", isCorrect: false, rationale: "Cơ chế: individual sources là habit, security, fear, economic factors, selective processing. Bẫy: cá nhân có thể làm theo group inertia. Khóa: group/structure là organizational." },
-        { id: "d", text: "OD interventions", isCorrect: false, rationale: "Cơ chế: OD interventions là kỹ thuật quản trị thay đổi. Bẫy: OD có thể xử lý inertia. Khóa: intervention khác source of resistance." },
-        { id: "e", text: "Behavioral symptoms of stress", isCorrect: false, rationale: "Cơ chế: behavioral symptoms là absence, turnover, sleep/eating changes. Bẫy: inertia có vẻ là hành vi không đổi. Khóa: đây là nguồn resistance, không phải triệu chứng stress." },
+        { id: "a", text: "Organizational resistance through structural inertia and group inertia", isCorrect: true, rationale: "Cơ chế: approval rules là structural inertia và department norms là group inertia dù employees ủng hộ. Bẫy: mọi resistance cuối cùng đều biểu hiện qua người. Khóa: system/norms kéo lùi = organizational source." },
+        { id: "b", text: "Challenge stressors that motivate employees to improve performance", isCorrect: false, rationale: "Cơ chế: rules/norms đang block progress chứ không tạo meaningful challenge. Bẫy: cross-functional work có thể là stretch assignment. Khóa: hindering inertia thuộc resistance, không phải challenge stressor." },
+        { id: "c", text: "Individual resistance based on fear of the unknown", isCorrect: false, rationale: "Cơ chế: employees explicitly support process; barrier nằm ở legacy system và department norms. Bẫy: người thực thi vẫn tuân theo nếp cũ. Khóa: location of cause phân biệt individual và organizational." },
+        { id: "d", text: "An organizational-development intervention", isCorrect: false, rationale: "Cơ chế: OD intervention được dùng để thay đổi system; legacy rules đang cản thay đổi. Bẫy: cross-functional process nghe như một intervention. Khóa: intervention là giải pháp, inertia là source of resistance." },
+        { id: "e", text: "Behavioral symptoms of stress such as withdrawal", isCorrect: false, rationale: "Cơ chế: case không nêu absence, turnover hay coping behavior. Bẫy: work bị kéo lùi có thể giống withdrawal. Khóa: process blockage ở structure/group khác stress consequence." },
       ],
       difficulty: "basic",
       conceptTested: "Organizational resistance sources",
@@ -12849,13 +13074,13 @@ const topic12: Chapter = {
     },
     {
       id: "q14",
-      stem: "Which statement best distinguishes challenge stressors from hindrance stressors?",
+      stem: "An analyst feels energized by a demanding deadline because she has adequate support, but red tape blocks access to the data and drains her effort. Which interpretation is most accurate?",
       options: [
-        { id: "a", text: "Challenge stressors can support achievement, while hindrance stressors block goal progress", isCorrect: true, rationale: "Cơ chế: challenge gắn với workload/deadline có thể thúc đẩy; hindrance như red tape/politics cản mục tiêu. Bẫy: cả hai đều là stressors. Khóa: challenge pushes, hindrance blocks." },
-        { id: "b", text: "Challenge stressors are always harmful, while hindrance stressors are always motivating", isCorrect: false, rationale: "Cơ chế: câu này đảo ngược logic. Bẫy: từ stress khiến người học nghĩ tất cả đều xấu. Khóa: challenge can be useful; hindrance usually hurts." },
-        { id: "c", text: "Challenge stressors are personal factors, while hindrance stressors are only world politics", isCorrect: false, rationale: "Cơ chế: challenge/hindrance là phân loại bản chất stressor, không phải nhóm nguồn. Bẫy: sources và types đều nói stress. Khóa: do not mix type with source." },
-        { id: "d", text: "Challenge stressors are the same as coercion", isCorrect: false, rationale: "Cơ chế: coercion là tactic quản trị change; challenge stressor là áp lực công việc có thể thúc đẩy. Bẫy: cả hai gây áp lực. Khóa: pressure from goals differs from threats." },
-        { id: "e", text: "Hindrance stressors increase performance in all environments", isCorrect: false, rationale: "Cơ chế: hindrance stressors cản trở và giảm hiệu suất. Bẫy: một số người nghĩ áp lực nào cũng tốt. Khóa: not all pressure is eustress." },
+        { id: "a", text: "The deadline is a challenge stressor, while the red tape is a hindrance stressor", isCorrect: true, rationale: "Cơ chế: deadline có support nên thúc đẩy achievement; red tape chặn goal progress và làm cạn effort. Bẫy: cả hai đều tạo pressure. Khóa: challenge pushes toward goal; hindrance blocks it." },
+        { id: "b", text: "The deadline is a hindrance, while the red tape is a motivating challenge", isCorrect: false, rationale: "Cơ chế: đáp án đảo tác động được stem mô tả. Bẫy: deadline có vẻ cản thời gian còn bureaucracy có thể là problem to solve. Khóa: classify theo chức năng thực tế đối với goal." },
+        { id: "c", text: "The deadline is personal stress, while red tape is world-politics stress", isCorrect: false, rationale: "Cơ chế: challenge/hindrance là type theo tác động, không phải taxonomy nguồn personal/world politics. Bẫy: cùng Topic 12 có nhiều cách phân loại stressors. Khóa: source category khác functional type." },
+        { id: "d", text: "Both pressures are coercion tactics used by a change agent", isCorrect: false, rationale: "Cơ chế: không có threat hay change agent; deadline và red tape là work conditions. Bẫy: mọi pressure dễ bị gọi là coercion. Khóa: coercion là tactic dùng force, không phải stressor classification." },
+        { id: "e", text: "Both pressures should improve performance because all stress is motivating", isCorrect: false, rationale: "Cơ chế: red tape đang drain effort và cản access. Bẫy: áp dụng inverted-U để kết luận mọi stress vừa phải đều tốt. Khóa: hindrance stressors thường làm giảm performance dù mức áp lực không cực đoan." },
       ],
       difficulty: "basic",
       conceptTested: "Challenge versus hindrance stressors",
@@ -12950,6 +13175,338 @@ const topic12: Chapter = {
   source:
     "Robbins & Judge, Organizational Behavior — Chapter 17 'Organizational Change' (pp.315-335); Slide 'OB-Topic 12-Organizational Change and Workstress' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Robert H. Schaffer 'All Management Is Change Management' (HBR 2017), Kurt Lewin (3-step), John Kotter (8-step), Rick Maurer '3 Levels of Resistance', Spencer Johnson 'Who Moved My Cheese?', Spectrum Assessments (8 change readiness factors), Cooper et al. (2002) & Lazarus & Folkman (1984) (stress), MetLife (holistic well-being), Simon Thornton 2023 (D>CS=SR).",
 };
+
+export const organizationalBehaviorCourseMap: CourseMapDiagram = {
+  engine: "flow",
+  layout: "tree",
+  collapsible: true,
+  caption:
+    "Khung 3 cấp theo Basic OB Model (Robbins & Judge, 2019). Bấm chip để xem bản chất topic và mở trang topic.",
+  nodes: [
+    {
+      id: "ob-root",
+      label: "Organizational Behavior",
+      group: "purpose",
+      detail:
+        "Nghiên cứu HỆ THỐNG hành vi con người ở 3 cấp — cá nhân → nhóm → tổ chức — để cải thiện organizational effectiveness (Robbins & Judge, 2019).",
+    },
+    {
+      id: "lv-found",
+      label: "Nền tảng",
+      group: "purpose",
+      detail:
+        "Khung của cả môn: OB là gì, Basic OB Model (Inputs → Processes → Outcomes), 4 objectives",
+      parent: "ob-root",
+    },
+    {
+      id: "lv-ind",
+      label: "Individual level",
+      group: "lo",
+      detail:
+        "Con người mang gì vào tổ chức và nó thành hành vi thế nào (T1–T6)",
+      parent: "ob-root",
+    },
+    {
+      id: "lv-grp",
+      label: "Group level",
+      group: "concept",
+      detail:
+        "Khi cá nhân làm việc cùng nhau: nhóm, xung đột, team, dẫn dắt (T7–T10)",
+      parent: "ob-root",
+    },
+    {
+      id: "lv-org",
+      label: "Organizational level",
+      group: "term",
+      detail: "Tầng tổ chức: văn hóa và thay đổi (T11–T12)",
+      parent: "ob-root",
+    },
+    {
+      id: "t00",
+      label: "T0 · Introduction to OB",
+      group: "purpose",
+      detail: topic00.bigIdea,
+      parent: "lv-found",
+      href: "/organizational-behavior/topic-00",
+    },
+    {
+      id: "t01",
+      label: "T1 · Personality & Learning Styles",
+      group: "lo",
+      detail: topic01.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-01",
+    },
+    {
+      id: "t02",
+      label: "T2 · Perception & Common Biases",
+      group: "lo",
+      detail: topic02.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-02",
+    },
+    {
+      id: "t03",
+      label: "T3 · Personal Values & Valuing Diversity",
+      group: "lo",
+      detail: topic03.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-03",
+    },
+    {
+      id: "t04",
+      label: "T4 · Emotions & Moods",
+      group: "lo",
+      detail: topic04.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-04",
+    },
+    {
+      id: "t05",
+      label: "T5 · Attitudes & Issues of Dissonance",
+      group: "lo",
+      detail: topic05.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-05",
+    },
+    {
+      id: "t06",
+      label: "T6 · Motivation",
+      group: "lo",
+      detail: topic06.bigIdea,
+      parent: "lv-ind",
+      href: "/organizational-behavior/topic-06",
+    },
+    {
+      id: "t07",
+      label: "T7 · Group Properties",
+      group: "concept",
+      detail: topic07.bigIdea,
+      parent: "lv-grp",
+      href: "/organizational-behavior/topic-07",
+    },
+    {
+      id: "t08",
+      label: "T8 · Conflict and Collaboration",
+      group: "concept",
+      detail: topic08.bigIdea,
+      parent: "lv-grp",
+      href: "/organizational-behavior/topic-08",
+    },
+    {
+      id: "t09",
+      label: "T9 · Team Lifecycle and Team Effectiveness",
+      group: "concept",
+      detail: topic09.bigIdea,
+      parent: "lv-grp",
+      href: "/organizational-behavior/topic-09",
+    },
+    {
+      id: "t10",
+      label: "T10 · Leadership and Followership",
+      group: "concept",
+      detail: topic10.bigIdea,
+      parent: "lv-grp",
+      href: "/organizational-behavior/topic-10",
+    },
+    {
+      id: "t11",
+      label: "T11 · Organizational Culture",
+      group: "term",
+      detail: topic11.bigIdea,
+      parent: "lv-org",
+      href: "/organizational-behavior/topic-11",
+    },
+    {
+      id: "t12",
+      label: "T12 · Organizational Change and Work Stress",
+      group: "term",
+      detail: topic12.bigIdea,
+      parent: "lv-org",
+      href: "/organizational-behavior/topic-12",
+    },
+  ],
+};
+
+export const organizationalBehaviorCourseThreads: CourseThread[] = [
+  {
+    title: "Từ nhận thức đến hành động",
+    description:
+      "Góc nhìn liên hệ: vì sao học T1→T6 theo thứ tự đó — mỗi topic là một mắt xích từ 'con người mang gì vào' đến hành vi.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách. Đọc như chuỗi từ input cá nhân qua perception, attitude, motivation đến behavior/performance.",
+      nodes: [
+        {
+          id: "th1-input",
+          label: "Cá nhân mang gì vào (T1·T3·T4)",
+          detail:
+            "Personality (T1), values (T3), emotions & moods (T4) là input cá nhân — chúng định hình cách ta nhìn và phản ứng.",
+        },
+        {
+          id: "th1-perc",
+          label: "Perception (T2)",
+          detail:
+            "Ta hành xử theo thực tại-được-diễn-giải, không phải thực tại — input cá nhân đi qua bộ lọc perception.",
+        },
+        {
+          id: "th1-att",
+          label: "Attitudes (T5)",
+          detail:
+            "Perception nuôi cognitive component của attitude; attitude là đánh giá +/− về đối tượng.",
+        },
+        {
+          id: "th1-mot",
+          label: "Motivation (T6)",
+          detail:
+            "Attitude và nhu cầu chuyển thành intensity–direction–persistence của nỗ lực.",
+        },
+        {
+          id: "th1-beh",
+          label: "Behavior & Performance",
+          detail:
+            "Đầu ra ở cấp cá nhân trong Basic OB Model: task performance, OCB, withdrawal.",
+        },
+      ],
+      edges: [
+        { from: "th1-input", to: "th1-perc", label: "định hình" },
+        { from: "th1-perc", to: "th1-att", label: "nuôi" },
+        { from: "th1-att", to: "th1-mot", label: "chuyển thành nỗ lực" },
+        { from: "th1-mot", to: "th1-beh", label: "thúc đẩy" },
+      ],
+    },
+  },
+  {
+    title: "Từ cá nhân đến đội nhóm",
+    description:
+      "Góc nhìn liên hệ: khác biệt cá nhân không mất đi khi vào nhóm — chúng trở thành động lực học của nhóm.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách. Đọc như đường đi từ deep-level diversity đến group properties, conflict, rồi team effectiveness.",
+      nodes: [
+        {
+          id: "th2-diff",
+          label: "Khác biệt cá nhân (T1·T3)",
+          detail:
+            "Personality + values = deep-level diversity mà mỗi người mang vào nhóm.",
+        },
+        {
+          id: "th2-grp",
+          label: "Group Properties (T7)",
+          detail:
+            "Vào nhóm, khác biệt bị ràng bởi roles, norms, status, size, cohesiveness.",
+        },
+        {
+          id: "th2-conf",
+          label: "Conflict & Collaboration (T8)",
+          detail:
+            "Khác biệt + tương tác sinh perceived incompatibility; xử lý xung đột quyết định nhóm vỡ hay lớn.",
+        },
+        {
+          id: "th2-team",
+          label: "Team Effectiveness (T9)",
+          detail:
+            "Nhóm xử lý tốt khác biệt & xung đột mới thành team hiệu quả qua lifecycle.",
+        },
+      ],
+      edges: [
+        { from: "th2-diff", to: "th2-grp", label: "gia nhập" },
+        { from: "th2-grp", to: "th2-conf", label: "va chạm" },
+        { from: "th2-conf", to: "th2-team", label: "xử lý tốt →" },
+      ],
+    },
+  },
+  {
+    title: "Dẫn dắt",
+    description:
+      "Góc nhìn liên hệ: leadership (T10) không đứng riêng — nó là đòn bẩy tác động vào ba topic đã học.",
+    diagram: {
+      engine: "flow",
+      layout: "tree",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách. Đọc leadership như đòn bẩy tác động vào motivation, conflict và team.",
+      nodes: [
+        {
+          id: "th3-lead",
+          label: "Leadership & Followership (T10)",
+          detail:
+            "Ảnh hưởng người khác hướng về mục tiêu; hiệu quả tùy contingency + followership.",
+        },
+        {
+          id: "th3-mot",
+          label: "Motivation (T6)",
+          parent: "th3-lead",
+          detail:
+            "Leader tác động intensity–direction–persistence của nỗ lực người theo.",
+        },
+        {
+          id: "th3-conf",
+          label: "Conflict (T8)",
+          parent: "th3-lead",
+          detail:
+            "Leader điều phối xung đột: giữ functional, chặn dysfunctional.",
+        },
+        {
+          id: "th3-team",
+          label: "Team (T9)",
+          parent: "th3-lead",
+          detail:
+            "Leader dựng điều kiện team hiệu quả: context, composition, process.",
+        },
+      ],
+      edges: [
+        { from: "th3-lead", to: "th3-mot", label: "truyền động lực" },
+        { from: "th3-lead", to: "th3-conf", label: "điều phối" },
+        { from: "th3-lead", to: "th3-team", label: "tạo điều kiện" },
+      ],
+    },
+  },
+  {
+    title: "Tổ chức vận động",
+    description:
+      "Góc nhìn liên hệ: vòng khép của môn — tầng tổ chức dội ngược về cảm xúc & thái độ của từng cá nhân.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách. Đọc như vòng khép từ culture qua change/stress rồi quay về emotions & attitudes.",
+      nodes: [
+        {
+          id: "th4-cult",
+          label: "Culture (T11)",
+          detail:
+            "Hệ giá trị chung định hình hành vi — vừa là chất keo vừa là quán tính của tổ chức.",
+        },
+        {
+          id: "th4-chg",
+          label: "Change (T12)",
+          detail:
+            "Thay đổi tổ chức phải vượt qua quán tính văn hóa và resistance.",
+        },
+        {
+          id: "th4-str",
+          label: "Work Stress (T12)",
+          detail: "Thay đổi là nguồn stressor lớn với cá nhân.",
+        },
+        {
+          id: "th4-ind",
+          label: "Emotions & Attitudes (T4·T5)",
+          detail:
+            "Stress dội về affect và job attitudes — vòng quay lại cấp cá nhân.",
+        },
+      ],
+      edges: [
+        { from: "th4-cult", to: "th4-chg", label: "quán tính" },
+        { from: "th4-chg", to: "th4-str", label: "gây" },
+        { from: "th4-str", to: "th4-ind", label: "dội về cá nhân" },
+      ],
+    },
+  },
+];
 
 export const organizationalBehaviorChapters: Chapter[] = [
   topic00,

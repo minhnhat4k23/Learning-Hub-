@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSubjects, getSubject, getSubjectChapters } from "@/content/subjects";
+import FlowDiagram from "@/app/components/teaching/FlowDiagram";
+import KnowledgeMapGrouped from "@/app/components/teaching/KnowledgeMapGrouped";
 
 export function generateStaticParams() {
   return getAllSubjects().map((subject) => ({ subject: subject.id }));
@@ -23,6 +25,8 @@ export default async function SubjectChapterList({
 
   const chapters = getSubjectChapters(subjectId);
   const ready = chapters.filter((chapter) => chapter.status !== "placeholder").length;
+  const courseMap = subject.courseMap;
+  const courseThreads = subject.courseThreads;
 
   return (
     <main className="min-h-screen bg-zinc-50 px-6 py-16 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
@@ -37,7 +41,45 @@ export default async function SubjectChapterList({
         {subject.subtitle && (
           <p className="mt-2 text-sm leading-6 text-zinc-500">{subject.subtitle}</p>
         )}
+      </div>
 
+      {courseMap && (
+        <section className="mx-auto mt-10 max-w-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            Bản đồ môn học
+          </p>
+          <div className="mt-4">
+            <KnowledgeMapGrouped diagram={courseMap} />
+          </div>
+        </section>
+      )}
+
+      {courseThreads && courseThreads.length > 0 && (
+        <section className="mx-auto mt-10 max-w-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            Chuỗi khái niệm
+          </p>
+          <div className="mt-4 space-y-5">
+            {courseThreads.map((thread) => (
+              <article key={thread.title} className="space-y-2">
+                <div>
+                  <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                    {thread.title}
+                  </h2>
+                  {thread.description && (
+                    <p className="mt-1 text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+                      {thread.description}
+                    </p>
+                  )}
+                </div>
+                <FlowDiagram diagram={thread.diagram} />
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="mx-auto max-w-3xl">
         <ul className="mt-8 space-y-3">
           {chapters.map((chapter) => {
             const placeholder = chapter.status === "placeholder";

@@ -40,6 +40,7 @@ export type FlowNode = {
   detail?: string;
   sectionId?: string;
   parent?: string;
+  href?: string;
 };
 
 export type FlowEdge = {
@@ -65,6 +66,19 @@ export type Diagram =
       collapsible?: boolean;
       caption?: string;
     };
+
+export type CourseMapDiagram = Omit<
+  Extract<Diagram, { engine: "flow" }>,
+  "edges"
+> & {
+  edges?: FlowEdge[];
+};
+
+export type CourseThread = {
+  title: string;
+  description?: string;
+  diagram: Extract<Diagram, { engine: "flow" }>;
+};
 
 export type ComparisonTable = {
   title?: string;
@@ -170,4 +184,6 @@ export type Subject = {
   title: string;
   subtitle?: string;
   chapters: Chapter[];
+  courseMap?: CourseMapDiagram;
+  courseThreads?: CourseThread[];
 };

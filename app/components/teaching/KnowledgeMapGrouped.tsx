@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowDownRight } from "lucide-react";
-import type { Diagram, FlowNode } from "@/content/types";
+import type { CourseMapDiagram, FlowNode } from "@/content/types";
 
-type FlowDiagramData = Extract<Diagram, { engine: "flow" }>;
+type FlowDiagramData = CourseMapDiagram;
 
 const groupClasses: Record<
   NonNullable<FlowNode["group"]>,
@@ -157,7 +158,17 @@ export default function KnowledgeMapGrouped({
                   {selectedChip.detail && (
                     <p className="mt-1 leading-6">{selectedChip.detail}</p>
                   )}
-                  {selectedChip.sectionId && (
+                  {selectedChip.href && (
+                    <Link
+                      href={selectedChip.href}
+                      onClick={(event) => event.stopPropagation()}
+                      className="mt-3 inline-flex h-7 items-center gap-1 rounded-md border border-sky-300 bg-sky-50 px-2.5 text-[11px] font-semibold text-sky-800 shadow-sm hover:border-sky-400 hover:bg-sky-100 dark:border-sky-700 dark:bg-sky-950/60 dark:text-sky-200 dark:hover:border-sky-500 dark:hover:bg-sky-900/70"
+                    >
+                      <ArrowDownRight aria-hidden className="h-3.5 w-3.5" />
+                      Mở topic
+                    </Link>
+                  )}
+                  {!selectedChip.href && selectedChip.sectionId && (
                     <a
                       href={`#${selectedChip.sectionId}`}
                       onClick={(event) => event.stopPropagation()}

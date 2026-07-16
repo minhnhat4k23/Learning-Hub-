@@ -1,7 +1,11 @@
 import { dtbChapters } from "./dtb";
 import { managerialChapters } from "./managerial";
 import { manufacturingChapters } from "./manufacturing";
-import { organizationalBehaviorChapters } from "./organizational-behavior";
+import {
+  organizationalBehaviorChapters,
+  organizationalBehaviorCourseMap,
+  organizationalBehaviorCourseThreads,
+} from "./organizational-behavior";
 import type { Chapter, Subject } from "./types";
 
 export const subjects: Subject[] = [
@@ -30,8 +34,10 @@ export const subjects: Subject[] = [
     id: "organizational-behavior",
     title: "Organizational Behavior",
     subtitle:
-      "Topic 0-12 placeholder. Nội dung sẽ được soạn từ slide Dr Lan Anh (IM2017) + Reading Chapters + đề thi Midterm/Final.",
+      "Hành vi con người trong tổ chức qua 3 cấp: cá nhân (personality, perception, values, emotions, attitudes, motivation), nhóm (groups, conflict, teams, leadership) và tổ chức (culture, change & stress).",
     chapters: organizationalBehaviorChapters,
+    courseMap: organizationalBehaviorCourseMap,
+    courseThreads: organizationalBehaviorCourseThreads,
   },
 ];
 
