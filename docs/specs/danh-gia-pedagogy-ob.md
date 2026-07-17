@@ -44,7 +44,7 @@ Mỗi tiêu chí có **cách kiểm tra cụ thể** để lần đánh giá sau
 | 1 | E | 13 topic là 13 "ốc đảo" — chỉ 1 cross-reference toàn file; thiếu bản đồ cấp-môn | ✅ **XONG** — Course Map + 4 chuỗi khái niệm (`ob-course-map.md`, verify PASS 2026-07-14) |
 | 2 | F | Thiếu mini-case tổng hợp kiểu HBS (một tình huống → phân tích bằng nhiều khái niệm) | ☐ Chưa làm |
 | 3 | G | Thiếu "So what" cuối topic (chỉ T2 có) | ☐ Chưa làm |
-| 4 | H | Quiz chỉ theo từng topic, chưa có mode cumulative/interleaving trong web (spaced hiện dựa Obsidian ngoài web) | ☐ Chưa làm |
+| 4 | H | Quiz chỉ theo từng topic, chưa có mode cumulative/interleaving trong web (spaced hiện dựa Obsidian ngoài web) | ✅ **XONG** — trang "Ôn tập tổng hợp" `/{môn}/on-tap`, round-robin interleaved + breakdown per topic + làm lại câu sai (`quiz-cumulative-mode.md`, verify PASS 2026-07-17; cơ chế chung — Managerial cũng có) |
 
 **Kết luận lần 1:** đạt ~80% mục tiêu "khung có cấu trúc"; phần thiếu là tầng trên-topic (E–H).
 

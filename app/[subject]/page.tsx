@@ -80,6 +80,35 @@ export default async function SubjectChapterList({
       )}
 
       <div className="mx-auto max-w-3xl">
+        {(() => {
+          const reviewChapters = chapters.filter(
+            (chapter) =>
+              chapter.status !== "placeholder" && chapter.questions.length > 0,
+          );
+          if (reviewChapters.length < 2) return null;
+          const totalQuestions = reviewChapters.reduce(
+            (total, chapter) => total + chapter.questions.length,
+            0,
+          );
+          const unitLabel =
+            subject.id === "managerial-accounting" ? "chương" : "topic";
+
+          return (
+            <Link
+              href={`/${subject.id}/on-tap`}
+              className="mt-8 block rounded-2xl border border-zinc-200 bg-white px-5 py-4 transition-colors hover:border-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600"
+            >
+              <h2 className="text-base font-semibold">
+                Ôn tập tổng hợp (interleaved)
+              </h2>
+              <p className="mt-1 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+                Trộn {totalQuestions} câu từ {reviewChapters.length} {unitLabel} —
+                luyện như đề thi thật.
+              </p>
+            </Link>
+          );
+        })()}
+
         <ul className="mt-8 space-y-3">
           {chapters.map((chapter) => {
             const placeholder = chapter.status === "placeholder";
