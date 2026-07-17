@@ -712,6 +712,11 @@ const topic00: Chapter = {
           "OB đồng hành nghề nghiệp",
           "Trước khi thành MANAGER giỏi → phải là EMPLOYEE giỏi; trước khi quản người khác → quản chính mình; trước khi thành LEADER → làm FOLLOWER hiệu quả; trước khi đòi người khác CHANGE → tự thay đổi mình (slide 52). OB bắt đầu từ chính bạn.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Mỗi khi bạn định kết luận kiểu \"nhân viên nghỉ vì lương\" hay \"người vui thì làm tốt\", dừng lại hỏi: đây là intuition hay có evidence? OB không bảo bỏ trực giác — nó bảo BỔ SUNG trực giác bằng systematic study (evidence-based management), vì môn này \"few absolutes\": cùng một khái niệm biểu hiện khác nhau tùy người và bối cảnh. Hành động: trước khi quy kết hành vi, đòi evidence và hỏi \"trong bối cảnh nào?\" (contingency) — đó là khác biệt giữa phán theo common sense và quản lý hiệu quả.",
+        ),
       ],
       keyTerms: [
         {
@@ -1652,6 +1657,11 @@ const topic01: Chapter = {
               ],
             },
           ],
+        ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Personality khó đổi, nhưng nó chỉ bộc lộ tùy tình huống — nên đừng dùng framework để dán nhãn người khác. Hành động: dùng nó để chọn fit (Holland/P-O fit) cho chính mình khi chọn việc; nếu tuyển người, dựa Big Five (conscientiousness dự báo tốt) chứ không dùng MBTI làm công cụ tuyển; với đồng nghiệp \"khó chịu\" — hỏi xem tình huống nào kích hoạt trait đó trước khi kết luận con người họ.",
         ),
       ],
       keyTerms: [
@@ -4055,6 +4065,11 @@ const topic03: Chapter = {
             },
           ],
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Values chỉ lộ ra khi phải trade-off — nên muốn biết giá trị thật (của mình hay của tổ chức), nhìn vào lựa chọn lúc khó, không nhìn tuyên ngôn. Hành động: trước khi nhận việc, so value system của mình với tổ chức (P-O fit) thay vì chỉ so lương; trong team, chủ động tìm deep-level diversity thay vì dừng ở surface-level; nhận diện stereotype threat để nó không bóp méo hiệu suất của chính bạn hoặc cách bạn đánh giá người khác.",
+        ),
       ],
       keyTerms: [
         {
@@ -5009,6 +5024,11 @@ const topic04: Chapter = {
           "Implications for managers",
           "Emotions là phần tự nhiên của workplace; good management không phải tạo môi trường emotion-free. Positive emotions/moods hỗ trợ creativity; positive display cải thiện customer service; emotional leadership và EI giúp giải thích, dự đoán, motivate và engage người khác tốt hơn.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Cảm xúc không phải kẻ thù của lý trí — nó là dữ liệu. Hành động: đừng ra quyết định lớn lúc mood xấu; nếu công việc đòi emotional labor, tránh surface acting kéo dài (dẫn tới dissonance/burnout) — luyện deep acting/mindfulness; theo AET, job attitude là tích lũy của chuỗi sự kiện nhỏ hằng ngày → quản lý trải nghiệm nhỏ mỗi ngày thay vì chỉ sửa \"chính sách lớn\".",
+        ),
       ],
       keyTerms: [
         {
@@ -5936,6 +5956,11 @@ const topic05: Chapter = {
           "key",
           "Implications for managers",
           "Manager không chỉ “mua” satisfaction bằng pay. Cần thiết kế job conditions tốt, fairness/trust, support, CSR đáng tin, và lắng nghe voice sớm để dissatisfaction không trượt sang neglect, exit hoặc CWB. Engagement cần meaningful work và điều kiện để nhân viên thật sự đầu tư năng lượng. **Understanding the impact (sách, p58–59):** satisfaction là chuyện bottom-line — công ty morale cao (>70% nhân viên hài lòng) có stock tăng 19.4% so với 10% của nhóm morale trung bình/thấp. Nguy hiểm là manager thường ẢO TƯỞNG: 86% senior managers tin tổ chức đối xử tốt với nhân viên, chỉ 55% nhân viên đồng ý; 55% managers nghĩ morale tốt, nhân viên chỉ 38%. Khảo sát ĐỀU ĐẶN thu hẹp gap này (case KFC Houston: survey mỗi 3 tháng, đổi lịch nghỉ theo ý nhân viên — 'they have a voice and they're heard').",
+        ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Con người khao khát consistency — khi bạn thấy mình đang \"hợp lý hóa\" một việc trái giá trị, đó là cognitive dissonance đang vận hành, hãy gọi tên nó. Hành động với vai trò quản lý: đừng đo satisfaction một lần rồi thôi — bất mãn diễn tiến theo EVLN, can thiệp ở Voice/Loyalty trước khi thành Exit/Neglect; và nhớ engagement ≠ satisfaction: người hài lòng chưa chắc dốc sức.",
         ),
       ],
       keyTerms: [
@@ -7305,6 +7330,11 @@ const topic06: Chapter = {
           "Implications for managers (R&J p165 + slide 49)",
           "(1) Recognize individual differences — thiết kế job hợp nhu cầu từng người; (2) Use goals & feedback; (3) Cho nhân viên participate quyết định ảnh hưởng họ; (4) Link rewards to performance; (5) Check the system for equity. Và luôn nhớ motivation là culture-bound.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Motivation là process thiết kế được, không phải trait bẩm sinh của nhân viên. Hành động: gặp ca \"thiếu động lực\", chạy checklist 3 câu thay vì phán xét con người — (1) goal đã specific + difficult + có feedback chưa (goal-setting)? (2) phần thưởng có gắn performance và có công bằng không (expectancy + equity/justice)? (3) bản thân công việc có đủ 5 core dimensions chưa (JCM)? Hầu hết vấn đề động lực nằm ở một trong ba chỗ đó.",
+        ),
       ],
       keyTerms: [
         {
@@ -8417,6 +8447,11 @@ const topic07: Chapter = {
           "Khép lại Topic 07",
           "Sáu thuộc tính + hiểu biết về ra quyết định nhóm cho ta bộ công cụ đọc và can thiệp hành vi nhóm. Chương tiếp theo (Ch.11) sẽ chuyển từ GROUP sang TEAM — thuộc Topic 09.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Khi một người \"đổi tính\" lúc vào nhóm, soi norms/roles/status trước khi quy cho tính cách — đây chính là fundamental attribution error (nối Topic 2) ở cấp nhóm. Hành động: nhóm đông thì thiết kế accountability cá nhân để chặn social loafing; nhóm quá cohesive + cô lập thì cảnh giác groupthink — chỉ định devil's advocate trước khi quyết định lớn.",
+        ),
       ],
       keyTerms: [
         { term: "Interacting groups", definition: "Nhóm ra quyết định bằng tương tác trực tiếp bằng lời và phi ngôn ngữ." },
@@ -9522,6 +9557,11 @@ const topic08: Chapter = {
           "Công cụ & cạm bẫy collaboration (slide 38-41)",
           "Johari Window để tăng empathy ('seek first to understand' — Covey); promote healthy conflict (an toàn tâm lý, đa dạng góc nhìn, devil's advocate). CẠM BẪY: collaboration overload (quá nhiều họp/kênh → kiệt sức) và 'New Groupthink' (hợp tác quá đà bóp nghẹt sáng tạo cá nhân) — hợp tác cần liều lượng, giống conflict.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Câu hỏi đúng không phải \"có conflict không\" mà \"loại gì, mức nào\". Hành động: gặp xung đột, phân loại task/relationship/process trước rồi mới chọn 1 trong 5 handling intentions một cách CÓ Ý THỨC (đừng auto-avoid); vào đàm phán, xác định BATNA và thử integrative trước khi chia bánh distributive; và đừng tự hào vì nhóm \"êm\" — quá êm có thể là thiếu functional conflict.",
+        ),
       ],
       keyTerms: [
         { term: "SCARF model", definition: "Khung Status, Certainty, Autonomy, Relatedness, Fairness để đọc threat/reward xã hội." },
@@ -10540,6 +10580,11 @@ const topic09: Chapter = {
           "Implications for managers (R&J p215)",
           "Đội hiệu quả có đủ nguồn lực + lãnh đạo + climate of trust + reward theo nhóm; nhỏ gọn, đúng vai; tin vào năng lực đội, chung kế hoạch & mental model. Đừng mặc định luôn cần team.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "\"Gọi là team\" không tự tạo positive synergy. Hành động: trước khi lập team, hỏi \"việc này có thật sự cần team không?\" (đủ phức tạp? có common purpose? có interdependence?) — nếu không, để cá nhân làm nhanh hơn; khi team trục trặc, chẩn đoán theo đúng thứ tự model: Context → Composition → Process; và muốn người ta nói thật thì xây psychological safety trước khi đòi hỏi ý kiến thẳng.",
+        ),
       ],
       keyTerms: [
         { term: "Team player", definition: "Người có kỹ năng và động lực hợp tác, phối hợp, chịu trách nhiệm trong team." },
@@ -11423,6 +11468,11 @@ const topic10: Chapter = {
           "Building LEADERSHIP is about... (synthesis, slide 63)",
           "Ba trục tổng kết: (1) Leader-Follower Exchange → Benefits; (2) Role Model → Inspiration; (3) Influence → Power. Bắt đầu từ self-leadership (Lead your organization → your people → yourself) & Fundamental 4: self-awareness, communication, influence, learning agility.",
         ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Leadership = influence, không phải chức vụ — nên bạn không cần đợi bổ nhiệm mới bắt đầu lãnh đạo, và có chức chưa chắc đã lead. Hành động: phát triển mình theo đúng hành trình lý thuyết — biết trait mình có, luyện behavior (initiating structure + consideration), đọc tình huống trước khi chọn style (contingency); và làm một courageous follower — nửa còn lại của lãnh đạo là biết theo ai, theo thế nào.",
+        ),
       ],
       keyTerms: [
         { term: "Attribution theory of leadership", definition: "Quan điểm leadership phần nào là kết quả follower quy gán phẩm chất/kết quả cho leader." },
@@ -12239,6 +12289,11 @@ const topic11: Chapter = {
           "key",
           "Can culture be changed? — leadership challenge (slide 47-48)",
           "Đổi văn hóa cần role của top management (cam kết & hỗ trợ) + employees (thực thi) + training/mentoring + formulate value statements + reward hành vi + stories. Nhưng First Law of Digital Innovation (Westerman): công nghệ đổi nhanh, tổ chức đổi chậm hơn, văn hóa tổ chức đổi CHẬM NHẤT → đây KHÔNG phải thách thức công nghệ mà là thách thức LÃNH ĐẠO.",
+        ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Văn hóa vô hình nhưng lái hành vi mạnh hơn quy định formal. Hành động: vào tổ chức mới, đọc culture qua stories/rituals/symbols/language thay vì chỉ đọc handbook; trước khi nhận offer, cân culture fit vs culture add; nếu bạn là quản lý — văn hóa sống qua selection, top management, socialization, nghĩa là hành vi hằng ngày của chính bạn là \"bài giảng văn hóa\" mạnh nhất, không phải poster giá trị trên tường.",
         ),
       ],
       keyTerms: [
