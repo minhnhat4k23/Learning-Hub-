@@ -109,6 +109,21 @@ export default async function SubjectChapterList({
           );
         })()}
 
+        {subject.miniCases?.length ? (
+          <Link
+            href={`/${subject.id}/mini-case`}
+            className="mt-3 block rounded-2xl border border-zinc-200 bg-white px-5 py-4 transition-colors hover:border-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600"
+          >
+            <h2 className="text-base font-semibold">
+              Mini-case tổng hợp (case method)
+            </h2>
+            <p className="mt-1 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+              {subject.miniCases.length} tình huống — mỗi case dùng nhiều khái
+              niệm từ nhiều topic, luyện dạng đề tự luận.
+            </p>
+          </Link>
+        ) : null}
+
         <ul className="mt-8 space-y-3">
           {chapters.map((chapter) => {
             const placeholder = chapter.status === "placeholder";

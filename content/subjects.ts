@@ -5,6 +5,7 @@ import {
   organizationalBehaviorChapters,
   organizationalBehaviorCourseMap,
   organizationalBehaviorCourseThreads,
+  organizationalBehaviorMiniCases,
 } from "./organizational-behavior";
 import type { Chapter, Subject } from "./types";
 
@@ -38,6 +39,7 @@ export const subjects: Subject[] = [
     chapters: organizationalBehaviorChapters,
     courseMap: organizationalBehaviorCourseMap,
     courseThreads: organizationalBehaviorCourseThreads,
+    miniCases: organizationalBehaviorMiniCases,
   },
 ];
 

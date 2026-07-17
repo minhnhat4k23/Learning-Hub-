@@ -42,7 +42,7 @@ Mỗi tiêu chí có **cách kiểm tra cụ thể** để lần đánh giá sau
 | Gap | Tiêu chí | Mô tả | Trạng thái |
 |---|---|---|---|
 | 1 | E | 13 topic là 13 "ốc đảo" — chỉ 1 cross-reference toàn file; thiếu bản đồ cấp-môn | ✅ **XONG** — Course Map + 4 chuỗi khái niệm (`ob-course-map.md`, verify PASS 2026-07-14) |
-| 2 | F | Thiếu mini-case tổng hợp kiểu HBS (một tình huống → phân tích bằng nhiều khái niệm) | ☐ Chưa làm |
+| 2 | F | Thiếu mini-case tổng hợp kiểu HBS (một tình huống → phân tích bằng nhiều khái niệm) | ✅ **XONG** — trang `/{môn}/mini-case`: 4 case theo 4 chuỗi khái niệm Course Map, mỗi case 3 câu phân tích + khung chuyên gia reveal + bẫy (`ob-mini-case.md`, option C: tình huống mô phỏng + motif sách cite chương + traceability check; verify PASS 2026-07-17) |
 | 3 | G | Thiếu "So what" cuối topic (chỉ T2 có) | ✅ **XONG** — 11 callout "So what — kiến thức này đổi hành động của bạn" cuối T00/T01/T03–T11 (`ob-so-what.md`, traceability check + verify PASS 2026-07-17; T02/T12 có sẵn) |
 | 4 | H | Quiz chỉ theo từng topic, chưa có mode cumulative/interleaving trong web (spaced hiện dựa Obsidian ngoài web) | ✅ **XONG** — trang "Ôn tập tổng hợp" `/{môn}/on-tap`, round-robin interleaved + breakdown per topic + làm lại câu sai (`quiz-cumulative-mode.md`, verify PASS 2026-07-17; cơ chế chung — Managerial cũng có) |
 

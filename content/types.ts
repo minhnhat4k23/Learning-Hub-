@@ -80,6 +80,30 @@ export type CourseThread = {
   diagram: Extract<Diagram, { engine: "flow" }>;
 };
 
+export type MiniCaseQuestion = {
+  id: string;
+  /** Câu hỏi phân tích (đề tự luận). */
+  prompt: string;
+  /** Khung phân tích chuyên gia — reveal sau khi tự nghĩ. */
+  analysis: string;
+  /** Bẫy thường gặp khi trả lời. */
+  trap: string;
+};
+
+export type MiniCase = {
+  id: string;
+  title: string;
+  /** Tên chuỗi khái niệm (thread) của Course Map mà case bám theo. */
+  thread: string;
+  /** Topic liên quan để render link. */
+  topics: { slug: string; order: number }[];
+  /** Tình huống (không nêu tên khái niệm). */
+  scenario: string;
+  /** Dòng nguồn hiển thị dưới tình huống. */
+  sourceNote: string;
+  questions: MiniCaseQuestion[];
+};
+
 export type ComparisonTable = {
   title?: string;
   columns: string[];
@@ -186,4 +210,5 @@ export type Subject = {
   chapters: Chapter[];
   courseMap?: CourseMapDiagram;
   courseThreads?: CourseThread[];
+  miniCases?: MiniCase[];
 };
