@@ -1,5 +1,9 @@
 import { dtbChapters } from "./dtb";
-import { managerialChapters } from "./managerial";
+import {
+  managerialChapters,
+  managerialCourseMap,
+  managerialCourseThreads,
+} from "./managerial";
 import { manufacturingChapters } from "./manufacturing";
 import {
   organizationalBehaviorChapters,
@@ -16,6 +20,8 @@ export const subjects: Subject[] = [
     subtitle:
       "Học quản trị chi phí theo bản chất: cost concepts, job-order costing, CVP, budgeting, variance analysis, and decisions.",
     chapters: managerialChapters,
+    courseMap: managerialCourseMap,
+    courseThreads: managerialCourseThreads,
   },
   {
     id: "digital-technology-business",

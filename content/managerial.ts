@@ -1,4 +1,4 @@
-import type { Chapter } from "./types";
+import type { Chapter, CourseMapDiagram, CourseThread } from "./types";
 import { applyEnglishQuizOverrides } from "./quizEnglish";
 
 // Nội dung Chương 1 bám sát slide gốc của môn (Garrison/Noreen/Brewer,
@@ -2743,6 +2743,14 @@ const rawChapters: Chapter[] = [
                 "Underapplied (áp THIẾU) → TĂNG COGS, GIẢM NOI. Dễ nhớ nhãn nhưng hay đảo chiều điều chỉnh.",
             },
           },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Chương này mới NHẬN DIỆN under/overapplied. Chapter 3 sẽ theo trọn dòng bút toán RM → WIP → FG → COGS và đưa số điều chỉnh này vào Schedule of COGS (Exhibit 3-9).",
+            },
+          },
         ],
         keyTerms: [
           { term: "Underapplied overhead", definition: "Overhead áp < overhead thực; cần tăng COGS, giảm lợi nhuận hoạt động thuần." },
@@ -3461,6 +3469,14 @@ const rawChapters: Chapter[] = [
               kind: "note",
               title: "Trọng tâm chương",
               body: "Chương này không có công thức mới — trọng tâm là DÒNG chi phí chạy qua tài khoản và báo cáo.",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Absorption costing, normal costing và POHR đã học ở Chapter 2 — chương này chỉ theo DÒNG của chúng qua sổ sách và báo cáo.",
             },
           },
         ],
@@ -4981,6 +4997,14 @@ const rawChapters: Chapter[] = [
               kind: "insight",
               title: "Incremental analysis",
               body: "Sales tăng chưa chắc lợi nhuận tăng. Luôn so sánh phần CM tăng thêm với phần fixed hoặc variable tăng thêm.",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Tư duy incremental ở 5 kịch bản này chính là nền của differential analysis — Chapter 13 nâng nó thành khung quyết định đầy đủ.",
             },
           },
         ],
@@ -6921,6 +6945,14 @@ const rawChapters: Chapter[] = [
                 "Budgeted income statement và budgeted balance sheet là đích của master budget: mọi schedule trước đó đổ số vào hai báo cáo này để tạo what-if tài chính trước khi kỳ thật diễn ra.",
             },
           },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Master budget lập ở mức hoạt động KẾ HOẠCH — nó chính là static planning budget mà Chapter 9 sẽ đem so với kết quả thực để tách variance.",
+            },
+          },
         ],
       },
     ],
@@ -7827,6 +7859,14 @@ const rawChapters: Chapter[] = [
               title: "Quy ước F/U",
               body:
                 "Chi phí: actual < budget → Favorable; actual > budget → Unfavorable. Doanh thu: actual > budget → Favorable; actual < budget → Unfavorable.",
+            },
+          },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Spending variance ở đây mới là tổng của từng dòng chi phí. Chapter 10 sẽ drill nó xuống từng input (price vs quantity) bằng standard costs.",
             },
           },
         ],
@@ -9826,6 +9866,14 @@ const rawChapters: Chapter[] = [
               ],
             },
           },
+          {
+            type: "callout",
+            callout: {
+              kind: "note",
+              title: "Mắt xích môn học",
+              body: "Differential, sunk và opportunity cost đã gieo ở Chapter 1 (LO5) — chương này biến lăng kính đó thành khung phân tích cho 5 quyết định kinh điển.",
+            },
+          },
         ],
         keyTerms: [
           {
@@ -10667,6 +10715,303 @@ const rawChapters: Chapter[] = [
         takeaway: "Ritter selling price theo cost-plus pricing là $30.",
       },
     ],
+  },
+];
+
+const big = (slug: string): string => {
+  const ch = rawChapters.find((c) => c.slug === slug);
+  if (!ch) throw new Error(`courseMap: missing chapter ${slug}`);
+  return ch.bigIdea;
+};
+
+export const managerialCourseMap: CourseMapDiagram = {
+  engine: "flow",
+  layout: "tree",
+  collapsible: true,
+  caption:
+    "Khung Plan – Control – Decide theo Garrison/Noreen/Brewer 17e Ch.1. Bấm chip để xem bản chất chương và mở trang topic.",
+  nodes: [
+    {
+      id: "ma-root",
+      label: "Managerial Accounting",
+      group: "purpose",
+      detail:
+        "Kế toán phục vụ nhà quản trị BÊN TRONG để Plan – Control – Decide (Garrison 17e Ch.1). Mọi chương đều trả lời: cần con số chi phí nào, cho mục đích nào.",
+    },
+    {
+      id: "lv-lang",
+      label: "Ngôn ngữ chi phí",
+      group: "purpose",
+      parent: "ma-root",
+      detail:
+        "\"Different costs for different purposes\" — cùng một khoản chi được phân loại khác nhau tùy mục đích. Nền của mọi chương sau (Ch1).",
+    },
+    {
+      id: "lv-cost",
+      label: "Đo giá thành (Costing)",
+      group: "lo",
+      parent: "ma-root",
+      detail:
+        "Một đơn hàng tốn bao nhiêu: truy nguyên DM/DL + áp MOH bằng POHR (Ch2), rồi theo dòng chi phí qua sổ tới COGS và báo cáo (Ch3).",
+    },
+    {
+      id: "lv-plan",
+      label: "Hoạch định (Planning)",
+      group: "concept",
+      parent: "ma-root",
+      detail:
+        "Mô hình hóa tương lai: CVP trả lời what-if lợi nhuận (Ch5); master budget kết nối kế hoạch bán → sản xuất → tiền mặt (Ch8).",
+    },
+    {
+      id: "lv-ctrl",
+      label: "Kiểm soát & Quyết định",
+      group: "term",
+      parent: "ma-root",
+      detail:
+        "So thực tế với chuẩn: flexible budget tách variance (Ch9), standard costs drill từng input (Ch10); differential analysis chọn phương án (Ch13).",
+    },
+    {
+      id: "c01",
+      label: "Ch1 · Cost Concepts",
+      group: "purpose",
+      parent: "lv-lang",
+      detail: big("cost-concepts"),
+      href: "/managerial-accounting/cost-concepts",
+    },
+    {
+      id: "c02",
+      label: "Ch2 · Job-Order Costing",
+      group: "lo",
+      parent: "lv-cost",
+      detail: big("job-order-costing"),
+      href: "/managerial-accounting/job-order-costing",
+    },
+    {
+      id: "c03",
+      label: "Ch3 · Cost Flows & Reporting",
+      group: "lo",
+      parent: "lv-cost",
+      detail: big("job-order-cost-flows"),
+      href: "/managerial-accounting/job-order-cost-flows",
+    },
+    {
+      id: "c05",
+      label: "Ch5 · CVP Relationships",
+      group: "concept",
+      parent: "lv-plan",
+      detail: big("cost-volume-profit"),
+      href: "/managerial-accounting/cost-volume-profit",
+    },
+    {
+      id: "c08",
+      label: "Ch8 · Master Budget",
+      group: "concept",
+      parent: "lv-plan",
+      detail: big("master-budget"),
+      href: "/managerial-accounting/master-budget",
+    },
+    {
+      id: "c09",
+      label: "Ch9 · Flexible Budgets",
+      group: "term",
+      parent: "lv-ctrl",
+      detail: big("flexible-budgets"),
+      href: "/managerial-accounting/flexible-budgets",
+    },
+    {
+      id: "c10",
+      label: "Ch10 · Standard Costs & Variances",
+      group: "term",
+      parent: "lv-ctrl",
+      detail: big("standard-costs"),
+      href: "/managerial-accounting/standard-costs",
+    },
+    {
+      id: "c13",
+      label: "Ch13 · Differential Analysis",
+      group: "term",
+      parent: "lv-ctrl",
+      detail: big("differential-analysis"),
+      href: "/managerial-accounting/differential-analysis",
+    },
+  ],
+};
+
+export const managerialCourseThreads: CourseThread[] = [
+  {
+    title: "Từ chi phí đến giá thành đơn vị",
+    description:
+      "Góc nhìn liên hệ: Ch1 → Ch2 → Ch3 là một đường thẳng — từ phân loại chi phí tới con số lợi nhuận trên báo cáo.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách.",
+      nodes: [
+        {
+          id: "th1-classify",
+          label: "Phân loại chi phí SX (Ch1)",
+          detail:
+            "DM + DL + MOH là product cost — gắn vào sản phẩm, chờ trong tồn kho tới khi bán (Ch1 LO2·LO3).",
+        },
+        {
+          id: "th1-pohr",
+          label: "POHR & áp overhead (Ch2)",
+          detail:
+            "DM/DL truy nguyên thẳng vào job; MOH không truy nguyên được → áp bằng POHR × mức hoạt động thực (normal costing) → unit product cost.",
+        },
+        {
+          id: "th1-flow",
+          label: "Dòng chi phí qua sổ (Ch3)",
+          detail:
+            "Chi phí job chảy Raw Materials → Work in Process → Finished Goods → COGS; job cost sheet là sổ chi tiết giải thích số dư.",
+        },
+        {
+          id: "th1-adj",
+          label: "Adjusted COGS & NOI (Ch3)",
+          detail:
+            "Overhead áp ≠ thực → under/overapplied điều chỉnh vào COGS trước khi lên income statement — khép vòng từ phân loại tới lợi nhuận.",
+        },
+      ],
+      edges: [
+        { from: "th1-classify", to: "th1-pohr", label: "vào job" },
+        { from: "th1-pohr", to: "th1-flow", label: "qua sổ" },
+        { from: "th1-flow", to: "th1-adj", label: "điều chỉnh" },
+      ],
+    },
+  },
+  {
+    title: "Hành vi chi phí là động cơ của lợi nhuận",
+    description:
+      "Góc nhìn liên hệ: variable/fixed học ở Ch1 không phải để thuộc lòng — nó là nhiên liệu của CVP và của mọi quyết định dùng contribution margin.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách.",
+      nodes: [
+        {
+          id: "th2-behavior",
+          label: "Hành vi chi phí (Ch1)",
+          detail:
+            "Variable đổi theo cost driver, fixed phẳng trong relevant range, mixed = Y = a + bX (Ch1 LO4).",
+        },
+        {
+          id: "th2-sep",
+          label: "Tách mixed cost (Ch5 App 5A)",
+          detail:
+            "High-low / least-squares tách a và b — có a, b sạch mới chạy được mô hình CVP.",
+        },
+        {
+          id: "th2-cvp",
+          label: "CVP: CM là động cơ (Ch5)",
+          detail:
+            "CM = Sales − variable, phủ fixed rồi mới thành profit; break-even, target profit, MOS, DOL đều xoay quanh CM.",
+        },
+        {
+          id: "th2-decide",
+          label: "Quyết định dùng CM (Ch13)",
+          detail:
+            "Drop segment so CM mất với fixed tránh được; special order chỉ cần phủ variable; constraint xếp theo CM trên mỗi đơn vị nguồn lực khan hiếm.",
+        },
+      ],
+      edges: [
+        { from: "th2-behavior", to: "th2-sep", label: "tách a, b" },
+        { from: "th2-sep", to: "th2-cvp", label: "nạp mô hình" },
+        {
+          from: "th2-cvp",
+          to: "th2-decide",
+          label: "áp vào quyết định",
+        },
+      ],
+    },
+  },
+  {
+    title: "Vòng Plan → Control",
+    description:
+      "Góc nhìn liên hệ: Ch8 lập chuẩn, Ch9 so công bằng, Ch10 mổ xẻ nguyên nhân — một vòng khép của quản trị.",
+    diagram: {
+      engine: "flow",
+      layout: "horizontal",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách.",
+      nodes: [
+        {
+          id: "th3-plan",
+          label: "Master budget (Ch8)",
+          detail:
+            "Bộ kế hoạch liên kết khởi đầu từ sales forecast — chính là static planning budget mà kỳ sau sẽ đem so với thực tế.",
+        },
+        {
+          id: "th3-flex",
+          label: "Flexible budget (Ch9)",
+          detail:
+            "Flex theo mức hoạt động thực để tách activity variance khỏi revenue & spending variance — hết so \"táo với cam\".",
+        },
+        {
+          id: "th3-std",
+          label: "Standard costs (Ch10)",
+          detail:
+            "Drill spending variance xuống từng input: price/rate vs quantity/efficiency bằng khung AQ×AP → AQ×SP → SQ×SP.",
+        },
+        {
+          id: "th3-mbe",
+          label: "Management by exception",
+          detail:
+            "Variance lớn được đánh dấu để điều tra và quy trách nhiệm đúng người (purchasing vs production) — khép vòng plan → control.",
+        },
+      ],
+      edges: [
+        { from: "th3-plan", to: "th3-flex", label: "làm chuẩn" },
+        { from: "th3-flex", to: "th3-std", label: "drill từng input" },
+        { from: "th3-std", to: "th3-mbe", label: "quy trách nhiệm" },
+      ],
+    },
+  },
+  {
+    title: "Chi phí nào relevant cho quyết định?",
+    description:
+      "Góc nhìn liên hệ: lăng kính relevant cost gieo ở Ch1 chạy xuyên môn — Ch13 là nơi nó thành khung đầy đủ.",
+    diagram: {
+      engine: "flow",
+      layout: "tree",
+      caption:
+        "Góc nhìn liên hệ (lens) tổng hợp từ nội dung các topic — không phải trích nguyên văn sách.",
+      nodes: [
+        {
+          id: "th4-rel",
+          label: "Lăng kính relevant cost (Ch1)",
+          detail:
+            "Chi phí thích hợp = TƯƠNG LAI + KHÁC BIỆT giữa phương án; sunk bỏ qua, opportunity cost phải tính (Ch1 LO5).",
+        },
+        {
+          id: "th4-dec",
+          label: "5 quyết định (Ch13)",
+          parent: "th4-rel",
+          detail:
+            "Add/drop, make-or-buy, special order, constrained resource, sell-or-process-further — tất cả chỉ là áp bộ lọc relevant vào 5 tình huống.",
+        },
+        {
+          id: "th4-avg",
+          label: "Bẫy average unit cost (Ch2)",
+          parent: "th4-rel",
+          detail:
+            "Unit product cost là chi phí BÌNH QUÂN — không phải incremental cost của 1 đơn vị thêm; đừng dùng cho quyết định \"làm thêm\".",
+        },
+        {
+          id: "th4-whatif",
+          label: "Incremental what-if (Ch5)",
+          parent: "th4-rel",
+          detail:
+            "5 kịch bản CVP đều so phần CM tăng thêm với phần chi phí tăng thêm — cùng tư duy differential.",
+        },
+      ],
+      edges: [
+        { from: "th4-rel", to: "th4-dec", label: "áp khung" },
+        { from: "th4-rel", to: "th4-avg", label: "cảnh báo" },
+        { from: "th4-rel", to: "th4-whatif", label: "cùng tư duy" },
+      ],
+    },
   },
 ];
 
