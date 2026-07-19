@@ -17,7 +17,7 @@ Mỗi tiêu chí có **cách kiểm tra cụ thể** để lần đánh giá sau
 |---|---|---|
 | A | **Khung trong-topic nhất quán** | Mỗi topic đủ xương sống: bigIdea → pillars → knowledgeMap → sections → keyTerms → quiz? Đếm qua grep, soi topic thiếu thành phần. |
 | B | **Trực quan (dual coding)** | Mỗi section ≥1 visual block (flow/comparison/callout), không prose đặc? Grep tỉ lệ block theo section. |
-| C | **Active recall chất lượng** | Quiz: distractor là misconception thật (không phải nhiễu vô nghĩa)? Có câu scenario/application, không chỉ định nghĩa? Rationale theo Cơ chế→Bẫy→Khóa? Sample ≥5 câu/topic để chấm. |
+| C | **Active recall chất lượng** | Quiz: distractor là misconception thật (không phải nhiễu vô nghĩa)? Có câu scenario/application, không chỉ định nghĩa? Rationale theo Cơ chế→Bẫy→Khóa? Sample ≥5 câu/topic để chấm. Ngưỡng application: môn định tính ≥1/3; **môn định lượng ≥40%/topic** (Chaliyah duyệt 2026-07-18, áp từ đánh giá MA). |
 | D | **Trung thực nguồn (hard/soft)** | Định nghĩa trích đúng nguồn+trang; kiến thức "(sách)" đánh dấu; lens không mạo danh lời sách? Đối chiếu ngẫu nhiên vài keyTerm với Glossary. |
 | E | **Liên kết ngang (synthesis)** | Có course map cấp-môn? Có cross-reference giữa topic (grep "xem topic", "T\d")? Chuỗi khái niệm có phản ánh quan hệ thật của môn? |
 | F | **Application (case method)** | Có mini-case buộc dùng ≥2–3 khái niệm cùng lúc để phân tích? (Chuẩn HBS — quan trọng với môn định tính thi tự luận/tình huống.) |
@@ -95,7 +95,7 @@ Mọi topic có trích dẫn tác giả/năm (3–35 chỗ) và số slide (0–
 
 ## 4. Hướng đánh giá KỸ HƠN cho lần sau (backlog)
 
-Lần 1 mới đánh giá ở tầng cấu trúc + sample 3 topic. **Cập nhật 2026-07-16: mục 1, 2, 3, 4, 6 đã làm ở §3b** — còn mở: mục 5 (áp rubric cho môn khác). Lần sau nên:
+Lần 1 mới đánh giá ở tầng cấu trúc + sample 3 topic. **Cập nhật 2026-07-16: mục 1, 2, 3, 4, 6 đã làm ở §3b.** **Cập nhật 2026-07-18: mục 5 — Managerial ĐÃ đánh giá trọn 2 lần (`danh-gia-pedagogy-ma.md`); còn DTB, Manufacturing.** Lần sau nên:
 
 1. **Chấm C sâu:** sample 5 câu quiz/topic × 13 topic, chấm distractor + rationale theo Cơ chế→Bẫy→Khóa; đo tỉ lệ câu application vs định nghĩa (mục tiêu môn định tính: ≥1/3 scenario).
 2. **Chấm B sâu:** đo tỉ lệ section có ≥1 visual thật sự đúng loại (flow cho quan hệ, comparison cho phân biệt) chứ không chỉ đếm block.

@@ -1,7 +1,8 @@
 # Đánh giá pedagogy — môn Managerial Accounting (rubric A–H)
 
-> **Nguồn gốc:** Chaliyah chọn từ backlog 2026-07-18 (mục 5 của `danh-gia-pedagogy-ob.md` §4: áp rubric §2 cho các môn còn lại). Đây là **đánh giá lần 1** của Managerial theo đúng khung 8 tiêu chí A–H.
-> **Rubric chuẩn:** `docs/specs/danh-gia-pedagogy-ob.md` §2 (không lặp lại ở đây).
+> **Nguồn gốc:** Chaliyah chọn từ backlog 2026-07-18 (mục 5 của `danh-gia-pedagogy-ob.md` §4: áp rubric §2 cho các môn còn lại). §1–§4 là **đánh giá lần 1** (cấu trúc, script-based); **§3b là đánh giá lần 2 cùng ngày** (định tính: đọc sâu ruột nội dung như người học + chấm 40 câu quiz đủ chuẩn + walkthrough runtime) — làm theo yêu cầu Chaliyah: chấm cách TRÌNH BÀY nội dung lý thuyết có dễ học/dễ hiểu/có cấu trúc không, chuẩn học Harvard/Stanford.
+> **Rubric chuẩn:** `docs/specs/danh-gia-pedagogy-ob.md` §2 (không lặp lại ở đây). Ngưỡng application ratio môn định lượng ≥40%/topic — Chaliyah duyệt 2026-07-18, đã ghi vào rubric §2-C.
+> **QC lần 2 bởi 2 subagent độc lập (2026-07-18):** fact-check 100% số liệu khớp; critique ra 10 findings (F1–F10) — các mục dưới đã vá theo đó.
 
 ## 1. Phương pháp (2026-07-18)
 
@@ -39,10 +40,10 @@ Tổng: 90 sections, 120 câu quiz, tất cả status "ready", 8/8 có bigIdea +
 - 89/90 section có ≥1 visual block; duy nhất **Ch8 s8 "Selling & administrative expense budget (LO7)"** chỉ có 1 block prose.
 - Đúng đặc thù môn định lượng: 40 calc walkthrough + 21 formula block tập trung ở CVP/variance/differential; comparison dùng cho phân biệt (product vs period, traditional vs contribution...).
 
-### C — Active recall chất lượng: **Đạt (rationale) / Đạt một phần (application ratio)**
+### C — Active recall chất lượng: **Đạt (rationale, chấm đủ chuẩn lần 2) / Đạt một phần (application ratio)**
 
-- **Rationale:** 480/480 option có rationale đầy đủ; 120/120 câu có takeaway. Spot-read 3 câu: đủ cấu trúc Cơ chế→Bẫy→Khóa, distractor là misconception thật (vd Ch13 q3: "drop vì đang lỗ $100,000" = bẫy allocated common fixed cost; Ch9 q8: bẫy "static budget always wrong" = phủ định quá mức). Chất lượng cao.
-- **Tỉ lệ application/tính toán-tình huống** (phân loại thủ công; môn định lượng đặt mục tiêu ≥40%, cao hơn mức ≥33% của môn định tính):
+- **Rationale — chấm đủ chuẩn rubric ở lần 2 (vá F1):** 480/480 option có rationale (check cấu trúc bằng script) **+ chấm tay 40 câu = 5 câu/topic × 8** (sample trải đều index + difficulty, dump `ma-quiz-sample40.txt`): 40/40 đủ Cơ chế→Bẫy→Khóa THẬT, không câu nào distractor vô nghĩa. Xuất sắc nhất: Ch10 (mỗi distractor của câu công thức = công thức của variance KHÁC), Ch13 (bẫy full cost $30 vs $25 make-or-buy kinh điển), Ch1. Weakness nhỏ: ~7/160 distractor SỐ trong câu tính (Ch3 q4/q14, Ch5 q5/q15, Ch8 q4) rationale generic kiểu "tính sai/không khớp" thay vì chỉ đích lối sai — polish item, không hạ verdict.
+- **Tỉ lệ application/tính toán-tình huống** (phân loại thủ công; ngưỡng môn định lượng ≥40%/topic — **Chaliyah duyệt 2026-07-18**, cao hơn mức ≥1/3 của môn định tính):
 
 | Topic (order) | 1 | 2 | 3 | 5 | 8 | 9 | 10 | 13 |
 |---|---|---|---|---|---|---|---|---|
@@ -51,11 +52,13 @@ Tổng: 90 sections, 120 câu quiz, tất cả status "ready", 8/8 có bigIdea +
 
 Toàn môn ≈ 60/120 = **50%** — đạt tổng thể, nhưng lệch: **Ch8 master-budget (27%) và Ch9 flexible-budgets (25%)** phần lớn câu định nghĩa/khái niệm, trong khi đây là 2 chương thi tính toán schedule/variance. → Cần thêm ~3–4 câu tính toán mỗi chương (production budget, cash budget, activity/spending variance).
 
-### D — Trung thực nguồn: **Đạt một phần (chờ audit Topic 6–8)**
+### D — Trung thực nguồn: **Đạt (Topic 1–5, kiểm chứng lần 2) / UNCERTAIN (Topic 6–8 chờ audit)**
 
-- 8/8 chapter có `source` ghi rõ Garrison/Noreen/Brewer 17e + tên slide gốc; Appendix vào bài đúng luật (10A ở Ch10 — 2 câu quiz riêng, 13A ở Ch13, 3 chỗ ở Ch2).
-- Marker "(sách p.NN)" kèm trang: Ch1 = 18, Ch2 = 14 (chuẩn mực); **Ch3/Ch5/Ch8 chỉ 1 marker mỗi chương; Ch9/Ch10/Ch13 = 0**.
-- Diễn giải: Topic 1–5 (Ch1,2,3,5,8) đã qua audit sách; ít marker ở Ch3/5/8 có thể do audit kết luận coverage đủ (như OB T09). **Ch9/10/13 = MA Topic 6–8 CHƯA audit sách** — backlog #2 đã ghi nhận, là task riêng. → UNCERTAIN cho 3 chương cuối, không kết luận được thiếu hay đủ cho tới khi audit.
+- 8/8 chapter có `source` ghi rõ Garrison/Noreen/Brewer 17e + tên slide gốc; Appendix vào bài đúng luật (10A ở Ch10 — 2 câu quiz riêng, 13A ở Ch13, 2A/2B ở Ch2, 5A ở Ch5).
+- Marker "(sách p.NN)" kèm trang: Ch1 = 18, Ch2 = 14; Ch3/Ch5/Ch8 = 1 mỗi chương; Ch9/Ch10/Ch13 = 0.
+- **Kiểm chứng lần 2 (vá F3 — thay suy diễn bằng bằng chứng):** đối chiếu 5 file audit `ma-topic1..5-completeness.md` với nội dung thật → **toàn bộ supplement ĐÃ land**: Ch1 (s10b "6 lăng kính" + keyTerms s5/s11), Ch2 (Absorption costing s0 + Appendix 2B Prahad s13), Ch3 (**section s11 Ruger Exhibit 3-8/9/10** — đúng gap trọng tâm audit nêu), Ch5 (**section s7b equation method** — gap Review Problem sách), Ch8 (3 block s0: bảng 5 planning + 2 control, top-down vs self-imposed, callout 4 ưu điểm sách p.356). Ít marker ở Ch3/5/8 là vì supplement gói trong 1 section/vài block, không phải thiếu.
+- **Spot-check Glossary (vá F2):** 3 keyTerm đối chiếu (Inventoriable costs p.31, Matching principle p.30-31, Absorption costing p.61) — định nghĩa trong content khớp NGUYÊN VĂN bản trong spec audit (đã VERIFIED từ sách kèm trang). PASS.
+- **Ch9/10/13 = MA Topic 6–8 CHƯA audit sách** — task riêng theo luật SÁCH > slide (memory `sach-hon-slide-bat-buoc`; việc này nằm trong backlog dự án ở session note, KHÔNG có file backlog trong repo — vá F4). Gap 2 ở §4 là chỗ theo dõi chính thức từ nay. → UNCERTAIN cho 3 chương cuối tới khi audit.
 
 ### E — Liên kết ngang (synthesis): **Thiếu** *(giống OB gap 1 trước khi fix)*
 
@@ -74,26 +77,56 @@ Toàn môn ≈ 60/120 = **50%** — đạt tổng thể, nhưng lệch: **Ch8 ma
 
 ### H — Spaced / interleaved practice: **Đạt**
 
-- `/managerial-accounting/on-tap` hoạt động bằng cơ chế chung (round-robin interleaved + breakdown per topic + làm lại câu sai): route generic, MA có 8 topic "ready" × 120 câu, thỏa điều kiện ≥2 topic. Đã verify runtime PASS trong `quiz-cumulative-mode.md` (2026-07-17, cơ chế chung cả 2 môn).
+- `/managerial-accounting/on-tap` hoạt động bằng cơ chế chung (round-robin interleaved + breakdown per topic + làm lại câu sai): route generic, MA có 8 topic "ready" × 120 câu, thỏa điều kiện ≥2 topic. Verify tiền lệ trong `quiz-cumulative-mode.md` (2026-07-17) **+ verify lại runtime lần 2: HTTP 200, screenshot hiện đủ 8 topic kèm số câu** (`ma-ontap.png`).
+- Vế 2 của rubric H (cơ chế ôn qua Obsidian): vault theo memory `obsidian-on-tap-ra-soat` KHÔNG tìm thấy trên ổ F: tại thời điểm kiểm (path stale hoặc ổ chưa gắn) — UNCERTAIN, không ảnh hưởng verdict vì rubric dùng "hoặc" và vế web đã Đạt (vá F9).
 
-## 4. Bảng gap + đề xuất thứ tự làm
+## 3b. Kết quả đánh giá SÂU — lần 2 (2026-07-18, định tính "dễ học dễ hiểu")
+
+**Phương pháp:** đọc TOÀN BỘ ruột nội dung 8 topic như người học (dump learner-view `ma-content-chN.txt` từ bundle: prose + block + keyTerms + examples, bỏ quiz đã chấm riêng); chấm 40 câu quiz (§3-C đã cập nhật); walkthrough runtime Playwright 1440×900 ba topic Ch1/Ch3/Ch8 + route check. Notes gốc: scratchpad `ma-danh-gia-lan2-notes.md`.
+
+### Chất lượng trình bày lý thuyết — **Đạt, mức cao và ĐỀU**
+
+- **Mỗi phép tính đều đóng bằng nghĩa:** pattern nhất quán toàn môn — prose 1–2 câu nêu bản chất → formula (legend + note) → calc walkthrough có "KQ → Ý nghĩa → Hàm ý". Không có "liệt kê trá hình": bảng nào cũng có cột nghĩa/hàm ý, không phải bullet chép slide.
+- **Giải thích VÌ SAO ở đúng điểm mấu chốt:** matching principle (Ch1 s5), vì sao POHR ước tính trước — 2 lý do sách p.69 (Ch2 s4), unit cost bình quân ≠ incremental (Ch2 s5), mua ≠ dùng trong price variance (Ch10 s5), favorable chưa chắc tốt (Ch10 s2/s7), joint cost irrelevant (Ch13 s7).
+- **Running example đúng sách/slide từng chương** (Phở, PearCo/Dickson/Maxtar/Prahad, Ruger + Exhibit 3-8/9/10, RBC/Coffee Klatch/Brentline, Royal, Larry, Glacier/Hanson/MicroDrive, Lovell/Essex/Jet/Ensign/Sawmill) — người học gặp lại đúng dữ liệu khi ôn đề.
+- **Hai mục kiểu "Harvard synthesis":** Ch1 s10b "một bộ số — 6 lăng kính" và Ch5 s7b "equation vs formula method" — một tình huống nhiều cách nhìn, đúng trục (b) mục đích gốc.
+
+### Learning flow runtime (Ch1/Ch3/Ch8) — **Đạt, 1 chỗ đứt mạch nhẹ**
+
+- Mở trang: bigIdea compass → 3–4 pillars → knowledge map → Mục tiêu học → sections đúng thứ tự LO → End-of-Chapter Questions; sidebar 2 lớp (chương + mục lục). hscroll = false, pageerror = none. Scroll depth: Ch1 ≈21.4 màn (dài nhất toàn site, hơn OB max 20.5 — chấp nhận được nhờ điều hướng 2 lớp), Ch3 ≈12.8, Ch8 ≈11.9.
+- **Đứt mạch nhẹ ở Ch3 (forward-reference):** thứ tự render s7→s8→**s11 (Ruger Exhibit 3-9 dùng adjusted COGS = unadjusted + underapplied $5,000)**→s9 (mới dạy under/overapplied)→s10. Người học gặp khái niệm under/overapplied TRƯỚC khi được dạy; callout trong s11 tự nhận "số under/overapplied ở s9/s10 được đưa vào ĐÂY". Vị trí này do spec `ma-topic3-completeness.md` chỉ định ("chèn sau s8") — đề xuất đảo s9/s10 lên trước s11.
+
+### Điểm yếu RUỘT tìm thấy (mới so với lần 1)
+
+1. **Ch8 s5/s7/s8 mỏng:** direct labor budget, ending FG budget, S&A budget chỉ tả bằng LỜI — 3/10 schedule của master budget không có bảng số minh họa, trong khi đề thi chương này là lập schedule. Cộng hưởng với C-ratio Ch8 thấp (27%).
+2. **Ch9 s5/s6 mỏng:** LO5/LO6 (multiple cost drivers, performance report nhiều driver) không có ví dụ số nào — chỉ prose. Ch9 tổng thể ngắn nhất môn.
+3. **Ch5 s3 lệch loại visual (B sâu — vá F5):** "CVP graph" vẽ bằng FLOW node-chain trong khi bản chất là đồ thị TỌA ĐỘ — người học không thấy dáng đồ thị (LO2 là "lập và ĐỌC CVP graph"). Các flow còn lại đều đúng loại: master budget sequence, T-account, khung 3 cột variance, relevant filter, Planning→Flexible→Actual.
+4. Data quirks nhỏ: Ch2 s6 keyTerms chứa chuỗi "Vì sao plantwide rate kém chính xác" (không phải term); Ch13 s6 bảng "Cách relaxing constraint" có cells rỗng.
+5. Xác nhận gap keyTerms lần 1 là gap học THẬT: Ch5 dạy ~10 công thức nhưng keyTerms = 0 → không có chỗ tra nhanh.
+
+### QC độc lập (2 subagent, 2026-07-18)
+
+- **Fact-check:** 100% số liệu lần 1 khớp khi kiểm độc lập (bảng §2, rationale 480/480, route 404/200, so-what 0/8, phân loại lại Ch8=4/15, Ch9=2–3/12).
+- **Critique (F1–F10):** F1 sample size → đã chấm đủ 40 câu; F2 Glossary → spot-check PASS; F3 suy diễn D → thay bằng bằng chứng supplement đã land; F4 backlog ref → đã ghi rõ; F5 B sâu → đã làm; F6 thứ tự audit sách → Chaliyah duyệt đẩy lên (bảng §4 mới); F7 ngưỡng 40% → Chaliyah duyệt, ghi vào rubric; F8 Ch8 s8 → vào gap 5; F9 Obsidian → ghi UNCERTAIN ở H; F10 điểm cộng giữ làm mẫu cho DTB/Manufacturing.
+
+## 4. Bảng gap + thứ tự làm (Chaliyah duyệt thứ tự 2026-07-18)
 
 | Gap | Tiêu chí | Việc cần làm | Ước lượng | Trạng thái |
 |---|---|---|---|---|
 | 1 | E | Course map cấp-môn + chuỗi khái niệm MA (mạch: phân loại → tính giá → CVP → kế hoạch → kiểm soát → quyết định) + chèn cross-ref tại các mắt xích ruột (Ch2→3, Ch5→13, Ch9→10...) | Spec + Codex, giống `ob-course-map.md` | Chưa làm |
-| 2 | F | 3–4 mini-case integrated problem theo chuỗi khái niệm của course map (làm SAU gap 1 để case bám thread) | Spec + Codex, giống `ob-mini-case.md` | Chưa làm |
-| 3 | G | 8 callout "So what" cuối topic | Spec nhỏ, giống `ob-so-what.md` | Chưa làm |
-| 4 | C | +3–4 câu tính toán cho Ch8 (production/cash budget) & Ch9 (activity/spending variance) → mỗi chương ≥40% | Spec nhỏ | Chưa làm |
-| 5 | A | Bổ sung keyTerms cho Ch5 (0), Ch3 (2), Ch9 (2) | Spec nhỏ (có thể gộp với gap 4) | Chưa làm |
-| 6 | D | Audit sách MA Topic 6–8 (Ch9/10/13) — **đã nằm sẵn ở backlog #2**, task riêng theo luật SÁCH > slide | Quy trình audit Lớp B | Backlog #2 |
+| 2 | D | **Audit sách MA Topic 6–8 (Ch9/10/13)** — đẩy lên trước mini-case/So-what theo luật SÁCH > slide (kiến thức THI: variance, differential; Chaliyah duyệt 2026-07-18). Quy trình như `ma-topic1..5-completeness.md` | Audit Lớp B + spec bổ sung | Chưa làm |
+| 3 | F | 3–4 mini-case integrated problem theo chuỗi khái niệm của course map (làm SAU gap 1 để case bám thread) | Spec + Codex, giống `ob-mini-case.md` | Chưa làm |
+| 4 | G | 8 callout "So what" cuối topic | Spec nhỏ, giống `ob-so-what.md` | Chưa làm |
+| 5 | C + A + B | Gói polish trong-topic: +3–4 câu tính toán Ch8 (production/cash budget) & Ch9 (activity/spending variance) → ≥40%/topic; keyTerms cho Ch5 (0)/Ch3 (2)/Ch9 (2); visual hóa Ch8 s5/s7/s8 + ví dụ số Ch9 s5/s6; sửa CVP graph Ch5 s3 đúng loại; đảo thứ tự Ch3 s9/s10 trước s11; dọn 2 data quirk; đặt tên lối sai cho ~7 distractor số generic | Spec nhỏ gộp 1 đợt | Chưa làm |
 
-**Kết luận lần 1:** Managerial rất mạnh ở tầng trong-topic (B, C-rationale, H Đạt; A gần Đạt) — đúng như kỳ vọng vì đây là môn chuẩn gốc của rich teaching mode. Toàn bộ gap nằm ở **tầng trên-topic (E, F, G)**, lặp đúng pattern OB trước khi fix — và nay cơ chế render (course map, mini-case, so-what callout, on-tap) đều đã là cơ chế chung, nên chi phí đóng gap thấp hơn OB đáng kể: chủ yếu là soạn DATA + spec cho Codex.
+**Kết luận (sau lần 2):** Managerial là môn mạnh nhất tầng trong-topic của cả site — trình bày lý thuyết ĐẠT chuẩn "dễ học dễ hiểu có cấu trúc" (mỗi phép tính đóng bằng ý nghĩa quản trị, giải thích vì-sao ở điểm mấu chốt, running example khớp đề). Gap còn lại: tầng trên-topic (E/F/G — cơ chế render đã là cơ chế chung, chỉ cần soạn data + spec Codex), audit sách Topic 6–8 (ưu tiên cao theo luật SÁCH > slide), và một gói polish trong-topic (gap 5).
 
-## 5. Backlog đánh giá lần 2 (sau khi đóng gap)
+## 5. Việc còn mở cho lần sau
 
-1. Walkthrough runtime Playwright 2–3 topic (learning flow, scroll depth, pageerror) — như OB §3b.
-2. Chấm E sâu khảo sát ngược theo chuỗi khái niệm (sau khi có course map).
-3. Đối chiếu D lại sau audit sách Topic 6–8.
+1. Chấm E sâu khảo sát ngược theo chuỗi khái niệm (sau khi có course map — gap 1).
+2. Đối chiếu D lại sau audit sách Topic 6–8 (gap 2).
+3. Kiểm nội dung 3 mermaid diagram Ch1 (s3/s7/s9) trên runtime — dump không đọc được code mermaid.
+4. Xác minh lại vault Obsidian (path memory `obsidian-on-tap-ra-soat` stale?) và trạng thái sync MA.
 
 ## 6. Liên kết
 
