@@ -1,7 +1,8 @@
 # Đánh giá pedagogy — môn Managerial Accounting (rubric A–H)
 
 > **Nguồn gốc:** Chaliyah chọn từ backlog 2026-07-18 (mục 5 của `danh-gia-pedagogy-ob.md` §4: áp rubric §2 cho các môn còn lại). §1–§4 là **đánh giá lần 1** (cấu trúc, script-based); **§3b là đánh giá lần 2 cùng ngày** (định tính: đọc sâu ruột nội dung như người học + chấm 40 câu quiz đủ chuẩn + walkthrough runtime) — làm theo yêu cầu Chaliyah: chấm cách TRÌNH BÀY nội dung lý thuyết có dễ học/dễ hiểu/có cấu trúc không, chuẩn học Harvard/Stanford.
-> **Rubric chuẩn:** `docs/specs/danh-gia-pedagogy-ob.md` §2 (không lặp lại ở đây). Ngưỡng application ratio môn định lượng ≥40%/topic — Chaliyah duyệt 2026-07-18, đã ghi vào rubric §2-C.
+> **Rubric chuẩn:** **`docs/RUBRIC.md`** (từ 2026-07-19 là nguồn chân lý duy nhất, có ngưỡng lượng hóa từng mức; trước đó rubric nằm ở `danh-gia-pedagogy-ob.md` §2). Ngưỡng application ratio môn định lượng ≥40%/topic — Chaliyah duyệt 2026-07-18.
+> **Lưu ý khi đọc lại:** §3/§3b dưới đây chấm TRƯỚC khi rubric được lượng hóa (2026-07-19). Xem §6 để biết mức nào đổi khi đối chiếu ngưỡng số mới.
 > **QC lần 2 bởi 2 subagent độc lập (2026-07-18):** fact-check 100% số liệu khớp; critique ra 10 findings (F1–F10) — các mục dưới đã vá theo đó.
 
 ## 1. Phương pháp (2026-07-18)
@@ -113,7 +114,7 @@ Toàn môn ≈ 60/120 = **50%** — đạt tổng thể, nhưng lệch: **Ch8 ma
 
 | Gap | Tiêu chí | Việc cần làm | Ước lượng | Trạng thái |
 |---|---|---|---|---|
-| 1 | E | Course map cấp-môn + chuỗi khái niệm MA (mạch: phân loại → tính giá → CVP → kế hoạch → kiểm soát → quyết định) + chèn cross-ref tại các mắt xích ruột (Ch2→3, Ch5→13, Ch9→10...) | Spec + Codex, giống `ob-course-map.md` | Chưa làm |
+| 1 | E | Course map cấp-môn + chuỗi khái niệm MA (mạch: phân loại → tính giá → CVP → kế hoạch → kiểm soát → quyết định) + chèn cross-ref tại các mắt xích ruột (Ch2→3, Ch5→13, Ch9→10...) | Spec + Codex, giống `ob-course-map.md` | ✅ **XONG** — commit a6be7b3 (`ma-course-map.md`, verify Lớp B 129/129 + Lớp A 19/19 PASS 2026-07-19) |
 | 2 | D | **Audit sách MA Topic 6–8 (Ch9/10/13)** — đẩy lên trước mini-case/So-what theo luật SÁCH > slide (kiến thức THI: variance, differential; Chaliyah duyệt 2026-07-18). Quy trình như `ma-topic1..5-completeness.md` | Audit Lớp B + spec bổ sung | Chưa làm |
 | 3 | F | 3–4 mini-case integrated problem theo chuỗi khái niệm của course map (làm SAU gap 1 để case bám thread) | Spec + Codex, giống `ob-mini-case.md` | Chưa làm |
 | 4 | G | 8 callout "So what" cuối topic | Spec nhỏ, giống `ob-so-what.md` | Chưa làm |
@@ -128,7 +129,26 @@ Toàn môn ≈ 60/120 = **50%** — đạt tổng thể, nhưng lệch: **Ch8 ma
 3. Kiểm nội dung 3 mermaid diagram Ch1 (s3/s7/s9) trên runtime — dump không đọc được code mermaid.
 4. Xác minh lại vault Obsidian (path memory `obsidian-on-tap-ra-soat` stale?) và trạng thái sync MA.
 
-## 6. Liên kết
+## 6. Đối chiếu lại với ngưỡng lượng hóa của `docs/RUBRIC.md` (2026-07-19)
+
+Chấm lại bằng script trên data thật sau khi rubric có ngưỡng số. Ba mức đổi so với §3:
+
+| Tiêu chí | Số đo | Mức cũ (§3) | Mức theo ngưỡng mới | Ghi chú |
+|---|---|---|---|---|
+| A | 7/8 = 88% topic đủ 6 tầng (Ch5 thiếu keyTerms) | Đạt một phần | **Đạt một phần** | Không đổi |
+| B | B1 89/90 = 98,9% ≥95%; B2 = 1 khối lệch loại (CVP graph Ch5 s3) ≤1 | Đạt | **Đạt** | Không đổi — nhưng sát trần: thêm 1 khối lệch loại nữa là rớt xuống Đạt một phần |
+| C | C2: 6/8 = 75% topic đạt ≥40% | Đạt một phần | **Đạt một phần** | Không đổi |
+| **D** | D3: 5/8 = **62,5%** topic đã audit sách (<70%) | Đạt (T1–5) / UNCERTAIN (T6–8) | **Thiếu** | ⚠️ **ĐỔI MỨC.** Cách chấm cũ tách riêng phần đã audit nên nhìn nhẹ hơn thực tế; ngưỡng số cho thấy môn chưa đạt trung thực nguồn ở cấp môn. Củng cố quyết định đẩy gap 2 (audit Topic 6–8) lên ưu tiên cao |
+| **E** | E1 có, E2 = 4 thread, E3 = 7/8 = 88% topic có cross-ref | Thiếu | **Đạt** | ⚠️ **ĐỔI MỨC** — do gap 1 đã hoàn thành (commit a6be7b3), không phải do đổi ngưỡng |
+| F | miniCases = 0 | Thiếu | **Thiếu** | Không đổi |
+| G | 0/8 topic có So-what | Thiếu | **Thiếu** | Không đổi |
+| H | Trang ôn tập trộn 8/8 topic, có breakdown + retry | Đạt | **Đạt** | Không đổi |
+
+**Trạng thái hiện tại:** Đạt B · E · H — Đạt một phần A · C — Thiếu D · F · G.
+
+**Phát hiện ngoài môn MA:** chấm lại OB bằng cùng script cho thấy E3 = 9/13 = **69%** topic có cross-ref, hụt ngưỡng 70% đúng một topic → theo rubric mới **OB-E là "Đạt một phần", không còn "đóng trọn A–H"** như ghi trước đây. Chênh nhỏ (thêm cross-ref cho 1 topic là đạt), nhưng phải ghi nhận thay vì bỏ qua — chờ Chaliyah quyết có bổ sung không.
+
+## 7. Liên kết
 
 - Rubric chuẩn + tiền lệ OB: `docs/specs/danh-gia-pedagogy-ob.md`
 - Cơ chế dùng lại: `ob-course-map.md`, `ob-mini-case.md`, `ob-so-what.md`, `quiz-cumulative-mode.md`

@@ -1,0 +1,1207 @@
+{
+  "meta": {
+    "subject_id": "organizational-behavior",
+    "subject_title": "Organizational Behavior",
+    "measured_at": "2026-07-21T13:51:08.816Z",
+    "commit": "a6be7b326e4bbd17740574d74b910183c6921cbe",
+    "rubric": "docs/RUBRIC.md (changelog mới nhất: 2026-07-20)",
+    "n_topics_total": 13,
+    "n_topics_placeholder": 0,
+    "placeholder_topics": [],
+    "n_topics_evaluated": 13,
+    "note": "SỐ LIỆU THÔ — chưa áp ngưỡng, chưa kết luận Đạt/Thiếu (rubric §2 rule 2: mẫu = topic status !== placeholder)"
+  },
+  "A1": {
+    "unit": "slot = 6 tầng × topic",
+    "n_typical": "~48 (rubric §3.A)",
+    "rule": "Slot (rule 9) — KHÔNG áp ở đây",
+    "n_slots_total": 78,
+    "n_slots_missing": 0,
+    "n_topics_incomplete": 0,
+    "slots_missing": []
+  },
+  "B1": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_sections_total": 132,
+    "n_sections_without_nonprose": 0,
+    "sections_without_nonprose": [],
+    "block_type_distribution": {
+      "callout": 204,
+      "diagram": 28,
+      "comparison": 150
+    }
+  },
+  "B3": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây; '>4 khái niệm mới' là ĐỊNH NGHĨA hụt của rubric, không phải ngưỡng Đạt",
+    "n_sections_total": 132,
+    "n_concepts_indexed": 436,
+    "new_concepts_per_section_histogram": {
+      "0": 5,
+      "1": 15,
+      "2": 26,
+      "3": 30,
+      "4": 24,
+      "5": 18,
+      "6": 9,
+      "7": 3,
+      "8": 1,
+      "10": 1
+    },
+    "n_sections_over_4_new_concepts": 32,
+    "sections_over_4": [
+      {
+        "topic": "topic-00",
+        "section": "s3",
+        "new_concepts": 5,
+        "terms": [
+          "individual level",
+          "group level",
+          "interpersonal",
+          "organizational level",
+          "intergroup"
+        ]
+      },
+      {
+        "topic": "topic-00",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "inputs",
+          "processes",
+          "outcomes",
+          "organizational citizenship behavior (OCB)",
+          "withdrawal behavior"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s1",
+        "new_concepts": 6,
+        "terms": [
+          "personality",
+          "personality trait",
+          "heredity (nature)",
+          "environment (nurture)",
+          "personality framework",
+          "observer-ratings survey"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "situation strength theory",
+          "strong situation",
+          "weak situation",
+          "trait activation theory",
+          "self-image / work mask"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s3",
+        "new_concepts": 5,
+        "terms": [
+          "Big Five (OCEAN)",
+          "conscientiousness",
+          "extraversion",
+          "agreeableness",
+          "emotional stability"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "MBTI",
+          "extroverted / introverted (E/I)",
+          "sensing / intuitive (S/N)",
+          "thinking / feeling (T/F)",
+          "judging / perceiving (J/P)"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s5",
+        "new_concepts": 5,
+        "terms": [
+          "Holland RIASEC",
+          "person-job fit",
+          "person-organization fit",
+          "congruent occupation",
+          "turnover"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s6",
+        "new_concepts": 5,
+        "terms": [
+          "learning style",
+          "personality development",
+          "active learning",
+          "diversified team",
+          "elaborative processing"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s4",
+        "new_concepts": 6,
+        "terms": [
+          "attribution theory",
+          "internal causation",
+          "external causation",
+          "distinctiveness",
+          "consensus",
+          "consistency"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s6",
+        "new_concepts": 7,
+        "terms": [
+          "selective perception",
+          "halo effect",
+          "contrast effect",
+          "stereotyping",
+          "similar-to-me effect",
+          "recency effect",
+          "primacy effect"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s7",
+        "new_concepts": 6,
+        "terms": [
+          "decisions",
+          "problem",
+          "rational decision-making model",
+          "bounded rationality",
+          "satisficing",
+          "intuitive decision making"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s8",
+        "new_concepts": 8,
+        "terms": [
+          "overconfidence bias",
+          "anchoring bias",
+          "confirmation bias",
+          "availability bias",
+          "escalation of commitment",
+          "randomness error",
+          "risk aversion",
+          "hindsight bias"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s10",
+        "new_concepts": 5,
+        "terms": [
+          "utilitarianism",
+          "rights",
+          "justice",
+          "whistle-blower",
+          "behavioral ethics"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "emotional labor",
+          "felt emotions",
+          "displayed emotions",
+          "surface acting",
+          "deep acting"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s4",
+        "new_concepts": 6,
+        "terms": [
+          "Job satisfaction",
+          "Job involvement",
+          "Psychological empowerment",
+          "Organizational commitment",
+          "Perceived organizational support (POS)",
+          "Employee engagement"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s8",
+        "new_concepts": 5,
+        "terms": [
+          "Exit",
+          "Voice",
+          "Loyalty",
+          "Neglect",
+          "Counterproductive work behavior (CWB)"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "Hierarchy of needs theory",
+          "Two-factor theory",
+          "Hygiene factors",
+          "McClelland's theory of needs",
+          "ERG theory"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "Goal-setting theory",
+          "Management by objectives (MBO)",
+          "Self-generated feedback",
+          "Promotion focus",
+          "Prevention focus"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s7",
+        "new_concepts": 6,
+        "terms": [
+          "Equity theory",
+          "Organizational justice",
+          "Distributive justice",
+          "Procedural justice",
+          "Informational justice",
+          "Interpersonal justice"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s10",
+        "new_concepts": 5,
+        "terms": [
+          "Job design",
+          "Job characteristics model (JCM)",
+          "Motivating potential score (MPS)",
+          "Job rotation",
+          "Relational job design"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s11",
+        "new_concepts": 6,
+        "terms": [
+          "Flextime",
+          "Job sharing",
+          "Telecommuting",
+          "Employee involvement and participation (EIP)",
+          "Participative management",
+          "Representative participation"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s12",
+        "new_concepts": 10,
+        "terms": [
+          "Variable-pay program",
+          "Piece-rate pay plan",
+          "Merit-based pay plan",
+          "Bonus",
+          "Profit-sharing plan",
+          "Employee stock ownership plan (ESOP)",
+          "Flexible benefits",
+          "Employee recognition program",
+          "Internal equity",
+          "External equity"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s1",
+        "new_concepts": 7,
+        "terms": [
+          "Group",
+          "Formal group",
+          "Informal group",
+          "Command group",
+          "Task group",
+          "Interest group",
+          "Friendship group"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "Social identity theory",
+          "Ingroup favoritism",
+          "Social exchange",
+          "Punctuated-equilibrium model",
+          "Five-stage group-development model"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s3",
+        "new_concepts": 5,
+        "terms": [
+          "Role",
+          "Role perception",
+          "Role expectation",
+          "Psychological contract",
+          "Role conflict"
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "section": "s2",
+        "new_concepts": 6,
+        "terms": [
+          "Task conflict",
+          "Relationship conflict",
+          "Process conflict",
+          "Dyadic conflict",
+          "Intragroup conflict",
+          "Intergroup conflict"
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "section": "s6",
+        "new_concepts": 6,
+        "terms": [
+          "Intentions",
+          "Competing",
+          "Collaborating",
+          "Avoiding",
+          "Accommodating",
+          "Compromising"
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "section": "s8",
+        "new_concepts": 5,
+        "terms": [
+          "Negotiation",
+          "Distributive bargaining",
+          "Integrative bargaining",
+          "Fixed pie",
+          "settlement range"
+        ]
+      },
+      {
+        "topic": "topic-09",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "Problem-solving team",
+          "Self-managed work team",
+          "Cross-functional team",
+          "Virtual team",
+          "Multiteam system"
+        ]
+      },
+      {
+        "topic": "topic-09",
+        "section": "s3",
+        "new_concepts": 6,
+        "terms": [
+          "Forming",
+          "Storming",
+          "Norming",
+          "Performing",
+          "Adjourning",
+          "GRPI model"
+        ]
+      },
+      {
+        "topic": "topic-12",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "Unfreezing",
+          "Movement",
+          "Refreezing",
+          "Driving forces",
+          "Restraining forces"
+        ]
+      },
+      {
+        "topic": "topic-12",
+        "section": "s7",
+        "new_concepts": 7,
+        "terms": [
+          "Stress",
+          "Challenge stressors",
+          "Hindrance stressors",
+          "Demands",
+          "Resources",
+          "Allostasis",
+          "Allostatic load"
+        ]
+      }
+    ]
+  },
+  "C3": {
+    "unit": "câu hỏi",
+    "n_typical": "~200 (rubric §3.C)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_questions_total": 247,
+    "n_questions_missing_takeaway": 0,
+    "questions_missing_takeaway": []
+  },
+  "D1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.D) — thực tế 13",
+    "rule": "Nhị phân (gate) — KHÔNG áp ở đây",
+    "n_topics": 13,
+    "n_topics_with_source_field": 13,
+    "per_topic": [
+      {
+        "topic": "topic-00",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 0 - Introduction' + Reading 'Chapter 1 - Welcome to the world of OB' (Robbins & Judge). Định nghĩa OB (Robbins & Judge 2019 + Newstrom 2014); Basic OB Model (Robbins & Judge, Exhibit 1-3); 4 disciplines (Exhibit 1-1).",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-01",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 1 - Personality and Learning styles' + Reading 'Chapter 4 - Personality Factors' (Robbins & Judge). Định nghĩa & frameworks (Robbins & Judge 2019); Situation Strength & Trait Activation Theory; Big Five (OCEAN); MBTI; Holland RIASEC; Jung reaction mode (adapted 1920). Bổ sung từ Reading Ch.4 (R&J Personality Factors, p77-94): assessing personality, MBTI weaknesses, Big Five at work, Dark Triad, CSE/Self-Monitoring/Proactive, components of situation strength.",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-02",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 2 - Perception and Common bias' + Reading 'Chapter 5 - Perceptual Processes' (Robbins & Judge, p94-110). Perception & attribution (R&J 2019); shortcuts & biases; decision making: rational model / bounded rationality / intuition; biases in decision; individual & organizational influences; 3 ethical criteria; three-stage model of creativity. Câu Nordell (The End of Bias, 2022) từ slide.",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-03",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 3 - Personal values' + Reading 'Chapter 6 - Valuing diversity' (Robbins & Judge, p113-127). Values: định nghĩa & attributes, Rokeach Value Survey, Schwartz, generational values, values development (Massey/S.E.E.), Person-Organization Fit (Kristof supplementary/complementary), VIA character strengths. Diversity: surface/deep-level, discrimination (Exhibit 6-1), stereotype threat, biographical & other differentiating characteristics, ability (intellectual 7 dims + GMA; physical 9 — Exhibit 6-2/6-3), diversity management & positive diversity climate.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-04",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 4 - Emotions' + Reading 'Chapter 3 - Emotions' (Robbins & Judge, p60-74). Affect/emotion/mood (Exhibit 3-1), 6 universal + moral emotions, positive/negative affect (affective circumplex) + positivity offset, sources of emotions/moods, emotional labor (felt/displayed, surface/deep acting), emotional dissonance & mindfulness, Affective Events Theory, emotional intelligence (cascading model), emotion regulation, OB applications. Ratio 3:1 (Fredrickson & Losada) từ slide.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-05",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 5 - Attitudes and Dissonance' + Reading 'Chapter 2 - Attitudes' (Robbins & Judge, p47-57). Attitude & 3 components (ABC, Exhibit 2-1), cognitive dissonance (Festinger) + moderators, major job attitudes (job satisfaction/involvement/psychological empowerment/organizational commitment/POS/engagement), measuring JS (single global rating vs summation of facets), causes (job conditions/CSE/pay/CSR), outcomes (performance/OCB/customer/life satisfaction), impact of dissatisfaction (EVLN framework) + CWB, engagement vs satisfaction. Attitude-behavior model (Schafer & Tait) + Viktor Frankl từ slide.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-06",
+        "source": "Organizational Behavior (IM2017, Dr Truong Thi Lan Anh) — slide 'OB-Topic 6 - Motivation' + Reading 'Chapter 7 - Basic Motivation' (Robbins & Judge, p130-149) & 'Chapter 8 - Applied Motivation' (p150-165). Motivation = process (intensity/direction/persistence); early need theories (Maslow Exhibit 7-1, Herzberg two-factor Exhibit 7-2, McClelland nAch/nPow/nAff, Alderfer ERG + McGregor X-Y từ slide); contemporary theories (self-determination/cognitive evaluation/self-concordance, goal-setting + MBO Exhibit 7-3, self-efficacy Bandura + Pygmalion Exhibit 7-4, reinforcement/operant/behaviorism/social-learning + OB Mod A-B-C, equity Exhibit 7-5 + organizational justice 4 loại Exhibit 7-6, expectancy Vroom Exhibit 7-7, job engagement, integration Exhibit 7-8); applied motivation (JCM 5 dims + MPS Exhibit 8-1, job rotation, relational job design, flextime Exhibit 8-2/job sharing/telecommuting, EIP participative & representative, variable pay piece-rate/merit/bonus/profit-sharing/ESOP, flexible benefits, employee recognition). SCARF (David Rock), Drive (Daniel Pink) và well-being từ slide.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-07",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 10 'Basics of Group Behavior' (pp.182-199); Slide 'OB-Topic 7-Group properties' (Dr Lan Anh, IM2017, HCMUT).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-08",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 14 'Conflict in Organizations' (pp.256-273); Slide 'OB-Topic 8-Conflict and Collaboration' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Myers-Briggs (2022), SCARF (David Rock, 2008), HBR '4 Triggers Cause the Majority of Team Conflicts' (Laker & Pereira, 2022).",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-09",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 11 'From Groups to Teams' (pp.200-215); Slide 'OB-Topic 9-Team lifecycle and Team effectiveness' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Tuckman (team stages), Google re:Work Project Aristotle, Tim R. Clark '4 Stages of Psychological Safety', Patrick Lencioni 'The Five Dysfunctions of a Team', Jeff Bezos' meeting rules.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-10",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 12 'Characteristics of Leaders' (pp.216-236); Slide 'OB-Topic 10-Leadership Followership' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Hurwitz & Hurwitz 'Leadership is Half the Story', Ken Blanchard Situational Leadership II & relationship power, Robert Kelley 'In Praise of Followers' (5 followership types), Ira Chaleff 'The Courageous Follower', Bill George (authentic leadership), Daniel Goleman (EI & 6 leadership styles), Center for Creative Leadership (Fundamental 4).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-11",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 16 'Creating and Maintaining Organizational Culture' (pp.295-314); Slide 'OB-Topic 11-Organizational culture' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Edgar H. Schein 'Organizational Culture and Leadership' (3 layers), MIT Sloan 'Big 9 Cultural Values' & Toxic Culture, SHRM 2022 Global Culture Research, Blue C 2021 (khảo sát VHDN Việt Nam), Quantum Workplace 2022, George Westerman 'First Law of Digital Innovation' (MIT Sloan Management Review).",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-12",
+        "source": "Robbins & Judge, Organizational Behavior — Chapter 17 'Organizational Change' (pp.315-335); Slide 'OB-Topic 12-Organizational Change and Workstress' (Dr Lan Anh, IM2017, HCMUT); bổ sung slide: Robert H. Schaffer 'All Management Is Change Management' (HBR 2017), Kurt Lewin (3-step), John Kotter (8-step), Rick Maurer '3 Levels of Resistance', Spencer Johnson 'Who Moved My Cheese?', Spectrum Assessments (8 change readiness factors), Cooper et al. (2002) & Lazarus & Folkman (1984) (stress), MetLife (holistic well-being), Simon Thornton 2023 (D>CS=SR).",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      }
+    ]
+  },
+  "D2": {
+    "unit": "marker / topic (điều kiện của D3, rubric §3.D)",
+    "n_typical": "không khai báo riêng trong rubric — đếm hỗ trợ audit D3",
+    "rule": "điều kiện của audit D3 — KHÔNG áp ở đây",
+    "per_topic": [
+      {
+        "topic": "topic-00",
+        "n_book_page_markers": 3,
+        "n_slide_markers": 8,
+        "book_marker_samples": [
+          "(sách, p38–42)",
+          "(sách, p41–42)",
+          "(sách, p35–36)"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "n_book_page_markers": 11,
+        "n_slide_markers": 11,
+        "book_marker_samples": [
+          "(R&J Ch.4, p78)",
+          "(p78-79)",
+          "(p78)",
+          "(p79)",
+          "(R&J Ch.4, p86)"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "n_book_page_markers": 17,
+        "n_slide_markers": 4,
+        "book_marker_samples": [
+          "(R&J 2019, p95; slide 14)",
+          "(R&J p96-97; slide 15)",
+          "(R&J p97-98, Exhibit 5-1)",
+          "(slide 25-28; R&J p98)",
+          "(slide 32-35; R&J p99)"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "n_book_page_markers": 5,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(R&J Ch.6, p114)",
+          "(R&J p117-123)",
+          "(sách, p126–128)",
+          "(case TRANSCO Phần Lan p128 — global philosophy nhất quán nhưng policy riêng theo khung pháp lý/văn hóa từng nước)",
+          "(Robbins & Judge, p113-127)"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "n_book_page_markers": 7,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách, p64)",
+          "(R&J p64-67)",
+          "(sách, p66)",
+          "(R&J p69-70)",
+          "(sách, p71–72)"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "n_book_page_markers": 3,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách, p57–58)",
+          "(sách, p58–59)",
+          "(Robbins & Judge, p47-57)"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "n_book_page_markers": 29,
+        "n_slide_markers": 1,
+        "book_marker_samples": [
+          "(p130)",
+          "(R&J p130-131; slide 5)",
+          "(R&J p131-134; slide 6-8)",
+          "(R&J p134)",
+          "(R&J p134-135)"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "n_book_page_markers": 30,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(p182)",
+          "(R&J p182; slide)",
+          "(R&J p182-183)",
+          "(R&J p182-183; slide)",
+          "(R&J p184)"
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "n_book_page_markers": 18,
+        "n_slide_markers": 3,
+        "book_marker_samples": [
+          "(p256)",
+          "(R&J p258-259)",
+          "(R&J p259)",
+          "(R&J p257)",
+          "(Exhibit 14-2, R&J p259)"
+        ]
+      },
+      {
+        "topic": "topic-09",
+        "n_book_page_markers": 12,
+        "n_slide_markers": 7,
+        "book_marker_samples": [
+          "(R&J p201)",
+          "(R&J p200)",
+          "(R&J p202-205)",
+          "(Exhibit 11-3, R&J p205)",
+          "(R&J p206-207)"
+        ]
+      },
+      {
+        "topic": "topic-10",
+        "n_book_page_markers": 15,
+        "n_slide_markers": 13,
+        "book_marker_samples": [
+          "(R&J p217)",
+          "(R&J p218)",
+          "(R&J p220-222)",
+          "(House — R&J p224)",
+          "(Exhibit 12-4, R&J p226)"
+        ]
+      },
+      {
+        "topic": "topic-11",
+        "n_book_page_markers": 15,
+        "n_slide_markers": 5,
+        "book_marker_samples": [
+          "(R&J p296)",
+          "(R&J p297)",
+          "(R&J p298)",
+          "(R&J p299)",
+          "(R&J p300)"
+        ]
+      },
+      {
+        "topic": "topic-12",
+        "n_book_page_markers": 15,
+        "n_slide_markers": 1,
+        "book_marker_samples": [
+          "(R&J p316)",
+          "(Exhibit 17-1, R&J p318)",
+          "(R&J p317-320)",
+          "(Exhibit 17-3, R&J p320)",
+          "(R&J p321-322)"
+        ]
+      }
+    ]
+  },
+  "D4": {
+    "unit": "khối soft lens (courseMap + courseThreads + miniCases)",
+    "n_typical": "~40 (rubric §3.D)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_blocks_total": 9,
+    "n_blocks_with_disclaimer": 5,
+    "blocks": [
+      {
+        "kind": "courseMap",
+        "id": "courseMap",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Từ nhận thức đến hành động",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Từ cá nhân đến đội nhóm",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Dẫn dắt",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Tổ chức vận động",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "miniCase",
+        "id": "case-01",
+        "has_disclaimer": false,
+        "searched_fields": "toàn bộ object (sourceNote/scenario)"
+      },
+      {
+        "kind": "miniCase",
+        "id": "case-02",
+        "has_disclaimer": false,
+        "searched_fields": "toàn bộ object (sourceNote/scenario)"
+      },
+      {
+        "kind": "miniCase",
+        "id": "case-03",
+        "has_disclaimer": false,
+        "searched_fields": "toàn bộ object (sourceNote/scenario)"
+      },
+      {
+        "kind": "miniCase",
+        "id": "case-04",
+        "has_disclaimer": false,
+        "searched_fields": "toàn bộ object (sourceNote/scenario)"
+      }
+    ]
+  },
+  "E3": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.E) — thực tế 13",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 13,
+    "n_topics_without_crossref": 0,
+    "topics_without_crossref": [],
+    "refs_per_topic": [
+      {
+        "topic": "topic-00",
+        "n_refs": 4,
+        "targets": [
+          1,
+          7,
+          11
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "n_refs": 4,
+        "targets": [
+          2,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "n_refs": 5,
+        "targets": [
+          1,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "n_refs": 4,
+        "targets": [
+          2,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "n_refs": 8,
+        "targets": [
+          2,
+          3,
+          5,
+          10,
+          12
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "n_refs": 6,
+        "targets": [
+          2,
+          4,
+          6,
+          8
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "n_refs": 3,
+        "targets": [
+          2,
+          5,
+          10
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "n_refs": 6,
+        "targets": [
+          1,
+          2,
+          3,
+          6,
+          9
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "n_refs": 2,
+        "targets": [
+          2,
+          7
+        ]
+      },
+      {
+        "topic": "topic-09",
+        "n_refs": 3,
+        "targets": [
+          7,
+          8
+        ]
+      },
+      {
+        "topic": "topic-10",
+        "n_refs": 3,
+        "targets": [
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "topic": "topic-11",
+        "n_refs": 2,
+        "targets": [
+          10,
+          12
+        ]
+      },
+      {
+        "topic": "topic-12",
+        "n_refs": 4,
+        "targets": [
+          2,
+          4,
+          5,
+          11
+        ]
+      }
+    ]
+  },
+  "E4": {
+    "unit": "cross-topic reference",
+    "n_typical": "~20 (rubric §3.E) — thực tế 54",
+    "rule": "T(n) — KHÔNG áp ở đây; 'có chú thích forward hay không' người chấm đọc snippet",
+    "n_crossrefs_total": 54,
+    "n_forward_refs": 24,
+    "forward_refs": [
+      {
+        "topic": "topic-00",
+        "from_order": 0,
+        "target_topic_order": 1,
+        "loc": "section:s3",
+        "snippet": " emotions, attitudes, motivation → individual performance. (Topic 1-6)\",\"sectionId\":\"s3\"},{\"id\":\"s3_grp\",\"label\":\"Group "
+      },
+      {
+        "topic": "topic-00",
+        "from_order": 0,
+        "target_topic_order": 7,
+        "loc": "section:s3",
+        "snippet": "formal groups: teamwork, leadership, groupthink, conflict. (Topic 7-10)\",\"sectionId\":\"s3\"},{\"id\":\"s3_org\",\"label\":\"Organ"
+      },
+      {
+        "topic": "topic-00",
+        "from_order": 0,
+        "target_topic_order": 11,
+        "loc": "section:s3",
+        "snippet": "tail\":\"Structure, culture, change; phối hợp giữa các nhóm. (Topic 11-12)\",\"sectionId\":\"s3\"}],\"edges\":[{\"from\":\"s3_ob\",\"t"
+      },
+      {
+        "topic": "topic-00",
+        "from_order": 0,
+        "target_topic_order": 1,
+        "loc": "section:s6",
+        "snippet": "ues, emotions, attitudes, motivation. Đây chính là mạch các Topic 1-6 (slide 44).\"}},{\"type\":\"comparison\",\"table\":{\"titl"
+      },
+      {
+        "topic": "topic-01",
+        "from_order": 1,
+        "target_topic_order": 2,
+        "loc": "section:s3",
+        "snippet": " trait định hình cách bạn nhìn nhận tình huống (perception, Topic 02), attitudes (Topic 05) và motivation (Topic 06); nề"
+      },
+      {
+        "topic": "topic-01",
+        "from_order": 1,
+        "target_topic_order": 5,
+        "loc": "section:s3",
+        "snippet": "bạn nhìn nhận tình huống (perception, Topic 02), attitudes (Topic 05) và motivation (Topic 06); nền cá nhân này quay lại"
+      },
+      {
+        "topic": "topic-01",
+        "from_order": 1,
+        "target_topic_order": 6,
+        "loc": "section:s3",
+        "snippet": "(perception, Topic 02), attitudes (Topic 05) và motivation (Topic 06); nền cá nhân này quay lại ở Topic 07 khi ghép ngườ"
+      },
+      {
+        "topic": "topic-01",
+        "from_order": 1,
+        "target_topic_order": 7,
+        "loc": "section:s3",
+        "snippet": "ic 05) và motivation (Topic 06); nền cá nhân này quay lại ở Topic 07 khi ghép người vào nhóm.\"}}] []"
+      },
+      {
+        "topic": "topic-02",
+        "from_order": 2,
+        "target_topic_order": 5,
+        "loc": "section:s11",
+        "snippet": ": perception & attribution là bộ lọc đầu vào cho attitudes (Topic 05) và motivation (Topic 06) — cách bạn \\\"quy nhân\\\" t"
+      },
+      {
+        "topic": "topic-02",
+        "from_order": 2,
+        "target_topic_order": 6,
+        "loc": "section:s11",
+        "snippet": "n là bộ lọc đầu vào cho attitudes (Topic 05) và motivation (Topic 06) — cách bạn \\\"quy nhân\\\" thành công/thất bại định h"
+      },
+      {
+        "topic": "topic-02",
+        "from_order": 2,
+        "target_topic_order": 7,
+        "loc": "section:s11",
+        "snippet": "as như anchoring/overconfidence sẽ trở lại ở decision nhóm (Topic 07) và negotiation (Topic 08).\"}},{\"type\":\"comparison\""
+      },
+      {
+        "topic": "topic-02",
+        "from_order": 2,
+        "target_topic_order": 8,
+        "loc": "section:s11",
+        "snippet": "dence sẽ trở lại ở decision nhóm (Topic 07) và negotiation (Topic 08).\"}},{\"type\":\"comparison\",\"table\":{\"title\":\"Causes "
+      },
+      {
+        "topic": "topic-03",
+        "from_order": 3,
+        "target_topic_order": 7,
+        "loc": "section:s10",
+        "snippet": "và deep-level diversity là \\\"nguyên liệu cá nhân\\\" mà nhóm (Topic 07) và team (Topic 09) lắp ráp; P-O Fit ở đây nối thẳn"
+      },
+      {
+        "topic": "topic-03",
+        "from_order": 3,
+        "target_topic_order": 9,
+        "loc": "section:s10",
+        "snippet": "sity là \\\"nguyên liệu cá nhân\\\" mà nhóm (Topic 07) và team (Topic 09) lắp ráp; P-O Fit ở đây nối thẳng tới organizationa"
+      },
+      {
+        "topic": "topic-03",
+        "from_order": 3,
+        "target_topic_order": 11,
+        "loc": "section:s10",
+        "snippet": "đây nối thẳng tới organizational culture — culture fit/add (Topic 11).\"}}] []"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 5,
+        "loc": "section:s9",
+        "snippet": "ích môn học: emotion là dữ liệu cảm xúc chảy vào attitudes (Topic 05, thành phần Affective của ABC) và, qua Emotional In"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 10,
+        "loc": "section:s9",
+        "snippet": "ve của ABC) và, qua Emotional Intelligence, vào leadership (Topic 10) lẫn quản trị stress (Topic 12).\"}}] []"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 12,
+        "loc": "section:s9",
+        "snippet": "ntelligence, vào leadership (Topic 10) lẫn quản trị stress (Topic 12).\"}}] []"
+      },
+      {
+        "topic": "topic-05",
+        "from_order": 5,
+        "target_topic_order": 6,
+        "loc": "section:s9",
+        "snippet": "g hành vi; EVLN ở đây là bản lề sang motivation/engagement (Topic 06), và khi bất mãn lan ra nhóm thì thành conflict (To"
+      },
+      {
+        "topic": "topic-05",
+        "from_order": 5,
+        "target_topic_order": 8,
+        "loc": "section:s9",
+        "snippet": " (Topic 06), và khi bất mãn lan ra nhóm thì thành conflict (Topic 08).\"}}] []"
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 10,
+        "loc": "section:s1",
+        "snippet": " là đòn bẩy chính mà transformational leadership khai thác (Topic 10).\"}}] []"
+      },
+      {
+        "topic": "topic-07",
+        "from_order": 7,
+        "target_topic_order": 9,
+        "loc": "section:s11",
+        "snippet": "ương tiếp theo (Ch.11) sẽ chuyển từ GROUP sang TEAM — thuộc Topic 09.\"}},{\"type\":\"callout\",\"callout\":{\"kind\":\"key\",\"titl"
+      },
+      {
+        "topic": "topic-07",
+        "from_order": 7,
+        "target_topic_order": 9,
+        "loc": "question:0",
+        "snippet": "y skills\",\"isCorrect\":false,\"rationale\":\"Cơ chế: team thuộc Topic 09/Ch.11 và là dạng đặc biệt hơn group. Bẫy: mọi team "
+      },
+      {
+        "topic": "topic-11",
+        "from_order": 11,
+        "target_topic_order": 12,
+        "loc": "section:s11",
+        "snippet": "ền\\\" mà leadership (Topic 10) viết ra và change management (Topic 12) phải viết lại — culture đổi chậm nhất chính là lý "
+      }
+    ]
+  },
+  "G1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.G) — thực tế 13",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 13,
+    "n_topics_without_sowhat": 0,
+    "topics_without_sowhat": [],
+    "found_at": [
+      {
+        "topic": "topic-00",
+        "found_at": "callout-key:s7"
+      },
+      {
+        "topic": "topic-01",
+        "found_at": "callout-key:s8"
+      },
+      {
+        "topic": "topic-02",
+        "found_at": "callout-key:s11"
+      },
+      {
+        "topic": "topic-03",
+        "found_at": "callout-key:s10"
+      },
+      {
+        "topic": "topic-04",
+        "found_at": "callout-key:s9"
+      },
+      {
+        "topic": "topic-05",
+        "found_at": "callout-key:s9"
+      },
+      {
+        "topic": "topic-06",
+        "found_at": "callout-key:s12"
+      },
+      {
+        "topic": "topic-07",
+        "found_at": "callout-key:s11"
+      },
+      {
+        "topic": "topic-08",
+        "found_at": "callout-key:s11"
+      },
+      {
+        "topic": "topic-09",
+        "found_at": "callout-key:s9"
+      },
+      {
+        "topic": "topic-10",
+        "found_at": "callout-key:s11"
+      },
+      {
+        "topic": "topic-11",
+        "found_at": "callout-key:s11"
+      },
+      {
+        "topic": "topic-12",
+        "found_at": "callout-key:s11"
+      }
+    ]
+  },
+  "H1": {
+    "unit": "trang ôn tập",
+    "n_typical": "1 route /[subject]/on-tap (rubric §3.H)",
+    "rule": "Tồn tại + chất lượng — KHÔNG áp ở đây",
+    "n_topics_with_quiz": 13,
+    "topics_with_quiz": [
+      "topic-00",
+      "topic-01",
+      "topic-02",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06",
+      "topic-07",
+      "topic-08",
+      "topic-09",
+      "topic-10",
+      "topic-11",
+      "topic-12"
+    ],
+    "meets_min_2_topics": true,
+    "note": "breakdown theo topic + retry câu sai là feature component CumulativeQuiz — không đo được từ data, cần walkthrough runtime"
+  },
+  "not_measured": {
+    "reason": "đòi index ngữ nghĩa hoặc chấm tay (rubric §2 rule 5, rule 10)",
+    "sub_checks": [
+      "A2",
+      "B2",
+      "C1",
+      "C2",
+      "C4",
+      "D3",
+      "E4-chú-thích-forward",
+      "F1-chất-lượng",
+      "F2",
+      "G2",
+      "H1-breakdown/retry-runtime"
+    ]
+  }
+}

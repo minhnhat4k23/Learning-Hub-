@@ -1,0 +1,687 @@
+{
+  "meta": {
+    "subject_id": "digital-technology-business",
+    "subject_title": "Digital Technology in Business",
+    "measured_at": "2026-07-21T13:51:08.805Z",
+    "commit": "a6be7b326e4bbd17740574d74b910183c6921cbe",
+    "rubric": "docs/RUBRIC.md (changelog mới nhất: 2026-07-20)",
+    "n_topics_total": 8,
+    "n_topics_placeholder": 1,
+    "placeholder_topics": [
+      "topic-08"
+    ],
+    "n_topics_evaluated": 7,
+    "note": "SỐ LIỆU THÔ — chưa áp ngưỡng, chưa kết luận Đạt/Thiếu (rubric §2 rule 2: mẫu = topic status !== placeholder)"
+  },
+  "A1": {
+    "unit": "slot = 6 tầng × topic",
+    "n_typical": "~48 (rubric §3.A)",
+    "rule": "Slot (rule 9) — KHÔNG áp ở đây",
+    "n_slots_total": 42,
+    "n_slots_missing": 7,
+    "n_topics_incomplete": 7,
+    "slots_missing": [
+      {
+        "topic": "topic-01",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-02",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-03",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-04",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-05",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-06",
+        "slot": "bigIdeaPillars"
+      },
+      {
+        "topic": "topic-07",
+        "slot": "bigIdeaPillars"
+      }
+    ]
+  },
+  "B1": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_sections_total": 97,
+    "n_sections_without_nonprose": 0,
+    "sections_without_nonprose": [],
+    "block_type_distribution": {
+      "diagram": 39,
+      "callout": 84,
+      "comparison": 40,
+      "formula": 6
+    }
+  },
+  "B3": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây; '>4 khái niệm mới' là ĐỊNH NGHĨA hụt của rubric, không phải ngưỡng Đạt",
+    "n_sections_total": 97,
+    "n_concepts_indexed": 322,
+    "new_concepts_per_section_histogram": {
+      "0": 6,
+      "1": 16,
+      "2": 18,
+      "3": 22,
+      "4": 9,
+      "5": 10,
+      "6": 7,
+      "7": 6,
+      "8": 1,
+      "13": 2
+    },
+    "n_sections_over_4_new_concepts": 26,
+    "sections_over_4": [
+      {
+        "topic": "topic-02",
+        "section": "s3",
+        "new_concepts": 8,
+        "terms": [
+          "HDD",
+          "SSD",
+          "optical drive",
+          "EEPROM",
+          "SSHD",
+          "Track",
+          "Sector",
+          "Cylinder"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s4",
+        "new_concepts": 6,
+        "terms": [
+          "CPU",
+          "control unit",
+          "ALU",
+          "machine cycle",
+          "cache",
+          "bus"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s5",
+        "new_concepts": 6,
+        "terms": [
+          "RAM",
+          "ROM",
+          "volatile",
+          "non-volatile",
+          "bit",
+          "byte"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s7",
+        "new_concepts": 6,
+        "terms": [
+          "input",
+          "OCR",
+          "OMR",
+          "RFID",
+          "MICR",
+          "voice recognition"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s8",
+        "new_concepts": 7,
+        "terms": [
+          "non-impact printer",
+          "modem",
+          "WAP",
+          "router",
+          "network card",
+          "hub",
+          "switch"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s9",
+        "new_concepts": 5,
+        "terms": [
+          "machine language",
+          "instruction set",
+          "assembly language",
+          "HLL",
+          "Object-Oriented (OO) language"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s10",
+        "new_concepts": 13,
+        "terms": [
+          "operating system",
+          "user interface",
+          "GUI",
+          "command-line interface",
+          "multitasking",
+          "virtual memory",
+          "paging",
+          "performance monitor",
+          "user account",
+          "Sleep",
+          "Hibernate",
+          "Device driver",
+          "Plug and Play (PnP)"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s11",
+        "new_concepts": 6,
+        "terms": [
+          "desktop OS",
+          "server OS",
+          "mobile OS",
+          "open source",
+          "proprietary",
+          "firmware"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s12",
+        "new_concepts": 13,
+        "terms": [
+          "program",
+          "application",
+          "system software",
+          "retail software",
+          "custom software",
+          "shareware",
+          "freeware",
+          "open source software",
+          "public domain software",
+          "web app",
+          "SaaS (Software as a Service)",
+          "F/OSS",
+          "GPL"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s13",
+        "new_concepts": 7,
+        "terms": [
+          "productivity application",
+          "software suite",
+          "CAD",
+          "website authoring",
+          "project management",
+          "spreadsheet",
+          "personal interest application"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s14",
+        "new_concepts": 6,
+        "terms": [
+          "firewall",
+          "antivirus",
+          "spyware",
+          "adware",
+          "disk defragmenter",
+          "backup/restore tool"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "ISP",
+          "bandwidth",
+          "hot spot",
+          "DSL",
+          "FTTP"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s4",
+        "new_concepts": 7,
+        "terms": [
+          "World Wide Web (WWW)",
+          "website",
+          "web server",
+          "Web 2.0",
+          "hypertext",
+          "HTML",
+          "HTTP"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s6",
+        "new_concepts": 6,
+        "terms": [
+          "search engine",
+          "subject directory",
+          "search operator",
+          "online social network",
+          "e-commerce website",
+          "portal"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s7",
+        "new_concepts": 7,
+        "terms": [
+          "multimedia",
+          "graphic",
+          "infographic",
+          "animation",
+          "virtual reality (VR)",
+          "plug-in (add-on)",
+          "media player"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s8",
+        "new_concepts": 7,
+        "terms": [
+          "email",
+          "email list",
+          "instant messaging",
+          "chat room",
+          "VoIP",
+          "FTP",
+          "FTP server"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s11",
+        "new_concepts": 5,
+        "terms": [
+          "LAN",
+          "WLAN",
+          "MAN",
+          "WAN",
+          "PAN"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s14",
+        "new_concepts": 5,
+        "terms": [
+          "Ethernet",
+          "TCP/IP",
+          "Wi-Fi (802.11)",
+          "Bluetooth",
+          "NFC"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s15",
+        "new_concepts": 5,
+        "terms": [
+          "dedicated line",
+          "ADSL",
+          "ISDN",
+          "T-carrier",
+          "ATM"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s17",
+        "new_concepts": 7,
+        "terms": [
+          "latency",
+          "twisted-pair cable",
+          "coaxial cable",
+          "fiber-optic cable",
+          "microwave",
+          "communications satellite",
+          "GPS"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s1",
+        "new_concepts": 5,
+        "terms": [
+          "workbook",
+          "worksheet",
+          "cell",
+          "VBA",
+          "macro"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "Sort",
+          "Filter",
+          "Custom Filter",
+          "Advanced Filter",
+          "criteria range"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "field (attribute)",
+          "record",
+          "file",
+          "key field",
+          "entity"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s9",
+        "new_concepts": 6,
+        "terms": [
+          "DBMS",
+          "query",
+          "query language",
+          "query by example (QBE)",
+          "SQL",
+          "report writer"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "freemium",
+          "subscription",
+          "aggregator",
+          "marketplace",
+          "crowdsourcing"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s8",
+        "new_concepts": 5,
+        "terms": [
+          "SRM",
+          "CRM",
+          "inventory system",
+          "MRP",
+          "ERP"
+        ]
+      }
+    ]
+  },
+  "C3": {
+    "unit": "câu hỏi",
+    "n_typical": "~200 (rubric §3.C)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_questions_total": 81,
+    "n_questions_missing_takeaway": 0,
+    "questions_missing_takeaway": []
+  },
+  "D1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.D) — thực tế 7",
+    "rule": "Nhị phân (gate) — KHÔNG áp ở đây",
+    "n_topics": 7,
+    "n_topics_with_source_field": 7,
+    "per_topic": [
+      {
+        "topic": "topic-01",
+        "source": "Digital Technology in Business slides Topic 01 (Introduction to CBIS) + quiz-digi.pdf.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-02",
+        "source": "Digital Technology in Business slides Topic 02-1 (Hardware, 95 slides) + Topic 02-2 (Software, 86 slides) + quiz-digi.pdf (QUIZ 2 Software + QUIZ 3 Hardware).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-03",
+        "source": "Digital Technology in Business — Topic 03 Network Internet WWW.pdf (Part 3.1 & 3.2).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-04",
+        "source": "Digital Technology in Business — Topic 04 MS Word.pdf (Part 4-1: Word Processing).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-05",
+        "source": "Digital Technology in Business — Topic 05 MSExcel slides.pdf (Part 5: Applications - MS Excel).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-06",
+        "source": "Digital Technology in Business — Topic 06 Database Mgt.pdf.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-07",
+        "source": "Digital Technology in Business — Topic 07 E-com and SC.pdf.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      }
+    ]
+  },
+  "D2": {
+    "unit": "marker / topic (điều kiện của D3, rubric §3.D)",
+    "n_typical": "không khai báo riêng trong rubric — đếm hỗ trợ audit D3",
+    "rule": "điều kiện của audit D3 — KHÔNG áp ở đây",
+    "per_topic": [
+      {
+        "topic": "topic-01",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-02",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-03",
+        "n_book_page_markers": 1,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(P2P)"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-05",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-06",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-07",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      }
+    ]
+  },
+  "D4": {
+    "unit": "khối soft lens (courseMap + courseThreads + miniCases)",
+    "n_typical": "~40 (rubric §3.D)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_blocks_total": 0,
+    "n_blocks_with_disclaimer": 0,
+    "blocks": []
+  },
+  "E3": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.E) — thực tế 7",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 7,
+    "n_topics_without_crossref": 5,
+    "topics_without_crossref": [
+      "topic-01",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06"
+    ],
+    "refs_per_topic": [
+      {
+        "topic": "topic-01",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-02",
+        "n_refs": 2,
+        "targets": [
+          1,
+          3
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-04",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-05",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-06",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-07",
+        "n_refs": 1,
+        "targets": [
+          3
+        ]
+      }
+    ]
+  },
+  "E4": {
+    "unit": "cross-topic reference",
+    "n_typical": "~20 (rubric §3.E) — thực tế 3",
+    "rule": "T(n) — KHÔNG áp ở đây; 'có chú thích forward hay không' người chấm đọc snippet",
+    "n_crossrefs_total": 3,
+    "n_forward_refs": 1,
+    "forward_refs": [
+      {
+        "topic": "topic-02",
+        "from_order": 2,
+        "target_topic_order": 3,
+        "loc": "section:s8",
+        "snippet": "act: tiếp xúc vật lý (đầu kim).\",\"Chi tiết giao thức mạng → Topic 03. Ở đây chỉ nhận diện thiết bị.\"]}]}}] []"
+      }
+    ]
+  },
+  "G1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.G) — thực tế 7",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 7,
+    "n_topics_without_sowhat": 7,
+    "topics_without_sowhat": [
+      "topic-01",
+      "topic-02",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06",
+      "topic-07"
+    ],
+    "found_at": []
+  },
+  "H1": {
+    "unit": "trang ôn tập",
+    "n_typical": "1 route /[subject]/on-tap (rubric §3.H)",
+    "rule": "Tồn tại + chất lượng — KHÔNG áp ở đây",
+    "n_topics_with_quiz": 7,
+    "topics_with_quiz": [
+      "topic-01",
+      "topic-02",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06",
+      "topic-07"
+    ],
+    "meets_min_2_topics": true,
+    "note": "breakdown theo topic + retry câu sai là feature component CumulativeQuiz — không đo được từ data, cần walkthrough runtime"
+  },
+  "not_measured": {
+    "reason": "đòi index ngữ nghĩa hoặc chấm tay (rubric §2 rule 5, rule 10)",
+    "sub_checks": [
+      "A2",
+      "B2",
+      "C1",
+      "C2",
+      "C4",
+      "D3",
+      "E4-chú-thích-forward",
+      "F1-chất-lượng",
+      "F2",
+      "G2",
+      "H1-breakdown/retry-runtime"
+    ]
+  }
+}

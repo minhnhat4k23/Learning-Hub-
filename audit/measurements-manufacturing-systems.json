@@ -1,0 +1,955 @@
+{
+  "meta": {
+    "subject_id": "manufacturing-systems",
+    "subject_title": "Manufacturing Systems",
+    "measured_at": "2026-07-21T13:51:08.810Z",
+    "commit": "a6be7b326e4bbd17740574d74b910183c6921cbe",
+    "rubric": "docs/RUBRIC.md (changelog mới nhất: 2026-07-20)",
+    "n_topics_total": 8,
+    "n_topics_placeholder": 0,
+    "placeholder_topics": [],
+    "n_topics_evaluated": 8,
+    "note": "SỐ LIỆU THÔ — chưa áp ngưỡng, chưa kết luận Đạt/Thiếu (rubric §2 rule 2: mẫu = topic status !== placeholder)"
+  },
+  "A1": {
+    "unit": "slot = 6 tầng × topic",
+    "n_typical": "~48 (rubric §3.A)",
+    "rule": "Slot (rule 9) — KHÔNG áp ở đây",
+    "n_slots_total": 48,
+    "n_slots_missing": 0,
+    "n_topics_incomplete": 0,
+    "slots_missing": []
+  },
+  "B1": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_sections_total": 91,
+    "n_sections_without_nonprose": 0,
+    "sections_without_nonprose": [],
+    "block_type_distribution": {
+      "diagram": 23,
+      "callout": 76,
+      "comparison": 64,
+      "formula": 14,
+      "calc": 17
+    }
+  },
+  "B3": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây; '>4 khái niệm mới' là ĐỊNH NGHĨA hụt của rubric, không phải ngưỡng Đạt",
+    "n_sections_total": 91,
+    "n_concepts_indexed": 398,
+    "new_concepts_per_section_histogram": {
+      "0": 1,
+      "1": 2,
+      "2": 5,
+      "3": 20,
+      "4": 23,
+      "5": 21,
+      "6": 13,
+      "7": 3,
+      "8": 1,
+      "9": 1,
+      "13": 1
+    },
+    "n_sections_over_4_new_concepts": 40,
+    "sections_over_4": [
+      {
+        "topic": "topic-01",
+        "section": "s1",
+        "new_concepts": 5,
+        "terms": [
+          "production system",
+          "facilities",
+          "manufacturing support systems",
+          "plant layout",
+          "manufacturing system"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s2",
+        "new_concepts": 6,
+        "terms": [
+          "manufacturing industry",
+          "process industry",
+          "discrete vs continuous items",
+          "basic producer",
+          "converter",
+          "fabricator"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s3",
+        "new_concepts": 6,
+        "terms": [
+          "jobbing/project production",
+          "batch production",
+          "mass production",
+          "mass customization",
+          "process focus",
+          "product focus"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s4",
+        "new_concepts": 7,
+        "terms": [
+          "processing",
+          "basic/secondary processes",
+          "finishing operations",
+          "assembly",
+          "material handling",
+          "inspection and test",
+          "process control"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s5",
+        "new_concepts": 13,
+        "terms": [
+          "business functions",
+          "make to order",
+          "make to stock",
+          "forecasting",
+          "product design",
+          "production planning",
+          "master production schedule",
+          "material requirements planning (MRP)",
+          "capacity planning",
+          "production control",
+          "shop floor control",
+          "inventory control",
+          "quality control"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s6",
+        "new_concepts": 5,
+        "terms": [
+          "manual work system",
+          "worker-machine system",
+          "automated system",
+          "semiautomated",
+          "fully automated"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s7",
+        "new_concepts": 5,
+        "terms": [
+          "manufacturing lead time (MLT)",
+          "setup time (Ts)",
+          "unit processing time (Tp)",
+          "non-operating time (Tn)",
+          "batch quantity (Q)"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s9",
+        "new_concepts": 5,
+        "terms": [
+          "capacity (Ca)",
+          "number of work stations (W)",
+          "shifts (S)",
+          "hours per shift (H)",
+          "number of lines (W ÷ N)"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s10",
+        "new_concepts": 5,
+        "terms": [
+          "utilization (U)",
+          "availability (A)",
+          "MTBF",
+          "MTTR",
+          "idle time"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s12",
+        "new_concepts": 5,
+        "terms": [
+          "fixed automation",
+          "programmable automation",
+          "flexible automation",
+          "product variety",
+          "production quantity"
+        ]
+      },
+      {
+        "topic": "topic-01",
+        "section": "s13",
+        "new_concepts": 9,
+        "terms": [
+          "USA Principle",
+          "understand/simplify/automate",
+          "ten strategies for automation",
+          "combined operations",
+          "integration of operations",
+          "on-line inspection",
+          "computer-integrated manufacturing (CIM)",
+          "CAD",
+          "CAM"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s1",
+        "new_concepts": 5,
+        "terms": [
+          "organization in factory",
+          "team-work",
+          "relevant organization",
+          "dynamic organization",
+          "organization goals"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s2",
+        "new_concepts": 6,
+        "terms": [
+          "organization design",
+          "functions",
+          "work-elements",
+          "job description",
+          "organization requests",
+          "operational requests"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s6",
+        "new_concepts": 5,
+        "terms": [
+          "job division",
+          "function-based division",
+          "process-based division",
+          "group technology layout",
+          "family of items"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "section": "s7",
+        "new_concepts": 5,
+        "terms": [
+          "responsibility",
+          "authority",
+          "formal (appointed) authority",
+          "informal authority",
+          "decision-making authority"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "process design",
+          "financial feasibility",
+          "process selection",
+          "facilities layout",
+          "impact factors"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s3",
+        "new_concepts": 8,
+        "terms": [
+          "manual process",
+          "mechanized process",
+          "automated process",
+          "NC",
+          "CNC",
+          "DNC",
+          "PLC",
+          "FMS"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s4",
+        "new_concepts": 7,
+        "terms": [
+          "distribution & transportation",
+          "containerization",
+          "warehousing",
+          "point of sale (POS)",
+          "MICR",
+          "ATM",
+          "e-banking"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s5",
+        "new_concepts": 5,
+        "terms": [
+          "process planning",
+          "manufacturing engineer",
+          "route sheet",
+          "operation sheet",
+          "tooling"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s6",
+        "new_concepts": 6,
+        "terms": [
+          "basic process",
+          "secondary process",
+          "property-enhancing operation",
+          "finishing operation",
+          "net shape",
+          "near net shape"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s9",
+        "new_concepts": 6,
+        "terms": [
+          "CAPP",
+          "retrieval (variant) CAPP",
+          "generative CAPP",
+          "group technology code",
+          "expert system",
+          "inference engine"
+        ]
+      },
+      {
+        "topic": "topic-03",
+        "section": "s10",
+        "new_concepts": 5,
+        "terms": [
+          "concurrent engineering",
+          "design for manufacturing and assembly (DFM/A)",
+          "design for quality",
+          "design for cost (DFC)",
+          "design for life cycle"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "section": "s4",
+        "new_concepts": 5,
+        "terms": [
+          "jobbing",
+          "project production",
+          "make-to-order (MTO)",
+          "non-standardised item",
+          "customization"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "section": "s6",
+        "new_concepts": 6,
+        "terms": [
+          "routing",
+          "scheduling",
+          "dispatching",
+          "bill of materials (BOM)",
+          "job card",
+          "process sheet"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "section": "s9",
+        "new_concepts": 5,
+        "terms": [
+          "standard operating procedure (SOP)",
+          "expediting",
+          "red tag",
+          "production control chart",
+          "bar chart"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "section": "s10",
+        "new_concepts": 5,
+        "terms": [
+          "block system",
+          "production clearance list (PCL)",
+          "inventory status report",
+          "finished goods (FG)",
+          "expediter"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s5",
+        "new_concepts": 5,
+        "terms": [
+          "transfer line",
+          "assembly line",
+          "single-model line",
+          "multi-model line",
+          "mixed-model line"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s6",
+        "new_concepts": 5,
+        "terms": [
+          "total work content",
+          "minimum rational work element",
+          "service time",
+          "cycle time",
+          "balance delay"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "section": "s7",
+        "new_concepts": 5,
+        "terms": [
+          "cycle time (Tc)",
+          "theoretical minimum stations",
+          "balance loss",
+          "balance efficiency (Eb)",
+          "repositioning time (Tr)"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s4",
+        "new_concepts": 7,
+        "terms": [
+          "hierarchical structure (monocode)",
+          "chain-type structure (polycode)",
+          "Opitz system",
+          "form code",
+          "supplementary code",
+          "extension",
+          "Multi-class"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s7",
+        "new_concepts": 6,
+        "terms": [
+          "single-machine cell",
+          "group-machine cell",
+          "manual handling",
+          "semi-integrated handling",
+          "U-shaped layout",
+          "key machine"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s8",
+        "new_concepts": 5,
+        "terms": [
+          "design standardization",
+          "standardized attachment",
+          "automated process planning",
+          "employee satisfaction",
+          "classification cost"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "section": "s9",
+        "new_concepts": 5,
+        "terms": [
+          "rank-order clustering",
+          "part-machine incidence matrix",
+          "diagonalized block",
+          "Hollier method",
+          "from-to chart"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "part-variety test",
+          "schedule-change test",
+          "error-recovery test",
+          "new-part test",
+          "mixed-model"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s3",
+        "new_concepts": 6,
+        "terms": [
+          "processing station",
+          "material handling and storage system",
+          "computer control system",
+          "pallet",
+          "fixture",
+          "human role"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s5",
+        "new_concepts": 6,
+        "terms": [
+          "independent movement",
+          "workpart configuration",
+          "temporary storage",
+          "buffer",
+          "load/unload",
+          "computer compatibility"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s6",
+        "new_concepts": 6,
+        "terms": [
+          "in-line layout",
+          "loop layout",
+          "ladder layout",
+          "open-field layout",
+          "robot-centered cell",
+          "routing flexibility"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s7",
+        "new_concepts": 6,
+        "terms": [
+          "workstation control",
+          "DNC distribution",
+          "traffic control",
+          "shuttle control",
+          "tool control",
+          "tool-life monitoring"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s8",
+        "new_concepts": 6,
+        "terms": [
+          "part program file",
+          "routing file",
+          "pallet reference file",
+          "tool life file",
+          "utilization report",
+          "status report"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "section": "s10",
+        "new_concepts": 6,
+        "terms": [
+          "bottleneck model",
+          "workload (WL)",
+          "server",
+          "part-mix fraction",
+          "maximum production rate (Rp*)",
+          "bottleneck station"
+        ]
+      }
+    ]
+  },
+  "C3": {
+    "unit": "câu hỏi",
+    "n_typical": "~200 (rubric §3.C)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_questions_total": 96,
+    "n_questions_missing_takeaway": 0,
+    "questions_missing_takeaway": []
+  },
+  "D1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.D) — thực tế 8",
+    "rule": "Nhị phân (gate) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_with_source_field": 8,
+    "per_topic": [
+      {
+        "topic": "topic-01",
+        "source": "Manufacturing Systems — Groover, Automation, Production Systems & CIM, 4e (Pearson, 2015), Chapter 1 (p.1–18) + slide 'Chapter 1 Introduction' (mục 1.1–1.7).",
+        "has_year": true,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": true
+      },
+      {
+        "topic": "topic-02",
+        "source": "Manufacturing Systems — slide 'Chapter 2 Organization Planning in Factory' (mục 2.1–2.4, 28 trang). Ebook Groover KHÔNG cover chủ đề organizational design (đã kiểm full-text); topic slide-only.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-03",
+        "source": "Manufacturing Systems — slide 'Chapter 3 Process Design' (mục 3.1–3.4) + ebook Groover, Automation, Production Systems & CIM 4e, Chapter 24 'Process Planning and Concurrent Engineering' (p.703–718). Định nghĩa automation term (NC/CNC/DNC/PLC/FMS/CAD/CAM) chuẩn hóa theo Groover.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-04",
+        "source": "Manufacturing Systems — slide 'Chapter 4 Jobbing and Batch' (lecturer Le Phuoc Luong, 39 slide) cho tầng vận hành PPC + ebook Groover, Automation, Production Systems & CIM 4e, §2.3 'Production Facilities' (p.33–36) và Fig 2.4 (p.32) cho tầng định vị (variety↔quantity, dải production quantity, plant layout, setup time).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-05",
+        "source": "Manufacturing Systems — slide 'Chapter 5 Mass Production' (Dr. Le Phuoc Luong, 81 slide) cho notation exam-facing + worked example + history/principles/QI + ebook Groover, Automation, Production Systems & CIM 4e, §2.3.3 (p.36–37, Fig 2.7) và Ch.15 'Manual Assembly Lines' (p.398–407, Eq 15.2/15.7/15.11/15.14/15.15) cho định nghĩa & công thức line balancing chuẩn.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-06",
+        "source": "Manufacturing Systems — slide 'Chapter 6 Group technology' (lecturer Đặng Võ Hùng, 31 slide) cho Opitz worked example + advantages/benefits + cell types + ebook Groover, Automation, Production Systems & CIM 4e, Chapter 18 'Group Technology and Cellular Manufacturing' (p.503–516) cho định nghĩa chuẩn + composite part + §18.4 rank-order clustering/Hollier (đánh dấu kiến thức nâng cao).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-07",
+        "source": "Manufacturing Systems — slide 'Chapter 7 Flexible manufacturing' (lecturer Đặng Võ Hùng, 27 slide) cho elements/types/handling/layouts/computer functions/data files/benefits + ebook Groover, Automation, Production Systems & CIM 4e, Chapter 19 'Flexible Manufacturing Cells and Systems' (p.533–554) cho định nghĩa chuẩn + 4 flexibility tests + single-machine cell/FMC/FMS + §19.4 bottleneck model (đánh dấu kiến thức nâng cao).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "topic-08",
+        "source": "Manufacturing Systems — slide 'Chapter 8 Costs Management' (lecturer Đặng Võ Hùng, 54 slide) cho control system + production/labour control + weighted method + ratio method + WIP cost computing (3 cách) với worked examples + ebook Groover, Automation, Production Systems & CIM 4e, §3.2 'Manufacturing Costs' (p.59-63) cho phân loại chi phí (fixed/variable, direct labour/material/overhead, phân bổ overhead).",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      }
+    ]
+  },
+  "D2": {
+    "unit": "marker / topic (điều kiện của D3, rubric §3.D)",
+    "n_typical": "không khai báo riêng trong rubric — đếm hỗ trợ audit D3",
+    "rule": "điều kiện của audit D3 — KHÔNG áp ở đây",
+    "per_topic": [
+      {
+        "topic": "topic-01",
+        "n_book_page_markers": 1,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(p.1–18)"
+        ]
+      },
+      {
+        "topic": "topic-02",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 15,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "topic-03",
+        "n_book_page_markers": 11,
+        "n_slide_markers": 3,
+        "book_marker_samples": [
+          "(Groover p.704)",
+          "(Groover p.705)",
+          "(Groover p.706)",
+          "(Groover p.707)",
+          "(Groover p.708)"
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "n_book_page_markers": 6,
+        "n_slide_markers": 8,
+        "book_marker_samples": [
+          "(Groover p.33–34)",
+          "(Groover p.34–35)",
+          "(Groover Fig 2.4, p.32)",
+          "(Groover p.35)",
+          "(p.33–36)"
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "n_book_page_markers": 5,
+        "n_slide_markers": 12,
+        "book_marker_samples": [
+          "(Groover p.36–37)",
+          "(Groover p.401)",
+          "(Groover p.403–404)",
+          "(p.36–37, Fig 2.7)",
+          "(p.398–407, Eq 15.2/15.7/15.11/15.14/15.15)"
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "n_book_page_markers": 6,
+        "n_slide_markers": 7,
+        "book_marker_samples": [
+          "(Groover p.507)",
+          "(Groover p.508)",
+          "(Groover p.508–509)",
+          "(Groover p.513)",
+          "(Groover p.513–515)"
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "n_book_page_markers": 8,
+        "n_slide_markers": 11,
+        "book_marker_samples": [
+          "(p.533)",
+          "(Groover p.533)",
+          "(Groover p.534–535)",
+          "(Groover p.535)",
+          "(Groover p.536–537)"
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "n_book_page_markers": 3,
+        "n_slide_markers": 18,
+        "book_marker_samples": [
+          "(Groover p.60)",
+          "(slide 17/54 + Groover p.62)",
+          "(p.59-63)"
+        ]
+      }
+    ]
+  },
+  "D4": {
+    "unit": "khối soft lens (courseMap + courseThreads + miniCases)",
+    "n_typical": "~40 (rubric §3.D)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_blocks_total": 0,
+    "n_blocks_with_disclaimer": 0,
+    "blocks": []
+  },
+  "E3": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.E) — thực tế 8",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_without_crossref": 3,
+    "topics_without_crossref": [
+      "topic-01",
+      "topic-02",
+      "topic-08"
+    ],
+    "refs_per_topic": [
+      {
+        "topic": "topic-01",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-02",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "topic-03",
+        "n_refs": 2,
+        "targets": [
+          1,
+          15
+        ]
+      },
+      {
+        "topic": "topic-04",
+        "n_refs": 5,
+        "targets": [
+          5,
+          6
+        ]
+      },
+      {
+        "topic": "topic-05",
+        "n_refs": 5,
+        "targets": [
+          2,
+          4
+        ]
+      },
+      {
+        "topic": "topic-06",
+        "n_refs": 9,
+        "targets": [
+          4,
+          5,
+          7
+        ]
+      },
+      {
+        "topic": "topic-07",
+        "n_refs": 3,
+        "targets": [
+          1,
+          6
+        ]
+      },
+      {
+        "topic": "topic-08",
+        "n_refs": 0,
+        "targets": []
+      }
+    ]
+  },
+  "E4": {
+    "unit": "cross-topic reference",
+    "n_typical": "~20 (rubric §3.E) — thực tế 24",
+    "rule": "T(n) — KHÔNG áp ở đây; 'có chú thích forward hay không' người chấm đọc snippet",
+    "n_crossrefs_total": 24,
+    "n_forward_refs": 11,
+    "forward_refs": [
+      {
+        "topic": "topic-03",
+        "from_order": 3,
+        "target_topic_order": 15,
+        "loc": "section:s7",
+        "snippet": "c tạp, medium–high volume\",\"cells\":[\"Manual assembly lines (Chương 15)\"]},{\"label\":\"Sản phẩm đơn giản (~chục components)"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 5,
+        "loc": "section:s1",
+        "snippet": "ion\",\"cells\":[\"10.000 – hàng triệu units\",\"Mass production (Topic 5)\",\"Thiết bị dedicated, high demand rate\"]}]}},{\"type"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 6,
+        "loc": "section:s2",
+        "snippet": "echnology)\",\"Batch soft-variety (medium) — giảm changeover (Topic 6)\"]},{\"label\":\"Product layout\",\"cells\":[\"Thiết bị xếp"
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 5,
+        "loc": "section:s2",
+        "snippet": " xếp theo trình tự sản phẩm (dây chuyền)\",\"Mass production (Topic 5)\"]}]}},{\"type\":\"callout\",\"callout\":{\"kind\":\"insight\""
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 5,
+        "loc": "section:s11",
+        "snippet": " 3 hệ thống\",\"columns\":[\"Tiêu chí\",\"Jobbing\",\"Batch\",\"Mass (Topic 5)\"],\"rows\":[{\"label\":\"Production quantity\",\"cells\":[\""
+      },
+      {
+        "topic": "topic-04",
+        "from_order": 4,
+        "target_topic_order": 5,
+        "loc": "section:s11",
+        "snippet": " điểm đánh đổi flexibility ↔ efficiency phù hợp thị trường. Topic 5 sẽ đi sâu đầu 'mass' của trục này (slide + Groover §"
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 7,
+        "loc": "section:s7",
+        "snippet": ",{\"label\":\"d. Flexible manufacturing cell / FMS (Groover, → Topic 7)\",\"cells\":[\"Cell/hệ tự động linh hoạt\",\"Tự động hóa "
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 7,
+        "loc": "section:s7",
+        "snippet": "s\":[\"Cell/hệ tự động linh hoạt\",\"Tự động hóa cao — học kỹ ở Topic 7\"]}]}},{\"type\":\"callout\",\"callout\":{\"kind\":\"note\",\"ti"
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 7,
+        "loc": "section:s7",
+        "snippet": " soát WIP trực quan (Groover p.508–509). Loại (d) FMS thuộc Topic 7.\"}}] []"
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 7,
+        "loc": "question:8",
+        "snippet": "mation cao. Khóa: FMS là mức tự động linh hoạt cao hơn, nối Topic 7.\"},{\"id\":\"b\",\"text\":\"Group-machine manual cells must"
+      },
+      {
+        "topic": "topic-06",
+        "from_order": 6,
+        "target_topic_order": 7,
+        "loc": "question:8",
+        "snippet": "gle, group-manual, group semi-integrated, và FMS học tiếp ở Topic 7.\"}"
+      }
+    ]
+  },
+  "G1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.G) — thực tế 8",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_without_sowhat": 8,
+    "topics_without_sowhat": [
+      "topic-01",
+      "topic-02",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06",
+      "topic-07",
+      "topic-08"
+    ],
+    "found_at": []
+  },
+  "H1": {
+    "unit": "trang ôn tập",
+    "n_typical": "1 route /[subject]/on-tap (rubric §3.H)",
+    "rule": "Tồn tại + chất lượng — KHÔNG áp ở đây",
+    "n_topics_with_quiz": 8,
+    "topics_with_quiz": [
+      "topic-01",
+      "topic-02",
+      "topic-03",
+      "topic-04",
+      "topic-05",
+      "topic-06",
+      "topic-07",
+      "topic-08"
+    ],
+    "meets_min_2_topics": true,
+    "note": "breakdown theo topic + retry câu sai là feature component CumulativeQuiz — không đo được từ data, cần walkthrough runtime"
+  },
+  "not_measured": {
+    "reason": "đòi index ngữ nghĩa hoặc chấm tay (rubric §2 rule 5, rule 10)",
+    "sub_checks": [
+      "A2",
+      "B2",
+      "C1",
+      "C2",
+      "C4",
+      "D3",
+      "E4-chú-thích-forward",
+      "F1-chất-lượng",
+      "F2",
+      "G2",
+      "H1-breakdown/retry-runtime"
+    ]
+  }
+}

@@ -684,6 +684,71 @@ const topic00: Chapter = {
       ],
     },
     {
+      id: "s6b",
+      heading: "Challenges & Opportunities cho OB (sách Ch.1)",
+      blocks: [
+        comparisonBlock(
+          "6 thách thức & cơ hội của OB hiện đại (sách, p38–42)",
+          ["Thách thức", "Nội dung"],
+          [
+            {
+              label: "Continuing globalization",
+              cells: [
+                "Tổ chức không còn bị biên giới ràng buộc (Samsung bán chủ yếu ra ngoài Hàn; McDonald's 118 nước; Apple thuê ngoài Mỹ nhiều gấp đôi trong Mỹ). 3 tình huống manager phải xử: làm việc ở nước ngoài (expatriate), làm với người khác văn hóa (điều motivate mình chưa chắc motivate họ — phải đổi management style), thích ứng chuẩn văn hóa + PHÁP LÝ từng nước (\"guest companies\" vi phạm là gánh hậu quả).",
+              ],
+            },
+            {
+              label: "Workforce demographics",
+              cells: [
+                "Longevity tăng ~6 năm từ 1990, birth rate giảm ở nước phát triển → workforce GIÀ đi, ảnh hưởng attitudes/culture/leadership/structure/communication; hậu khủng hoảng 2008: người thất nghiệp lâu rời workforce, ghép nhiều việc part-time, on-demand work.",
+              ],
+            },
+            {
+              label: "Social media",
+              cells: [
+                "HR có nên soi social media ứng viên? (case sa thải vì tweet/post trước ngày nhận việc); policy dùng social media tại chỗ làm; nghiên cứu: đang mood tốt mà lướt Facebook nhiều → mood XẤU đi; check Facebook thường xuyên 2 tuần → satisfaction với cuộc sống giảm.",
+              ],
+            },
+            {
+              label: "Employee well-being at work",
+              cells: [
+                "Virtual workplace = \"never get away\" — làm ở đâu cũng được nhưng dễ thấy không thuộc về team; 1/4 nhân viên có dấu hiệu burnout, 2/3 báo stress cao + fatigue; văn hóa \"always on\" qua email/text; single-parent & chăm sóc người phụ thuộc → work–life conflict.",
+              ],
+            },
+            {
+              label: "Positive work environment",
+              cells: [
+                "Dòng nghiên cứu positive organizational scholarship — xem chi tiết callout dưới.",
+              ],
+            },
+            {
+              label: "Ethical behavior",
+              cells: [
+                "Bối cảnh cắt giảm + cạnh tranh → nhân viên bị ép \"cut corners\"; ethical dilemmas (blow the whistle? theo lệnh mình không đồng ý? \"play politics\"?); ranh giới đúng-sai ngày càng mờ; manager phải tạo ethically healthy climate — giảm ambiguity về đúng/sai; ethics training hiệu quả khi làm LIÊN TỤC.",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "insight",
+          "Positive organizational scholarship — OB nhìn qua lens điểm mạnh (sách, p41–42)",
+          "POS (còn gọi positive organizational behavior) nghiên cứu cách tổ chức phát triển human strengths, nuôi vitality & resilience, unlock potential; chủ đề chính: engagement, hope, optimism, resilience. Phê phán: OB truyền thống quá tập trung \"what's wrong\". POS không phủ nhận giá trị của negative feedback — nó thách thức researcher nhìn OB qua lens tích cực, dùng strengths thay vì dằn vặt limitations.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Positive organizational scholarship (POS)",
+          definition:
+            "Lĩnh vực OB nghiên cứu cách tổ chức phát triển human strengths, nuôi vitality/resilience và unlock potential.",
+        },
+        {
+          term: "Ethical dilemmas and ethical choices",
+          definition:
+            "Tình huống buộc cá nhân tự định nghĩa đúng-sai để hành động.",
+        },
+      ],
+    },
+    {
       id: "s7",
       heading: "Managers & systematic study",
       blocks: [
@@ -707,6 +772,30 @@ const topic00: Chapter = {
           "insight",
           "Intuition + systematic study",
           "OB khuyên bổ sung intuition (linh cảm) bằng systematic study — dựa trên evidence/data thay vì 'common sense'. Vì 'few absolutes', kết luận rút từ nghiên cứu có kiểm soát đáng tin hơn phán đoán vội. Đây là tinh thần evidence-based management (R&J Ch.1).",
+        ),
+        comparisonBlock(
+          "Big Data trong management (sách, p35–36)",
+          ["Khía cạnh", "Nội dung"],
+          [
+            {
+              label: "Current usage",
+              cells: [
+                "Lý do dùng data analytics: predicting events, detecting risk, preventing catastrophes.",
+              ],
+            },
+            {
+              label: "New trends",
+              cells: [
+                "Nghiên cứu 10.000 workers ở 5 nước: nhân viên kỳ vọng cách làm việc sắp tới thay đổi vì technological advancement hơn mọi yếu tố khác; data-driven management: define objectives → dựng theories of causality → test hoạt động nào relevant.",
+              ],
+            },
+            {
+              label: "Limitations",
+              cells: [
+                "Privacy khi thu thập bằng surveillance; nghiên cứu: nhân viên productive HƠN khi có tương tác xã hội → công ty đổi break policies; electronic performance monitoring tăng task performance + citizenship chỉ NGẮN HẠN (motif Taylor 1911: giám sát không thay được quản trị outcomes).",
+              ],
+            },
+          ],
         ),
         calloutBlock(
           "note",
@@ -1238,6 +1327,48 @@ const topic00: Chapter = {
       conceptTested: "Effective vs successful managers",
       takeaway:
         "OB giúp thấy thăng tiến nhanh và quản lý hiệu quả không phải lúc nào cũng là một chuyện.",
+    },
+    {
+      id: "q12",
+      stem: "A research team studies how organizations build employee hope, resilience, vitality, and strengths while still using negative feedback when it is useful. Which field best fits the study?",
+      options: [
+        { id: "a", text: "Positive organizational scholarship", isCorrect: true, rationale: "Cơ chế: field này nghiên cứu human strengths, vitality, resilience và potential trong tổ chức. Bẫy: chữ positive dễ bị hiểu thành chỉ nói điều dễ nghe. Khóa: POS vẫn thừa nhận giá trị của negative feedback." },
+        { id: "b", text: "A policy of ignoring every weakness and failure", isCorrect: false, rationale: "Cơ chế: POS đổi lens sang strengths nhưng không phủ nhận weakness hay negative feedback. Bẫy: positive bị tuyệt đối hóa thành né mọi vấn đề. Khóa: strengths-based không đồng nghĩa blind optimism." },
+        { id: "c", text: "Electronic performance monitoring", isCorrect: false, rationale: "Cơ chế: monitoring theo dõi hành vi/performance, không phải field nghiên cứu hope và resilience. Bẫy: cả hai đều có thể dùng workplace data. Khóa: surveillance khác positive scholarship." },
+        { id: "d", text: "An instrumental ethical climate", isCorrect: false, rationale: "Cơ chế: instrumental climate ưu tiên self-interest trong quyết định đạo đức. Bẫy: vitality và strengths có thể cải thiện outcomes cá nhân. Khóa: POS không phải ethical-climate category." },
+        { id: "e", text: "Workforce demographic analysis", isCorrect: false, rationale: "Cơ chế: demographics xem age, labor participation và workforce composition. Bẫy: resilience có thể khác theo nhóm nhân khẩu. Khóa: stem hỏi phát triển strengths, không hỏi composition." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Positive organizational scholarship",
+      takeaway: "POS nhìn OB qua human strengths, vitality và resilience nhưng không biến positivity thành lý do bỏ qua feedback tiêu cực.",
+    },
+    {
+      id: "q13",
+      stem: "An employee must decide whether to report a supervisor's misconduct, even though reporting may damage her career. What is she facing?",
+      options: [
+        { id: "a", text: "An ethical dilemma requiring her to define right and wrong for action", isCorrect: true, rationale: "Cơ chế: tình huống buộc cá nhân cân nhắc đúng-sai trước một lựa chọn có hậu quả thật. Bẫy: có misconduct nên dễ gọi ngay là ethics training problem. Khóa: decision situation = ethical dilemma." },
+        { id: "b", text: "An ethics training program", isCorrect: false, rationale: "Cơ chế: training là hoạt động tổ chức giúp chuẩn hóa nhận thức đạo đức, không phải lựa chọn đang xảy ra. Bẫy: training có thể giúp employee xử lý case. Khóa: program khác dilemma." },
+        { id: "c", text: "An ethically healthy climate", isCorrect: false, rationale: "Cơ chế: climate là môi trường chung giảm ambiguity về đúng-sai. Bẫy: climate ảnh hưởng quyết định báo cáo. Khóa: stem mô tả lựa chọn cá nhân, không mô tả shared climate." },
+        { id: "d", text: "A demographic trend", isCorrect: false, rationale: "Cơ chế: demographic trend là thay đổi cấu trúc workforce. Bẫy: career consequences có thể khác giữa nhóm nhân viên. Khóa: không có dữ kiện population change." },
+        { id: "e", text: "Systematic study", isCorrect: false, rationale: "Cơ chế: systematic study dùng evidence để hiểu hành vi. Bẫy: employee có thể cần thu thập evidence trước khi report. Khóa: câu hỏi phân loại tình huống đúng-sai." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Ethical dilemmas and ethical choices",
+      takeaway: "Ethical dilemma là lúc cá nhân phải tự xác định đúng-sai để hành động; ethical climate và training chỉ là bối cảnh hỗ trợ quyết định đó.",
+    },
+    {
+      id: "q14",
+      stem: "A company expands electronic monitoring and discovers that informal employee interaction predicts productivity. Which conclusion best reflects the limits of Big Data management?",
+      options: [
+        { id: "a", text: "Use the insight carefully because surveillance raises privacy concerns and monitoring gains may be short-lived", isCorrect: true, rationale: "Cơ chế: Big Data có thể phát hiện vai trò của social interaction nhưng surveillance gây privacy risk và monitoring chỉ nâng một số outcomes ngắn hạn. Bẫy: data chính xác dễ tạo niềm tin rằng theo dõi càng nhiều càng tốt. Khóa: insight hữu ích không xóa giới hạn quản trị." },
+        { id: "b", text: "Continuous monitoring always raises long-term productivity and citizenship", isCorrect: false, rationale: "Cơ chế: evidence trong block chỉ cho hiệu ứng task performance và citizenship NGẮN HẠN. Bẫy: electronic data tạo cảm giác kiểm soát bền vững. Khóa: always + long-term trái với giới hạn nêu trong sách." },
+        { id: "c", text: "Privacy is irrelevant whenever the data improve prediction", isCorrect: false, rationale: "Cơ chế: surveillance đặt ra privacy concern dù prediction hữu ích. Bẫy: outcome tốt bị dùng để hợp thức hóa mọi phương tiện. Khóa: data-driven management vẫn cần ethical governance." },
+        { id: "d", text: "Social interaction should be eliminated to make work measurable", isCorrect: false, rationale: "Cơ chế: nghiên cứu cho thấy interaction có thể làm nhân viên productive hơn. Bẫy: informal time dễ bị coi là waste. Khóa: Big Data ở đây phát hiện giá trị của breaks và interaction." },
+        { id: "e", text: "Data analytics cannot detect risk or predict events", isCorrect: false, rationale: "Cơ chế: predicting events và detecting risk là current uses của analytics. Bẫy: thấy limitations rồi phủ định toàn bộ công cụ. Khóa: giới hạn không đồng nghĩa vô dụng." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Big Data limitations",
+      takeaway: "Big Data hỗ trợ prediction và phát hiện pattern, nhưng surveillance cần giới hạn privacy và không thể thay quản trị outcomes dài hạn.",
     },
   ],
   status: "ready",
@@ -2390,7 +2521,7 @@ const topic02: Chapter = {
     },
     {
       id: "s6",
-      heading: "Shortcuts trong judging others",
+      heading: "Shortcuts kinh điển khi judging others (R&J)",
       blocks: [
         calloutBlock(
           "note",
@@ -2425,24 +2556,6 @@ const topic02: Chapter = {
                 "Judging someone on the basis of one's perception of the group to which that person belongs.",
               ],
             },
-            {
-              label: "Similar-to-me effect",
-              cells: [
-                "Vô thức thiên vị người giống mình về thể chất, nghề nghiệp, background hoặc identity cues.",
-              ],
-            },
-            {
-              label: "Recency effect",
-              cells: [
-                "Thông tin xuất hiện gần nhất được nhớ tốt và có thể nặng ký quá mức trong phán đoán.",
-              ],
-            },
-            {
-              label: "Primacy effect",
-              cells: [
-                "Thông tin đầu tiên tạo first impression mạnh, khiến những thông tin sau bị diễn giải quanh ấn tượng đầu.",
-              ],
-            },
           ],
         ),
       ],
@@ -2467,6 +2580,38 @@ const topic02: Chapter = {
           definition:
             "Judging someone based on one's perception of the group to which that person belongs.",
         },
+      ],
+    },
+    {
+      id: "s6b",
+      heading: "Shortcut bổ sung từ slide: similarity & thứ tự thông tin",
+      blocks: [
+        comparisonBlock(
+          "Shortcut bổ sung (slide 32-35)",
+          ["Shortcut", "Nội dung"],
+          [
+            {
+              label: "Similar-to-me effect",
+              cells: [
+                "Vô thức thiên vị người giống mình về thể chất, nghề nghiệp, background hoặc identity cues.",
+              ],
+            },
+            {
+              label: "Recency effect",
+              cells: [
+                "Thông tin xuất hiện gần nhất được nhớ tốt và có thể nặng ký quá mức trong phán đoán.",
+              ],
+            },
+            {
+              label: "Primacy effect",
+              cells: [
+                "Thông tin đầu tiên tạo first impression mạnh, khiến những thông tin sau bị diễn giải quanh ấn tượng đầu.",
+              ],
+            },
+          ],
+        ),
+      ],
+      keyTerms: [
         {
           term: "similar-to-me effect",
           definition:
@@ -2613,10 +2758,10 @@ const topic02: Chapter = {
     },
     {
       id: "s8",
-      heading: "Common biases & errors in decision making",
+      heading: "Biases khi xử lý thông tin (R&J p102-104)",
       blocks: [
         comparisonBlock(
-          "8 biases/errors quyết định (R&J p102-104; slide 36-38)",
+          "Biases khi xử lý thông tin (R&J p102-104; slide 36-38)",
           ["Bias", "Nội dung"],
           [
             {
@@ -2643,6 +2788,40 @@ const topic02: Chapter = {
                 "Base judgments on information that is readily available, vivid hoặc recently encountered.",
               ],
             },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "overconfidence bias",
+          definition:
+            "Tendency to overestimate one's own ability or judgment accuracy.",
+        },
+        {
+          term: "anchoring bias",
+          definition:
+            "Fixating on initial information and failing to adjust adequately later.",
+        },
+        {
+          term: "confirmation bias",
+          definition:
+            "Seeking information that reaffirms past choices while discounting contradictory information.",
+        },
+        {
+          term: "availability bias",
+          definition:
+            "Basing judgments on information that is readily available or vivid.",
+        },
+      ],
+    },
+    {
+      id: "s8b",
+      heading: "Biases khi cam kết & nhìn lại + cách giảm bias",
+      blocks: [
+        comparisonBlock(
+          "Biases khi cam kết & nhìn lại (R&J p102-104; slide 36-38)",
+          ["Bias", "Nội dung"],
+          [
             {
               label: "Escalation of commitment",
               cells: [
@@ -2706,26 +2885,6 @@ const topic02: Chapter = {
         ),
       ],
       keyTerms: [
-        {
-          term: "overconfidence bias",
-          definition:
-            "Tendency to overestimate one's own ability or judgment accuracy.",
-        },
-        {
-          term: "anchoring bias",
-          definition:
-            "Fixating on initial information and failing to adjust adequately later.",
-        },
-        {
-          term: "confirmation bias",
-          definition:
-            "Seeking information that reaffirms past choices while discounting contradictory information.",
-        },
-        {
-          term: "availability bias",
-          definition:
-            "Basing judgments on information that is readily available or vivid.",
-        },
         {
           term: "escalation of commitment",
           definition:
@@ -2984,7 +3143,7 @@ const topic02: Chapter = {
         calloutBlock(
           "key",
           "Ứng dụng shortcut & bias trong tổ chức + SO WHAT",
-          "Employment interview dễ bị ấn tượng đầu chi phối; performance expectations có thể tạo self-fulfilling prophecy / Pygmalion effect; performance evaluation cũng chịu bias. SO WHAT (Nordell 2022): unconscious bias có thể hại hơn explicit discrimination vì nó ngăn ta thấy rõ, hiểu đúng và tin nhau.",
+          "Employment interview dễ bị ấn tượng đầu chi phối; performance expectations có thể tạo self-fulfilling prophecy / Pygmalion effect; performance evaluation cũng chịu bias. SO WHAT (Nordell 2022): unconscious bias có thể hại hơn explicit discrimination vì nó ngăn ta thấy rõ, hiểu đúng và tin nhau. → Mắt xích môn học: perception & attribution là bộ lọc đầu vào cho attitudes (Topic 05) và motivation (Topic 06) — cách bạn \"quy nhân\" thành công/thất bại định hình kỳ vọng effort→performance; các bias như anchoring/overconfidence sẽ trở lại ở decision nhóm (Topic 07) và negotiation (Topic 08).",
         ),
         comparisonBlock(
           "Causes of creative behavior — chi tiết sách (p109–111)",
@@ -4069,7 +4228,7 @@ const topic03: Chapter = {
         calloutBlock(
           "key",
           "So what — kiến thức này đổi hành động của bạn",
-          "Values chỉ lộ ra khi phải trade-off — nên muốn biết giá trị thật (của mình hay của tổ chức), nhìn vào lựa chọn lúc khó, không nhìn tuyên ngôn. Hành động: trước khi nhận việc, so value system của mình với tổ chức (P-O fit) thay vì chỉ so lương; trong team, chủ động tìm deep-level diversity thay vì dừng ở surface-level; nhận diện stereotype threat để nó không bóp méo hiệu suất của chính bạn hoặc cách bạn đánh giá người khác.",
+          "Values chỉ lộ ra khi phải trade-off — nên muốn biết giá trị thật (của mình hay của tổ chức), nhìn vào lựa chọn lúc khó, không nhìn tuyên ngôn. Hành động: trước khi nhận việc, so value system của mình với tổ chức (P-O fit) thay vì chỉ so lương; trong team, chủ động tìm deep-level diversity thay vì dừng ở surface-level; nhận diện stereotype threat để nó không bóp méo hiệu suất của chính bạn hoặc cách bạn đánh giá người khác. → Mắt xích môn học: values và deep-level diversity là \"nguyên liệu cá nhân\" mà nhóm (Topic 07) và team (Topic 09) lắp ráp; P-O Fit ở đây nối thẳng tới organizational culture — culture fit/add (Topic 11).",
         ),
       ],
       keyTerms: [
@@ -5028,7 +5187,7 @@ const topic04: Chapter = {
         calloutBlock(
           "key",
           "So what — kiến thức này đổi hành động của bạn",
-          "Cảm xúc không phải kẻ thù của lý trí — nó là dữ liệu. Hành động: đừng ra quyết định lớn lúc mood xấu; nếu công việc đòi emotional labor, tránh surface acting kéo dài (dẫn tới dissonance/burnout) — luyện deep acting/mindfulness; theo AET, job attitude là tích lũy của chuỗi sự kiện nhỏ hằng ngày → quản lý trải nghiệm nhỏ mỗi ngày thay vì chỉ sửa \"chính sách lớn\".",
+          "Cảm xúc không phải kẻ thù của lý trí — nó là dữ liệu. Hành động: đừng ra quyết định lớn lúc mood xấu; nếu công việc đòi emotional labor, tránh surface acting kéo dài (dẫn tới dissonance/burnout) — luyện deep acting/mindfulness; theo AET, job attitude là tích lũy của chuỗi sự kiện nhỏ hằng ngày → quản lý trải nghiệm nhỏ mỗi ngày thay vì chỉ sửa \"chính sách lớn\". → Mắt xích môn học: emotion là dữ liệu cảm xúc chảy vào attitudes (Topic 05, thành phần Affective của ABC) và, qua Emotional Intelligence, vào leadership (Topic 10) lẫn quản trị stress (Topic 12).",
         ),
       ],
       keyTerms: [
@@ -5639,7 +5798,7 @@ const topic05: Chapter = {
     },
     {
       id: "s4",
-      heading: "Major job attitudes",
+      heading: "Job attitudes hướng CÔNG VIỆC: satisfaction, involvement, empowerment",
       blocks: [
         comparisonBlock(
           "6 major job attitudes trong OB",
@@ -5663,6 +5822,35 @@ const topic05: Chapter = {
                 "Belief rằng mình có influence lên work environment, competence, meaningfulness và autonomy.",
               ],
             },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Job satisfaction",
+          definition:
+            "Positive feeling about a job resulting from evaluating its characteristics.",
+        },
+        {
+          term: "Job involvement",
+          definition:
+            "Degree of psychological identification with job and performance importance to self-worth.",
+        },
+        {
+          term: "Psychological empowerment",
+          definition:
+            "Belief in influence, competence, meaningfulness and autonomy at work.",
+        },
+      ],
+    },
+    {
+      id: "s4b",
+      heading: "Job attitudes hướng TỔ CHỨC: commitment, POS, engagement",
+      blocks: [
+        comparisonBlock(
+          "Job attitudes hướng TỔ CHỨC",
+          ["Job attitude", "Meaning"],
+          [
             {
               label: "Organizational commitment",
               cells: [
@@ -5690,21 +5878,6 @@ const topic05: Chapter = {
         ),
       ],
       keyTerms: [
-        {
-          term: "Job satisfaction",
-          definition:
-            "Positive feeling about a job resulting from evaluating its characteristics.",
-        },
-        {
-          term: "Job involvement",
-          definition:
-            "Degree of psychological identification with job and performance importance to self-worth.",
-        },
-        {
-          term: "Psychological empowerment",
-          definition:
-            "Belief in influence, competence, meaningfulness and autonomy at work.",
-        },
         {
           term: "Organizational commitment",
           definition:
@@ -5961,7 +6134,7 @@ const topic05: Chapter = {
         calloutBlock(
           "key",
           "So what — kiến thức này đổi hành động của bạn",
-          "Con người khao khát consistency — khi bạn thấy mình đang \"hợp lý hóa\" một việc trái giá trị, đó là cognitive dissonance đang vận hành, hãy gọi tên nó. Hành động với vai trò quản lý: đừng đo satisfaction một lần rồi thôi — bất mãn diễn tiến theo EVLN, can thiệp ở Voice/Loyalty trước khi thành Exit/Neglect; và nhớ engagement ≠ satisfaction: người hài lòng chưa chắc dốc sức.",
+          "Con người khao khát consistency — khi bạn thấy mình đang \"hợp lý hóa\" một việc trái giá trị, đó là cognitive dissonance đang vận hành, hãy gọi tên nó. Hành động với vai trò quản lý: đừng đo satisfaction một lần rồi thôi — bất mãn diễn tiến theo EVLN, can thiệp ở Voice/Loyalty trước khi thành Exit/Neglect; và nhớ engagement ≠ satisfaction: người hài lòng chưa chắc dốc sức. → Mắt xích môn học: attitudes tổng hợp perception (Topic 02) và emotion (Topic 04) thành xu hướng hành vi; EVLN ở đây là bản lề sang motivation/engagement (Topic 06), và khi bất mãn lan ra nhóm thì thành conflict (Topic 08).",
         ),
       ],
       keyTerms: [
@@ -6508,6 +6681,11 @@ const topic06: Chapter = {
           "Thêm từ slide: McGregor Theory X-Y",
           "Theory X giả định nhân viên lười, cần kiểm soát; Theory Y giả định nhân viên tự giác, tìm trách nhiệm. Cách manager nhìn con người ảnh hưởng cách tạo động lực.",
         ),
+        calloutBlock(
+          "note",
+          "Maslow — nuances & giới hạn (sách)",
+          "Gần đây có đề xuất nhu cầu THỨ SÁU — intrinsic values — quy về Maslow nhưng chưa được chấp nhận rộng. Muốn motivate ai phải biết người đó đang Ở BẬC NÀO và thỏa mãn nhu cầu TẠI hoặc TRÊN bậc đó. Phần lớn research KHÔNG validate lý thuyết, nhất là khác văn hóa (ngoại lệ khả dĩ: physiological) — nhưng lý thuyết trực giác \"die hard\", vẫn phải biết vì mức phổ biến của nó.",
+        ),
       ],
       keyTerms: [
         {
@@ -6557,7 +6735,7 @@ const topic06: Chapter = {
             {
               label: "Self-concordance",
               cells: [
-                "Mức độ lý do theo đuổi goal khớp với interests & core values của cá nhân; theo đuổi goal vì intrinsic reason → hài lòng & perform tốt hơn.",
+                "Mức độ lý do theo đuổi goal khớp với interests & core values của cá nhân; theo đuổi goal vì intrinsic reason → hài lòng & perform tốt hơn. (sách) Người làm vì cảm giác NGHĨA VỤ (không intrinsic) vẫn có thể perform acceptably, nhưng chịu strain cao hơn.",
               ],
             },
             {
@@ -6567,6 +6745,11 @@ const topic06: Chapter = {
               ],
             },
           ],
+        ),
+        calloutBlock(
+          "key",
+          "Intrinsic → chất lượng, incentive → số lượng (sách)",
+          "Meta-analysis xác nhận intrinsic motivation đóng góp cho CHẤT LƯỢNG công việc, incentives đóng góp cho SỐ LƯỢNG; intrinsic motivation dự đoán performance yếu đi khi incentive gắn TRỰC TIẾP vào performance (bonus theo sản lượng).",
         ),
         calloutBlock(
           "note",
@@ -6632,10 +6815,35 @@ const topic06: Chapter = {
             {
               label: "Moderators khác",
               cells: [
-                "Task characteristics (đơn giản/quen thuộc/độc lập) và national culture ảnh hưởng quan hệ goal-performance.",
+                "Task characteristics (đơn giản/quen thuộc/độc lập) và national culture ảnh hưởng quan hệ goal-performance. (sách) Văn hóa collectivistic + high power-distance: moderate achievable goals motivate HƠN difficult goals; trên interdependent tasks thì group goals hiệu quả hơn.",
               ],
             },
           ],
+        ),
+        comparisonBlock(
+          "Promotion focus vs Prevention focus — 2 chiến lược self-regulation (sách)",
+          ["Focus", "Cơ chế", "Ví dụ ôn thi"],
+          [
+            {
+              label: "Promotion focus",
+              cells: [
+                "Strive qua advancement & accomplishment; APPROACH điều kiện đưa mình lại gần goal.",
+                "Đọc tài liệu.",
+              ],
+            },
+            {
+              label: "Prevention focus",
+              cells: [
+                "Strive qua fulfill duties/obligations; AVOID điều kéo mình xa goal.",
+                "Nhịn chơi game khi ôn thi.",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "note",
+          "Dùng cả promotion lẫn prevention (sách)",
+          "Lý tưởng là CÓ CẢ HAI; người prevention outlook bị failure ảnh hưởng satisfaction NẶNG hơn → với họ nên set achievable goals, remove distractions, provide structure.",
         ),
         flowBlock(
           "s4",
@@ -6675,7 +6883,7 @@ const topic06: Chapter = {
             { from: "div", to: "dept", label: "cascade" },
             { from: "dept", to: "indiv", label: "cascade" },
           ],
-          "MBO chuyển goal-setting thành hệ thống: mục tiêu tổ chức được cascade xuống division → department → individual.",
+          "MBO chuyển goal-setting thành hệ thống: mục tiêu tổ chức được cascade xuống division → department → individual. (sách) GE gọi mục tiêu hung hăng là 'stretch goals'; biến thể MBOR dùng >30 năm ở chính phủ Đan Mạch/Na Uy/Thụy Điển. Khi MBO thất bại, thủ phạm thường là: kỳ vọng phi thực tế, top management thiếu commitment, không (muốn) thưởng theo goal accomplishment.",
         ),
         calloutBlock(
           "note",
@@ -6698,6 +6906,16 @@ const topic06: Chapter = {
           term: "Self-generated feedback",
           definition:
             "Feedback do chính cá nhân tự theo dõi/tạo ra; thường mạnh hơn feedback từ bên ngoài.",
+        },
+        {
+          term: "Promotion focus",
+          definition:
+            "Strive qua advancement/accomplishment và approach điều kiện đưa mình gần goal.",
+        },
+        {
+          term: "Prevention focus",
+          definition:
+            "Strive qua duties/obligations và avoid điều kéo mình xa goal.",
         },
       ],
     },
@@ -6744,6 +6962,11 @@ const topic06: Chapter = {
           "note",
           "Pygmalion effect (self-fulfilling prophecy)",
           "Kỳ vọng của người khác có thể làm điều đó thành thật: GV tin HS thông minh sẽ dành nhiều thời gian hơn, kỳ vọng cao hơn → HS đạt tốt hơn. Cách mạnh nhất manager dùng verbal persuasion. Goal-setting & self-efficacy bổ sung nhau (Exhibit 7-4).",
+        ),
+        calloutBlock(
+          "note",
+          "Phê phán self-efficacy (sách)",
+          "Intelligence + conscientiousness + emotional stability làm tăng self-efficacy mạnh đến mức một số researcher cho rằng self-efficacy một phần là BY-PRODUCT của người thông minh, tự tin — không hẳn nguồn motivation độc lập.",
         ),
       ],
       keyTerms: [
@@ -6913,7 +7136,7 @@ const topic06: Chapter = {
             {
               label: "Informational justice",
               cells: [
-                "Mức độ manager cung cấp giải thích trung thực cho quyết định.",
+                "Mức độ manager cung cấp giải thích trung thực cho quyết định. (sách) Khi báo tin xấu, excuse ('tôi biết điều này tệ, nhưng đó không phải quyết định của tôi') hiệu quả hơn justification ('tôi quyết vậy nhưng chuyện không lớn').",
                 "Tôi có được giải thích rõ ràng, thành thật không?",
               ],
             },
@@ -6930,6 +7153,41 @@ const topic06: Chapter = {
           "note",
           "Justice outcomes",
           "Khi thấy được đối xử công bằng, nhân viên tăng task performance & citizenship (OCB), giảm counterproductive behavior. Distributive & procedural gắn với performance; informational & interpersonal gắn với citizenship.",
+        ),
+        calloutBlock(
+          "note",
+          "Ensuring justice — 2 kiểu manager (sách)",
+          "Manager 'tính' công bằng theo rule-adherence hành xử công bằng hơn khi NHIỀU rules/ít discretion; manager hành xử theo affect (positive affect cao) công bằng hơn khi NHIỀU discretion → guideline cứng không hiệu quả phổ quát.",
+        ),
+        comparisonBlock(
+          "Culture & justice — nghiên cứu 32 nước (sách)",
+          ["Giá trị văn hóa trội", "Chương trình justice phù hợp"],
+          [
+            {
+              label: "Individualism cao (Úc/Mỹ)",
+              cells: ["Competitive pay + thưởng cá nhân xuất sắc."],
+            },
+            {
+              label: "Uncertainty avoidance (Pháp)",
+              cells: ["Fixed pay + employee participation."],
+            },
+            {
+              label: "Femininity (Thụy Điển)",
+              cells: ["Work–life balance + social recognition."],
+            },
+            {
+              label: "Low power-distance (Áo)",
+              cells: [
+                "Công khai justify chênh lệch leader–worker + biểu tượng ethical leadership.",
+              ],
+            },
+            {
+              label: "Justice perceptions",
+              cells: [
+                "Quan trọng NHẤT ở nước individualistic, feminine, uncertainty-avoidance, low power-distance.",
+              ],
+            },
+          ],
         ),
       ],
       keyTerms: [
@@ -7166,6 +7424,11 @@ const topic06: Chapter = {
             },
           ],
         ),
+        calloutBlock(
+          "note",
+          "JCM hiệu lực tới đâu? (sách, p152–153)",
+          "Nhiều bằng chứng job characteristics → satisfaction + organizational commitment QUA increased motivation; nhân viên \"other oriented\" → quan hệ intrinsic characteristics↔satisfaction yếu hơn; psychological ownership tăng motivation (nhất là khi shared trong group); virtual work làm meaningfulness/responsibility/knowledge-of-results SUY GIẢM — manager bù bằng quan hệ cá nhân + tăng task significance/autonomy/feedback. JCM tương đối INDIVIDUALISTIC: Nigeria (collectivistic) correlations khác data nước individualistic; nhưng intrinsic motivators dự đoán satisfaction + involvement NHƯ NHAU ở Mỹ/Nhật/Hungary — cần thêm research.",
+        ),
       ],
       keyTerms: [
         {
@@ -7195,7 +7458,7 @@ const topic06: Chapter = {
     },
     {
       id: "s11",
-      heading: "Applied: alternative work arrangements & EIP",
+      heading: "Applied: alternative work arrangements",
       blocks: [
         comparisonBlock(
           "Alternative work arrangements (R&J p154-158)",
@@ -7221,6 +7484,27 @@ const topic06: Chapter = {
             },
           ],
         ),
+      ],
+      keyTerms: [
+        {
+          term: "Flextime",
+          definition:
+            "Arrangement cho phép linh hoạt thời điểm làm việc quanh common core.",
+        },
+        {
+          term: "Job sharing",
+          definition: "Hai hoặc nhiều người chia một full-time job.",
+        },
+        {
+          term: "Telecommuting",
+          definition: "Làm việc từ xa qua công nghệ ít nhất vài ngày/tuần.",
+        },
+      ],
+    },
+    {
+      id: "s11b",
+      heading: "Applied: employee involvement & participation (EIP)",
+      blocks: [
         comparisonBlock(
           "Employee involvement & participation — EIP (R&J p157-159)",
           ["Hình thức", "Nội dung"],
@@ -7247,19 +7531,6 @@ const topic06: Chapter = {
       ],
       keyTerms: [
         {
-          term: "Flextime",
-          definition:
-            "Arrangement cho phép linh hoạt thời điểm làm việc quanh common core.",
-        },
-        {
-          term: "Job sharing",
-          definition: "Hai hoặc nhiều người chia một full-time job.",
-        },
-        {
-          term: "Telecommuting",
-          definition: "Làm việc từ xa qua công nghệ ít nhất vài ngày/tuần.",
-        },
-        {
           term: "Employee involvement and participation (EIP)",
           definition:
             "Các chương trình tăng quyền tham gia/ảnh hưởng của nhân viên vào quyết định.",
@@ -7278,10 +7549,33 @@ const topic06: Chapter = {
     },
     {
       id: "s12",
-      heading: "Applied: rewards, benefits, recognition & implications",
+      heading: "Applied: what to pay — pay structure (sách)",
+      blocks: [
+        calloutBlock(
+          "key",
+          "What to pay: pay structure trước khi bàn variable-pay (sách, p159)",
+          "Pay bị underestimate — 45% employers nghĩ pay là lý do mất top talent nhưng 71% TOP PERFORMERS nói đó là lý do hàng đầu. Set pay = cân bằng internal equity (giá trị công việc với tổ chức — job evaluation) và external equity (cạnh tranh với ngành — pay surveys); lead/match/lag thị trường là quyết định CHIẾN LƯỢC: trả cao → người giỏi hơn, morale/productivity/customer satisfaction cao hơn (study 126 tổ chức) nhưng pay là chi phí đơn lớn nhất (case Costco $45.000 tăng trưởng 8%/năm vs Walmart-Sam's Club $17.500 tăng trưởng 1%).",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Internal equity",
+          definition:
+            "Giá trị công việc đối với tổ chức, thường xác định bằng job evaluation.",
+        },
+        {
+          term: "External equity",
+          definition:
+            "Mức cạnh tranh của pay với thị trường/ngành, thường xác định bằng pay surveys.",
+        },
+      ],
+    },
+    {
+      id: "s12b",
+      heading: "Applied: variable-pay cấp CÁ NHÂN",
       blocks: [
         comparisonBlock(
-          "Các chương trình variable pay (R&J p160-163)",
+          "Variable pay cấp cá nhân (R&J p160-162)",
           ["Chương trình", "Nội dung"],
           [
             {
@@ -7302,6 +7596,37 @@ const topic06: Chapter = {
                 "Thưởng cho performance GẦN ĐÂY (không cộng dồn như merit); incentive mạnh hơn nhưng khiến thu nhập dễ bị cắt khi khó khăn.",
               ],
             },
+          ],
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Variable-pay program",
+          definition:
+            "Pay plan trong đó một phần compensation thay đổi theo performance hoặc kết quả.",
+        },
+        {
+          term: "Piece-rate pay plan",
+          definition: "Trả cố định cho mỗi đơn vị sản phẩm.",
+        },
+        {
+          term: "Merit-based pay plan",
+          definition: "Raise dựa trên performance appraisal ratings.",
+        },
+        {
+          term: "Bonus",
+          definition: "Thưởng cho recent performance, thường không cộng vào base pay.",
+        },
+      ],
+    },
+    {
+      id: "s12c",
+      heading: "Applied: variable-pay cấp TỔ CHỨC, benefits, recognition & implications",
+      blocks: [
+        comparisonBlock(
+          "Variable pay cấp tổ chức (R&J p162-163)",
+          ["Chương trình", "Nội dung"],
+          [
             {
               label: "Profit-sharing plan",
               cells: [
@@ -7338,23 +7663,6 @@ const topic06: Chapter = {
         ),
       ],
       keyTerms: [
-        {
-          term: "Variable-pay program",
-          definition:
-            "Pay plan trong đó một phần compensation thay đổi theo performance hoặc kết quả.",
-        },
-        {
-          term: "Piece-rate pay plan",
-          definition: "Trả cố định cho mỗi đơn vị sản phẩm.",
-        },
-        {
-          term: "Merit-based pay plan",
-          definition: "Raise dựa trên performance appraisal ratings.",
-        },
-        {
-          term: "Bonus",
-          definition: "Thưởng cho recent performance, thường không cộng vào base pay.",
-        },
         {
           term: "Profit-sharing plan",
           definition: "Compensation dựa trên lợi nhuận công ty theo công thức.",
@@ -7655,6 +7963,62 @@ const topic06: Chapter = {
       conceptTested: "Variable pay and recognition",
       takeaway: "Bonus = thưởng cho performance gần đây; merit pay = raise dựa appraisal; ESOP = stock ownership; recognition = intrinsic praise/award.",
     },
+    {
+      id: "q21",
+      stem: "Minh prepares for an exam by reading the assigned material and by refusing to play games until the study session is complete. Which interpretation is most accurate?",
+      options: [
+        { id: "a", text: "Reading is promotion focus, while refusing games is prevention focus; both can be useful", isCorrect: true, rationale: "Cơ chế: reading approaches advancement/accomplishment, còn nhịn game avoids điều kéo xa goal. Bẫy: prevention nghe tiêu cực nên dễ bị coi là xấu. Khóa: lý tưởng là phối hợp cả promotion và prevention." },
+        { id: "b", text: "Both actions are promotion focus because they support the same goal", isCorrect: false, rationale: "Cơ chế: cùng phục vụ goal nhưng strategy khác nhau: approach tài liệu và avoid distraction. Bẫy: phân loại theo kết quả thay vì cơ chế. Khóa: promotion tiến tới, prevention tránh xa rủi ro." },
+        { id: "c", text: "Both actions are prevention focus because exams create obligations", isCorrect: false, rationale: "Cơ chế: đọc tài liệu trực tiếp tiến gần accomplishment nên là promotion. Bẫy: studying thường đi cùng duty. Khóa: nhìn hành động approach hay avoid, không chỉ nhìn bối cảnh." },
+        { id: "d", text: "Promotion focus is always good and prevention focus is always harmful", isCorrect: false, rationale: "Cơ chế: hai focus đều có giá trị và lý tưởng là có cả hai. Bẫy: tên promotion/prevention gợi tốt/xấu. Khóa: chúng là strategies, không phải moral labels." },
+        { id: "e", text: "The example concerns only extrinsic rewards, not self-regulation", isCorrect: false, rationale: "Cơ chế: không có reward bên ngoài; case mô tả cách tự điều chỉnh hành vi quanh goal. Bẫy: exam có thể gắn grades. Khóa: action pattern map trực tiếp vào regulatory focus." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Promotion versus prevention focus",
+      takeaway: "Promotion focus tiến tới accomplishment; prevention focus tránh điều kéo mình xa goal. Hai chiến lược có thể bổ sung nhau.",
+    },
+    {
+      id: "q22",
+      stem: "A design team needs exceptional originality, while a packaging line needs more units completed. Which motivation pattern best matches the evidence?",
+      options: [
+        { id: "a", text: "Intrinsic motivation is especially useful for quality, while incentives are especially useful for quantity", isCorrect: true, rationale: "Cơ chế: meta-analysis nối intrinsic motivation với quality và incentives với quantity. Bẫy: reward thường được quảng bá như cải thiện mọi outcome. Khóa: quality và quantity có drivers nổi bật khác nhau." },
+        { id: "b", text: "Intrinsic motivation mainly increases quantity, while incentives mainly increase quality", isCorrect: false, rationale: "Cơ chế: đáp án đảo mapping trong evidence. Bẫy: intrinsic persistence có thể làm nhiều hơn và bonus có thể tài trợ quality. Khóa: intrinsic→quality, incentive→quantity." },
+        { id: "c", text: "Direct performance bonuses always strengthen intrinsic motivation", isCorrect: false, rationale: "Cơ chế: intrinsic motivation dự đoán performance yếu đi khi incentive gắn trực tiếp vào performance. Bẫy: bonus có thể nâng output quantity. Khóa: controlling/direct reward có CET risk." },
+        { id: "d", text: "Neither intrinsic motivation nor incentives affect performance", isCorrect: false, rationale: "Cơ chế: cả hai đều đóng góp nhưng vào dimensions khác nhau. Bẫy: thấy mixed evidence rồi kết luận không có effect. Khóa: phân biệt loại performance outcome." },
+        { id: "e", text: "Only Maslow's hierarchy can explain the two tasks", isCorrect: false, rationale: "Cơ chế: scenario hỏi evidence CET/intrinsic-incentive, không hỏi need hierarchy. Bẫy: Maslow là theory nổi tiếng nhất. Khóa: quality-versus-quantity là finding cụ thể." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "CET quality versus quantity",
+      takeaway: "Intrinsic motivation nổi bật ở chất lượng, incentives nổi bật ở số lượng; reward gắn trực tiếp performance còn có thể làm yếu intrinsic motivation.",
+    },
+    {
+      id: "q23",
+      stem: "A multinational is designing a justice program for a French unit characterized by high uncertainty avoidance. Which package best fits the cross-cultural evidence?",
+      options: [
+        { id: "a", text: "Fixed pay combined with employee participation", isCorrect: true, rationale: "Cơ chế: uncertainty avoidance cao được ghép với fixed pay và participation để tăng predictability và voice. Bẫy: competitive individual rewards là default quen thuộc ở nhiều firms. Khóa: France + uncertainty avoidance." },
+        { id: "b", text: "Competitive pay and rewards only for individual stars in every country", isCorrect: false, rationale: "Cơ chế: package này khớp individualism cao hơn là one-size-fits-all. Bẫy: performance pay nghe universally motivating. Khóa: justice program phải tailor theo cultural values." },
+        { id: "c", text: "Work-life balance and social recognition because France is defined here by femininity", isCorrect: false, rationale: "Cơ chế: work-life balance/social recognition được ghép với femininity trong bảng. Bẫy: package này vẫn là một cultural match hợp lệ. Khóa: stem chỉ định uncertainty avoidance." },
+        { id: "d", text: "Publicly justify leader-worker differences because France is defined here by low power distance", isCorrect: false, rationale: "Cơ chế: public justification và ethical-leadership symbols ghép với low power-distance. Bẫy: explanation có vẻ tăng justice ở mọi nơi. Khóa: chọn đúng cultural dimension được nêu." },
+        { id: "e", text: "Use no formal pay design because culture never affects justice perceptions", isCorrect: false, rationale: "Cơ chế: nghiên cứu 32 nước cho thấy cultural values định hình chương trình phù hợp. Bẫy: fairness có core phổ quát nên dễ bỏ qua context. Khóa: justice matters broadly nhưng implementation không one-size." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Culture and justice tailoring",
+      takeaway: "Justice không triển khai one-size-fits-all: uncertainty avoidance cao phù hợp fixed pay và employee participation hơn competitive individual rewards đơn thuần.",
+    },
+    {
+      id: "q24",
+      stem: "HR first evaluates the relative value of jobs inside the company, then checks salary levels across the industry. Which two equity tools are being used?",
+      options: [
+        { id: "a", text: "Internal equity through job evaluation, then external equity through pay surveys", isCorrect: true, rationale: "Cơ chế: job evaluation định giá công việc trong tổ chức; pay survey kiểm tra competitiveness với thị trường. Bẫy: cả hai đều liên quan pay fairness nên dễ đảo. Khóa: inside=internal, market=external." },
+        { id: "b", text: "External equity through job evaluation, then internal equity through pay surveys", isCorrect: false, rationale: "Cơ chế: đáp án đảo đúng hai công cụ. Bẫy: job title bên ngoài cũng được dùng khi evaluation. Khóa: evaluation là relative job value nội bộ; survey là market benchmark." },
+        { id: "c", text: "Equity theory using only each employee's outcome-input ratio", isCorrect: false, rationale: "Cơ chế: O/I ratio giải thích fairness perception cá nhân, không phải hai bước thiết kế pay structure. Bẫy: cùng dùng từ equity. Khóa: internal/external equity là pay-level architecture." },
+        { id: "d", text: "Procedural justice followed by interpersonal justice", isCorrect: false, rationale: "Cơ chế: procedural/interpersonal là loại justice về process và respect. Bẫy: HR process cần công bằng. Khóa: tool names trong stem là job evaluation và pay survey." },
+        { id: "e", text: "Merit pay followed by a one-time bonus", isCorrect: false, rationale: "Cơ chế: merit và bonus là variable-pay decisions sau khi base-pay structure được đặt. Bẫy: đều là compensation tools. Khóa: question asks what to pay before how to vary pay." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Internal versus external equity",
+      takeaway: "Internal equity dựa job evaluation; external equity dựa pay surveys. Hai khái niệm này khác equity theory về ratio O/I của cá nhân.",
+    },
   ],
   status: "ready",
   source:
@@ -7844,13 +8208,29 @@ const topic07: Chapter = {
   sections: [
     {
       id: "s1",
-      heading: "Nhóm là gì, vì sao gia nhập, các loại nhóm",
+      heading: "Nhóm là gì & vì sao gia nhập",
       blocks: [
         calloutBlock(
           "key",
           "Group theo Robbins & Judge (p182)",
           "Group là “two or more individuals, interacting and interdependent, who have come together to achieve particular objectives.” Nhấn: tương tác + phụ thuộc lẫn nhau + mục tiêu chung — khác một đám đông ngẫu nhiên.",
         ),
+        calloutBlock(
+          "note",
+          "Vì sao gia nhập group (slide)",
+          "An ninh (security), địa vị (status), lòng tự trọng (self-esteem), liên kết (affiliation), quyền lực (power), đạt mục tiêu (goal achievement). → Mắt xích môn học: từ đây môn chuyển sang cấp GROUP — nhưng thành phần nhóm chính là các input cá nhân đã học: personality (Topic 01) và values/deep-level diversity (Topic 03) quyết định nhóm vận hành thế nào.",
+        ),
+      ],
+      keyTerms: [
+        { term: "Group", definition: "Two or more individuals, interacting and interdependent, who have come together to achieve particular objectives." },
+        { term: "Formal group", definition: "Group do tổ chức định nghĩa qua cơ cấu chính thức." },
+        { term: "Informal group", definition: "Group hình thành tự nhiên từ nhu cầu tiếp xúc xã hội." },
+      ],
+    },
+    {
+      id: "s1b",
+      heading: "4 loại nhóm formal/informal",
+      blocks: [
         comparisonBlock(
           "Formal vs Informal & 4 loại nhóm (R&J p182; slide)",
           ["Loại", "Bản chất", "Ví dụ"],
@@ -7885,16 +8265,8 @@ const topic07: Chapter = {
             },
           ],
         ),
-        calloutBlock(
-          "note",
-          "Vì sao gia nhập group (slide)",
-          "An ninh (security), địa vị (status), lòng tự trọng (self-esteem), liên kết (affiliation), quyền lực (power), đạt mục tiêu (goal achievement). → Mắt xích môn học: từ đây môn chuyển sang cấp GROUP — nhưng thành phần nhóm chính là các input cá nhân đã học: personality (Topic 01) và values/deep-level diversity (Topic 03) quyết định nhóm vận hành thế nào.",
-        ),
       ],
       keyTerms: [
-        { term: "Group", definition: "Two or more individuals, interacting and interdependent, who have come together to achieve particular objectives." },
-        { term: "Formal group", definition: "Group do tổ chức định nghĩa qua cơ cấu chính thức." },
-        { term: "Informal group", definition: "Group hình thành tự nhiên từ nhu cầu tiếp xúc xã hội." },
         { term: "Command group", definition: "Group gồm các cá nhân báo cáo trực tiếp cho một manager." },
         { term: "Task group", definition: "Group cùng hoàn thành một công việc hoặc nhiệm vụ cụ thể." },
         { term: "Interest group", definition: "Group tập hợp quanh một mối quan tâm cụ thể." },
@@ -8088,6 +8460,11 @@ const topic07: Chapter = {
           "Asch conformity study (Exhibit 10-2) (R&J p187)",
           "Người tham gia so độ dài đường thẳng; khi các đồng phạm cố tình chọn sai đồng loạt, khoảng 1/3 số người ngả theo đáp án sai của nhóm dù mắt thấy rõ là sai — sức ép tuân thủ có thể lấn át bằng chứng hiển nhiên.",
         ),
+        calloutBlock(
+          "insight",
+          "Positive norms & PC norms — kết quả ngược trực giác (sách, p188–189)",
+          "Quan niệm phổ biến: norm chặt bóp creativity → nên nới. NHƯNG nghiên cứu nhóm gender-diverse: strong political correctness (PC) norms TĂNG group creativity — kỳ vọng rõ về tương tác nam–nữ giảm uncertainty → thành viên tự do nêu ý tưởng mà không phải vật với stereotype norms. Positive norms chỉ sinh positive outcomes khi có yếu tố đi kèm (group extraversion cao → helping mạnh hơn KHI có positive cooperation norms); mức chịu ảnh hưởng khác nhau theo personality + social identity; nghiên cứu Đức: càng satisfied với nhóm càng theo sát norms.",
+        ),
       ],
       keyTerms: [
         { term: "Norms", definition: "Acceptable standards of behavior within a group shared by members." },
@@ -8127,6 +8504,11 @@ const topic07: Chapter = {
           "note",
           "Status & group diversity (R&J p191)",
           "Nhóm đa dạng về status/văn hóa có thể khiến việc thiết lập thứ bậc status khó khăn hơn, ảnh hưởng cách nhóm phối hợp.",
+        ),
+        calloutBlock(
+          "note",
+          "Status lan truyền: stigma by association & group status (sách, p191–192)",
+          "Status của người mình LIÊN KẾT cũng đổi cách người khác nhìn mình — người bị stigmatized có thể 'lây' stigma cho người đứng cạnh (\"stigma by association\"), dù association ngắn và thuần ngẫu nhiên. Ở cấp NHÓM: \"us and them\" — outgroup bị ingroup coi là status thấp; nhóm dominant được gán high status → discrimination; low-status groups leverage ingroup favoritism để cạnh tranh status, high-status groups đáp lại bằng bias — mỗi chu kỳ các nhóm càng POLARIZED.",
         ),
       ],
       keyTerms: [
@@ -8742,6 +9124,34 @@ const topic07: Chapter = {
       difficulty: "basic",
       conceptTested: "Nominal group technique",
       takeaway: "NGT thường vượt brainstorming vì giữ độc lập nhận thức trước khi nhóm thảo luận và xếp hạng.",
+    },
+    {
+      id: "q21",
+      stem: "A gender-diverse project group adopts strong political-correctness norms for interaction, and members then offer more unusual ideas. Which explanation best fits the evidence?",
+      options: [
+        { id: "a", text: "Clear PC norms can increase creativity by reducing uncertainty about cross-gender interaction", isCorrect: true, rationale: "Cơ chế: strong PC norms làm rõ kỳ vọng tương tác, giảm uncertainty và giải phóng việc nêu ý tưởng. Bẫy: trực giác cho rằng mọi norm chặt đều bóp creativity. Khóa: gender-diverse group + reduced uncertainty." },
+        { id: "b", text: "Any strong norm necessarily reduces creativity", isCorrect: false, rationale: "Cơ chế: finding trong sách cho kết quả ngược ở strong PC norms. Bẫy: rule rigidity thường gắn conformity. Khóa: tác động của norm phụ thuộc nội dung và context." },
+        { id: "c", text: "The group became creative because it removed all interaction standards", isCorrect: false, rationale: "Cơ chế: case nói nhóm thiết lập strong norms, không loại bỏ standards. Bẫy: freedom thường được gắn với creativity. Khóa: clarity, không phải normlessness, giảm uncertainty." },
+        { id: "d", text: "Political correctness works only by increasing status differences", isCorrect: false, rationale: "Cơ chế: mechanism được nêu là uncertainty reduction, không phải status hierarchy. Bẫy: gender dynamics có thể liên quan status. Khóa: clear interaction expectations." },
+        { id: "e", text: "Positive norms guarantee positive outcomes in every group", isCorrect: false, rationale: "Cơ chế: positive norms cần yếu tố đi kèm như group extraversion và social identity. Bẫy: gọi là positive nên dễ tuyệt đối hóa. Khóa: norms interact with group context." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "PC norms and group creativity",
+      takeaway: "Norm chặt không luôn bóp creativity; trong nhóm gender-diverse, PC norms rõ có thể giảm uncertainty và mở không gian cho ý tưởng.",
+    },
+    {
+      id: "q22",
+      stem: "A candidate is judged negatively after briefly standing beside a stigmatized stranger at an event, even though the association was random. What is this effect?",
+      options: [
+        { id: "a", text: "Stigma by association", isCorrect: true, rationale: "Cơ chế: status/stigma của người được liên kết lan sang cách người khác đánh giá candidate dù association ngắn và ngẫu nhiên. Bẫy: candidate không thuộc stigmatized category nên hiện tượng có vẻ vô lý. Khóa: negative judgment through association." },
+        { id: "b", text: "Stereotype threat", isCorrect: false, rationale: "Cơ chế: stereotype threat là người thuộc nhóm bị định kiến lo mình xác nhận stereotype, không phải observer lây stigma qua liên kết. Bẫy: cả hai đều liên quan stereotype. Khóa: association effect khác performance anxiety." },
+        { id: "c", text: "Social loafing", isCorrect: false, rationale: "Cơ chế: social loafing là giảm effort trong group task. Bẫy: hành vi xảy ra trong bối cảnh xã hội. Khóa: không có collective effort hay dispersion of responsibility." },
+        { id: "d", text: "Status inequity based on contribution", isCorrect: false, rationale: "Cơ chế: status inequity là rank không tương xứng đóng góp. Bẫy: candidate bị hạ status. Khóa: nguyên nhân là người đứng cạnh, không phải contribution." },
+        { id: "e", text: "Deep-level diversity", isCorrect: false, rationale: "Cơ chế: deep-level diversity nói values/personality bộc lộ theo thời gian. Bẫy: đánh giá người khác cũng có thể dựa identity. Khóa: random link with stigma mới là cue quyết định." },
+      ],
+      difficulty: "intermediate",
+      conceptTested: "Stigma by association",
+      takeaway: "Stigma by association cho thấy status có thể lan qua một liên kết ngắn và ngẫu nhiên; nó khác stereotype threat ở cơ chế.",
     },
   ],
   status: "ready",
@@ -12078,13 +12488,13 @@ const topic11: Chapter = {
             { label: "Sense of identity", cells: ["Truyền bản sắc chung cho thành viên."] },
             { label: "Commitment", cells: ["Tạo cam kết với điều gì đó LỚN HƠN tư lợi cá nhân."] },
             { label: "Stability (social glue)", cells: ["Chất keo xã hội giữ tổ chức gắn kết, cung cấp chuẩn nói & làm."] },
-            { label: "Sense-making & control", cells: ["Cơ chế tạo nghĩa & kiểm soát định hình thái độ, hành vi nhân viên."] },
+            { label: "Sense-making & control", cells: ["Cơ chế tạo nghĩa & kiểm soát định hình thái độ, hành vi nhân viên. (sách) Nghịch lý: xu hướng phi tập trung làm culture QUAN TRỌNG hơn bao giờ hết (thay control chính thức) nhưng cũng KHÓ xây hơn — team có thể trung thành với team hơn tổ chức; virtual orgs thiếu face-to-face nên khó lập norms chung → cần leader giao tiếp thường xuyên về mục tiêu chung."] },
           ],
         ),
         calloutBlock(
           "note",
           "Culture creates climate (R&J p299)",
-          "Organizational climate = shared perceptions thành viên có về tổ chức & môi trường làm việc, như team spirit cấp tổ chức. Positive climate gắn với job satisfaction, involvement, commitment, customer satisfaction & financial performance. Dimensions: innovation, safety, justice, diversity, customer service.",
+          "Organizational climate = shared perceptions thành viên có về tổ chức & môi trường làm việc, như team spirit cấp tổ chức. Positive climate gắn với job satisfaction, involvement, commitment, customer satisfaction & financial performance. Dimensions: innovation, safety, justice, diversity, customer service. (sách) Meta-analysis hàng chục mẫu: psychological climate quan hệ mạnh với satisfaction/involvement/commitment/motivation; các climate TƯƠNG TÁC nhau (climate trao quyền chỉ bật performance khi đi kèm climate personal accountability); safety climate làm giảm số chấn thương ghi nhận.",
         ),
       ],
       keyTerms: [
@@ -12111,6 +12521,11 @@ const topic11: Chapter = {
             { label: "Law & code", cells: ["Tuân theo chuẩn đạo đức BÊN NGOÀI như bộ quy tắc nghề nghiệp, luật."] },
             { label: "Rules", cells: ["Tuân theo kỳ vọng NỘI BỘ chuẩn hóa như sổ tay/chính sách tổ chức."] },
           ],
+        ),
+        calloutBlock(
+          "note",
+          "ECT outcomes chi tiết (sách)",
+          "Instrumental: −job satisfaction, +turnover intentions, +workplace bullying, +deviance; Caring/Rules: +satisfaction; Caring/Independence/Rules/Law-and-code: giảm turnover intentions, bullying, dysfunctional behavior. Ethical cultures nhìn dài hạn, cân bằng quyền của nhiều stakeholders.",
         ),
       ],
       keyTerms: [
@@ -12141,6 +12556,29 @@ const topic11: Chapter = {
       keyTerms: [
         { term: "Institutionalization", definition: "Khi tổ chức được coi trọng vì chính nó và mục tiêu ban đầu bị lu mờ." },
         { term: "Culture as a liability", definition: "Khi văn hóa trở thành rào cản thay đổi, diversity, M&A hoặc nuôi dysfunctional behavior." },
+      ],
+    },
+    {
+      id: "s6b",
+      heading: "Culture, sustainability & innovation (sách Ch.16)",
+      blocks: [
+        calloutBlock(
+          "key",
+          "Culture & sustainability (sách)",
+          "Sustainability = practices duy trì được RẤT lâu vì tools/structures hỗ trợ không bị chính process phá hỏng; gốc environmental movement + social sustainability (hệ xã hội ảnh hưởng và bị ảnh hưởng bởi tổ chức theo thời gian); muốn business bền vững thật phải xây văn hóa dài hạn và ĐƯA VALUES VÀO THỰC HÀNH — cần \"sustainable system for creating sustainability\"; nghiên cứu tiết kiệm năng lượng: lấy group feedback giảm tiêu thụ hơn hẳn phát tài liệu tuyên truyền → nói chuyện + gắn value vào culture mới đổi hành vi.",
+        ),
+        calloutBlock(
+          "insight",
+          "Văn hóa innovative (sách)",
+          "Đặc trưng: open, unconventional, collaborative, vision-driven, accelerating; start-up innovative \"by definition\" (nhỏ, agile, phải giải bài toán để sống); công ty lâu năm vẫn giữ được innovation NHỜ culture (mở, chịu trách nhiệm công khai với thất bại; hoặc \"culture of caring\" thúc phát triển thuốc hiếm dù xác suất thành công thấp).",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Sustainability",
+          definition:
+            "Practices duy trì được rất lâu vì tools/structures hỗ trợ không bị chính process phá hỏng.",
+        },
       ],
     },
     {
@@ -12210,6 +12648,48 @@ const topic11: Chapter = {
             { label: "Metamorphosis stage", cells: ["Biến đổi để hòa nhập: nắm kỹ năng/vai trò, điều chỉnh theo chuẩn & giá trị nhóm."] },
           ],
         ),
+        comparisonBlock(
+          "Entry socialization options (sách, Exhibit 16-3)",
+          ["Cặp lựa chọn", "Nội dung"],
+          [
+            {
+              label: "Formal ↔ Informal",
+              cells: [
+                "Tách riêng đào tạo tân binh vs ném thẳng vào việc.",
+              ],
+            },
+            {
+              label: "Individual ↔ Collective",
+              cells: ["Từng người vs cả lứa như boot camp."],
+            },
+            {
+              label: "Fixed ↔ Variable",
+              cells: [
+                "Lịch chuyển giai đoạn chuẩn hóa — probation 8–10 năm \"associate\" ở hãng kế toán/luật vs không báo trước — thăng khi 'sẵn sàng'.",
+              ],
+            },
+            {
+              label: "Serial ↔ Random",
+              cells: ["Có role model mentor/apprentice vs tự bơi."],
+            },
+            {
+              label: "Investiture ↔ Divestiture",
+              cells: [
+                "Xác nhận phẩm chất sẵn có của tân binh vs 'lột' đặc điểm cũ như pledge hội sinh viên.",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "key",
+          "Hai bundle socialization (sách)",
+          "Institutional (formal+collective+fixed+serial+divestiture) → tân binh bị chuẩn hóa hành vi, P-O fit & commitment cao; cảnh sát, cứu hỏa. Individual (informal+individual+variable+random+investiture) → role innovation; R&D, quảng cáo, làm phim.",
+        ),
+        calloutBlock(
+          "note",
+          "Honeymoon–hangover (sách)",
+          "Đo attitudes nhiều thời điểm cho thấy satisfaction GIẢM trong giai đoạn điều chỉnh đầu (kỳ vọng lý tưởng chạm thực tế); social support từ supervisor/coworker bị rút dần sau vài tuần ('business as usual'); role conflict/overload tăng dần — ai tăng nhiều nhất thì commitment/satisfaction giảm mạnh nhất.",
+        ),
       ],
       keyTerms: [
         { term: "Socialization", definition: "Quá trình giúp nhân viên mới thích nghi với văn hóa tổ chức." },
@@ -12254,15 +12734,15 @@ const topic11: Chapter = {
           [
             {
               label: "Ethical culture",
-              cells: ["Lãnh đạo làm gương (top-down); visibly REWARD hành vi đạo đức & PUNISH vi phạm; đánh giá cả means lẫn ends; protective mechanisms như ethical counselors, ombudspeople, ethical officers để báo cáo không sợ trả đũa."],
+              cells: ["Lãnh đạo làm gương (top-down); visibly REWARD hành vi đạo đức & PUNISH vi phạm; đánh giá cả means lẫn ends; protective mechanisms như ethical counselors, ombudspeople, ethical officers để báo cáo không sợ trả đũa. (sách) Values của top management là predictor tốt của ethical behavior nhân viên (áp lực từ leader → tăng ý định unethical ở auditors), NHƯNG ethical culture cũng chảy BOTTOM-UP: nhân viên có ethical values giống department được đề bạt nhiều hơn."],
             },
             {
               label: "Positive culture",
-              cells: ["Building on employee strengths; rewarding more than punishing (catching employees doing something right); encouraging vitality & growth. Lưu ý outside context: không phải cure-all."],
+              cells: ["Building on employee strengths; rewarding more than punishing (catching employees doing something right); encouraging vitality & growth. Lưu ý outside context: không phải cure-all. (sách) Giới hạn: không phải văn hóa quốc gia nào cũng chuộng positivity như Mỹ; đẩy quá mức thành ép buộc — 'social orthodoxy of positiveness' có thể stigmatize người không khớp khuôn."],
             },
             {
               label: "Spiritual culture",
-              cells: ["Workplace spirituality: công việc có Ý NGHĨA trong cộng đồng; org tâm linh có benevolence, strong sense of purpose, trust & respect, open-mindedness."],
+              cells: ["Workplace spirituality: công việc có Ý NGHĨA trong cộng đồng; org tâm linh có benevolence, strong sense of purpose, trust & respect, open-mindedness. (sách) Cách đạt: hỗ trợ work–life balance; giúp nhân viên thấy purpose (group counseling/OD); corporate chaplains (gây tranh cãi). 3 phê phán: nền tảng khoa học mỏng (định nghĩa quá rộng); có thể làm nhân viên khó chịu nếu thành áp đặt tôn giáo; tương thích lợi nhuận? — evidence hạn chế nói CÓ (tổ chức cho nhân viên phát triển spiritual outperform; +creativity, +satisfaction, +commitment)."],
             },
           ],
         ),
@@ -12292,9 +12772,14 @@ const topic11: Chapter = {
           "Đổi văn hóa cần role của top management (cam kết & hỗ trợ) + employees (thực thi) + training/mentoring + formulate value statements + reward hành vi + stories. Nhưng First Law of Digital Innovation (Westerman): công nghệ đổi nhanh, tổ chức đổi chậm hơn, văn hóa tổ chức đổi CHẬM NHẤT → đây KHÔNG phải thách thức công nghệ mà là thách thức LÃNH ĐẠO.",
         ),
         calloutBlock(
+          "note",
+          "Organizational culture trong bối cảnh toàn cầu (sách, cuối Ch.16)",
+          "Org culture mạnh tới mức thường vượt biên giới, nhưng không được bỏ qua national culture; manager Mỹ cần culturally sensitive (nói nhỏ, chậm, nghe nhiều, tránh bàn tôn giáo/chính trị); ethics cọ xát national culture: worldview Mỹ coi bribery/nepotism/thiên vị quan hệ là rất unethical + đề cao profit maximization, trong khi manager ở developing economies xem quyết định đạo đức EMBEDDED trong môi trường xã hội — giúp đỡ gia đình/bạn bè có thể là TRÁCH NHIỆM đạo đức; đa quốc gia phải quyết có chuẩn hóa văn hóa tổ chức xuyên nước hay không.",
+        ),
+        calloutBlock(
           "key",
           "So what — kiến thức này đổi hành động của bạn",
-          "Văn hóa vô hình nhưng lái hành vi mạnh hơn quy định formal. Hành động: vào tổ chức mới, đọc culture qua stories/rituals/symbols/language thay vì chỉ đọc handbook; trước khi nhận offer, cân culture fit vs culture add; nếu bạn là quản lý — văn hóa sống qua selection, top management, socialization, nghĩa là hành vi hằng ngày của chính bạn là \"bài giảng văn hóa\" mạnh nhất, không phải poster giá trị trên tường.",
+          "Văn hóa vô hình nhưng lái hành vi mạnh hơn quy định formal. Hành động: vào tổ chức mới, đọc culture qua stories/rituals/symbols/language thay vì chỉ đọc handbook; trước khi nhận offer, cân culture fit vs culture add; nếu bạn là quản lý — văn hóa sống qua selection, top management, socialization, nghĩa là hành vi hằng ngày của chính bạn là \"bài giảng văn hóa\" mạnh nhất, không phải poster giá trị trên tường. → Mắt xích môn học: văn hóa là \"phần mềm nền\" mà leadership (Topic 10) viết ra và change management (Topic 12) phải viết lại — culture đổi chậm nhất chính là lý do đổi mới tổ chức khó nhất.",
         ),
       ],
       keyTerms: [
@@ -12585,6 +13070,20 @@ const topic11: Chapter = {
       conceptTested: "Culture fit versus culture add and change",
       takeaway: "'Culture fit' quá mức biến tuyển dụng thành nhân bản; 'culture add' giữ lợi thế đa dạng mà vẫn xây gắn kết.",
     },
+    {
+      id: "q21",
+      stem: "A fire department trains each incoming class together on a fixed schedule, assigns experienced mentors, and strips away old habits. A film studio instead lets each newcomer learn informally and improvise a role. Which comparison is correct?",
+      options: [
+        { id: "a", text: "The fire department uses an institutional bundle that favors P-O fit and commitment; the studio uses an individual bundle that favors role innovation", isCorrect: true, rationale: "Cơ chế: formal+collective+fixed+serial+divestiture tạo institutional socialization, còn informal+individual+variable+random+investiture hỗ trợ role innovation. Bẫy: creative studio vẫn có thể cần strong culture. Khóa: standardized bundle versus individualized bundle." },
+        { id: "b", text: "The fire department uses an individual bundle, while the studio uses an institutional bundle", isCorrect: false, rationale: "Cơ chế: đáp án đảo hai bundle theo các cues training class/fixed/mentor và informal/improvise. Bẫy: fire trainees là individuals còn studio là organization. Khóa: classify socialization options, không classify legal entity." },
+        { id: "c", text: "Both organizations use identical socialization because both have newcomers", isCorrect: false, rationale: "Cơ chế: newcomers có thể được socialized bằng option bundles rất khác nhau. Bẫy: outcome chung là học culture. Khóa: process configuration quyết định standardization hay innovation." },
+        { id: "d", text: "Divestiture confirms and preserves the newcomer's existing qualities", isCorrect: false, rationale: "Cơ chế: divestiture 'lột' đặc điểm cũ; investiture mới xác nhận phẩm chất sẵn có. Bẫy: tiền tố invest nghe như đầu tư để thay đổi. Khóa: investiture confirms, divestiture strips." },
+        { id: "e", text: "Serial socialization means newcomers receive no role model", isCorrect: false, rationale: "Cơ chế: serial dùng role model/mentor; random mới để người mới tự bơi. Bẫy: serial nghe như từng người tự đi theo chuỗi. Khóa: mentor cue = serial." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Institutional versus individual socialization bundles",
+      takeaway: "Institutional socialization chuẩn hóa hành vi và tăng P-O fit/commitment; individual socialization mở chỗ cho role innovation. Investiture xác nhận, divestiture tháo bỏ đặc điểm cũ.",
+    },
   ],
   status: "ready",
   source:
@@ -12716,6 +13215,33 @@ const topic12: Chapter = {
           { label: "4", cells: ["Fear of the unknown — bất định thay cho cái đã biết.", "Threat to expertise — đe dọa chuyên môn của nhóm chuyên trách."] },
           { label: "5", cells: ["Selective information processing — chỉ nghe cái củng cố nhận thức cũ.", "Threat to established power relationships — tái phân bổ quyền lực đe dọa quan hệ quyền lực cũ."] },
         ]),
+        comparisonBlock(
+          "4 dạng kháng cự (sách)",
+          ["Dạng", "Biểu hiện", "Độ khó xử lý"],
+          [
+            {
+              label: "Overt + Immediate",
+              cells: [
+                "Than phiền, work slowdown, dọa đình công.",
+                "DỄ xử nhất vì thấy ngay.",
+              ],
+            },
+            {
+              label: "Implicit",
+              cells: [
+                "Mất loyalty/motivation, tăng lỗi, tăng absence.",
+                "Tinh vi, khó nhận diện đúng bản chất.",
+              ],
+            },
+            {
+              label: "Deferred",
+              cells: [
+                "Phản ứng nổ ra sau hàng tuần/tháng/NĂM; một thay đổi nhỏ có thể thành 'giọt nước tràn ly' vì resistance các đợt trước bị tích lại.",
+                "Làm mờ link giữa change và reaction; kháng cự DỒN TOA.",
+              ],
+            },
+          ],
+        ),
       ],
       keyTerms: [
         { term: "Resistance to change", definition: "Phản ứng làm chậm, làm lệch hoặc ngăn triển khai thay đổi." },
@@ -12754,7 +13280,7 @@ const topic12: Chapter = {
           "horizontal",
           [
             { id: "l_unfreezing", label: "Unfreezing", detail: "Phá vỡ trạng thái cân bằng cũ; làm người ta thấy cần thay đổi." },
-            { id: "l_movement", label: "Movement", detail: "Dịch chuyển tới trạng thái mới bằng hành vi, quy trình, cấu trúc mới." },
+            { id: "l_movement", label: "Movement", detail: "Dịch chuyển tới trạng thái mới bằng hành vi, quy trình, cấu trúc mới. (sách) Vào giai đoạn movement phải giữ MOMENTUM: tổ chức 'build up' lâu rồi mới đổi làm kém hơn tổ chức vào và đi qua movement NHANH." },
             { id: "l_refreezing", label: "Refreezing", detail: "Cố định trạng thái mới để thay đổi bền vững." },
           ],
           [
@@ -12816,13 +13342,75 @@ const topic12: Chapter = {
         calloutBlock(
           "key",
           "Creating a culture for change (R&J p323)",
-          "Không chỉ thích ứng mà chủ động ôm lấy thay đổi qua 3 cách: managing paradox (không có trạng thái tối ưu cuối cùng, phải cân bằng động các căng thẳng), stimulating an innovative culture (khuyến khích thử nghiệm, chấp nhận thất bại), creating a learning organization (tổ chức học tập, sửa lỗi hệ thống).",
+          "Không chỉ thích ứng mà chủ động ôm lấy thay đổi qua 3 cách: managing paradox (không có trạng thái tối ưu cuối cùng, phải cân bằng động các căng thẳng), stimulating an innovative culture (khuyến khích thử nghiệm, chấp nhận thất bại), creating a learning organization (tổ chức học tập, sửa lỗi hệ thống). (sách) Đo mức cam kết learning-organization bằng DLOQ (Dimensions of the Learning Organization Questionnaire). Manager biến công ty thành learning organization bằng: establish strategy (cam kết công khai với change/innovation/continuous improvement), redesign structure (làm phẳng, gộp phòng ban, tăng cross-functional teams), reshape culture (thưởng risk-taking + dám nhận sai, khuyến khích FUNCTIONAL CONFLICT).",
         ),
       ],
       keyTerms: [
         { term: "Organizational development", definition: "Tập hợp interventions nhằm cải thiện hiệu quả tổ chức và sức khỏe con người trong tổ chức." },
         { term: "Appreciative inquiry", definition: "OD approach tập trung điểm mạnh và câu chuyện thành công thay vì chỉ đào sâu vấn đề." },
         { term: "Learning organization", definition: "Tổ chức liên tục học, chia sẻ tri thức và cải thiện hệ thống." },
+      ],
+    },
+    {
+      id: "s6b",
+      heading: "Culture for change: innovation & idea champions (sách Ch.17)",
+      blocks: [
+        calloutBlock(
+          "note",
+          "Innovation = loại change chuyên biệt (sách)",
+          "Ý tưởng mới áp vào khởi tạo/cải thiện product, process, service — mọi innovation đều là change, không phải change nào cũng là innovation (từ cải tiến tăng dần tới đột phá radical).",
+        ),
+        comparisonBlock(
+          "4 nguồn structural của innovation (sách)",
+          ["Nguồn", "Cơ chế"],
+          [
+            {
+              label: "Organic structures",
+              cells: [
+                "Ít vertical differentiation/formalization/centralization → linh hoạt, dễ hấp thu innovation.",
+              ],
+            },
+            {
+              label: "Long tenure in management",
+              cells: ["Legitimacy + biết cách hoàn thành việc."],
+            },
+            {
+              label: "Slack resources",
+              cells: [
+                "Đủ dư để mua/phát triển innovation, chịu được thất bại.",
+              ],
+            },
+            {
+              label: "High interunit communication",
+              cells: [
+                "Committee, task force, cross-functional teams.",
+              ],
+            },
+            {
+              label: "Context thưởng & job security",
+              cells: [
+                "Tổ chức innovative thưởng CẢ thành công LẪN thất bại — thưởng cho 'absence of failures' thay vì 'presence of successes' là giết risk taking; job security cao để không sợ sai khi thử.",
+              ],
+            },
+          ],
+        ),
+        calloutBlock(
+          "key",
+          "Idea champions (sách)",
+          "Người chủ động, nhiệt thành promote ý tưởng, build support, vượt kháng cự, bảo đảm implement; đặc điểm: self-confidence rất cao, persistence, energy, chấp nhận rủi ro; giống transformational leader; cần decision-making discretion. Khác biệt văn hóa khi championing: collectivist → thích appeal cross-functional support; high power-distance → làm chặt với authority TRƯỚC khi bắt đầu; high uncertainty avoidance → phát triển innovation TRONG rules/procedures của tổ chức.",
+        ),
+      ],
+      keyTerms: [
+        {
+          term: "Innovation",
+          definition:
+            "Ý tưởng mới áp vào khởi tạo hoặc cải thiện product, process hay service.",
+        },
+        {
+          term: "Idea champions",
+          definition:
+            "Người chủ động promote ý tưởng, build support, vượt kháng cự và bảo đảm implement.",
+        },
       ],
     },
     {
@@ -12838,6 +13426,11 @@ const topic12: Chapter = {
           { label: "Challenge stressors", cells: ["Gắn với workload, áp lực hoàn thành, deadline.", "Thúc đẩy — cải thiện hiệu suất trong môi trường có hỗ trợ; ít strain hơn."] },
           { label: "Hindrance stressors", cells: ["Red tape, office politics, mơ hồ trách nhiệm.", "Cản trở mục tiêu — giảm hiệu suất ở mọi môi trường."] },
         ]),
+        calloutBlock(
+          "key",
+          "Allostasis — không có trạng thái cân bằng lý tưởng (sách)",
+          "Nghiên cứu sớm nhìn stress kiểu HOMEOSTATIC (demands khớp resources là xong); nay rõ là không có single ideal state — mô hình ALLOSTATIC: demands đổi, resources đổi, cách xử lý mất cân bằng cũng đổi; qua allostasis ta tìm ổn định bằng cách THAY ĐỔI hành vi/thái độ; tất cả phụ thuộc allostatic load — tác động tích lũy của stressors so với resources đang có: load vừa phải + tự tin + support → dám chịu strain và huy động coping tốt hơn; load quá lớn/kéo dài → triệu chứng tâm-sinh lý.",
+        ),
       ],
       keyTerms: [
         { term: "Stress", definition: "Dynamic condition khi kết quả quan trọng nhưng không chắc chắn trong bối cảnh demand/resource/opportunity." },
@@ -12845,6 +13438,16 @@ const topic12: Chapter = {
         { term: "Hindrance stressors", definition: "Áp lực cản trở mục tiêu và làm giảm hiệu suất." },
         { term: "Demands", definition: "Trách nhiệm, áp lực, nghĩa vụ hoặc bất định cá nhân phải đối mặt." },
         { term: "Resources", definition: "Điều cá nhân kiểm soát hoặc tiếp cận được để xử lý demands." },
+        {
+          term: "Allostasis",
+          definition:
+            "Quá trình tìm ổn định bằng cách thay đổi hành vi hoặc thái độ khi demands và resources biến động.",
+        },
+        {
+          term: "Allostatic load",
+          definition:
+            "Tác động tích lũy của stressors so với resources đang có.",
+        },
       ],
     },
     {
@@ -12870,9 +13473,39 @@ const topic12: Chapter = {
         ),
         comparisonBlock("3 nhóm sources of stress (R&J p329-330)", ["Nhóm", "Nội dung"], [
           { label: "Environmental factors", cells: ["Bất định kinh tế, chính trị, công nghệ — làm kỹ năng/kinh nghiệm lỗi thời nhanh."] },
-          { label: "Organizational factors", cells: ["Task demands, role demands (role conflict, overload, ambiguity), interpersonal demands (xung đột, bắt nạt, quấy rối)."] },
+          { label: "Organizational factors", cells: ["Task demands, role demands (role conflict, overload, ambiguity), interpersonal demands (xung đột, bắt nạt, quấy rối). (sách) Mistreatment (bully, incivility, harassment) kích hoạt cortisol — hormone trong chuỗi stress reaction."] },
           { label: "Personal factors", cells: ["Vấn đề gia đình, work–life conflict, khó khăn tài chính cá nhân."] },
         ]),
+        comparisonBlock(
+          "4 biến điều tiết stress theo cá nhân (sách)",
+          ["Biến", "Cơ chế"],
+          [
+            {
+              label: "Perception",
+              cells: [
+                "Stress nằm ở DIỄN GIẢI, không phải điều kiện khách quan — cùng layoff: người sợ mất việc, người thấy cơ hội severance khởi nghiệp; nối Topic 02.",
+              ],
+            },
+            {
+              label: "Job experience",
+              cells: [
+                "2 cơ chế: selective withdrawal — ai stress nhiều đã nghỉ, người ở lại vốn kháng stress tốt; coping mechanisms tích lũy theo thời gian.",
+              ],
+            },
+            {
+              label: "Social support",
+              cells: [
+                "Buffer được ghi nhận TỐT NHẤT trong tài liệu stress.",
+              ],
+            },
+            {
+              label: "Personality traits",
+              cells: [
+                "Neuroticism → tự TÌM THẤY nhiều stressor hơn trong môi trường + chọn avoidance coping thay vì giải quyết.",
+              ],
+            },
+          ],
+        ),
         calloutBlock(
           "note",
           "Stressors are ADDITIVE (R&J p330)",
@@ -12904,6 +13537,11 @@ const topic12: Chapter = {
           { label: "Psychological", cells: ["Job dissatisfaction, căng thẳng, lo âu, cáu gắt, chán nản, trì hoãn."] },
           { label: "Behavioral", cells: ["Giảm năng suất, tăng absence & turnover, thay đổi ăn uống/hút thuốc/rượu, nói nhanh, bồn chồn, rối loạn giấc ngủ."] },
         ]),
+        calloutBlock(
+          "note",
+          "Consequences mở rộng (sách)",
+          "Physiological: UK long-term study — job strain gắn coronary heart disease; Đan Mạch — burnout cấp work-unit gắn sickness absence cao hơn. Psychological: người EXTERNAL locus of control được tăng job control lại TĂNG stress/exhaustion (không phải ai cũng hợp autonomy).",
+        ),
       ],
       keyTerms: [
         { term: "Eustress", definition: "Mức stress tích cực giúp kích hoạt năng lượng và hiệu suất." },
@@ -12936,6 +13574,16 @@ const topic12: Chapter = {
           "key",
           "D > CS = SR (Thornton 2023, slide 30)",
           "Đây là công thức khái niệm, không phải calc/formula block: khi Demands vượt Coping Skills → Stress Reaction. Ba đòn bẩy quản trị stress: (1) reduce demands, (2) increase coping skills, (3) monitor stress reactions. Nó khớp demands–resources model của R&J. Change tại nơi làm việc gắn với employee stress, distrust & intent to quit; vì vậy quản trị thay đổi tốt cũng là giảm stress. Thông điệp khép môn: trước khi đòi người khác thay đổi, bạn đã thay đổi chính mình chưa? — quản trị thay đổi & stress bắt đầu từ self-leadership, biến áp lực thành bản lĩnh (eustress).",
+        ),
+        calloutBlock(
+          "note",
+          "Giảm stress của thay đổi — bằng chứng sách (sách)",
+          "Transformational leaders định hình affect tập thể → nhân viên giữ commitment với change, không coi nó là stressful; xây positive change orientation TRƯỚC khi lên kế hoạch: tăng self-efficacy (role clarification + thưởng liên tục), tăng perceived control + thái độ tích cực (cho tham gia từ khâu planning tới áp dụng); thêm: tăng lượng communication, đánh giá và bồi psychological resilience qua social support, huấn luyện emotional self-regulation.",
+        ),
+        calloutBlock(
+          "key",
+          "So what — kiến thức này đổi hành động của bạn",
+          "Change và stress không phải hai chương rời: mọi thay đổi bạn khởi xướng đều bơm demands vào người khác, nên quản trị thay đổi giỏi cũng là quản trị stress. Hành động: khi đẩy một thay đổi, đọc trước 3 tầng kháng cự (Maurer) và giảm demands/tăng coping thay vì chỉ ép tiến độ; với chính mình, dùng D>CS=SR như bảng đèn — thấy demands vượt coping thì can thiệp sớm ở một trong ba đòn bẩy, biến áp lực thành eustress trước khi trượt sang distress/burnout.",
         ),
       ],
       keyTerms: [
@@ -13226,6 +13874,34 @@ const topic12: Chapter = {
       conceptTested: "Managing stress and D>CS=SR",
       takeaway: "D>CS=SR chốt môn rất gọn: khi yêu cầu vượt kỹ năng đối phó, hãy giảm demands, tăng coping skills và theo dõi phản ứng của chính mình.",
     },
+    {
+      id: "q21",
+      stem: "An idea champion works in a high-power-distance culture. Which approach is most likely to fit the cultural pattern described in the chapter?",
+      options: [
+        { id: "a", text: "Work closely with authority before beginning the championing effort", isCorrect: true, rationale: "Cơ chế: high power-distance làm authority approval trở thành bước quan trọng trước khi champion bắt đầu. Bẫy: champions có self-confidence cao nên dễ hình dung họ tự lao đi. Khóa: power distance → coordinate with authority first." },
+        { id: "b", text: "Act alone and avoid all cross-functional support because the culture is collectivist", isCorrect: false, rationale: "Cơ chế: collectivist champions lại thích appeal cross-functional support. Bẫy: champion thường được kể như heroic individual. Khóa: collectivism kéo về coalition, không solo action." },
+        { id: "c", text: "Ignore organizational rules because high uncertainty avoidance rewards ambiguity", isCorrect: false, rationale: "Cơ chế: high uncertainty avoidance khiến champion phát triển innovation TRONG rules/procedures. Bẫy: innovation thường gắn rule breaking. Khóa: uncertainty avoidance seeks structure." },
+        { id: "d", text: "Wait passively for someone else to promote the idea", isCorrect: false, rationale: "Cơ chế: idea champion phải chủ động, nhiệt thành build support và vượt resistance. Bẫy: tôn trọng authority bị nhầm thành thụ động. Khóa: coordinate first vẫn đi cùng proactive championing." },
+        { id: "e", text: "Remove all decision-making discretion from the champion", isCorrect: false, rationale: "Cơ chế: champions cần decision-making discretion để đưa idea qua resistance tới implementation. Bẫy: high power-distance gợi centralized control. Khóa: authority alignment không đồng nghĩa zero discretion." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Idea champions and cultural context",
+      takeaway: "Idea champion vẫn chủ động nhưng phải đọc culture: high power-distance đòi làm với authority trước; collectivism chuộng cross-functional support; uncertainty avoidance chuộng rules.",
+    },
+    {
+      id: "q22",
+      stem: "A team faces changing demands and resources, repeatedly adjusts its behavior, and remains stable until cumulative strain overwhelms its support. Which concept best explains this pattern?",
+      options: [
+        { id: "a", text: "Allostasis, with outcomes depending on cumulative allostatic load", isCorrect: true, rationale: "Cơ chế: allostasis tìm stability bằng cách thay đổi khi demands/resources đổi; allostatic load là tác động tích lũy so với resources. Bẫy: stability dễ gợi quay về một trạng thái cố định. Khóa: stability through change + cumulative load." },
+        { id: "b", text: "Homeostasis as a return to one fixed ideal balance", isCorrect: false, rationale: "Cơ chế: mô hình mới bác ý tưởng có single ideal state cố định cho mọi bối cảnh. Bẫy: cân bằng là cách mô tả stress quen thuộc. Khóa: demands/resources và response cùng biến động." },
+        { id: "c", text: "Allostatic load means each stressor automatically cancels the previous one", isCorrect: false, rationale: "Cơ chế: load là tác động tích lũy, không phải triệt tiêu. Bẫy: adaptation nghe như reset về zero. Khóa: prolonged/high load tạo triệu chứng tâm-sinh lý." },
+        { id: "d", text: "Allostasis requires avoiding every challenge stressor", isCorrect: false, rationale: "Cơ chế: load vừa phải cùng confidence/support có thể giúp huy động coping. Bẫy: stress thường bị nhìn hoàn toàn tiêu cực. Khóa: mục tiêu là adaptive change, không xóa mọi demand." },
+        { id: "e", text: "The pattern is only a form of deferred resistance to change", isCorrect: false, rationale: "Cơ chế: deferred resistance nói reaction xuất hiện muộn; stem nhấn stress adaptation và cumulative strain. Bẫy: cả hai đều có delay và accumulation. Khóa: resources, coping và load chỉ về allostasis." },
+      ],
+      difficulty: "advanced",
+      conceptTested: "Allostasis and allostatic load",
+      takeaway: "Allostasis không tìm một cân bằng cố định; nó tạo ổn định bằng điều chỉnh hành vi/thái độ, còn allostatic load quyết định hệ có chịu nổi hay không.",
+    },
   ],
   status: "ready",
   source:
@@ -13237,7 +13913,7 @@ export const organizationalBehaviorCourseMap: CourseMapDiagram = {
   layout: "tree",
   collapsible: true,
   caption:
-    "Khung 3 cấp theo Basic OB Model (Robbins & Judge, 2019). Bấm chip để xem bản chất topic và mở trang topic.",
+    "Khung 3 cấp theo Basic OB Model (Robbins & Judge, 2019) — sơ đồ do người soạn tổng hợp, không phải trích nguyên văn sách. Bấm chip để xem bản chất topic và mở trang topic.",
   nodes: [
     {
       id: "ob-root",

@@ -4,6 +4,7 @@
 :root {
   --background: #f6f8fb;
   --foreground: #1f2937;
+  --zinc-500: #646c7a;
   --flow-edge-label-bg: #f6f8fb;
   --flow-edge-label-border: #c2cad6;
   --flow-edge-label-text: #3a414c;
@@ -24,7 +25,7 @@
   --color-zinc-200: #dbe1ea;
   --color-zinc-300: #c2cad6;
   --color-zinc-400: #97a1b1;
-  --color-zinc-500: #6f7888;
+  --color-zinc-500: var(--zinc-500);
   --color-zinc-600: #545d6c;
   --color-zinc-700: #3a414c;
   --color-zinc-800: #2c313a;
@@ -48,6 +49,7 @@
   :root {
     --background: #16181d;
     --foreground: #e2e6ec;
+    --zinc-500: #9199a5;
     --flow-edge-label-bg: #1d2027;
     --flow-edge-label-border: #3a414c;
     --flow-edge-label-text: #e2e6ec;

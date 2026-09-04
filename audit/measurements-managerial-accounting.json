@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "subject_id": "managerial-accounting",
+    "subject_title": "Managerial Accounting",
+    "measured_at": "2026-07-21T13:51:08.801Z",
+    "commit": "a6be7b326e4bbd17740574d74b910183c6921cbe",
+    "rubric": "docs/RUBRIC.md (changelog mới nhất: 2026-07-20)",
+    "n_topics_total": 8,
+    "n_topics_placeholder": 0,
+    "placeholder_topics": [],
+    "n_topics_evaluated": 8,
+    "note": "SỐ LIỆU THÔ — chưa áp ngưỡng, chưa kết luận Đạt/Thiếu (rubric §2 rule 2: mẫu = topic status !== placeholder)"
+  },
+  "A1": {
+    "unit": "slot = 6 tầng × topic",
+    "n_typical": "~48 (rubric §3.A)",
+    "rule": "Slot (rule 9) — KHÔNG áp ở đây",
+    "n_slots_total": 48,
+    "n_slots_missing": 1,
+    "n_topics_incomplete": 1,
+    "slots_missing": [
+      {
+        "topic": "cost-volume-profit",
+        "slot": "keyTerms"
+      }
+    ]
+  },
+  "B1": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_sections_total": 90,
+    "n_sections_without_nonprose": 1,
+    "sections_without_nonprose": [
+      {
+        "topic": "master-budget",
+        "section": "s8"
+      }
+    ],
+    "block_type_distribution": {
+      "prose": 59,
+      "comparison": 38,
+      "callout": 79,
+      "diagram": 15,
+      "formula": 21,
+      "calc": 40
+    }
+  },
+  "B3": {
+    "unit": "section",
+    "n_typical": "~89 (rubric §3.B)",
+    "rule": "Band % — KHÔNG áp ở đây; '>4 khái niệm mới' là ĐỊNH NGHĨA hụt của rubric, không phải ngưỡng Đạt",
+    "n_sections_total": 90,
+    "n_concepts_indexed": 83,
+    "new_concepts_per_section_histogram": {
+      "0": 61,
+      "1": 3,
+      "2": 15,
+      "3": 3,
+      "4": 4,
+      "5": 2,
+      "6": 1,
+      "9": 1
+    },
+    "n_sections_over_4_new_concepts": 4,
+    "sections_over_4": [
+      {
+        "topic": "cost-concepts",
+        "section": "s11",
+        "new_concepts": 9,
+        "terms": [
+          "Differential cost/revenue",
+          "Opportunity cost",
+          "Sunk cost",
+          "Incremental cost",
+          "Decremental cost",
+          "Relevant benefit",
+          "Controllable cost",
+          "Value-added cost",
+          "Marginal cost / Marginal revenue"
+        ]
+      },
+      {
+        "topic": "job-order-costing",
+        "section": "s2",
+        "new_concepts": 5,
+        "terms": [
+          "Job cost sheet",
+          "Bill of materials",
+          "Materials Requisition Form",
+          "Employee Time Ticket",
+          "Subsidiary ledger"
+        ]
+      },
+      {
+        "topic": "master-budget",
+        "section": "s0",
+        "new_concepts": 5,
+        "terms": [
+          "Budget",
+          "Planning",
+          "Control",
+          "Self-imposed budget / Participative budget",
+          "Continuous budget / Perpetual budget"
+        ]
+      },
+      {
+        "topic": "standard-costs",
+        "section": "s0",
+        "new_concepts": 6,
+        "terms": [
+          "Standard cost card",
+          "Standard quantity per unit",
+          "Standard price per unit",
+          "Standard hours per unit",
+          "Standard rate per hour",
+          "Standard quantity/hours allowed"
+        ]
+      }
+    ]
+  },
+  "C3": {
+    "unit": "câu hỏi",
+    "n_typical": "~200 (rubric §3.C)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_questions_total": 120,
+    "n_questions_missing_takeaway": 0,
+    "questions_missing_takeaway": []
+  },
+  "D1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.D) — thực tế 8",
+    "rule": "Nhị phân (gate) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_with_source_field": 8,
+    "per_topic": [
+      {
+        "topic": "cost-concepts",
+        "source": "Garrison/Noreen/Brewer 17e Ch.1 (slide môn học) + case Phở của giảng viên",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "job-order-costing",
+        "source": "Garrison/Noreen/Brewer 17e Ch.2 (slide môn học). PearCo / Dickson / NW Fab = ví dụ trong slide.",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "job-order-cost-flows",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 3 (slide '3. Job order costing b')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "cost-volume-profit",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 5 (slide '5 CVP Analysis')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "master-budget",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 8 (slide '8. Master Budget')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "flexible-budgets",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 9 (slide 'chapter 9- flexible budget')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "standard-costs",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 10 (slide '10. Standard Cost and Variance')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      },
+      {
+        "topic": "differential-analysis",
+        "source": "Garrison, Noreen, Brewer — Managerial Accounting, 17e, Chapter 13 (slide '13. Differential Analysis')",
+        "has_year": false,
+        "has_chapter_or_slide": true,
+        "has_author_heuristic": false
+      }
+    ]
+  },
+  "D2": {
+    "unit": "marker / topic (điều kiện của D3, rubric §3.D)",
+    "n_typical": "không khai báo riêng trong rubric — đếm hỗ trợ audit D3",
+    "rule": "điều kiện của audit D3 — KHÔNG áp ở đây",
+    "per_topic": [
+      {
+        "topic": "cost-concepts",
+        "n_book_page_markers": 5,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách p.38)",
+          "(sách p.40)",
+          "(sách p.39)",
+          "(sách p.39-40)"
+        ]
+      },
+      {
+        "topic": "job-order-costing",
+        "n_book_page_markers": 8,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách p.61)",
+          "(sách p.69)",
+          "(sách p.96)",
+          "(sách p.97)",
+          "(sách p.98)"
+        ]
+      },
+      {
+        "topic": "job-order-cost-flows",
+        "n_book_page_markers": 1,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách p.121)"
+        ]
+      },
+      {
+        "topic": "cost-volume-profit",
+        "n_book_page_markers": 1,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách p.199)"
+        ]
+      },
+      {
+        "topic": "master-budget",
+        "n_book_page_markers": 1,
+        "n_slide_markers": 0,
+        "book_marker_samples": [
+          "(sách p.356)"
+        ]
+      },
+      {
+        "topic": "flexible-budgets",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "standard-costs",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      },
+      {
+        "topic": "differential-analysis",
+        "n_book_page_markers": 0,
+        "n_slide_markers": 0,
+        "book_marker_samples": []
+      }
+    ]
+  },
+  "D4": {
+    "unit": "khối soft lens (courseMap + courseThreads + miniCases)",
+    "n_typical": "~40 (rubric §3.D)",
+    "rule": "Band % — KHÔNG áp ở đây",
+    "n_blocks_total": 5,
+    "n_blocks_with_disclaimer": 4,
+    "blocks": [
+      {
+        "kind": "courseMap",
+        "id": "courseMap",
+        "has_disclaimer": false,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Từ chi phí đến giá thành đơn vị",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Hành vi chi phí là động cơ của lợi nhuận",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Vòng Plan → Control",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      },
+      {
+        "kind": "courseThread",
+        "id": "Chi phí nào relevant cho quyết định?",
+        "has_disclaimer": true,
+        "searched_fields": "toàn bộ object (caption/description)"
+      }
+    ]
+  },
+  "E3": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.E) — thực tế 8",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_without_crossref": 2,
+    "topics_without_crossref": [
+      "cost-concepts",
+      "standard-costs"
+    ],
+    "refs_per_topic": [
+      {
+        "topic": "cost-concepts",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "job-order-costing",
+        "n_refs": 1,
+        "targets": [
+          3
+        ]
+      },
+      {
+        "topic": "job-order-cost-flows",
+        "n_refs": 1,
+        "targets": [
+          2
+        ]
+      },
+      {
+        "topic": "cost-volume-profit",
+        "n_refs": 1,
+        "targets": [
+          13
+        ]
+      },
+      {
+        "topic": "master-budget",
+        "n_refs": 1,
+        "targets": [
+          9
+        ]
+      },
+      {
+        "topic": "flexible-budgets",
+        "n_refs": 1,
+        "targets": [
+          10
+        ]
+      },
+      {
+        "topic": "standard-costs",
+        "n_refs": 0,
+        "targets": []
+      },
+      {
+        "topic": "differential-analysis",
+        "n_refs": 1,
+        "targets": [
+          1
+        ]
+      }
+    ]
+  },
+  "E4": {
+    "unit": "cross-topic reference",
+    "n_typical": "~20 (rubric §3.E) — thực tế 6",
+    "rule": "T(n) — KHÔNG áp ở đây; 'có chú thích forward hay không' người chấm đọc snippet",
+    "n_crossrefs_total": 6,
+    "n_forward_refs": 4,
+    "forward_refs": [
+      {
+        "topic": "job-order-costing",
+        "from_order": 2,
+        "target_topic_order": 3,
+        "loc": "section:s9",
+        "snippet": "ôn học\",\"body\":\"Chương này mới NHẬN DIỆN under/overapplied. Chapter 3 sẽ theo trọn dòng bút toán RM → WIP → FG → COGS và"
+      },
+      {
+        "topic": "cost-volume-profit",
+        "from_order": 5,
+        "target_topic_order": 13,
+        "loc": "section:s5",
+        "snippet": "l ở 5 kịch bản này chính là nền của differential analysis — Chapter 13 nâng nó thành khung quyết định đầy đủ.\"}}] []"
+      },
+      {
+        "topic": "master-budget",
+        "from_order": 8,
+        "target_topic_order": 9,
+        "loc": "section:s10",
+        "snippet": " hoạt động KẾ HOẠCH — nó chính là static planning budget mà Chapter 9 sẽ đem so với kết quả thực để tách variance.\"}}] ["
+      },
+      {
+        "topic": "flexible-budgets",
+        "from_order": 9,
+        "target_topic_order": 10,
+        "loc": "section:s3",
+        "snippet": "\"Spending variance ở đây mới là tổng của từng dòng chi phí. Chapter 10 sẽ drill nó xuống từng input (price vs quantity) "
+      }
+    ]
+  },
+  "G1": {
+    "unit": "topic",
+    "n_typical": "~8 (rubric §3.G) — thực tế 8",
+    "rule": "T(n) — KHÔNG áp ở đây",
+    "n_topics": 8,
+    "n_topics_without_sowhat": 8,
+    "topics_without_sowhat": [
+      "cost-concepts",
+      "job-order-costing",
+      "job-order-cost-flows",
+      "cost-volume-profit",
+      "master-budget",
+      "flexible-budgets",
+      "standard-costs",
+      "differential-analysis"
+    ],
+    "found_at": []
+  },
+  "H1": {
+    "unit": "trang ôn tập",
+    "n_typical": "1 route /[subject]/on-tap (rubric §3.H)",
+    "rule": "Tồn tại + chất lượng — KHÔNG áp ở đây",
+    "n_topics_with_quiz": 8,
+    "topics_with_quiz": [
+      "cost-concepts",
+      "job-order-costing",
+      "job-order-cost-flows",
+      "cost-volume-profit",
+      "master-budget",
+      "flexible-budgets",
+      "standard-costs",
+      "differential-analysis"
+    ],
+    "meets_min_2_topics": true,
+    "note": "breakdown theo topic + retry câu sai là feature component CumulativeQuiz — không đo được từ data, cần walkthrough runtime"
+  },
+  "not_measured": {
+    "reason": "đòi index ngữ nghĩa hoặc chấm tay (rubric §2 rule 5, rule 10)",
+    "sub_checks": [
+      "A2",
+      "B2",
+      "C1",
+      "C2",
+      "C4",
+      "D3",
+      "E4-chú-thích-forward",
+      "F1-chất-lượng",
+      "F2",
+      "G2",
+      "H1-breakdown/retry-runtime"
+    ]
+  }
+}

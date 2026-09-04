@@ -11,20 +11,9 @@ Diễn dịch thành 2 trục đo: **(a)** khung kiến thức rõ, có thứ t�
 
 ## 2. Khung đánh giá (rubric 8 tiêu chí — dùng lại cho MỌI môn)
 
-Mỗi tiêu chí có **cách kiểm tra cụ thể** để lần đánh giá sau lặp lại được và đào sâu hơn:
-
-| # | Tiêu chí | Cách kiểm tra |
-|---|---|---|
-| A | **Khung trong-topic nhất quán** | Mỗi topic đủ xương sống: bigIdea → pillars → knowledgeMap → sections → keyTerms → quiz? Đếm qua grep, soi topic thiếu thành phần. |
-| B | **Trực quan (dual coding)** | Mỗi section ≥1 visual block (flow/comparison/callout), không prose đặc? Grep tỉ lệ block theo section. |
-| C | **Active recall chất lượng** | Quiz: distractor là misconception thật (không phải nhiễu vô nghĩa)? Có câu scenario/application, không chỉ định nghĩa? Rationale theo Cơ chế→Bẫy→Khóa? Sample ≥5 câu/topic để chấm. Ngưỡng application: môn định tính ≥1/3; **môn định lượng ≥40%/topic** (Chaliyah duyệt 2026-07-18, áp từ đánh giá MA). |
-| D | **Trung thực nguồn (hard/soft)** | Định nghĩa trích đúng nguồn+trang; kiến thức "(sách)" đánh dấu; lens không mạo danh lời sách? Đối chiếu ngẫu nhiên vài keyTerm với Glossary. |
-| E | **Liên kết ngang (synthesis)** | Có course map cấp-môn? Có cross-reference giữa topic (grep "xem topic", "T\d")? Chuỗi khái niệm có phản ánh quan hệ thật của môn? |
-| F | **Application (case method)** | Có mini-case buộc dùng ≥2–3 khái niệm cùng lúc để phân tích? (Chuẩn HBS — quan trọng với môn định tính thi tự luận/tình huống.) |
-| G | **Elaboration ("So what")** | Mỗi topic đóng bằng "kiến thức này đổi hành động của bạn thế nào?" — grep các section cuối. |
-| H | **Spaced / interleaved practice** | Có quiz cumulative trộn nhiều topic? Có cơ chế ôn lại (trong web hoặc qua Obsidian vault)? |
-
-**Thang chấm gợi ý:** mỗi tiêu chí Đạt / Đạt một phần / Thiếu, kèm bằng chứng (số liệu grep, ví dụ cụ thể). KHÔNG chấm cảm tính.
+> **ĐÃ CHUYỂN (2026-07-19):** rubric giờ sống ở **`docs/RUBRIC.md`** — nguồn chân lý duy nhất, có ngưỡng lượng hóa Đạt / Đạt một phần / Thiếu cho từng tiêu chí + quy tắc chấm. Bảng tiêu chí cũ ở đây đã xóa để tránh hai bản lệch nhau. Mọi lần đánh giá phải nạp `@docs/RUBRIC.md` trước khi chấm.
+>
+> Tóm tắt để đọc file này liền mạch: A khung trong-topic · B trực quan · C active recall · D trung thực nguồn · E liên kết ngang · F case method · G "So what" · H spaced/interleaved. Kết quả OB ở §3/§3b dưới đây chấm theo đúng 8 tiêu chí đó.
 
 ## 3. Kết quả đánh giá OB — lần 1 (2026-07-13)
 
@@ -109,3 +98,37 @@ Lần 1 mới đánh giá ở tầng cấu trúc + sample 3 topic. **Cập nhậ
 - Gap 1 đã thực thi: `docs/specs/ob-course-map.md`
 - Luật soạn môn: `docs/specs/workflow-soan-mon-moi.md`
 - Nguồn OB: memory `nguon-hoc-lieu-ob` (slide Dr Lan Anh + Reading Chapters; SÁCH > slide)
+
+## 6. Re-score theo rubric 2026-07-20 (ngưỡng T(n) + sub-check mới)
+
+> **Dấu đóng tái lập:** ngày chấm 2026-07-20 · rubric bản 2026-07-20 (`docs/RUBRIC.md`) · content commit `1d9ed5a` (`content/organizational-behavior.ts`, working tree sạch) · đo tại HEAD `a6be7b3`.
+> **Vì sao chấm lại:** rubric 2026-07-20 đổi ngưỡng % → **T(n)=max(1,ceil(n/8))** và thêm sub-check A2/E4/B3/C4/F2. OB có **n=13 topic → T(13)=2** (Đạt=0 hụt · Một phần 1–2 · Thiếu >2).
+> **Phương pháp:** bundle `content/subjects.ts` bằng esbuild (`scratchpad/ob-stats.mjs`, `ob-stats2.mjs`) → duyệt object thật; C1/C2/G2/B2 dựa số liệu lần-2 đã ghi (content chưa đổi); A2/E4 chưa chạy script chuyên biệt.
+
+### Bảng 8 tiêu chí
+
+| TC | Mức | Bằng chứng số (tử/mẫu, n=13, T=2) |
+|---|---|---|
+| **A** | **Đạt** | A1: 0/13 topic thiếu tầng (48/48 slot đủ). A2 forward-ref nội-topic: 11/13 topic có candidate nhưng đọc tay ra toàn từ phổ thông/preview overview (behavior, ability, status, loyalty…), không phải dựa khái niệm chưa định nghĩa → Đạt (low-risk). |
+| **B** | **Đạt một phần** | B1: 129/129 section có ≥1 visual (100%, Đạt). B3: metric thô 31/129 section >4 khái niệm mới (76%), NHƯNG rà tay: ~22/31 là **cụm 1-framework** (OCEAN, MBTI, RIASEC, EVLN, Tuckman, Lewin, 5 conflict styles…) phạt oan; chỉ **~6 catalog quá tải thật** (T2s6=7, T2s8=8, T5s4=6, T6s11=6, T6s12=8, T7s1=7) → ~123/129 ≈ 95% → **Đạt một phần** (tách 6 section này là xong). B2 (lệch loại): chưa rà lần này. |
+| **C** | Đạt | C1: rationale lần-2 100% khung Cơ chế→Bẫy→Chốt (chưa re-sample lần này). C2: mọi topic ≥33% scenario (prior `ob-quiz-scenario-crossref.md`). C3: 235/235 câu có takeaway. C4: 100% quiz nằm ở `chapter.questions` render sau toàn bộ section (kiến trúc). |
+| **D** | **Đạt** | D1: 13/13 topic có source (gate Đạt). **D4: 9/9 soft-lens có disclaimer = 100% → Đạt** (fix 2026-07-21, `ob-fix-rubric-2026-07-20.md`, verify `ob-verify-fix.mjs`). **D3: audit đợt 2 (`ob-audit-sach-lop-b-2.md`, ~33 gap) → supplements đợt 2 ĐÃ BỔ SUNG XONG 2026-07-21 (`ob-sach-supplements-2.md`, Codex thực thi +614 dòng, verify độc lập `ob-verify-sup2.mjs` + tsc PASS): marker "(sách" T00=4/T06=13/T07=2/T11=13/T12=12 (trước = 0 cả 5); +3 section mới (T00=8, T11=12, T12=12); 11/11 keyTerms mới; quiz 235→247, 1235/1235 options đủ Cơ chế/Bẫy/Khóa, 0 thiếu takeaway; B3 guard sạch → Đạt.** |
+| **E** | **Đạt** | E1 courseMap ✓ · E2 4 courseThreads phản ánh quan hệ thật ✓. **E3: ~~5/13 topic không cross-ref → Thiếu~~ → FIX 2026-07-21: thêm 5 câu "→ Mắt xích môn học" vào So-what của T2/T3/T4/T5/T11 → 13/13 topic có ≥1 cross-ref = 0 hụt → Đạt** (verify `ob-verify-fix.mjs`; toàn môn 10 câu Mắt xích). E4 prerequisite giữa topic: 13 forward-ref multi-word nhưng chủ yếu ở T0 (Introduction preview cả môn) + mention ngắn, không có đảo prerequisite thật → **E4 Đạt**. |
+| **F** | Đạt | F1: 4 mini-case phủ 4 chuỗi (1/chuỗi), mỗi case 3 câu **đều** có analysis + trap. F2 worked-example ladder = **N/A** (OB định tính). |
+| **G** | **Đạt** | G1: ~~12/13 (T12 hụt)~~ → FIX 2026-07-21: thêm callout So-what sau block D>CS=SR ở section cuối T12 → **13/13 topic có So-what ở section CUỐI = 0 hụt → Đạt** (verify `ob-verify-fix.mjs`). G2 traceability: prior Đạt (`ob-so-what.md`). |
+| **H** | Đạt | H1: `/on-tap` interleaved trộn topic + breakdown + retry câu sai (prior verify PASS). |
+
+**Kết luận (cập nhật 2026-07-21 cuối ngày — sau Phase 1 fix + audit D3 đợt 2 + supplements đợt 2, đều verify PASS):** OB **0 Thiếu, 0 UNCERTAIN** — **7 Đạt (A, C, D, E, F, G, H)**, còn đúng **1 Đạt một phần: B** (B3 — tách 6 catalog section T2s6/T2s8/T5s4/T6s11/T6s12/T7s1, Phase 2). OB "đóng trọn A–H" khi xong B3.
+
+> **So lần đo đầu (§6 bản 1):** nhẹ đi 1 bậc ở B (Thiếu→Đạt một phần, vì metric B3 phạt oan ~22/31 cụm-framework), A2 và E4 gỡ UNCERTAIN → Đạt (candidate toàn từ phổ thông/preview, không đảo prerequisite). D3 giữ UNCERTAIN vì thật sự chưa audit 5 topic.
+
+### Bảng gap xếp ưu tiên (rẻ → nặng)
+
+| # | TC | Việc cần làm | Trạng thái |
+|---|---|---|---|
+| 1 | D4 | Thêm disclaimer "không phải trích nguyên văn sách" vào `courseMap.caption` (1 dòng) → 9/9 = Đạt | ✅ xong 2026-07-21 (`ob-fix-rubric-2026-07-20.md`) |
+| 2 | G1 | Dời/thêm khối So-what xuống section CUỐI của T12 → 0 hụt = Đạt | ✅ xong 2026-07-21 (nt) |
+| 3 | E3 | Thêm cross-ref (câu "Mắt xích môn học" trong So-what) cho T2, T3, T4, T5, T11 → 0 hụt = Đạt | ✅ xong 2026-07-21 (nt) |
+| 4 | D3 | Audit sách Lớp B cho T00, T06, T07, T11, T12 (5 topic) → gỡ UNCERTAIN | ✅ TRỌN GÓI xong 2026-07-21: audit (`ob-audit-sach-lop-b-2.md`) + vision-read 3 chương scan + supplements (`ob-sach-supplements-2.md`, Codex) + verify (`ob-verify-sup2.mjs`) → D Đạt |
+| 5 | B3 | Tách 6 section catalog quá tải: T2s6 (7 shortcuts), T2s8 (8 biases), T5s4 (6 job attitudes), T6s11 (6 work arrangements), T6s12 (8 reward programs), T7s1 (7 group types) → mỗi cái chẻ 2 → B lên Đạt | chưa làm |
+| 6 | A2, E4 | ✅ ĐÃ ĐO (`ob-stats3.mjs` + rà tay): A2 Đạt, E4 Đạt — không có forward-ref gây hại | xong |
