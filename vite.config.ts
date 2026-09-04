@@ -68,6 +68,10 @@ const localBindingConfig = {
 };
 
 export default defineConfig({
+  build: {
+    // Mermaid is lazy-loaded; its isolated parser chunk is ~580 KiB raw (~133 KiB gzip).
+    chunkSizeWarningLimit: 600,
+  },
   plugins: [
     ignoreResizeObserverDevOverlay(),
     vinext(),
