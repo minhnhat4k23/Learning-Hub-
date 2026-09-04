@@ -1,11 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { PanelLeftClose, PanelLeftOpen, X } from "lucide-react";
 
 type NavChapter = { order: number; slug: string; title: string };
 type NavSection = { id: string; heading: string };
+
+const CHAPTER_RAIL_STORAGE_KEY = "chapterRailOpen";
+const CHAPTER_RAIL_CHANGE_EVENT = "chapterRailOpenChange";
+
+function subscribeToChapterRail(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener(CHAPTER_RAIL_CHANGE_EVENT, onStoreChange);
+
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener(CHAPTER_RAIL_CHANGE_EVENT, onStoreChange);
+  };
+}
+
+function getChapterRailSnapshot() {
+  return localStorage.getItem(CHAPTER_RAIL_STORAGE_KEY) !== "0";
+}
+
+function getServerChapterRailSnapshot() {
+  return true;
+}
 
 export default function ChapterRail({
   chapters,
@@ -18,17 +39,17 @@ export default function ChapterRail({
   sections: NavSection[];
   subjectId: string;
 }) {
-  const [open, setOpen] = useState(true);
+  const open = useSyncExternalStore(
+    subscribeToChapterRail,
+    getChapterRailSnapshot,
+    getServerChapterRailSnapshot,
+  );
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("chapterRailOpen");
-    if (saved !== null) setOpen(saved === "1");
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("chapterRailOpen", open ? "1" : "0");
-  }, [open]);
+  const setOpen = (nextOpen: boolean) => {
+    localStorage.setItem(CHAPTER_RAIL_STORAGE_KEY, nextOpen ? "1" : "0");
+    window.dispatchEvent(new Event(CHAPTER_RAIL_CHANGE_EVENT));
+  };
 
   useEffect(() => {
     if (!mobileOpen) return;

@@ -4,6 +4,8 @@ export default function FigureBlock({ figure }: { figure: FigureData }) {
   return (
     <figure className="rounded-2xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
       {figure.src && !figure.placeholder ? (
+        // Figure sources are content-defined and may not have stable dimensions or hosts.
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={figure.src}
           alt={figure.alt ?? figure.caption}

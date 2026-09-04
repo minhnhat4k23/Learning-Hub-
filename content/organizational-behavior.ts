@@ -60,25 +60,6 @@ const comparisonBlock = (
 // 13 topic (Topic 0-12). Hiện là PLACEHOLDER — nội dung từng topic sẽ soạn theo GATE
 // bigIdea + verify 2 lớp (xem docs/specs/workflow-soan-mon-moi.md), rồi chuyển "ready".
 
-const placeholder = (
-  order: number,
-  slug: string,
-  title: string,
-  slideFile: string,
-  readingChapter: string,
-): Chapter => ({
-  slug,
-  order,
-  title,
-  bigIdea:
-    "Placeholder — bigIdea (lens) sẽ soạn theo GATE từ slide + Reading Chapter, đợi Chaliyah chốt.",
-  learningObjectives: [],
-  sections: [],
-  questions: [],
-  status: "placeholder",
-  source: `Slide '${slideFile}' (Dr Lan Anh, IM2017) + Reading '${readingChapter}'.`,
-});
-
 const topic00: Chapter = {
   slug: "topic-00",
   order: 0,

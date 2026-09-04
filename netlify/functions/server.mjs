@@ -6,11 +6,13 @@ const staticAssets = {
   },
 };
 
-export default {
+const handler = {
   async fetch(request, context) {
     return server.fetch(request, { ASSETS: staticAssets }, context);
   },
 };
+
+export default handler;
 
 export const config = {
   path: "/*",

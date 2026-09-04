@@ -1,7 +1,6 @@
 import type { Block, CalloutKind, Chapter, FlowEdge, FlowNode } from "./types";
 
 type FlowLayout = "tree" | "horizontal" | "radial";
-type FlowGroup = NonNullable<FlowNode["group"]>;
 type SectionFlowNode = Omit<FlowNode, "sectionId"> & {
   detail: string;
 };

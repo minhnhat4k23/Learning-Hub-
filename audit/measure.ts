@@ -15,13 +15,14 @@ import { execSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import type { Chapter, Section, Subject } from "../content/types";
 
 const AUDIT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(AUDIT_DIR, "..");
 
 // ---------- bundle content/subjects.ts (rubric §2 rule 3) ----------
 
-async function bundleSubjects(): Promise<any[]> {
+async function bundleSubjects(): Promise<Subject[]> {
   // esbuild chỉ có transitively trong node_modules → import theo đường dẫn tuyệt đối
   const esbuild = await import(
     pathToFileURL(path.join(ROOT, "node_modules/esbuild/lib/main.js")).href
@@ -34,7 +35,9 @@ async function bundleSubjects(): Promise<any[]> {
     platform: "node",
     outfile,
   });
-  const mod = await import(pathToFileURL(outfile).href + `?t=${Date.now()}`);
+  const mod = (await import(
+    pathToFileURL(outfile).href + `?t=${Date.now()}`
+  )) as { subjects: Subject[] };
   return mod.subjects;
 }
 
@@ -43,16 +46,16 @@ async function bundleSubjects(): Promise<any[]> {
 const norm = (s: string) => s.toLowerCase().trim();
 
 /** Toàn bộ text của 1 section (heading + body + blocks + examples) */
-function sectionText(s: any): string {
+function sectionText(s: Section): string {
   return [s.heading, s.body, JSON.stringify(s.blocks ?? []), JSON.stringify(s.examples ?? [])]
     .filter(Boolean)
     .join("\n");
 }
 
 /** Các "đơn vị text" của topic để quét regex, kèm vị trí (section id / question idx) */
-function textUnits(ch: any): { loc: string; text: string }[] {
-  const units = (ch.sections ?? []).map((s: any) => ({ loc: `section:${s.id}`, text: sectionText(s) }));
-  (ch.questions ?? []).forEach((q: any, i: number) => {
+function textUnits(ch: Chapter): { loc: string; text: string }[] {
+  const units = (ch.sections ?? []).map((s) => ({ loc: `section:${s.id}`, text: sectionText(s) }));
+  (ch.questions ?? []).forEach((q, i) => {
     units.push({ loc: `question:${i}`, text: JSON.stringify(q) });
   });
   return units;
@@ -64,8 +67,8 @@ function snippet(text: string, index: number, radius = 60): string {
 
 // ---------- đo 1 môn ----------
 
-function measureSubject(subject: any, commit: string) {
-  const all: any[] = [...subject.chapters].sort((a, b) => a.order - b.order);
+function measureSubject(subject: Subject, commit: string) {
+  const all: Chapter[] = [...subject.chapters].sort((a, b) => a.order - b.order);
   const placeholders = all.filter((c) => c.status === "placeholder");
   const evaluated = all.filter((c) => c.status !== "placeholder");
 
@@ -84,7 +87,7 @@ function measureSubject(subject: any, commit: string) {
   const SLOTS = ["bigIdea", "bigIdeaPillars", "knowledgeMap", "sections", "keyTerms", "questions"];
   const slotsMissing: { topic: string; slot: string }[] = [];
   for (const ch of evaluated) {
-    const keyTermsUnion = (ch.sections ?? []).flatMap((s: any) => s.keyTerms ?? []);
+    const keyTermsUnion = (ch.sections ?? []).flatMap((s) => s.keyTerms ?? []);
     const present: Record<string, boolean> = {
       bigIdea: typeof ch.bigIdea === "string" && ch.bigIdea.trim().length > 0,
       bigIdeaPillars: Array.isArray(ch.bigIdeaPillars) && ch.bigIdeaPillars.length > 0,
@@ -106,15 +109,15 @@ function measureSubject(subject: any, commit: string) {
   };
 
   // ----- B1: section có ≥1 block non-prose -----
-  const allSections = evaluated.flatMap((ch: any) =>
-    (ch.sections ?? []).map((s: any) => ({ topic: ch.slug, section: s }))
+  const allSections = evaluated.flatMap((ch) =>
+    (ch.sections ?? []).map((s) => ({ topic: ch.slug, section: s }))
   );
   const blockTypeDistribution: Record<string, number> = {};
   const withoutNonProse: { topic: string; section: string }[] = [];
   for (const { topic, section } of allSections) {
     const blocks = section.blocks ?? [];
     for (const b of blocks) blockTypeDistribution[b.type] = (blockTypeDistribution[b.type] ?? 0) + 1;
-    if (!blocks.some((b: any) => b.type !== "prose")) {
+    if (!blocks.some((b) => b.type !== "prose")) {
       withoutNonProse.push({ topic, section: section.id });
     }
   }
@@ -133,12 +136,12 @@ function measureSubject(subject: any, commit: string) {
   const over4: { topic: string; section: string; new_concepts: number; terms: string[] }[] = [];
   for (const { topic, section } of allSections) {
     const newTerms = (section.keyTerms ?? []).filter(
-      (kt: any) => firstSeen.get(norm(kt.term)) === `${topic}/${section.id}`
+      (kt) => firstSeen.get(norm(kt.term)) === `${topic}/${section.id}`
     );
     const n = newTerms.length;
     histogram[String(n)] = (histogram[String(n)] ?? 0) + 1;
     if (n > 4) {
-      over4.push({ topic, section: section.id, new_concepts: n, terms: newTerms.map((t: any) => t.term) });
+      over4.push({ topic, section: section.id, new_concepts: n, terms: newTerms.map((t) => t.term) });
     }
   }
   const B3 = {
@@ -156,7 +159,7 @@ function measureSubject(subject: any, commit: string) {
   const missingTakeaway: { topic: string; question_index: number; stem_short: string }[] = [];
   let nQuestions = 0;
   for (const ch of evaluated) {
-    (ch.questions ?? []).forEach((q: any, i: number) => {
+    (ch.questions ?? []).forEach((q, i) => {
       nQuestions++;
       if (typeof q.takeaway !== "string" || q.takeaway.trim().length === 0) {
         missingTakeaway.push({ topic: ch.slug, question_index: i, stem_short: String(q.stem).slice(0, 80) });
